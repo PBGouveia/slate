@@ -75,8 +75,55 @@ under the License.
       <div class="content">
         <%= yield %>
         <% current_page.data.includes && current_page.data.includes.each do |include| %>
-          <%= partial "includes/#{include}" %>
+
+          <% jsonfilepath = 'source/' + include + '.json' %>
+
+          <%#= partial "includes/#{include}" %>
+          <%# require 'json' %>
+
+          <%# file = File.read('source/filej.json') %>
+          <%# my_hash = JSON.parse(file) %>
+          <div name="<%= include %>" data-unique="filej1"></div>
+          <h1 id="<%= include %>"><%= include.capitalize %></h1>
+
+          <h2 id="<%= include + '-submenu' %>">Filej1 Submenu 1</h2>
+
+          <% require 'json' %>
+          <% file = File.read(jsonfilepath) %>
+          <% my_hash = JSON.parse(file) %>
+          <% my_hash2 = JSON.pretty_generate(my_hash) %>
+         
+          <% jsonfilepath.slice! "source/" %>
+
+          <pre class="highlight shell" style="display: block;">
+            <code>teste teste testes testes shell</code>
+          </pre>
+
+          <pre class="highlight javascript" style="display: block;">
+            <code>teste teste testes testes javascript</code>
+          </pre>
+
+          <pre class="highlight ruby" style="display: block;">
+            <code>teste teste testes testes ruby</code>
+          </pre>
+
+          <pre class="highlight python" style="display: block;">
+            <code>teste teste testes testes python</code>
+          </pre>
+
+          <blockquote>
+            <p>The above command returns JSON structured like this:</p>
+          </blockquote>
+          <pre class="highlight json">
+            <%= my_hash2 %>
+          </pre>
+          <br><br>
+          <% puts my_hash %>
+
+
+          <br><br>
         <% end %>
+
       </div>
       <div class="dark-box">
         <% if language_tabs %>

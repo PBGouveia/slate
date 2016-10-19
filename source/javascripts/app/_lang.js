@@ -155,6 +155,7 @@ under the License.
   $(function() {
     $(".lang-selector a").on("click", function() {
       var language = $(this).data("language-name");
+      console.log(language);
       pushURL(language);
       activateLanguage(language);
       return false;
