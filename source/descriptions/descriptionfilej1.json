@@ -1,9 +1,21 @@
 {
-    "description": "We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.",
-    "description2": "We 222have l2angua222ge bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.",
-    "numbermenus" : 2,
-    "ruby": "blablabla ruby",
-    "javascript": "dsja javascript",
-    "python": "sad python",
-    "shell": "sads shell"
+    "submenus": {
+        "Submenu1": "We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.",
+        "Submenu2": "We 222have l2angua222ge bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right."
+    },
+    "codes": {
+        "ruby": "blablabla ruby",
+        "javascript": "dsja javascript",
+        "python": "sad python",
+        "shell": "sads shell"
+    },
+    "testes": {
+        "testes1": {
+            "teste1": "fdsfd",
+            "teste2": "fasasdsfdsdfsasd"
+        },
+        "testes2": {
+            "teste1": "aloooo"
+        }
+    }
 }

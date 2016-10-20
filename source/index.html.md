@@ -116,6 +116,34 @@ import kittn
 
 api = kittn.authorize('meowmeowmeow')
 api.kittens.get()
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get()
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get()
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get()
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get()
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get()
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get()
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get()
 ```
 
 ```shell

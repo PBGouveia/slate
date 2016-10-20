@@ -24,7 +24,6 @@ under the License.
 
     <style>
       <%= Rouge::Themes::Base16::Monokai.render(:scope => '.highlight') %>
-      <%#= Rouge::Themes::Monokai.render(:scope => '.highlight') %>
     </style>
     <%= stylesheet_link_tag :screen, media: :screen %>
     <%= stylesheet_link_tag :print, media: :print %>
@@ -56,10 +55,10 @@ under the License.
         </div>
       <% end %>
       <% if current_page.data.search %>
-        <div class="search">
+        <!-- <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
-        <ul class="search-results"></ul>
+        <ul class="search-results"></ul> -->
       <% end %>
       <div id="toc">
       </div>
@@ -81,58 +80,41 @@ under the License.
           
 
           <% require 'json' %>
-          <%# jsonfilepath = 'source/' + jsonfilepath + '.json' %>
           <% file = File.read(jsonfilepath) %>
           <% my_hash = JSON.parse(file) %>
           <% my_hash2 = JSON.pretty_generate(my_hash) %>
   
 
           <% jsontitle = jsonfilepath %>
-          <% jsontitle2 = jsonfilepath %>
           <% jsontitle.slice! "source/" %>
           <% jsontitle.slice! ".json" %>
           <% jsondescfilepath = 'source/descriptions/description' + jsontitle + '.json' %>
-
-          <% puts jsondescfilepath %>
-
+          <% puts jsontitle %>
           <% file2 = File.read(jsondescfilepath) %>
           <% my_hash = JSON.parse(file2) %>
-          <% puts my_hash['description'] %>
 
-          <div name="<%= jsontitle %>" data-unique="filej1"></div>
+
           <h1 id="<%= jsontitle %>"><%= jsontitle.capitalize %></h1>
 
-            <h2 id="<%= jsontitle + '-submenu1' %>">Filej1 Submenu 1</h2>
-            <p><%= my_hash['description1'] %></p>
+          <% my_hash['submenus'].each do |a| %>
 
-            <h2 id="<%= jsontitle + '-submenu2' %>">Filej1 Submenu 2</h2>
+            <h2 id="<%= a[0] %>"><%= a[0] %></h2>
+            <% puts a[0] %>
+            <% my_hash['codes'].each do |b| %>
 
-            <pre class="highlight shell" style="display: block;">
-              <code><%= my_hash['shell'] %></code>
-            </pre>
+              <pre class="highlight <%= b[0] %>" style="display: block;"><code><%= b[1] %></code></pre>
 
-            <pre class="highlight javascript" style="display: block;">
-              <code><%= my_hash['javascript'] %></code>
-            </pre>
-
-            <pre class="highlight ruby" style="display: block;">
-              <code><%= my_hash['ruby'] %></code>
-            </pre>
-
-            <pre class="highlight python" style="display: block;">
-              <code><%= my_hash['python'] %></code>
-            </pre>
+            <% end %>
 
             <blockquote>
               <p>The above command returns JSON structured like this:</p>
             </blockquote>
-            <pre class="highlight json">
+            <pre class="highlight json"><code><%= my_hash2 %></code></pre>
 
-              <%= my_hash2 %>
-            </pre>
+          <p><%= a[1] %></p>
 
-            <p><%= my_hash['description2'] %></p>
-            
+          <% end %>
+
         <% end %>
 
       </div>
