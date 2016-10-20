@@ -74,26 +74,42 @@ under the License.
       <div class="dark-box"></div>
       <div class="content">
         <%= yield %>
-        <% current_page.data.includes && current_page.data.includes.each do |include| %>
+        <%# current_page.data.includes && current_page.data.includes.each do |include| %>
 
-          <% jsonfilepath = 'source/' + include + '.json' %>
+        <% Dir.glob("source/*.json") do |jsonfilepath|%>
+          <%# require 'json' %>
+          <%# file = File.read(my_text_file) %>
+
+          <%# jsonfilepath = 'source/' + include + '.json' %>
+          
+
+          <% require 'json' %>
+          <%# jsonfilepath = 'source/' + jsonfilepath + '.json' %>
+          <% file = File.read(jsonfilepath) %>
+          <% my_hash = JSON.parse(file) %>
+          <% my_hash2 = JSON.pretty_generate(my_hash) %>
+
+          <%# my_text_file.slice! "source/" %>
 
           <%#= partial "includes/#{include}" %>
           <%# require 'json' %>
 
+          <% jsontitle = jsonfilepath %>
+          <%# jsontitle.slice! "source/" %>
+          <% jsontitle2 = jsonfilepath %>
+          <% jsontitle.slice! "source/" %>
+          <% jsontitle.slice! ".json" %>
+
           <%# file = File.read('source/filej.json') %>
           <%# my_hash = JSON.parse(file) %>
-          <div name="<%= include %>" data-unique="filej1"></div>
-          <h1 id="<%= include %>"><%= include.capitalize %></h1>
+          <div name="<%= jsontitle %>" data-unique="filej1"></div>
+          <h1 id="<%= jsontitle %>"><%= jsontitle.capitalize %></h1>
 
-          <h2 id="<%= include + '-submenu' %>">Filej1 Submenu 1</h2>
+          <h2 id="<%= jsontitle + '-submenu' %>">Filej1 Submenu 1</h2>
 
-          <% require 'json' %>
-          <% file = File.read(jsonfilepath) %>
-          <% my_hash = JSON.parse(file) %>
-          <% my_hash2 = JSON.pretty_generate(my_hash) %>
+          
          
-          <% jsonfilepath.slice! "source/" %>
+          <%# jsonfilepath.slice! "source/" %>
 
           <pre class="highlight shell" style="display: block;">
             <code>teste teste testes testes shell</code>
