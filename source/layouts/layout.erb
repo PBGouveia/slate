@@ -78,10 +78,6 @@ under the License.
         <%# current_page.data.includes && current_page.data.includes.each do |include| %>
 
         <% Dir.glob("source/*.json") do |jsonfilepath|%>
-          <%# require 'json' %>
-          <%# file = File.read(my_text_file) %>
-
-          <%# jsonfilepath = 'source/' + include + '.json' %>
           
 
           <% require 'json' %>
@@ -89,59 +85,54 @@ under the License.
           <% file = File.read(jsonfilepath) %>
           <% my_hash = JSON.parse(file) %>
           <% my_hash2 = JSON.pretty_generate(my_hash) %>
-          <%# my_text_file.slice! "source/" %>
-
-          <%#= partial "includes/#{include}" %>
-          <%# require 'json' %>
+  
 
           <% jsontitle = jsonfilepath %>
-          <%# jsontitle.slice! "source/" %>
           <% jsontitle2 = jsonfilepath %>
           <% jsontitle.slice! "source/" %>
           <% jsontitle.slice! ".json" %>
           <% jsondescfilepath = 'source/descriptions/description' + jsontitle + '.json' %>
-          <%# puts my_hash['name'] %>
-          <%# puts jsontitle %>
+
           <% puts jsondescfilepath %>
-          <%# puts jsonfilepath %>
 
           <% file2 = File.read(jsondescfilepath) %>
           <% my_hash = JSON.parse(file2) %>
           <% puts my_hash['description'] %>
-          <%# file = File.read('source/filej.json') %>
-          <%# my_hash = JSON.parse(file) %>
+
           <div name="<%= jsontitle %>" data-unique="filej1"></div>
           <h1 id="<%= jsontitle %>"><%= jsontitle.capitalize %></h1>
 
-          <h2 id="<%= jsontitle + '-submenu' %>">Filej1 Submenu 1</h2>
+            <h2 id="<%= jsontitle + '-submenu1' %>">Filej1 Submenu 1</h2>
+            <p><%= my_hash['description1'] %></p>
 
-          
+            <h2 id="<%= jsontitle + '-submenu2' %>">Filej1 Submenu 2</h2>
 
-          <pre class="highlight shell" style="display: block;">
-            <code><%= my_hash['shell'] %></code>
-          </pre>
+            <pre class="highlight shell" style="display: block;">
+              <code><%= my_hash['shell'] %></code>
+            </pre>
 
-          <pre class="highlight javascript" style="display: block;">
-            <code><%= my_hash['javascript'] %></code>
-          </pre>
+            <pre class="highlight javascript" style="display: block;">
+              <code><%= my_hash['javascript'] %></code>
+            </pre>
 
-          <pre class="highlight ruby" style="display: block;">
-            <code><%= my_hash['ruby'] %></code>
-          </pre>
+            <pre class="highlight ruby" style="display: block;">
+              <code><%= my_hash['ruby'] %></code>
+            </pre>
 
-          <pre class="highlight python" style="display: block;">
-            <code><%= my_hash['python'] %></code>
-          </pre>
+            <pre class="highlight python" style="display: block;">
+              <code><%= my_hash['python'] %></code>
+            </pre>
 
-          <blockquote>
-            <p>The above command returns JSON structured like this:</p>
-          </blockquote>
-          <pre class="highlight json">
+            <blockquote>
+              <p>The above command returns JSON structured like this:</p>
+            </blockquote>
+            <pre class="highlight json">
 
-            <%= my_hash2 %>
-          </pre>
+              <%= my_hash2 %>
+            </pre>
 
-          <p><%= my_hash['description'] %></p>
+            <p><%= my_hash['description2'] %></p>
+            
         <% end %>
 
       </div>
