@@ -1,0 +1,158 @@
+{
+    "name": "files",
+    "attrs": {
+        "file": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "type": {
+            "type": "id",
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "file_type",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "name": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "_uploaded_date": {
+            "type": "datetime",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "events": {
+                "insert": {
+                    "type": "Function",
+                    "function": "now"
+                }
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "notes": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "content_type": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "checksum": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        }
+    }
+}
