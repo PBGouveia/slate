@@ -6,7 +6,7 @@
     "codes": {
         "ruby": "blablabla ruby",
         "javascript": "dsja javascript",
-        "python": "sad python",
+        "python": "print 'Hello, world!'",
         "shell": "sads shell"
     },
     "testes": {

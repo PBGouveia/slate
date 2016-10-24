@@ -24,6 +24,7 @@ under the License.
 
     <style>
       <%= Rouge::Themes::Base16::Monokai.render(:scope => '.highlight') %>
+      <%= Rouge::Themes::Base16::Monokai.render(:scope => '.highlights') %>
     </style>
     <%= stylesheet_link_tag :screen, media: :screen %>
     <%= stylesheet_link_tag :print, media: :print %>
@@ -102,14 +103,19 @@ under the License.
             <% puts a[0] %>
             <% my_hash['codes'].each do |b| %>
 
-              <pre class="highlight <%= b[0] %>" style="display: block;"><code><%= b[1] %></code></pre>
-
+              <% aro = Rouge.highlight(b[1], b[0], 'html') %>
+              <% puts aro %>
+              <% aro.gsub! '<pre class="highlight"', '<pre class="highlight' + ' ' + b[0] + '"' %>
+              <%= aro %>
+              <% puts aro %>
             <% end %>
 
             <blockquote>
               <p>The above command returns JSON structured like this:</p>
             </blockquote>
-            <pre class="highlight json"><code><%= my_hash2 %></code></pre>
+            <!-- <pre class="highlight json"><code><%= my_hash2 %></code></pre> -->
+            <code><%= Rouge.highlight(my_hash2, 'ruby', 'html') %></code>
+
 
           <p><%= a[1] %></p>
 

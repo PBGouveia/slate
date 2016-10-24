@@ -6,7 +6,7 @@
     "codes": {
         "ruby": "ruby ruby",
         "javascript": "dsjajavascript",
-        "python": "sadpython",
+        "python": "print 'Hello, world!2222'",
         "shell": "sadsshell"
     },
     "testes": {
