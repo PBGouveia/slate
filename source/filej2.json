@@ -8,6 +8,10 @@
             },
             "default": {
                 "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
             }
         },
         "_unavailable": {
@@ -24,6 +28,10 @@
             },
             "default": {
                 "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
             }
         },
         "start": {
@@ -46,6 +54,10 @@
             },
             "default": {
                 "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
             }
         }
     }

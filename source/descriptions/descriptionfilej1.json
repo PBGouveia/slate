@@ -4,10 +4,30 @@
         "Submenu2": "We 222have l2angua222ge bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right."
     },
     "codes": {
-        "ruby": "blablabla ruby",
-        "javascript": "dsja javascript",
-        "python": "print 'Hello, world!'",
-        "shell": "sads shell"
+        "ruby": {
+            "line1": "blablabla ruby",
+            "line2": "dsja javascript",
+            "line3": "print 'Hello, world!'",
+            "line4": "sads shell"
+        },
+        "javascript": {
+            "line1": "dsja javascript",
+            "line2": "dsja javascript",
+            "line3": "print 'Hello, world!'",
+            "line4": "sads shell"
+        },
+        "python": {
+            "line1": "print 'Hello, world!'",
+            "line2": "dsja javascript",
+            "line3": "print 'Hello, world!'",
+            "line4": "sads shell"
+        },
+        "shell": {
+            "line1": "sads shell",
+            "line2": "dsja javascript",
+            "line3": "print 'Hello, world!'",
+            "line4": "sads shell"
+        }
     },
     "testes": {
         "testes1": {
