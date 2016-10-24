@@ -87,7 +87,9 @@ under the License.
             
           <% jsondescfilepath = 'source/descriptions/description' + jsontitle + '.json' %>    <!-- create path for the description file -->
 
-          <% file2 = File.read(jsondescfilepath) %>     <!-- read each json description file -->
+          <%# file2 = File.read(jsondescfilepath) %>     <!-- read each json description file -->
+          <% file2 = File.read('source/descriptions/descriptionfilej1.json') %>     <!-- because testing -->
+          
           <% my_hasht = JSON.parse(file2) %>             <!-- read each json description file -->
 
           <% my_hash['attrs'].each do |a| %>

@@ -1,0 +1,2847 @@
+{
+    "name": "candidates",
+    "attrs": {
+        "_deleted_dates": {
+            "type": "subdocuments",
+            "subdocument": {
+                "_deleted_date": {
+                    "type": "datetime",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true
+                    }
+                },
+                "_deleted_reason": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "_undeleted_date": {
+                    "type": "datetime",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true
+                    }
+                }
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "candidate_status": {
+            "type": "id",
+            "title": {
+                "singular": "Candidate Status"
+            },
+            "reference": {
+                "type": "referenceOne",
+                "collection": "accounts.candidate_settings.candidate_stages"
+            },
+            "filter": {
+                "order": 1011,
+                "label": false,
+                "hidden": true
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "query": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "_alaunus_candidate": {
+            "type": "boolean",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "_hired": {
+            "type": "boolean",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "_hired_date": {
+            "type": "datetime",
+            "permissions": {
+                "fields": true,
+                "conditions": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "_hired_user": {
+            "type": "id",
+            "reference": {
+                "type": "referenceOne",
+                "collection": "users"
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "manager": {
+            "type": "id",
+            "title": {
+                "singular": "Hiring Manager"
+            },
+            "filter": {
+                "order": 9
+            },
+            "reference": {
+                "type": "referenceOne",
+                "collection": "users"
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "rating": {
+            "type": "integer",
+            "title": {
+                "singular": "Rating"
+            },
+            "filter": {
+                "order": 33
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "date_of_birth": {
+            "type": "date",
+            "title": {
+                "singular": "Date of Birth"
+            },
+            "filter": {
+                "order": 10
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "email": {
+            "type": "string",
+            "title": {
+                "singular": "Email",
+                "plural": "Emails"
+            },
+            "filter": {
+                "order": 7
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                },
+                "sort": true
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "ext_id": {
+            "type": "string",
+            "title": {
+                "singular": "External ID",
+                "plural": "External IDs"
+            },
+            "filter": {
+                "order": 6
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                },
+                "sort": true
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "gender": {
+            "type": "id",
+            "title": {
+                "singular": "Gender"
+            },
+            "filter": {
+                "order": 11
+            },
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "gender",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                },
+                "sort": true
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "languages": {
+            "type": "subdocuments",
+            "title": {
+                "singular": "Language",
+                "plural": "Languages"
+            },
+            "filter": {
+                "order": 22
+            },
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "fluency": {
+                    "type": "id",
+                    "reference": {
+                        "type": "picklist",
+                        "filter": {
+                            "function": "fluency",
+                            "options": []
+                        }
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "language": {
+                    "type": "id",
+                    "title": {
+                        "singular": "Language",
+                        "plural": "Languages"
+                    },
+                    "filter": {
+                        "order": 13
+                    },
+                    "reference": {
+                        "type": "picklist",
+                        "filter": {
+                            "function": "language",
+                            "options": []
+                        }
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "primary": {
+                    "type": "boolean",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                }
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "locations": {
+            "type": "subdocuments",
+            "title": {
+                "singular": "Address",
+                "plural": "Addresses"
+            },
+            "filter": {
+                "function": "location",
+                "options": {
+                    "type": "full"
+                },
+                "order": 14
+            },
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "events": {
+                "insert": [
+                    {
+                        "function": "geolocate"
+                    }
+                ],
+                "update": [
+                    {
+                        "function": "geolocate"
+                    }
+                ]
+            },
+            "subdocument": {
+                "address": {
+                    "type": "subdocument",
+                    "title": {
+                        "singular": "Address",
+                        "plural": "Addresses"
+                    },
+                    "filter": {
+                        "order": 15
+                    },
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "city": {
+                            "type": "string",
+                            "title": {
+                                "singular": "City",
+                                "plural": "Cities"
+                            },
+                            "filter": {
+                                "order": 18
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "country": {
+                            "type": "id",
+                            "reference": {
+                                "type": "picklist",
+                                "filter": {
+                                    "function": "country",
+                                    "options": []
+                                }
+                            },
+                            "filter": {
+                                "order": 20
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "lat": {
+                            "type": "float",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "lng": {
+                            "type": "float",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "state": {
+                            "type": "id",
+                            "reference": {
+                                "type": "picklist",
+                                "filter": {
+                                    "function": "state",
+                                    "options": []
+                                }
+                            },
+                            "filter": {
+                                "order": 19
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "title": {
+                            "type": "string",
+                            "title": {
+                                "singular": "Title",
+                                "plural": "Titles"
+                            },
+                            "filter": {
+                                "order": 15
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "street": {
+                            "type": "string",
+                            "title": {
+                                "singular": "Street",
+                                "plural": "Streets"
+                            },
+                            "filter": {
+                                "order": 16
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "street_extra": {
+                            "type": "string",
+                            "filter": {
+                                "order": 17
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "zip": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "map_img": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            }
+                        }
+                    }
+                },
+                "primary": {
+                    "type": "boolean",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "title": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "type": {
+                    "type": "id",
+                    "reference": {
+                        "type": "picklist",
+                        "filter": {
+                            "function": "location_type",
+                            "options": []
+                        }
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                }
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "employment_history": {
+            "type": "subdocuments",
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "company_name": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "position_held": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "responsibilities": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "phone_number": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "location": {
+                    "type": "subdocument",
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "city": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "country": {
+                            "type": "id",
+                            "reference": {
+                                "type": "picklist",
+                                "filter": {
+                                    "function": "country",
+                                    "options": []
+                                }
+                            },
+                            "filter": {
+                                "order": 20
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "state": {
+                            "type": "id",
+                            "reference": {
+                                "type": "picklist",
+                                "filter": {
+                                    "function": "state",
+                                    "options": []
+                                }
+                            },
+                            "filter": {
+                                "order": 19
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        }
+                    }
+                },
+                "employment_dates": {
+                    "type": "subdocument",
+                    "subdocument": {
+                        "start": {
+                            "type": "date",
+                            "title": {
+                                "singular": "Start",
+                                "plural": "Start"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "end": {
+                            "type": "date",
+                            "title": {
+                                "singular": "End",
+                                "plural": "End"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        }
+                    }
+                },
+                "alternative_contact": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "reason_leaving": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "pay_rate": {
+                    "type": "integer",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "may_contact": {
+                    "type": "boolean",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                }
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "name": {
+            "type": "subdocument",
+            "filter": {
+                "order": 1,
+                "function": "name",
+                "options": {
+                    "type": "full"
+                }
+            },
+            "subdocument": {
+                "first": {
+                    "type": "string",
+                    "filter": {
+                        "order": 3
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        },
+                        "sort": true
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "last": {
+                    "type": "string",
+                    "filter": {
+                        "order": 5
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        },
+                        "sort": true
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "middle": {
+                    "type": "string",
+                    "filter": {
+                        "order": 4
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "nickname": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "title": {
+                    "type": "id",
+                    "filter": {
+                        "order": 2
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                }
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "phones": {
+            "type": "subdocuments",
+            "title": {
+                "singular": "Phone",
+                "plural": "Phones"
+            },
+            "filter": {
+                "function": "phone",
+                "options": {
+                    "type": "full"
+                },
+                "order": 12
+            },
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "country": {
+                    "type": "id",
+                    "reference": {
+                        "type": "picklist",
+                        "filter": {
+                            "function": "country",
+                            "options": []
+                        }
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "number": {
+                    "type": "string",
+                    "title": {
+                        "singular": "Number"
+                    },
+                    "filter": {
+                        "order": 13
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "primary": {
+                    "type": "boolean",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "type": {
+                    "type": "id",
+                    "reference": {
+                        "type": "picklist",
+                        "filter": {
+                            "function": "phone_type",
+                            "options": []
+                        }
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "notes": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                }
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "nearest_intersection": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "source": {
+            "type": "id",
+            "title": {
+                "singular": "Source",
+                "plural": "Source"
+            },
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "candidate_source",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "education_level": {
+            "type": "id",
+            "title": {
+                "singular": "Education Level",
+                "plural": "Education Level"
+            },
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "education_level",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "drivers_licence": {
+            "type": "id",
+            "title": {
+                "singular": "Driver's Licence"
+            },
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "drivers_licence",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "work_status": {
+            "type": "subdocument",
+            "title": {
+                "singular": "Work Status",
+                "plural": "Work Statuses"
+            },
+            "subdocument": {
+                "full_time": {
+                    "type": "boolean",
+                    "title": {
+                        "singular": "Full-time",
+                        "plural": "Full-time"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "part_time": {
+                    "type": "boolean",
+                    "title": {
+                        "singular": "Part-time",
+                        "plural": "Part-time"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "temp": {
+                    "type": "boolean",
+                    "title": {
+                        "singular": "Temp",
+                        "plural": "Temp"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "on_call": {
+                    "type": "boolean",
+                    "title": {
+                        "singular": "On-call",
+                        "plural": "On-call"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                }
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "living_status": {
+            "type": "id",
+            "title": {
+                "singular": "Living Status",
+                "plural": "Living Status"
+            },
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "living_status",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "transportation": {
+            "type": "id",
+            "title": {
+                "singular": "Transportation",
+                "plural": "Transportation"
+            },
+            "filter": {
+                "order": 21
+            },
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "transportation",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "will_travel": {
+            "type": "boolean",
+            "title": {
+                "singular": "Travel Ok",
+                "plural": "Travel Ok"
+            },
+            "filter": {
+                "order": 12
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "travel_passport": {
+            "type": "boolean",
+            "title": {
+                "singular": "Valid Travel Passport",
+                "plural": "Valid Travel Passport"
+            },
+            "filter": {
+                "order": 12
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "us_visa": {
+            "type": "boolean",
+            "title": {
+                "singular": "US Travel Visa"
+            },
+            "filter": {
+                "order": 29
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "experience_num_of_years": {
+            "type": "id",
+            "title": {
+                "singular": "Years of Experience",
+                "plural": "Years of Experience"
+            },
+            "filter": {
+                "order": 21
+            },
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "experience_in_year",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "experience_with_ages": {
+            "type": "subdocument",
+            "title": {
+                "singular": "Experience with Ages",
+                "plural": "Experience with Ages"
+            },
+            "subdocument": {
+                "age_0_months_3_months": {
+                    "type": "boolean",
+                    "title": {
+                        "singular": "0 - 3 months",
+                        "plural": "0 - 3 months"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "age_3_months_1_year": {
+                    "type": "boolean",
+                    "title": {
+                        "singular": "3 month - 1 year",
+                        "plural": "3 month - 1 year"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "age_1_year_3_years": {
+                    "type": "boolean",
+                    "title": {
+                        "singular": "1 year - 3 years",
+                        "plural": "1 year - 3 years"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "age_3_years_6_years": {
+                    "type": "boolean",
+                    "title": {
+                        "singular": "3 - 6 years",
+                        "plural": "3 - 6 years"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "age_6_years_10_years": {
+                    "type": "boolean",
+                    "title": {
+                        "singular": "6 - 10 years",
+                        "plural": "6 - 10 years"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "age_10_years_15_years": {
+                    "type": "boolean",
+                    "title": {
+                        "singular": "10 - 15 years",
+                        "plural": "10 - 15 years"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "age_15_years_more": {
+                    "type": "boolean",
+                    "title": {
+                        "singular": "15 years+",
+                        "plural": "15 years+"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                }
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "cooking_skill": {
+            "type": "id",
+            "title": {
+                "singular": "Cooking Skill",
+                "plural": "Cooking Skill"
+            },
+            "filter": {
+                "order": 21
+            },
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "cooking_skill",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "cleaning_skill": {
+            "type": "id",
+            "title": {
+                "singular": "Cleaning Skill",
+                "plural": "Cleaning Skill"
+            },
+            "filter": {
+                "order": 21
+            },
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "cleaning_skill",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "swimming_skill": {
+            "type": "id",
+            "title": {
+                "singular": "Swimming Skill",
+                "plural": "Swimming Skill"
+            },
+            "filter": {
+                "order": 21
+            },
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "swimming_skill",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "is_smoker": {
+            "type": "boolean",
+            "title": {
+                "singular": "Smoker Ok",
+                "plural": "Smoker Ok"
+            },
+            "filter": {
+                "order": 12
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "has_pets": {
+            "type": "boolean",
+            "title": {
+                "singular": "Pets Ok",
+                "plural": "Pets Ok"
+            },
+            "filter": {
+                "order": 13
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "type_of_pets": {
+            "type": "id",
+            "title": {
+                "singular": "Pets Type"
+            },
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "pet_type",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "salary_expectations": {
+            "type": "subdocument",
+            "title": {
+                "singular": "Salary Expectations",
+                "plural": "Salary Expectations"
+            },
+            "subdocument": {
+                "min": {
+                    "type": "integer",
+                    "title": {
+                        "singular": "Min",
+                        "plural": "Min"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "max": {
+                    "type": "integer",
+                    "title": {
+                        "singular": "Max",
+                        "plural": "Max"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                }
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "criminal_offender": {
+            "type": "boolean",
+            "title": {
+                "singular": "Criminal Offender",
+                "plural": "Criminal Offender"
+            },
+            "filter": {
+                "order": 31
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "criminal_offender_reason": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "work_permit": {
+            "type": "id",
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "work_permit",
+                    "options": []
+                }
+            },
+            "title": {
+                "singular": "Work Permit"
+            },
+            "filter": {
+                "order": 32
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "skills": {
+            "type": "subdocuments",
+            "title": {
+                "singular": "Skill"
+            },
+            "filter": {
+                "order": 14
+            },
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "tag": {
+                    "type": "id",
+                    "title": {
+                        "singular": "Skill",
+                        "plural": "Skills"
+                    },
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "skills"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                }
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "certifications": {
+            "type": "subdocuments",
+            "title": {
+                "singular": "Certifications"
+            },
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "title": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "type": {
+                    "type": "id",
+                    "reference": {
+                        "type": "picklist",
+                        "filter": {
+                            "function": "certification_types",
+                            "options": []
+                        }
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        },
+                        "sort": true
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "school": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "completed_date": {
+                    "type": "date",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "active": {
+                    "type": "boolean",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "notes": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                }
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "candidate_notes": {
+            "type": "subdocuments",
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "stage": {
+                    "type": "id",
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "account.candidate_settings.candidate_stages"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "note": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "title": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "_created_user": {
+                    "title": {
+                        "singular": "Created By",
+                        "plural": "Created By"
+                    },
+                    "filter": {
+                        "order": 4
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "_created_date": {
+                    "title": {
+                        "singular": "Created Date",
+                        "plural": "Created Dates"
+                    },
+                    "filter": {
+                        "order": 3
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "_last_updated_user": {
+                    "type": "id",
+                    "filter": {
+                        "order": 6
+                    },
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "users"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true
+                    },
+                    "default": {
+                        "fields": true
+                    },
+                    "events": {
+                        "update": {
+                            "type": "Function",
+                            "function": "user"
+                        }
+                    }
+                },
+                "_last_updated_date": {
+                    "type": "datetime",
+                    "filter": {
+                        "order": 5
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true
+                    },
+                    "default": {
+                        "fields": true
+                    },
+                    "events": {
+                        "update": {
+                            "type": "Function",
+                            "function": "now"
+                        }
+                    }
+                }
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "resume": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "cover_letter": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        },
+        "availability": {
+            "type": "subdocument",
+            "title": {
+                "singular": "Availability"
+            },
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "mon": {
+                    "type": "subdocuments",
+                    "title": {
+                        "singular": "Monday"
+                    },
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "start": {
+                            "type": "integer",
+                            "title": {
+                                "singular": "Start"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "end": {
+                            "type": "integer",
+                            "title": {
+                                "singular": "End"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "_created_user": {
+                            "events": {
+                                "insert": false
+                            }
+                        },
+                        "_created_date": {
+                            "events": {
+                                "insert": false
+                            }
+                        }
+                    }
+                },
+                "tue": {
+                    "type": "subdocuments",
+                    "title": {
+                        "singular": "Tuesday"
+                    },
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "start": {
+                            "type": "integer",
+                            "title": {
+                                "singular": "Start"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "end": {
+                            "type": "integer",
+                            "title": {
+                                "singular": "End"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "_created_user": {
+                            "events": {
+                                "insert": false
+                            }
+                        },
+                        "_created_date": {
+                            "events": {
+                                "insert": false
+                            }
+                        }
+                    }
+                },
+                "wed": {
+                    "type": "subdocuments",
+                    "title": {
+                        "singular": "Wednesday"
+                    },
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "start": {
+                            "type": "integer",
+                            "title": {
+                                "singular": "Start"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "end": {
+                            "type": "integer",
+                            "title": {
+                                "singular": "End"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "_created_user": {
+                            "events": {
+                                "insert": false
+                            }
+                        },
+                        "_created_date": {
+                            "events": {
+                                "insert": false
+                            }
+                        }
+                    }
+                },
+                "thu": {
+                    "type": "subdocuments",
+                    "title": {
+                        "singular": "Thursday"
+                    },
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "start": {
+                            "type": "integer",
+                            "title": {
+                                "singular": "Start"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "end": {
+                            "type": "integer",
+                            "title": {
+                                "singular": "End"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "_created_user": {
+                            "events": {
+                                "insert": false
+                            }
+                        },
+                        "_created_date": {
+                            "events": {
+                                "insert": false
+                            }
+                        }
+                    }
+                },
+                "fri": {
+                    "type": "subdocuments",
+                    "title": {
+                        "singular": "Friday"
+                    },
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "start": {
+                            "type": "integer",
+                            "title": {
+                                "singular": "Start"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "end": {
+                            "type": "integer",
+                            "title": {
+                                "singular": "End"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "_created_user": {
+                            "events": {
+                                "insert": false
+                            }
+                        },
+                        "_created_date": {
+                            "events": {
+                                "insert": false
+                            }
+                        }
+                    }
+                },
+                "sat": {
+                    "type": "subdocuments",
+                    "title": {
+                        "singular": "Saturday"
+                    },
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "start": {
+                            "type": "integer",
+                            "title": {
+                                "singular": "Start"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "end": {
+                            "type": "integer",
+                            "title": {
+                                "singular": "End"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "_created_user": {
+                            "events": {
+                                "insert": false
+                            }
+                        },
+                        "_created_date": {
+                            "events": {
+                                "insert": false
+                            }
+                        }
+                    }
+                },
+                "sun": {
+                    "type": "subdocuments",
+                    "title": {
+                        "singular": "Sunday"
+                    },
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "start": {
+                            "type": "integer",
+                            "title": {
+                                "singular": "Start"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "end": {
+                            "type": "integer",
+                            "title": {
+                                "singular": "End"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "_created_user": {
+                            "events": {
+                                "insert": false
+                            }
+                        },
+                        "_created_date": {
+                            "events": {
+                                "insert": false
+                            }
+                        }
+                    }
+                }
+            },
+            "kraiumanu": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red"
+            }
+        }
+    }
+}
