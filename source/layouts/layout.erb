@@ -88,20 +88,20 @@ under the License.
           <% jsondescfilepath = 'source/descriptions/description' + jsontitle + '.json' %>    <!-- create path for the description file -->
 
           <%# file2 = File.read(jsondescfilepath) %>     <!-- read each json description file -->
-          <% file2 = File.read('source/descriptions/descriptionfilej1.json') %>     <!-- because testing -->
+          <% file2 = File.read('source/descriptions/descriptionfilej1.json') %>     <!-- because testing (codes, ruby, python, etc)-->
           
           <% my_hasht = JSON.parse(file2) %>             <!-- read each json description file -->
 
-          <% my_hash['attrs'].each do |a| %>
-            <h2 id="<%= a[0] %>"><%= a[0] %></h2>
+          <% my_hash['attrs'].each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
+            <h2 id="<%= a[0] %>"><%= a[0] %></h2>     <!-- prints each subtitle on the html -->
 
-            <% my_hasht['codes'].each do |b| %>
-            <% entirecode = '' %>
-              <% b[1].each do |c| %>
-                <% entirecode = entirecode + c[1] + "\n" %>
+            <% my_hasht['codes'].each do |b| %>   <!-- loop through all the different codes on the json file --> 
+            <% entirecode = '' %>         
+              <% b[1].each do |c| %>        <!-- loop through the lines of each code -->
+                <% entirecode = entirecode + c[1] + "\n" %>    <!-- put all the lines together -->
               <% end %>
-              <% highlightedcode = Rouge.highlight(entirecode, b[0], 'html') %>
-              <% highlightedcode.gsub! '<pre class="highlight"', '<pre class="highlight' + ' ' + b[0] + '"' %>
+              <% highlightedcode = Rouge.highlight(entirecode, b[0], 'html') %>     <!-- pretty colors -->
+              <% highlightedcode.gsub! '<pre class="highlight"', '<pre class="highlight' + ' ' + b[0] + '"' %>   <!-- makes so each language block of code has its own subclass -->
               <%= highlightedcode %>
             <% end %>
 
@@ -110,11 +110,11 @@ under the License.
             </blockquote>
             <% puts a[1].except('kraiumanu')%>
             <% puts a[1].class %>
-            <% my_hash2 = JSON.pretty_generate(a[1].except('kraiumanu')) %>    <!-- sit still, look pretty -->
+            <% my_hash2 = JSON.pretty_generate(a[1].except('kraiumanu')) %>    <!-- sit still, look pretty; the except is used so the description doesnt show on the json code block -->
 
-            <code><%= Rouge.highlight(my_hash2, 'json', 'html') %></code>
+            <code><%= Rouge.highlight(my_hash2, 'json', 'html') %></code>    <!-- pretty colors -->
 
-            <p><%= a[1]['kraiumanu']['description'] %></p>
+            <p><%= a[1]['kraiumanu']['description'] %></p>    <!-- display the description -->
           <% end %>
 
 
