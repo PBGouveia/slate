@@ -9,9 +9,10 @@
             "query": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "_created_user": {
@@ -22,9 +23,10 @@
             "query": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "payroll": {
@@ -46,9 +48,10 @@
             "query": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "user": {
@@ -388,9 +391,10 @@
                     }
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "punchcards": {
@@ -413,13 +417,15 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "adjustments": {
@@ -957,9 +963,10 @@
                     }
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         }
     }

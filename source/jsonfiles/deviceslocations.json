@@ -16,9 +16,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "device": {
@@ -40,9 +41,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "pings": {
@@ -257,9 +259,10 @@
                     }
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         }
     }

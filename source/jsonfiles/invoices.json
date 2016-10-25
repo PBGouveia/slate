@@ -21,9 +21,10 @@
                     "value": true
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "_archived_date": {
@@ -37,9 +38,10 @@
                     "function": "now"
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "_archived_user": {
@@ -57,9 +59,10 @@
                     "function": "user"
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "_closed": {
@@ -78,9 +81,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "_closed_date": {
@@ -88,9 +92,10 @@
             "permissions": {
                 "conditions": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "_closed_user": {
@@ -102,9 +107,10 @@
             "permissions": {
                 "conditions": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "template": {
@@ -122,9 +128,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "status": {
@@ -155,9 +162,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "from_email": {
@@ -175,9 +183,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "account": {
@@ -516,9 +525,10 @@
                     }
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "number": {
@@ -542,9 +552,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "invoice_date": {
@@ -568,9 +579,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "billing_period_start_date": {
@@ -588,9 +600,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "billing_period_end_date": {
@@ -608,9 +621,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "billing_period": {
@@ -666,9 +680,10 @@
                     }
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "due_date": {
@@ -692,9 +707,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "term": {
@@ -753,9 +769,10 @@
                     }
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "client": {
@@ -1417,9 +1434,10 @@
                     }
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "patient": {
@@ -1833,9 +1851,10 @@
                     }
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "claim_number": {
@@ -1859,9 +1878,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "loss_date": {
@@ -1885,9 +1905,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "punchcards": {
@@ -2789,9 +2810,10 @@
                     }
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "services": {
@@ -3104,9 +3126,10 @@
                     }
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "taxes": {
@@ -3186,13 +3209,15 @@
                     }
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "subtotal": {
@@ -3210,13 +3235,15 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "total": {
@@ -3234,13 +3261,15 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "tax_total": {
@@ -3258,9 +3287,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "amount_paid": {
@@ -3278,9 +3308,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "amount_due": {
@@ -3304,9 +3335,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "hst_number": {
@@ -3324,9 +3356,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "header_message": {
@@ -3344,9 +3377,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "footer_message": {
@@ -3364,9 +3398,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "referred_by": {
@@ -3609,9 +3644,10 @@
                     }
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "sales_rep": {
@@ -3776,9 +3812,10 @@
                     }
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "legal_rep": {
@@ -3796,9 +3833,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "cc_invoice": {
@@ -3843,9 +3881,10 @@
                     }
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "invoice_type": {
@@ -3870,9 +3909,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "currency": {
@@ -3897,9 +3937,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "method": {
@@ -3924,9 +3965,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "payment_method": {
@@ -3951,9 +3993,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "notes": {
@@ -3971,9 +4014,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         }
     }

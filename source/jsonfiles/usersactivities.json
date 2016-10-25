@@ -5,9 +5,10 @@
             "manditory": {
                 "conditions": false
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "_date": {
@@ -20,9 +21,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "user": {
@@ -39,9 +41,10 @@
             "query": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "email": {
@@ -54,9 +57,10 @@
             "query": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "activities": {
@@ -166,9 +170,10 @@
                     }
                 }
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         }
     }

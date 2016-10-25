@@ -20,9 +20,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "invoice": {
@@ -44,9 +45,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "amount": {
@@ -64,9 +66,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "date": {
@@ -84,9 +87,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         },
         "notes": {
@@ -104,9 +108,10 @@
             "default": {
                 "fields": true
             },
-            "dataforapidoc": {
+            "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red"
+                "color": "red",
+                "hide": false
             }
         }
     }

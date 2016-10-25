@@ -94,27 +94,63 @@ under the License.
             <% my_json_languages_hash = JSON.parse(description_file) %>             <!-- read each json description file -->
 
             <% my_json_hash['attrs'].each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
-              <h2 id="<%= a[0] %>"><%= a[0] %></h2>     <!-- prints each subtitle on the html -->
+              
+              <% if (my_json_hash['attrs'][a[0]]['documentation'].key?("hide")) && (!my_json_hash['attrs'][a[0]]['documentation']['hide']) %>
+                <h2 id="<%= a[0] %>"><%= a[0] %></h2>     <!-- prints each subtitle on the html -->
 
-              <% my_json_languages_hash['codes'].each do |b| %>   <!-- loop through all the different codes on the json file --> 
-                <% entirecode = '' %>         
-                <% b[1].each do |c| %>        <!-- loop through each line of each code -->
-                  <% entirecode = entirecode + c[1] + "\n" %>    <!-- put all the lines together -->
+                <% my_json_languages_hash['codes'].each do |b| %>   <!-- loop through all the different codes on the json file --> 
+                  <% entirecode = '' %>         
+                  <% b[1].each do |c| %>        <!-- loop through each line of each code -->
+                    <% entirecode = entirecode + c[1] + "\n" %>    <!-- put all the lines together -->
+                  <% end %>
+                  <% highlightedcode = Rouge.highlight(entirecode, b[0], 'html') %>     <!-- pretty colors -->
+                  <% highlightedcode.gsub! '<pre class="highlight"', '<pre class="highlight' + ' ' + b[0] + '"' %>   <!-- makes so each language block of code has its own subclass -->
+                  <%= highlightedcode %>
                 <% end %>
-                <% highlightedcode = Rouge.highlight(entirecode, b[0], 'html') %>     <!-- pretty colors -->
-                <% highlightedcode.gsub! '<pre class="highlight"', '<pre class="highlight' + ' ' + b[0] + '"' %>   <!-- makes so each language block of code has its own subclass -->
-                <%= highlightedcode %>
+
+                <blockquote>
+                  <p>The above command returns JSON structured like this:</p>
+                </blockquote>
+                <% a[1].except('documentation')%>   <!-- this line is here so the description (inside documentation) doesn't appear on the json block -->
+                <% my_json_hash_pretty = JSON.pretty_generate(a[1].except('documentation')) %>    <!-- sit still, look pretty; the except is used so the description doesnt show on the json code block -->
+
+                <code><%= Rouge.highlight(my_json_hash_pretty, 'json', 'html') %></code>    <!-- pretty colors -->
+
+                <p><%= a[1]['documentation']['description'] %></p>    <!-- display the description -->
+                
+                <!-- <table>
+                  <thead>
+                    <tr>
+                      <th>Parameter</th>
+                      <th>Default</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>include_cats</td>
+                      <td>false</td>
+                      <td>If set to true, the result will also include cats.</td>
+                    </tr>
+                    <tr>
+                      <td>available</td>
+                      <td>true</td>
+                      <td>If set to false, the result will include kittens that have already been adopted.</td>
+                    </tr>
+                  </tbody>
+                </table> -->
+
+
+                <% if a[1]['documentation'].key?("notice") %>
+                  <aside class="notice"><%= a[1]['documentation']['notice'] %></aside>
+                <% end %>
+                <% if a[1]['documentation'].key?("warning") %>
+                  <aside class="warning"><%= a[1]['documentation']['warning'] %></aside>
+                <% end %>
+                <% if a[1]['documentation'].key?("success") %>
+                  <aside class="success"><%= a[1]['documentation']['success'] %></aside>
+                <% end %>
               <% end %>
-
-              <blockquote>
-                <p>The above command returns JSON structured like this:</p>
-              </blockquote>
-              <% a[1].except('dataforapidoc')%>   <!-- this line is here so the description (inside dataforapidoc) doesn't appear on the json block -->
-              <% my_json_hash_pretty = JSON.pretty_generate(a[1].except('dataforapidoc')) %>    <!-- sit still, look pretty; the except is used so the description doesnt show on the json code block -->
-
-              <code><%= Rouge.highlight(my_json_hash_pretty, 'json', 'html') %></code>    <!-- pretty colors -->
-
-              <p><%= a[1]['dataforapidoc']['description'] %></p>    <!-- display the description -->
             <% end %>
           <% end %>
 
