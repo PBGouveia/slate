@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: API Alaunus
 
 language_tabs:
   - shell: Shell
@@ -18,13 +18,13 @@ includes:
 search: true
 ---
 
-# Introduction
+# Introduction (example)
 
 Welcome to the Alaunus API! You can use our API to access Alaunus API endpoints, which can get information on stuff in our database.
 
 We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
-# Authentication
+# Authentication (example)
 
 > To authorize, use this code:
 
@@ -64,7 +64,7 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
-# Patients
+# Patients (example)
 
 > Patients section:
 
@@ -98,9 +98,9 @@ let api = kittn.authorize('meowmeowmeow');
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
-# Kittens
+# Kittens (example)
 
-## Get All Kittens
+## Get All Kittens (example)
 
 ### dasdastens
 
@@ -196,7 +196,7 @@ available | true | If set to false, the result will include kittens that have al
 Remember — a happy kitten is an authenticated kitten!
 </aside>
 
-## Get a Specific Kitten
+## Get a Specific Kitten (example)
 
 ```ruby
 require 'kittn'

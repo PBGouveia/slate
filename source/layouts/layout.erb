@@ -23,7 +23,7 @@ under the License.
     <title><%= current_page.data.title || "API Documentation" %></title>
 
     <style>
-      <%= Rouge::Themes::Base16::Monokai.render(:scope => '.highlight') %>
+      <%= Rouge::Themes::MonokaiSublime.render(:scope => '.highlight') %>
     </style>
     <%= stylesheet_link_tag :screen, media: :screen %>
     <%= stylesheet_link_tag :print, media: :print %>
@@ -71,56 +71,56 @@ under the License.
       <div class="content">
         <%= yield %> <!-- read stuff from markdown file -->
 
-        <% Dir.glob("source/*.json") do |jsonfilepath|%>  <!-- loop through folder and jsonfilepath = path to each json file -->
+        <% Dir.glob("source/jsonfiles/*.json") do |jsonfilepath|%>  <!-- loop through folder and jsonfilepath = path to each json file -->
           
           <% require 'json' %>
           <% file = File.read(jsonfilepath) %>    <!-- read each json file -->
-          <% my_hash = JSON.parse(file) %>        <!-- read each json file -->
+          <% my_json_hash = JSON.parse(file) %>        <!-- read each json file -->
 
   
 
           <% jsontitle = jsonfilepath %>      <!-- use the name of the json file as title -->
-          <% jsontitle.slice! "source/" %>    <!-- use the name of the json file as title -->
+          <% jsontitle.slice! "source/jsonfiles/" %>    <!-- use the name of the json file as title -->
           <% jsontitle.slice! ".json" %>      <!-- use the name of the json file as title -->
 
-          <h1 id="<%= jsontitle %>"><%= jsontitle.capitalize %></h1>    <!-- print title on html -->
+          <% if my_json_hash.key?("attrs") %>      <!-- check if the key 'attrs' exists -->
+            <h1 id="<%= jsontitle %>"><%= jsontitle.capitalize %></h1>    <!-- print title on html -->
             
-          <% jsondescfilepath = 'source/descriptions/description' + jsontitle + '.json' %>    <!-- create path for the description file -->
+            <% jsondescfilepath = 'source/jsonfiles/descriptions/description' + jsontitle + '.json' %>    <!-- create path for the description file -->
 
-          <%# file2 = File.read(jsondescfilepath) %>     <!-- read each json description file -->
-          <% file2 = File.read('source/descriptions/descriptionfilej1.json') %>     <!-- because testing (codes, ruby, python, etc)-->
+            <%# description_file = File.read(jsondescfilepath) %>     <!-- read each json description file -->
+            <% description_file = File.read('source/jsonfiles/descriptions/descriptionfilej1.json') %>     <!-- because testing (codes, ruby, python, etc)-->
           
-          <% my_hasht = JSON.parse(file2) %>             <!-- read each json description file -->
+            <% my_json_languages_hash = JSON.parse(description_file) %>             <!-- read each json description file -->
 
-          <% my_hash['attrs'].each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
-            <h2 id="<%= a[0] %>"><%= a[0] %></h2>     <!-- prints each subtitle on the html -->
+            <% my_json_hash['attrs'].each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
+              <h2 id="<%= a[0] %>"><%= a[0] %></h2>     <!-- prints each subtitle on the html -->
 
-            <% my_hasht['codes'].each do |b| %>   <!-- loop through all the different codes on the json file --> 
-            <% entirecode = '' %>         
-              <% b[1].each do |c| %>        <!-- loop through the lines of each code -->
-                <% entirecode = entirecode + c[1] + "\n" %>    <!-- put all the lines together -->
+              <% my_json_languages_hash['codes'].each do |b| %>   <!-- loop through all the different codes on the json file --> 
+                <% entirecode = '' %>         
+                <% b[1].each do |c| %>        <!-- loop through each line of each code -->
+                  <% entirecode = entirecode + c[1] + "\n" %>    <!-- put all the lines together -->
+                <% end %>
+                <% highlightedcode = Rouge.highlight(entirecode, b[0], 'html') %>     <!-- pretty colors -->
+                <% highlightedcode.gsub! '<pre class="highlight"', '<pre class="highlight' + ' ' + b[0] + '"' %>   <!-- makes so each language block of code has its own subclass -->
+                <%= highlightedcode %>
               <% end %>
-              <% highlightedcode = Rouge.highlight(entirecode, b[0], 'html') %>     <!-- pretty colors -->
-              <% highlightedcode.gsub! '<pre class="highlight"', '<pre class="highlight' + ' ' + b[0] + '"' %>   <!-- makes so each language block of code has its own subclass -->
-              <%= highlightedcode %>
+
+              <blockquote>
+                <p>The above command returns JSON structured like this:</p>
+              </blockquote>
+              <% a[1].except('dataforapidoc')%>   <!-- this line is here so the description (inside dataforapidoc) doesn't appear on the json block -->
+              <% my_json_hash_pretty = JSON.pretty_generate(a[1].except('dataforapidoc')) %>    <!-- sit still, look pretty; the except is used so the description doesnt show on the json code block -->
+
+              <code><%= Rouge.highlight(my_json_hash_pretty, 'json', 'html') %></code>    <!-- pretty colors -->
+
+              <p><%= a[1]['dataforapidoc']['description'] %></p>    <!-- display the description -->
             <% end %>
-
-            <blockquote>
-              <p>The above command returns JSON structured like this:</p>
-            </blockquote>
-            <% puts a[1].except('kraiumanu')%>
-            <% puts a[1].class %>
-            <% my_hash2 = JSON.pretty_generate(a[1].except('kraiumanu')) %>    <!-- sit still, look pretty; the except is used so the description doesnt show on the json code block -->
-
-            <code><%= Rouge.highlight(my_hash2, 'json', 'html') %></code>    <!-- pretty colors -->
-
-            <p><%= a[1]['kraiumanu']['description'] %></p>    <!-- display the description -->
           <% end %>
-
 
         <% end %>
 
-      </div>
+      </div>     <!-- closes class="content" -->
       <div class="dark-box">
         <% if language_tabs %>
           <div class="lang-selector">
