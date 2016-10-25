@@ -1,5 +1,6 @@
 {
     "name": "conversations",
+    "documentationhide": false,
     "attrs": {
         "messages": {
             "type": "subdocuments",

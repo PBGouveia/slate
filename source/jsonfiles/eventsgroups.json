@@ -1,5 +1,6 @@
 {
     "name": "eventsgroups",
+    "documentationhide": false,
     "attrs": {
         "events": {
             "type": "array",
@@ -209,7 +210,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "ends": {
@@ -404,7 +405,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         }
     }

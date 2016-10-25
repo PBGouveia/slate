@@ -1,5 +1,6 @@
 {
     "name": "payrolls",
+    "documentationhide": false,
     "attrs": {
         "_closed": {
             "type": "boolean",

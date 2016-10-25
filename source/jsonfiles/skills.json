@@ -1,5 +1,6 @@
 {
     "name": "skills",
+    "documentationhide": false,
     "attrs": {
         "title": {
             "type": "string",

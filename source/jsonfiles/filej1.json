@@ -1,5 +1,6 @@
 {
     "name": "filej1",
+    "documentationhide": true,
     "attrs": {
         "_created_user": {
             "permissions": {

@@ -1,5 +1,6 @@
 {
     "name": "candidates",
+    "documentationhide": false,
     "attrs": {
         "_deleted_dates": {
             "type": "subdocuments",
@@ -89,7 +90,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "_hired": {

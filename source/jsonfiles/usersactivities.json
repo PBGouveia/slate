@@ -1,5 +1,6 @@
 {
     "name": "usersactivities",
+    "documentationhide": true,
     "attrs": {
         "_account": {
             "manditory": {

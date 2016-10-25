@@ -1,5 +1,6 @@
 {
     "name": "queuedtasks",
+    "documentationhide": true,
     "attrs": {
         "task": {
             "type": "string",

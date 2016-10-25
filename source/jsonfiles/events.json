@@ -1,5 +1,6 @@
 {
     "name": "events",
+    "documentationhide": false,
     "attrs": {
         "_created_user": {
             "permissions": {
@@ -118,7 +119,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "_busy": {
@@ -139,7 +140,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "status": {
@@ -317,7 +318,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "stat_holiday": {

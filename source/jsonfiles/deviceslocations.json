@@ -1,5 +1,6 @@
 {
     "name": "deviceslocations",
+    "documentationhide": true,
     "attrs": {
         "datestamp": {
             "type": "date",

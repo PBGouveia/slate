@@ -1,5 +1,6 @@
 {
     "name": "sessions",
+    "documentationhide": true,
     "attrs": {
         "session_id": {
             "type": "string",

@@ -1,5 +1,6 @@
 {
     "name": "payrollsusers",
+    "documentationhide": false,
     "attrs": {
         "_created_date": {
             "permissions": {

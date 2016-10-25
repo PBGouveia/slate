@@ -1,5 +1,6 @@
 {
     "name": "files",
+    "documentationhide": false,
     "attrs": {
         "file": {
             "type": "string",

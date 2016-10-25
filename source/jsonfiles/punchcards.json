@@ -1,5 +1,6 @@
 {
     "name": "punchcards",
+    "documentationhide": false,
     "attrs": {
         "event": {
             "type": "id",

@@ -1,5 +1,6 @@
 {
     "name": "devices",
+    "documentationhide": true,
     "attrs": {
         "uuid": {
             "type": "string",

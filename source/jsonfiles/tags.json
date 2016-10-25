@@ -1,5 +1,6 @@
 {
     "name": "tags",
+    "documentationhide": false,
     "attrs": {
         "title": {
             "type": "string",

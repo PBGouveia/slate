@@ -1,5 +1,6 @@
 {
     "name": "invoices",
+    "documentationhide": false,
     "attrs": {
         "_archived": {
             "type": "boolean",
@@ -24,7 +25,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "_archived_date": {
@@ -41,7 +42,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "_archived_user": {
@@ -62,7 +63,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "_closed": {

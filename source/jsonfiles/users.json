@@ -1,5 +1,6 @@
 {
     "name": "users",
+    "documentationhide": false,
     "attrs": {
         "_alaunus_user": {
             "type": "boolean",
@@ -17,7 +18,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "_deleted": {
@@ -155,7 +156,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "start_date": {
@@ -305,7 +306,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "equipments": {
@@ -372,7 +373,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "email": {
@@ -635,7 +636,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "last_seen_date": {
@@ -651,7 +652,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "last_seen_device": {
@@ -671,7 +672,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "last_updated_device": {
@@ -691,7 +692,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "locations": {
@@ -1229,7 +1230,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "password": {
@@ -1244,7 +1245,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "password_salt": {
@@ -1252,7 +1253,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "password_lastchanged_date": {
@@ -1268,7 +1269,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "pin": {
@@ -1288,7 +1289,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "pin_salt": {
@@ -1296,7 +1297,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "pin_lastchanged_date": {
@@ -1312,7 +1313,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "services": {
@@ -1669,7 +1670,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "security_questions": {
@@ -1711,7 +1712,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "timezone": {
@@ -1817,7 +1818,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "reset_password": {
@@ -1831,7 +1832,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "recover_token": {
@@ -1839,7 +1840,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "recover_secret": {
@@ -1847,7 +1848,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "recover_key": {
@@ -1855,7 +1856,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "setup_token": {
@@ -1863,7 +1864,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "setup_secret": {
@@ -1871,7 +1872,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "setup_key": {
@@ -1879,7 +1880,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "files": {
@@ -3076,7 +3077,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "scheduling_notes": {
@@ -3097,7 +3098,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "internal_id": {
@@ -3118,7 +3119,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "internal_id2": {
@@ -3139,7 +3140,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "employment_reference": {
@@ -3160,7 +3161,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "employment_reference_phone": {
@@ -3181,7 +3182,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "employment_reference2": {
@@ -3202,7 +3203,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "employment_reference2_phone": {
@@ -3223,7 +3224,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "employment_history": {
@@ -3510,7 +3511,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "import": {
@@ -3640,7 +3641,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "availability": {
@@ -4118,7 +4119,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         }
     }

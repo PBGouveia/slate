@@ -1,5 +1,6 @@
 {
     "name": "accounts",
+    "documentationhide": false,
     "attrs": {
         "_id": {
             "default": {
@@ -18,7 +19,31 @@
                 "notice": "This is a notice example",
                 "warning": "This is a warning example",
                 "success": "This is a success example",
-                "hide": false
+                "hide": false,
+                "table": {
+                    "head": {
+                        "h1": "Teste1",
+                        "h2": "Teste2",
+                        "h3": "Teste3"
+                    },
+                    "body": {
+                        "line1": {
+                            "h1": "1x1",
+                            "h2": "1x2",
+                            "h3": "1x3"
+                        },
+                        "line2": {
+                            "h1": "2x1",
+                            "h2": "2x2",
+                            "h3": "2x3"
+                        },
+                        "line3": {
+                            "h1": "3x1",
+                            "h2": "3x2",
+                            "h3": "3x3"
+                        }
+                    }
+                }
             }
         },
         "_account": {
@@ -26,7 +51,7 @@
             "documentation": {
                 "description": "",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "_created_date": {
@@ -54,7 +79,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "ext_id": {
@@ -248,7 +273,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "events_types": {
@@ -311,7 +336,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "name": {
@@ -578,7 +603,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "policy": {
@@ -2120,7 +2145,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "positions": {
@@ -2183,7 +2208,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "locations": {
@@ -6643,7 +6668,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "templates": {
@@ -6671,7 +6696,7 @@
             "documentation": {
                 "description": "aaaaaaaaaaaaaaaaa",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "sales_reps": {

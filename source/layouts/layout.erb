@@ -71,19 +71,18 @@ under the License.
       <div class="content">
         <%= yield %> <!-- read stuff from markdown file -->
 
-        <% Dir.glob("source/jsonfiles/*.json") do |jsonfilepath|%>  <!-- loop through folder and jsonfilepath = path to each json file -->
+        <% Dir.glob("source/jsonfiles/*.json") do |jsonfilepath| %>  <!-- loop through folder and jsonfilepath = path to each json file -->
           
           <% require 'json' %>
-          <% file = File.read(jsonfilepath) %>    <!-- read each json file -->
-          <% my_json_hash = JSON.parse(file) %>        <!-- read each json file -->
-
-  
+          <% file = File.read(jsonfilepath) %>       <!-- read each json file -->
+          <% my_json_hash = JSON.parse(file) %>      <!-- read each json file -->
 
           <% jsontitle = jsonfilepath %>      <!-- use the name of the json file as title -->
           <% jsontitle.slice! "source/jsonfiles/" %>    <!-- use the name of the json file as title -->
           <% jsontitle.slice! ".json" %>      <!-- use the name of the json file as title -->
 
-          <% if my_json_hash.key?("attrs") %>      <!-- check if the key 'attrs' exists -->
+          <% if (my_json_hash.key?("attrs")) && (!my_json_hash['documentationhide']) %>      <!-- check if the key 'attrs' exists -->
+            
             <h1 id="<%= jsontitle %>"><%= jsontitle.capitalize %></h1>    <!-- print title on html -->
             
             <% jsondescfilepath = 'source/jsonfiles/descriptions/description' + jsontitle + '.json' %>    <!-- create path for the description file -->
@@ -93,7 +92,9 @@ under the License.
           
             <% my_json_languages_hash = JSON.parse(description_file) %>             <!-- read each json description file -->
 
-            <% my_json_hash['attrs'].each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
+            <% my_json_hash_sorted = my_json_hash['attrs'].sort %>
+
+            <% my_json_hash_sorted.each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
               
               <% if (my_json_hash['attrs'][a[0]]['documentation'].key?("hide")) && (!my_json_hash['attrs'][a[0]]['documentation']['hide']) %>
                 <h2 id="<%= a[0] %>"><%= a[0] %></h2>     <!-- prints each subtitle on the html -->
@@ -111,51 +112,62 @@ under the License.
                 <blockquote>
                   <p>The above command returns JSON structured like this:</p>
                 </blockquote>
-                <% a[1].except('documentation')%>   <!-- this line is here so the description (inside documentation) doesn't appear on the json block -->
-                <% my_json_hash_pretty = JSON.pretty_generate(a[1].except('documentation')) %>    <!-- sit still, look pretty; the except is used so the description doesnt show on the json code block -->
+                <% a[1].except('documentation') %>   <!-- this line is here so the description (inside documentation) doesn't appear on the json block -->
+                
+                <% if a[0] == 'roles' %>
+                  <% my_json_hash_pretty = JSON.pretty_generate(a[1].except('documentation', 'permissions')) %>    <!-- sit still, look pretty; the except is used so the description doesnt show on the json code block -->
+                <% else %>
+                  <% my_json_hash_pretty = JSON.pretty_generate(a[1].except('documentation')) %>    <!-- sit still, look pretty; the except is used so the description doesnt show on the json code block -->
+                <% end %>
 
                 <code><%= Rouge.highlight(my_json_hash_pretty, 'json', 'html') %></code>    <!-- pretty colors -->
 
                 <p><%= a[1]['documentation']['description'] %></p>    <!-- display the description -->
                 
-                <!-- <table>
-                  <thead>
-                    <tr>
-                      <th>Parameter</th>
-                      <th>Default</th>
-                      <th>Description</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>include_cats</td>
-                      <td>false</td>
-                      <td>If set to true, the result will also include cats.</td>
-                    </tr>
-                    <tr>
-                      <td>available</td>
-                      <td>true</td>
-                      <td>If set to false, the result will include kittens that have already been adopted.</td>
-                    </tr>
-                  </tbody>
-                </table> -->
+                <% if my_json_hash['attrs'][a[0]]['documentation'].key?("table") %>
+
+                  <table>
+                    <thead>
+                      <tr>
+                        <% a[1]['documentation']['table']['head'].each do |d| %> 
+                          <th><%= d[1] %></th>
+                        <% end %>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% a[1]['documentation']['table']['body'].each do |d| %> 
+                        <tr>
+                          <% d[1].each do |e| %> 
+
+                            <td><%= e[1] %></td>
+
+                          <% end %>
+
+                        </tr>
+                        
+                      <% end %>
+                    </tbody>
+                  </table>
+
+                <% end %>
 
 
                 <% if a[1]['documentation'].key?("notice") %>
                   <aside class="notice"><%= a[1]['documentation']['notice'] %></aside>
                 <% end %>
+
                 <% if a[1]['documentation'].key?("warning") %>
                   <aside class="warning"><%= a[1]['documentation']['warning'] %></aside>
                 <% end %>
+
                 <% if a[1]['documentation'].key?("success") %>
                   <aside class="success"><%= a[1]['documentation']['success'] %></aside>
                 <% end %>
+
               <% end %>
             <% end %>
           <% end %>
-
         <% end %>
-
       </div>     <!-- closes class="content" -->
       <div class="dark-box">
         <% if language_tabs %>
