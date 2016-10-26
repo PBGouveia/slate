@@ -21,6 +21,7 @@
                 "success": "This is a success example",
                 "hide": false,
                 "table": {
+                    "title": "Minha Tabela",
                     "head": {
                         "h1": "Teste1",
                         "h2": "Teste2",
@@ -2534,6 +2535,7 @@
             }
         },
         "roles": {
+            "somethingdeepinside": "subdocument",
             "type": "subdocuments",
             "permissions": {
                 "documents": {
@@ -2541,6 +2543,7 @@
                 }
             },
             "subdocument": {
+                "somethingdeepinside": "permissions",
                 "label": {
                     "type": "string",
                     "permissions": {

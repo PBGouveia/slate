@@ -20,6 +20,7 @@ under the License.
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" type="image/png" href="images/alaunus-tiny.png" />
     <title><%= current_page.data.title || "API Documentation" %></title>
 
     <style>
@@ -112,25 +113,40 @@ under the License.
                 <blockquote>
                   <p>The above command returns JSON structured like this:</p>
                 </blockquote>
-                <% a[1].except('documentation') %>   <!-- this line is here so the description (inside documentation) doesn't appear on the json block -->
-                
-                <% if a[0] == 'roles' %>
-                  <% my_json_hash_pretty = JSON.pretty_generate(a[1].except('documentation', 'permissions')) %>    <!-- sit still, look pretty; the except is used so the description doesnt show on the json code block -->
-                <% else %>
-                  <% my_json_hash_pretty = JSON.pretty_generate(a[1].except('documentation')) %>    <!-- sit still, look pretty; the except is used so the description doesnt show on the json code block -->
+
+                <!-- Check if there is something nested that needs to be hidden -->
+
+                <% if a[1].key?("somethingdeepinside") %>
+                  <% value = a[1]['somethingdeepinside'] %>
+                  <% a[1] = a[1].except('somethingdeepinside') %>
+                  <% if a[1][value].key?("somethingdeepinside") %>  <!--if a[1]['subdocument'].key? -->
+
+                    <% a[1][value] = a[1][value].except(a[1][value]['somethingdeepinside']) %>
+                    <% a[1][value] = a[1][value].except('somethingdeepinside') %>
+                  
+                  <% else %>
+
+                    <% a[1][value] = a[1][value].except(value) %>
+                    <% a[1][value] = a[1][value].except('somethingdeepinside') %>  
+
+                  <% end %>
                 <% end %>
+
+                <% my_json_hash_pretty = JSON.pretty_generate(a[1].except('documentation')) %>    <!-- sit still, look pretty; the except is used so the description doesnt show on the json code block -->
 
                 <code><%= Rouge.highlight(my_json_hash_pretty, 'json', 'html') %></code>    <!-- pretty colors -->
 
                 <p><%= a[1]['documentation']['description'] %></p>    <!-- display the description -->
                 
-                <% if my_json_hash['attrs'][a[0]]['documentation'].key?("table") %>
+                <% if my_json_hash['attrs'][a[0]]['documentation'].key?("table") %>   <!-- check if there is a table to load -->
 
+                  <!-- Information's table -->
+                  <h3> <%= a[1]['documentation']['table']['title'] %> </h3>
                   <table>
                     <thead>
                       <tr>
                         <% a[1]['documentation']['table']['head'].each do |d| %> 
-                          <th><%= d[1] %></th>
+                          <th> <%= d[1] %></th>
                         <% end %>
                       </tr>
                     </thead>
@@ -138,19 +154,16 @@ under the License.
                       <% a[1]['documentation']['table']['body'].each do |d| %> 
                         <tr>
                           <% d[1].each do |e| %> 
-
-                            <td><%= e[1] %></td>
-
+                            <td> <%= e[1] %></td>
                           <% end %>
-
                         </tr>
-                        
                       <% end %>
                     </tbody>
                   </table>
 
                 <% end %>
 
+                <!-- Notice, warning and success -->
 
                 <% if a[1]['documentation'].key?("notice") %>
                   <aside class="notice"><%= a[1]['documentation']['notice'] %></aside>
