@@ -71,7 +71,6 @@ under the License.
       <div class="dark-box"></div>
       <div class="content">
         <%= yield %> <!-- read stuff from markdown file -->
-
         <% Dir.glob("source/jsonfiles/*.json") do |jsonfilepath| %>  <!-- loop through folder and jsonfilepath = path to each json file -->
           
           <% require 'json' %>
@@ -98,7 +97,7 @@ under the License.
             <% my_json_hash_sorted.each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
               
               <% if (my_json_hash['attrs'][a[0]]['documentation'].key?("hide")) && (!my_json_hash['attrs'][a[0]]['documentation']['hide']) %>
-                <h2 id="<%= a[0] %>"><%= a[0] %></h2>     <!-- prints each subtitle on the html -->
+                <h2 id="<%= jsontitle + '_' + a[0] %>"><%= a[0] %></h2>     <!-- prints each subtitle on the html -->
 
                 <% my_json_languages_hash['codes'].each do |b| %>   <!-- loop through all the different codes on the json file --> 
                   <% entirecode = '' %>         
@@ -119,17 +118,15 @@ under the License.
                 <% if a[1].key?("somethingdeepinside") %>
                   <% value = a[1]['somethingdeepinside'] %>
                   <% a[1] = a[1].except('somethingdeepinside') %>
-                  <% if a[1][value].key?("somethingdeepinside") %>  <!--if a[1]['subdocument'].key? -->
 
+                  <% if a[1][value].key?("somethingdeepinside") %>  <!--if a[1]['subdocument'].key? -->
                     <% a[1][value] = a[1][value].except(a[1][value]['somethingdeepinside']) %>
                     <% a[1][value] = a[1][value].except('somethingdeepinside') %>
-                  
                   <% else %>
-
                     <% a[1][value] = a[1][value].except(value) %>
                     <% a[1][value] = a[1][value].except('somethingdeepinside') %>  
-
                   <% end %>
+
                 <% end %>
 
                 <% my_json_hash_pretty = JSON.pretty_generate(a[1].except('documentation')) %>    <!-- sit still, look pretty; the except is used so the description doesnt show on the json code block -->

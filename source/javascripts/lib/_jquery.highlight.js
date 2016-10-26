@@ -45,7 +45,6 @@
 
 jQuery.extend({
     highlight: function (node, re, nodeName, className) {
-        console.log("TESTE");
         if (node.nodeType === 3) {
             var match = node.data.match(re);
             if (match) {
