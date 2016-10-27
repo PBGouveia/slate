@@ -14,7 +14,7 @@
                 }
             },
             "documentation": {
-                "description": "This retrieves the accounts id data",
+                "description": "This contains the account id number",
                 "color": "red",
                 "notice": "This is a notice example",
                 "warning": "This is a warning example",
@@ -67,7 +67,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "",
+                "description": "This contains the created date",
                 "color": "red",
                 "hide": false
             }
@@ -192,7 +192,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the account is active or not",
                 "color": "red",
                 "hide": false
             }
@@ -1665,7 +1665,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains all the billing settings, like how is the billing going to happen, what happens with late checkouts and others",
                 "color": "red",
                 "hide": false
             }
@@ -2122,7 +2122,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains all information on employee candidates, like stage, description, hr information and more",
                 "color": "red",
                 "hide": false
             }
@@ -6493,7 +6493,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the emergency phones and its informations",
                 "color": "red",
                 "hide": false
             }

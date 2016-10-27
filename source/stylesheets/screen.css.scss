@@ -334,7 +334,7 @@ html, body {
     clear: both;
   }
 
-  &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
+  &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>ul, &>ol, &>aside, &>dl {
     margin-right: $examples-width;
     padding: 0 $main-padding;
     box-sizing: border-box;
@@ -571,6 +571,7 @@ html, body {
 // There are also a couple styles disperesed
 
 @media (max-width: $tablet-width) {
+
   .tocify-wrapper {
     left: -$nav-width;
 
@@ -594,6 +595,9 @@ html, body {
 }
 
 @media (max-width: $phone-width) {
+  table {
+    width: 100% !important;
+  }
   .dark-box {
     display: none;
   }
