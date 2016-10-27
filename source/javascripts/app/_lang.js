@@ -124,10 +124,8 @@ under the License.
     var hash = window.location.hash;
     if (hash) {
       hash = hash.replace(/^#+/, '');
-      console.log(hash);
     }
     history.pushState({}, '', '?' + generateNewQueryString(language) + '#' + hash);
-      console.log(generateNewQueryString(language));
 
     // save language as next default
     localStorage.setItem("language", language);
@@ -135,7 +133,6 @@ under the License.
 
   function setupLanguages(l) {
     var defaultLanguage = localStorage.getItem("language");
-    console.log("testestes");
     languages = l;
 
     var presetLanguage = getLanguageFromQueryString();
@@ -156,9 +153,7 @@ under the License.
   // if we click on a language tab, activate that language
   $(function() {
     $(".lang-selector a").on("click", function() {
-      console.log("clicounalanguage");
       var language = $(this).data("language-name");
-      console.log("language" + language);
 
       pushURL(language);
       activateLanguage(language);

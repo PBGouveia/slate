@@ -461,6 +461,9 @@
             }
 
             // add the index if we need to
+            // REMOVED BY PAULO
+            // the addition of numbers breaks when you change the language on the language's tab
+            // fixed the problem with submenus with equal name by adding the name of the menu on them
             //if (arr.length) { hashValue += ""+index; }
 
             // return the value
@@ -911,7 +914,7 @@
 
             }
 
-            // Maintains chainablity
+            // Maintains chainability
             return self;
         },
 
