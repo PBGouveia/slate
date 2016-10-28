@@ -130,7 +130,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Invoice template",
                 "color": "red",
                 "hide": false
             }
@@ -164,7 +164,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Status of the invoice",
                 "color": "red",
                 "hide": false
             }
@@ -185,7 +185,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Email used for the invoice",
                 "color": "red",
                 "hide": false
             }
@@ -527,7 +527,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on the account, like name, location and website",
                 "color": "red",
                 "hide": false
             }
@@ -554,7 +554,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Invoice number",
                 "color": "red",
                 "hide": false
             }
@@ -581,7 +581,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Date of the invoice",
                 "color": "red",
                 "hide": false
             }
@@ -602,7 +602,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Date in which the billing period starts",
                 "color": "red",
                 "hide": false
             }
@@ -623,7 +623,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Date in which the billing period ends",
                 "color": "red",
                 "hide": false
             }
@@ -682,7 +682,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "What is the billing period",
                 "color": "red",
                 "hide": false
             }
@@ -709,7 +709,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "When it is due",
                 "color": "red",
                 "hide": false
             }
@@ -771,7 +771,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Invoice's term",
                 "color": "red",
                 "hide": false
             }
@@ -1436,7 +1436,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on the client, like for example type, id, email, phone and others",
                 "color": "red",
                 "hide": false
             }
@@ -1853,7 +1853,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on the patient, with email, name, location, phone and others",
                 "color": "red",
                 "hide": false
             }
@@ -1880,7 +1880,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the number of the claim",
                 "color": "red",
                 "hide": false
             }
@@ -1907,7 +1907,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Date of loss",
                 "color": "red",
                 "hide": false
             }
@@ -2812,7 +2812,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Punchcards information, with bill and others",
                 "color": "red",
                 "hide": false
             }
@@ -3128,7 +3128,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the services and its informations, like its code, description, pay rate and others",
                 "color": "red",
                 "hide": false
             }
@@ -3211,12 +3211,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red",
-                "hide": false
-            },
-            "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the taxes info, like the amount and its label",
                 "color": "red",
                 "hide": false
             }
@@ -3237,12 +3232,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red",
-                "hide": false
-            },
-            "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Invoice's subtotal",
                 "color": "red",
                 "hide": false
             }
@@ -3263,12 +3253,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red",
-                "hide": false
-            },
-            "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Invoice's total",
                 "color": "red",
                 "hide": false
             }
@@ -3289,7 +3274,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Total taxes",
                 "color": "red",
                 "hide": false
             }
@@ -3310,7 +3295,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "How much was paid",
                 "color": "red",
                 "hide": false
             }
@@ -3337,7 +3322,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "How much is due to be paid",
                 "color": "red",
                 "hide": false
             }
@@ -3358,7 +3343,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the HST number",
                 "color": "red",
                 "hide": false
             }
@@ -3379,7 +3364,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Message on the header",
                 "color": "red",
                 "hide": false
             }
@@ -3400,7 +3385,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Message on the footer",
                 "color": "red",
                 "hide": false
             }
@@ -3646,7 +3631,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "By whom it was referred",
                 "color": "red",
                 "hide": false
             }
@@ -3814,7 +3799,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains information on the sales rep, like his or hers name, office, nickname and others",
                 "color": "red",
                 "hide": false
             }
@@ -3835,7 +3820,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on the legal rep",
                 "color": "red",
                 "hide": false
             }
@@ -3883,7 +3868,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Credit card invoice",
                 "color": "red",
                 "hide": false
             }
@@ -3911,7 +3896,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Type of the invoice",
                 "color": "red",
                 "hide": false
             }
@@ -3939,7 +3924,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Currency used",
                 "color": "red",
                 "hide": false
             }
@@ -3967,7 +3952,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Method used for the invoice",
                 "color": "red",
                 "hide": false
             }
@@ -3995,7 +3980,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Method used for the payment",
                 "color": "red",
                 "hide": false
             }
@@ -4016,7 +4001,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Notes on the invoice",
                 "color": "red",
                 "hide": false
             }

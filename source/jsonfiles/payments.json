@@ -22,7 +22,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Who made the payment",
                 "color": "red",
                 "hide": false
             }
@@ -47,7 +47,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Invoice for the payment",
                 "color": "red",
                 "hide": false
             }
@@ -68,7 +68,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Amount paid",
                 "color": "red",
                 "hide": false
             }
@@ -89,7 +89,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Date of the payment",
                 "color": "red",
                 "hide": false
             }
@@ -110,7 +110,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Notes on the payment",
                 "color": "red",
                 "hide": false
             }

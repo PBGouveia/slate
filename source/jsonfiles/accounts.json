@@ -6407,7 +6407,7 @@
                 }
             },
             "documentation": {
-                "description": "Contains the services and its informations, like its code, description, pay_rate and others",
+                "description": "Contains the services and its informations, like its code, description, pay rate and others",
                 "color": "red",
                 "hide": false
             }

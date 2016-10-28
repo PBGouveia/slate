@@ -34,7 +34,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -74,7 +74,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the date in which the patient was deleted and its reasons",
                 "color": "red",
                 "hide": false
             }
@@ -126,7 +126,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Patient's chart ID",
                 "color": "red",
                 "hide": false
             }
@@ -147,7 +147,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the accounting id",
                 "color": "red",
                 "hide": false
             }
@@ -364,7 +364,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on the case coordinator for that patient",
                 "color": "red",
                 "hide": false
             }
@@ -392,7 +392,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Date of birth of the patient",
                 "color": "red",
                 "hide": false
             }
@@ -413,7 +413,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the email of the patient",
                 "color": "red",
                 "hide": false
             }
@@ -441,7 +441,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Ethnicity of the patient",
                 "color": "red",
                 "hide": false
             }
@@ -469,7 +469,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "This contains the level of education the patient expects",
                 "color": "red",
                 "hide": false
             }
@@ -504,7 +504,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Gender of the patient",
                 "color": "red",
                 "hide": false
             }
@@ -531,7 +531,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Marital status of the patient",
                 "color": "red",
                 "hide": false
             }
@@ -552,7 +552,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on the legal rep",
                 "color": "red",
                 "hide": false
             }
@@ -866,7 +866,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Living status of the patient",
                 "color": "red",
                 "hide": false
             }
@@ -901,7 +901,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "What kind of transportation is the patient expecting",
                 "color": "red",
                 "hide": false
             }
@@ -1019,7 +1019,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Number of years of experience expected by the patient",
                 "color": "red",
                 "hide": false
             }
@@ -1173,7 +1173,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Experience with range of years expected",
                 "color": "red",
                 "hide": false
             }
@@ -1208,7 +1208,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "What are the cooking skills the patient is expecting",
                 "color": "red",
                 "hide": false
             }
@@ -1243,7 +1243,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "What are the cleaning skills the patient is expecting",
                 "color": "red",
                 "hide": false
             }
@@ -1278,7 +1278,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "What are the swimming skills the patient is expecting",
                 "color": "red",
                 "hide": false
             }
@@ -1306,7 +1306,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the patient smokes",
                 "color": "red",
                 "hide": false
             }
@@ -1334,7 +1334,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the patient has pets",
                 "color": "red",
                 "hide": false
             }
@@ -1365,7 +1365,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the patient has pets, what are the kind of pets",
                 "color": "red",
                 "hide": false
             }
@@ -1419,7 +1419,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "How much is the salary",
                 "color": "red",
                 "hide": false
             }
@@ -1444,7 +1444,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Photo of the patient",
                 "color": "red",
                 "hide": false
             }
@@ -1642,7 +1642,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Emergency contacts with phone number and etc",
                 "color": "red",
                 "hide": false
             }
@@ -1733,7 +1733,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Languages spoken by the patient",
                 "color": "red",
                 "hide": false
             }
@@ -3856,7 +3856,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains all the billing info, like how is the billing period and others",
                 "color": "red",
                 "hide": false
             }
@@ -3946,7 +3946,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Files about the patient",
                 "color": "red",
                 "hide": false
             }
@@ -3974,7 +3974,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the patient is a smoker",
                 "color": "red",
                 "hide": false
             }
@@ -4002,7 +4002,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the patient has pets",
                 "color": "red",
                 "hide": false
             }
@@ -4023,7 +4023,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Notes on the patient",
                 "color": "red",
                 "hide": false
             }
@@ -4044,7 +4044,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Notes on the patient",
                 "color": "red",
                 "hide": false
             }
@@ -4221,7 +4221,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -4399,7 +4399,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Patient's checklist",
                 "color": "red",
                 "hide": false
             }

@@ -33,6 +33,21 @@ under the License.
     <% else %>
       <%= javascript_include_tag  "all_nosearch" %>
     <% end %>
+
+    <script type="text/javascript">
+
+      function showHide(id) {
+
+        if (document.getElementById(id).style.display == "none") {
+          document.getElementById(id).style.display = '';
+        }
+
+        else {
+          document.getElementById(id).style.display = "none";
+        }
+
+      }
+    </script>
   </head>
 
   <body class="<%= page_classes %>" data-languages="<%=h language_tabs.map{ |lang| lang.is_a?(Hash) ? lang.keys.first : lang }.to_json %>">
@@ -108,11 +123,21 @@ under the License.
                     <% my_json_hash_sorted.each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
           
                       <% if (my_json_hash['attrs'][a[0]]['documentation'].key?("hide")) && (!my_json_hash['attrs'][a[0]]['documentation']['hide']) %>
-                        <tr>
-                          <td> <%= a[0] %> </td>
+                        <tr class="first">
+                          <td> <a href="#" onclick="showHide('<%= jsontitle %> sub <%= a[0] %>'); return false;"> <%= a[0] %> </a> </td>
                           <td> <%= a[1]['type'] %> </td>
                           <td> <%= a[1]['documentation']['description'] %></td>
                         </tr>
+                          <tbody class="second" id="<%= jsontitle %> sub <%= a[0] %>" border="1" style="display:none;">
+                        <% a[1] = a[1].except('documentation') %>
+                        <% a[1].each do |b| %>
+                            <tr>
+                              <td> <%= b[0] %> </td>
+                              <td> <%= b[1]['type'] %> </td>
+                              <td> 3 </td>
+                            </tr>
+                        <% end %>
+                          </tbody>
                       <% end %>
 
                     <% end %>
