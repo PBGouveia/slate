@@ -162,7 +162,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "The message info",
                 "color": "red",
                 "hide": false
             }
@@ -229,7 +229,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "To whom the message will be sent",
                 "color": "red",
                 "hide": false
             }
@@ -291,7 +291,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Form whom the message comes",
                 "color": "red",
                 "hide": false
             }

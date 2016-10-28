@@ -83,7 +83,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the invoice is closed or not",
                 "color": "red",
                 "hide": false
             }
@@ -94,7 +94,7 @@
                 "conditions": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Date in which the invoice was closed in case it was closed",
                 "color": "red",
                 "hide": false
             }
@@ -109,7 +109,7 @@
                 "conditions": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "User that closed the invoice",
                 "color": "red",
                 "hide": false
             }

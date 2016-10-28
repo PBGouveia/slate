@@ -23,7 +23,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "All the events in that group of events",
                 "color": "red",
                 "hide": false
             }
@@ -44,7 +44,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "When the group of events start",
                 "color": "red",
                 "hide": false
             }
@@ -65,7 +65,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -93,7 +93,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "The frequency in which the event repeats",
                 "color": "red",
                 "hide": false
             }
@@ -114,7 +114,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "The interval in which the event happens",
                 "color": "red",
                 "hide": false
             }
@@ -135,7 +135,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -164,7 +164,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the event is grouped by month",
                 "color": "red",
                 "hide": false
             }
@@ -186,7 +186,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the event is grouped by month",
                 "color": "red",
                 "hide": false
             }
@@ -286,7 +286,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -307,7 +307,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "How many times the event happens",
                 "color": "red",
                 "hide": false
             }
@@ -335,7 +335,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -356,7 +356,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Until when the group of events is supposed to happen",
                 "color": "red",
                 "hide": false
             }

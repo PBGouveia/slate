@@ -31,7 +31,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Type of contact, if it is company or person",
                 "color": "red",
                 "hide": false
             }
@@ -79,7 +79,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the external id",
                 "color": "red",
                 "hide": false
             }
@@ -100,7 +100,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the accounting id",
                 "color": "red",
                 "hide": false
             }
@@ -121,7 +121,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the email of the contact",
                 "color": "red",
                 "hide": false
             }
@@ -146,7 +146,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Photo of the contact",
                 "color": "red",
                 "hide": false
             }
@@ -167,7 +167,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Notes on the contact",
                 "color": "red",
                 "hide": false
             }
@@ -525,7 +525,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Location info, like address and geolocation",
                 "color": "red",
                 "hide": false
             }
@@ -579,7 +579,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the fax number of the contact",
                 "color": "red",
                 "hide": false
             }
@@ -867,7 +867,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on the client, like name, phones and gender",
                 "color": "red",
                 "hide": false
             }
@@ -941,7 +941,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Company's name and website",
                 "color": "red",
                 "hide": false
             }

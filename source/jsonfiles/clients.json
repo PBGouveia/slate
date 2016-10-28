@@ -31,7 +31,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Type of client, if it is company or person",
                 "color": "red",
                 "hide": false
             }
@@ -56,7 +56,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": true
             }
@@ -90,7 +90,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Type of client, if it is company or person",
                 "color": "red",
                 "hide": false
             }
@@ -117,7 +117,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the external id",
                 "color": "red",
                 "hide": false
             }
@@ -138,7 +138,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the accounting id",
                 "color": "red",
                 "hide": false
             }
@@ -159,7 +159,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Color of the tag",
                 "color": "red",
                 "hide": false
             }
@@ -180,7 +180,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the email of the client",
                 "color": "red",
                 "hide": false
             }
@@ -608,7 +608,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Location info, like address and geolocation",
                 "color": "red",
                 "hide": false
             }
@@ -845,7 +845,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on the client, like name, phones and gender",
                 "color": "red",
                 "hide": false
             }
@@ -909,7 +909,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Company's name and website",
                 "color": "red",
                 "hide": false
             }
@@ -1196,7 +1196,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains information on the employees, like their names, offices, emails and others",
                 "color": "red",
                 "hide": false
             }

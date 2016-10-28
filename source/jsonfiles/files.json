@@ -18,7 +18,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "The file",
                 "color": "red",
                 "hide": false
             }
@@ -46,7 +46,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Type of the file",
                 "color": "red",
                 "hide": false
             }
@@ -67,7 +67,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Name of the file",
                 "color": "red",
                 "hide": false
             }
@@ -94,7 +94,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Date in which the file was uploaded",
                 "color": "red",
                 "hide": false
             }
@@ -115,7 +115,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Notes on the file",
                 "color": "red",
                 "hide": false
             }
@@ -136,7 +136,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Type of the content of the file",
                 "color": "red",
                 "hide": false
             }
@@ -157,7 +157,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Checksum number in order to detect errors on the file",
                 "color": "red",
                 "hide": false
             }

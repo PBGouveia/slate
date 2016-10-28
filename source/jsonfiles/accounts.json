@@ -103,7 +103,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the external id",
                 "color": "red",
                 "hide": false
             }
@@ -145,7 +145,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the company's website",
                 "color": "red",
                 "hide": false
             }
@@ -166,7 +166,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the HST number",
                 "color": "red",
                 "hide": false
             }
@@ -213,9 +213,9 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Photo",
                 "color": "red",
-                "hide": false
+                "hide": true
             }
         },
         "departments": {
@@ -381,7 +381,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Name of the company",
                 "color": "red",
                 "hide": false
             }
@@ -406,7 +406,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Company logo",
                 "color": "red",
                 "hide": false
             }
@@ -459,7 +459,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the telephony information, like the authentication token, errors and others",
                 "color": "red",
                 "hide": false
             }
@@ -631,7 +631,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "The company's policy",
                 "color": "red",
                 "hide": false
             }
@@ -1186,7 +1186,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains settings like the timezone, currency used, country, language and others",
                 "color": "red",
                 "hide": false
             }
@@ -1236,7 +1236,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "This contains the settings for each role inside the company",
                 "color": "red",
                 "hide": false
             }
@@ -1286,7 +1286,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains all the invoice settings, like the sales rep for example.",
                 "color": "red",
                 "hide": false
             }
@@ -1733,7 +1733,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains all the visit settings, like punchcards, gps, overrides and telephony",
                 "color": "red",
                 "hide": false
             }
@@ -1883,7 +1883,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains all the payroll settings, like the type of payroll, the period and others",
                 "color": "red",
                 "hide": false
             }
@@ -1932,7 +1932,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains all the scheduler settings, like duration and permissions for example",
                 "color": "red",
                 "hide": false
             }
@@ -2533,7 +2533,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Location info, like address and geolocation",
                 "color": "red",
                 "hide": false
             }
@@ -5634,7 +5634,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains information about the roles, like for example the type, color and all the permissions",
                 "color": "red",
                 "hide": false
             }
@@ -5676,7 +5676,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the company's terms",
                 "color": "red",
                 "hide": false
             }
@@ -5718,7 +5718,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the taxes info, like the amount and its label",
                 "color": "red",
                 "hide": false
             }
@@ -6407,7 +6407,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the services and its informations, like its code, description, pay_rate and others",
                 "color": "red",
                 "hide": false
             }
@@ -7005,7 +7005,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains information on the sales reps, like his or hers name, office, nickname and others",
                 "color": "red",
                 "hide": false
             }

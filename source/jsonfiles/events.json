@@ -11,7 +11,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on the user that created this event",
                 "color": "red",
                 "hide": false
             }
@@ -40,7 +40,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Which user last updated the event",
                 "color": "red",
                 "hide": false
             }
@@ -65,7 +65,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "When was the event last updated",
                 "color": "red",
                 "hide": false
             }
@@ -96,7 +96,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -172,7 +172,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Status of the event",
                 "color": "red",
                 "hide": false
             }
@@ -199,7 +199,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Start of the event",
                 "color": "red",
                 "hide": false
             }
@@ -226,7 +226,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "When does the event ends",
                 "color": "red",
                 "hide": false
             }
@@ -247,7 +247,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on the duration of the event",
                 "color": "red",
                 "hide": false
             }
@@ -289,7 +289,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Expectation on the bill amount",
                 "color": "red",
                 "hide": false
             }
@@ -343,7 +343,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If it was on a holiday",
                 "color": "red",
                 "hide": false
             }
@@ -544,7 +544,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on the patient",
                 "color": "red",
                 "hide": false
             }
@@ -819,7 +819,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Location where the event is going to start with information like address and geolocation",
                 "color": "red",
                 "hide": false
             }
@@ -1094,7 +1094,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Location where the event is going to end with information like address and geolocation",
                 "color": "red",
                 "hide": false
             }
@@ -1848,7 +1848,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on the services that apply for this event, like pay rate and others",
                 "color": "red",
                 "hide": false
             }
@@ -2415,7 +2415,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on the billing, like billing period, currency, payment method and others",
                 "color": "red",
                 "hide": false
             }
@@ -2436,7 +2436,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Notes on the event",
                 "color": "red",
                 "hide": false
             }
@@ -2770,7 +2770,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on who are the attendees on the event, like name, pay_rate and others",
                 "color": "red",
                 "hide": false
             }

@@ -37,7 +37,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the date in which the candidate was deleted and its reasons",
                 "color": "red",
                 "hide": false
             }
@@ -70,12 +70,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red",
-                "hide": false
-            },
-            "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "What is the status of the candidate, applied, phone screened, selected for interview, interviewd or hired",
                 "color": "red",
                 "hide": false
             }
@@ -88,7 +83,7 @@
                 "sort": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": true
             }
@@ -104,7 +99,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If candidate was hired or not",
                 "color": "red",
                 "hide": false
             }
@@ -116,7 +111,7 @@
                 "conditions": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Date in which the candidate was hired",
                 "color": "red",
                 "hide": false
             }
@@ -132,7 +127,7 @@
                 "conditions": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -163,7 +158,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Manager info",
                 "color": "red",
                 "hide": false
             }
@@ -190,7 +185,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the rating on the candidate",
                 "color": "red",
                 "hide": false
             }
@@ -217,7 +212,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the date of birth of the candidate",
                 "color": "red",
                 "hide": false
             }
@@ -245,7 +240,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the email of the candidate",
                 "color": "red",
                 "hide": false
             }
@@ -273,7 +268,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the external id",
                 "color": "red",
                 "hide": false
             }
@@ -307,7 +302,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the gender of the candidate",
                 "color": "red",
                 "hide": false
             }
@@ -398,7 +393,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the languages spoken by the candidate and which one is the primary language",
                 "color": "red",
                 "hide": false
             }
@@ -708,7 +703,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Location info, like address and geolocation",
                 "color": "red",
                 "hide": false
             }
@@ -974,7 +969,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "This contains the employment history of the candidate, previous jobs, duration and etc",
                 "color": "red",
                 "hide": false
             }
@@ -1083,7 +1078,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Name of the candidate",
                 "color": "red",
                 "hide": false
             }
@@ -1209,7 +1204,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on the candidate's phones, like numbers and types",
                 "color": "red",
                 "hide": false
             }
@@ -1230,7 +1225,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "The nearest intersection to the candidate",
                 "color": "red",
                 "hide": false
             }
@@ -1262,7 +1257,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Candidate's source",
                 "color": "red",
                 "hide": false
             }
@@ -1294,7 +1289,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "This contains the level of education of the candidate",
                 "color": "red",
                 "hide": false
             }
@@ -1325,7 +1320,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains information on the candidate's drivers licence, if the candidate has one or not and others",
                 "color": "red",
                 "hide": false
             }
@@ -1419,7 +1414,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains information on the candidate work status, if it is full time, part time, temp or on call",
                 "color": "red",
                 "hide": false
             }
@@ -1451,7 +1446,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Living status of the candidate",
                 "color": "red",
                 "hide": false
             }
@@ -1486,7 +1481,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the method of transportation of the candidate, if it is by bus or car for example",
                 "color": "red",
                 "hide": false
             }
@@ -1514,7 +1509,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the candidate is willing to travel or not",
                 "color": "red",
                 "hide": false
             }
@@ -1542,7 +1537,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the candidate has a valid travel passport or not",
                 "color": "red",
                 "hide": false
             }
@@ -1569,7 +1564,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the candidate has a US travel visa or not",
                 "color": "red",
                 "hide": false
             }
@@ -1604,7 +1599,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "How many years of experiece the candidate has",
                 "color": "red",
                 "hide": false
             }
@@ -1758,7 +1753,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on which range of ages the candidate has experience with",
                 "color": "red",
                 "hide": false
             }
@@ -1793,7 +1788,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "How are the cooking skills of the candidate",
                 "color": "red",
                 "hide": false
             }
@@ -1828,7 +1823,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "How are the cleaning skills of the candidate",
                 "color": "red",
                 "hide": false
             }
@@ -1863,7 +1858,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "How are the swimming skills of the candidate",
                 "color": "red",
                 "hide": false
             }
@@ -1891,7 +1886,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the candidate is okay with smokers",
                 "color": "red",
                 "hide": false
             }
@@ -1919,7 +1914,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the candidate is okay with pets",
                 "color": "red",
                 "hide": false
             }
@@ -1950,7 +1945,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the candidate is okay with pets, which kind of pets",
                 "color": "red",
                 "hide": false
             }
@@ -2004,7 +1999,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "What are the salary expectations of the candidate",
                 "color": "red",
                 "hide": false
             }
@@ -2032,7 +2027,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the candidate was a criminal offender",
                 "color": "red",
                 "hide": false
             }
@@ -2053,7 +2048,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "In case the candidate was a criminal offender, what was the reason",
                 "color": "red",
                 "hide": false
             }
@@ -2087,7 +2082,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "What is the type of work permit of the candidate",
                 "color": "red",
                 "hide": false
             }
@@ -2132,7 +2127,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "What are the candidate's skills",
                 "color": "red",
                 "hide": false
             }
@@ -2253,7 +2248,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "What are the certifications of the candidate",
                 "color": "red",
                 "hide": false
             }
@@ -2398,7 +2393,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Notes on the candidate",
                 "color": "red",
                 "hide": false
             }
@@ -2419,7 +2414,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Candidate's resume",
                 "color": "red",
                 "hide": false
             }
@@ -2440,7 +2435,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Candidate's cover letter",
                 "color": "red",
                 "hide": false
             }
@@ -2885,7 +2880,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "What are the days and hours that the candidate is available during the week",
                 "color": "red",
                 "hide": false
             }
