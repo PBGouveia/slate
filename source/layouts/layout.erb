@@ -134,7 +134,18 @@ under the License.
                             <tr>
                               <td> <%= b[0] %> </td>
                               <td> <%= b[1]['type'] %> </td>
-                              <td> 3 </td>
+                              <td> 
+                                    <%# if b.key?("documentation") %>
+                                    <%#= b[1]['documentation']['description'] %> 
+                                    <%# else %>
+                                    3
+                    
+                                    <%# end %>
+
+
+
+
+                              </td>
                             </tr>
                         <% end %>
                           </tbody>

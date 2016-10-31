@@ -389,6 +389,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "If the language is the primary or not"
                     }
                 }
             },
@@ -507,6 +510,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Latitude"
                             }
                         },
                         "lng": {
@@ -523,6 +529,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Longitude"
                             }
                         },
                         "state": {
@@ -614,6 +623,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Extra info on the street"
                             }
                         },
                         "zip": {
@@ -642,7 +654,13 @@
                                     "update": true,
                                     "delete": true
                                 }
+                            },
+                            "documentation": {
+                                "description": "Map image"
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with city, country, lat, lng, state, title, street, street_extra, zip and map_img"
                         }
                     }
                 },
@@ -746,6 +764,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Position held on the previous jobs"
                     }
                 },
                 "responsibilities": {
@@ -762,6 +783,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Responsibilities held on previous jobs"
                     }
                 },
                 "phone_number": {
@@ -901,6 +925,9 @@
                                 "fields": true
                             }
                         }
+                    },
+                    "documentation": {
+                        "description": "Dates of the previous employment with start date and end date"
                     }
                 },
                 "alternative_contact": {
@@ -933,6 +960,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Reason for living"
                     }
                 },
                 "pay_rate": {
@@ -949,6 +979,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "What was the pay rate"
                     }
                 },
                 "may_contact": {
@@ -965,7 +998,13 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "If it is ok to contact the previous employer"
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with company_name, position_held, responsibilities, phone_number, location, employment_dates, alternative_contact, reason_leaving, pay_rate and may_contact"
                 }
             },
             "documentation": {
@@ -1075,6 +1114,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with first, last, middle, nickname and title"
                 }
             },
             "documentation": {
@@ -1201,6 +1243,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with country, number, primary, type and notes"
                 }
             },
             "documentation": {
@@ -1411,6 +1456,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with full_time, part_time, temp and on_call"
                 }
             },
             "documentation": {
@@ -1975,6 +2023,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Minimum value"
                     }
                 },
                 "max": {
@@ -1995,7 +2046,13 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Maximum value"
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with min and max"
                 }
             },
             "documentation": {
@@ -2123,6 +2180,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Skills tags"
                     }
                 }
             },
@@ -2208,6 +2268,9 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Date certification was acquired"
                         }
                     },
                     "default": {
@@ -2228,6 +2291,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "If it is active or not"
                     }
                 },
                 "notes": {
@@ -2279,6 +2345,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Stage of the candidate"
                     }
                 },
                 "note": {
@@ -2295,6 +2364,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "The note"
                     }
                 },
                 "title": {
@@ -2311,6 +2383,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Title of the note"
                     }
                 },
                 "_created_user": {
@@ -2328,6 +2403,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "User that created"
                     }
                 },
                 "_created_date": {
@@ -2345,6 +2423,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Date it was created"
                     }
                 },
                 "_last_updated_user": {
@@ -2369,6 +2450,9 @@
                             "type": "Function",
                             "function": "user"
                         }
+                    },
+                    "documentation": {
+                        "description": "Last user that updated it"
                     }
                 },
                 "_last_updated_date": {
@@ -2389,6 +2473,9 @@
                             "type": "Function",
                             "function": "now"
                         }
+                    },
+                    "documentation": {
+                        "description": "Last date it was updated"
                     }
                 }
             },
@@ -2877,6 +2964,9 @@
                             }
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with the days of the week and the candidate's availability"
                 }
             },
             "documentation": {
