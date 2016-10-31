@@ -11,6 +11,9 @@
                 "conditions": {
                     "type": "Function",
                     "function": "account"
+                },
+                "documentation": {
+                    "description": "If it is manditory or not"
                 }
             },
             "documentation": {
@@ -97,6 +100,9 @@
                     "insert": true,
                     "update": true,
                     "delete": true
+                },
+                "documentation": {
+                    "description": "Permissions on the external id"
                 }
             },
             "default": {

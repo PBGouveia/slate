@@ -11,7 +11,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If it was deleted",
                 "color": "red",
                 "hide": false
             }
@@ -33,7 +33,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Which user created the progress note",
                 "color": "red",
                 "hide": false
             }
@@ -55,7 +55,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Date in which the progress note was created",
                 "color": "red",
                 "hide": false
             }
@@ -84,7 +84,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Last user that updated the note",
                 "color": "red",
                 "hide": false
             }
@@ -109,7 +109,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Last date note was updated",
                 "color": "red",
                 "hide": false
             }
@@ -137,7 +137,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the note is private or not",
                 "color": "red",
                 "hide": false
             }
@@ -172,7 +172,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "The priority of the note",
                 "color": "red",
                 "hide": false
             }
@@ -201,7 +201,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Patient ID",
                 "color": "red",
                 "hide": false
             }
@@ -243,7 +243,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "The title of the note",
                 "color": "red",
                 "hide": false
             }
@@ -312,7 +312,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If it was approved and the date",
                 "color": "red",
                 "hide": false
             }
@@ -333,7 +333,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "The note itself",
                 "color": "red",
                 "hide": false
             }
@@ -412,7 +412,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Tagged users on the note",
                 "color": "red",
                 "hide": false
             }
@@ -483,7 +483,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "For whom is the invoice",
                 "color": "red",
                 "hide": false
             }
@@ -508,7 +508,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Who referred",
                 "color": "red",
                 "hide": false
             }
@@ -539,7 +539,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "The service that was tagged",
                 "color": "red",
                 "hide": false
             }
@@ -564,7 +564,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Patient's services",
                 "color": "red",
                 "hide": false
             }
@@ -609,7 +609,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Tags of the note",
                 "color": "red",
                 "hide": false
             }

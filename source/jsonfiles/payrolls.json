@@ -13,7 +13,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If payroll was closed or not",
                 "color": "red",
                 "hide": false
             }
@@ -24,7 +24,7 @@
                 "conditions": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Date when payroll was closed",
                 "color": "red",
                 "hide": false
             }
@@ -39,7 +39,7 @@
                 "conditions": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "User that closed the payroll",
                 "color": "red",
                 "hide": false
             }
@@ -60,7 +60,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Start date",
                 "color": "red",
                 "hide": false
             }
@@ -81,7 +81,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "End date",
                 "color": "red",
                 "hide": false
             }
@@ -109,7 +109,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Type of the period",
                 "color": "red",
                 "hide": false
             }
@@ -130,7 +130,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Extra period",
                 "color": "red",
                 "hide": false
             }

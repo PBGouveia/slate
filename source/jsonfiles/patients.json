@@ -187,7 +187,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Patient's status",
                 "color": "red",
                 "hide": false
             }
@@ -208,7 +208,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "SSN nuber",
                 "color": "red",
                 "hide": false
             }
@@ -229,7 +229,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Date in which the ssn expiry",
                 "color": "red",
                 "hide": false
             }
@@ -326,7 +326,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Name of the patient",
                 "color": "red",
                 "hide": false
             }
@@ -584,7 +584,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Who referred that patient",
                 "color": "red",
                 "hide": false
             }
@@ -612,7 +612,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Patient's religion",
                 "color": "red",
                 "hide": false
             }
@@ -633,7 +633,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "The major intersection to the candidate",
                 "color": "red",
                 "hide": false
             }
@@ -708,7 +708,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Service date range",
                 "color": "red",
                 "hide": false
             }
@@ -740,7 +740,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Education level required by the patient",
                 "color": "red",
                 "hide": false
             }
@@ -834,7 +834,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Work status required by tge patient",
                 "color": "red",
                 "hide": false
             }
@@ -929,7 +929,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If patient will be travelling",
                 "color": "red",
                 "hide": false
             }
@@ -957,7 +957,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If patient requires a valid travel passport",
                 "color": "red",
                 "hide": false
             }
@@ -984,7 +984,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If patient requires a valid US visa",
                 "color": "red",
                 "hide": false
             }
@@ -1856,7 +1856,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "All patient's phone numbers and its types",
                 "color": "red",
                 "hide": false
             }
@@ -2173,7 +2173,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Location info, like address and geolocation",
                 "color": "red",
                 "hide": false
             }
@@ -2273,7 +2273,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Notes on the patient",
                 "color": "red",
                 "hide": false
             }
@@ -2430,7 +2430,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Patient's problems",
                 "color": "red",
                 "hide": false
             }
@@ -3170,7 +3170,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "All the services necessary by the patient",
                 "color": "red",
                 "hide": false
             }

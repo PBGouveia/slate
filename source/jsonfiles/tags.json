@@ -18,7 +18,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Title of the tag",
                 "color": "red",
                 "hide": false
             }
@@ -39,7 +39,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Color of the tag",
                 "color": "red",
                 "hide": false
             }
@@ -60,7 +60,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Description of the tag",
                 "color": "red",
                 "hide": false
             }

@@ -33,7 +33,7 @@
                 "conditions": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "User was deleted",
                 "color": "red",
                 "hide": false
             }
@@ -73,7 +73,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the date in which the user was deleted and its reasons",
                 "color": "red",
                 "hide": false
             }
@@ -97,7 +97,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "User was suspended",
                 "color": "red",
                 "hide": false
             }
@@ -109,7 +109,7 @@
                 "conditions": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the date in which the user was suspended",
                 "color": "red",
                 "hide": false
             }
@@ -125,7 +125,7 @@
                 "conditions": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Who suspended that user",
                 "color": "red",
                 "hide": false
             }
@@ -141,7 +141,7 @@
                 "conditions": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the candidate id",
                 "color": "red",
                 "hide": false
             }
@@ -175,7 +175,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Date in which the user started",
                 "color": "red",
                 "hide": false
             }
@@ -191,7 +191,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Date in which the user was invited",
                 "color": "red",
                 "hide": false
             }
@@ -224,7 +224,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Role of the user",
                 "color": "red",
                 "hide": false
             }
@@ -252,7 +252,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Type of role",
                 "color": "red",
                 "hide": false
             }
@@ -279,7 +279,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Date of birth of the user",
                 "color": "red",
                 "hide": false
             }
@@ -304,7 +304,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Department in which the user works",
                 "color": "red",
                 "hide": true
             }
@@ -399,7 +399,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the user email",
                 "color": "red",
                 "hide": false
             }
@@ -427,7 +427,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the user external ID",
                 "color": "red",
                 "hide": false
             }
@@ -448,7 +448,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "This contains the accounting id number",
                 "color": "red",
                 "hide": false
             }
@@ -482,7 +482,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "User's gender",
                 "color": "red",
                 "hide": false
             }
@@ -507,7 +507,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "User's photo",
                 "color": "red",
                 "hide": false
             }
@@ -598,7 +598,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Languages spoken by the user, with information on which one is his or hers primary language",
                 "color": "red",
                 "hide": false
             }
@@ -614,7 +614,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Last time user logged in",
                 "color": "red",
                 "hide": false
             }
@@ -634,7 +634,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Last device used by the user",
                 "color": "red",
                 "hide": true
             }
@@ -650,7 +650,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Last time seen by the user",
                 "color": "red",
                 "hide": true
             }
@@ -670,7 +670,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Last seen device",
                 "color": "red",
                 "hide": true
             }
@@ -690,7 +690,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Last updated device",
                 "color": "red",
                 "hide": true
             }
@@ -1016,7 +1016,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Location info, like address and geolocation",
                 "color": "red",
                 "hide": false
             }
@@ -1125,7 +1125,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Name of the user",
                 "color": "red",
                 "hide": false
             }
@@ -1228,7 +1228,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Notes on the user",
                 "color": "red",
                 "hide": true
             }
@@ -1512,7 +1512,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Services provided by the user",
                 "color": "red",
                 "hide": false
             }
@@ -1638,7 +1638,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on the user's phones, like numbers and types",
                 "color": "red",
                 "hide": false
             }
@@ -1738,7 +1738,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Timezone of the user",
                 "color": "red",
                 "hide": false
             }
@@ -1770,7 +1770,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Manager info",
                 "color": "red",
                 "hide": false
             }
@@ -1790,7 +1790,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the user is set up",
                 "color": "red",
                 "hide": false
             }
@@ -1802,7 +1802,7 @@
                 "conditions": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Date in which the user was set",
                 "color": "red",
                 "hide": false
             }
@@ -1968,7 +1968,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Any files on the user",
                 "color": "red",
                 "hide": false
             }
@@ -1989,7 +1989,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "SSN number",
                 "color": "red",
                 "hide": false
             }
@@ -2010,7 +2010,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "SSN expiry date",
                 "color": "red",
                 "hide": false
             }
@@ -2031,7 +2031,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "The nearest intersection to the user",
                 "color": "red",
                 "hide": false
             }
@@ -2063,7 +2063,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "User's source",
                 "color": "red",
                 "hide": false
             }
@@ -2095,7 +2095,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "This contains the level of education of the user",
                 "color": "red",
                 "hide": false
             }
@@ -2189,7 +2189,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains information on the user work status, if it is full time, part time, temp or on call",
                 "color": "red",
                 "hide": false
             }
@@ -2221,7 +2221,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Living status of the user",
                 "color": "red",
                 "hide": false
             }
@@ -2256,7 +2256,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains the method of transportation of the user, if it is by bus or car for example",
                 "color": "red",
                 "hide": false
             }
@@ -2287,7 +2287,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Contains information on the user's drivers licence, if the user has one or not and others",
                 "color": "red",
                 "hide": false
             }
@@ -2315,7 +2315,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the user is willing to travel or not",
                 "color": "red",
                 "hide": false
             }
@@ -2343,7 +2343,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the user has a valid travel passport or not",
                 "color": "red",
                 "hide": false
             }
@@ -2370,7 +2370,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the user has a US travel visa or not",
                 "color": "red",
                 "hide": false
             }
@@ -2405,7 +2405,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "How many years of experiece the user has",
                 "color": "red",
                 "hide": false
             }
@@ -2559,7 +2559,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Information on which range of ages the user has experience with",
                 "color": "red",
                 "hide": false
             }
@@ -2594,7 +2594,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "How are the cooking skills of the user",
                 "color": "red",
                 "hide": false
             }
@@ -2629,7 +2629,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "How are the cleaning skills of the user",
                 "color": "red",
                 "hide": false
             }
@@ -2664,7 +2664,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "How are the swimming skills of the user",
                 "color": "red",
                 "hide": false
             }
@@ -2692,7 +2692,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the user is okay with smokers",
                 "color": "red",
                 "hide": false
             }
@@ -2720,7 +2720,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the user is okay with pets",
                 "color": "red",
                 "hide": false
             }
@@ -2751,7 +2751,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the user is okay with pets, which kind of pets",
                 "color": "red",
                 "hide": false
             }
@@ -2779,7 +2779,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "If the user was a criminal offender",
                 "color": "red",
                 "hide": false
             }
@@ -2800,7 +2800,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "In case the user was a criminal offender, what was the reason",
                 "color": "red",
                 "hide": false
             }
@@ -2834,7 +2834,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "What is the type of work permit of the user",
                 "color": "red",
                 "hide": false
             }
@@ -2888,7 +2888,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "What are the salary expectations of the user",
                 "color": "red",
                 "hide": false
             }
@@ -2933,7 +2933,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "What are the user's skills",
                 "color": "red",
                 "hide": false
             }
@@ -3054,7 +3054,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Certifications of the user, like school, university and etc",
                 "color": "red",
                 "hide": false
             }
@@ -3488,7 +3488,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "This contains the employment history of the user, previous jobs, duration and etc",
                 "color": "red",
                 "hide": false
             }
@@ -4084,7 +4084,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Days and hours in which the user is available",
                 "color": "red",
                 "hide": false
             }

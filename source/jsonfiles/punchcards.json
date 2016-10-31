@@ -22,7 +22,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -135,7 +135,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Punchcard's event",
                 "color": "red",
                 "hide": false
             }
@@ -156,7 +156,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -445,7 +445,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -625,7 +625,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -869,7 +869,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -1144,7 +1144,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -1884,7 +1884,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -2451,7 +2451,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -3289,7 +3289,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Actual information, with actual date and others",
                 "color": "red",
                 "hide": false
             }
@@ -3484,7 +3484,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Punchcard's bill",
                 "color": "red",
                 "hide": false
             }
@@ -3627,7 +3627,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -3714,7 +3714,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }
@@ -3837,7 +3837,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "",
                 "color": "red",
                 "hide": false
             }

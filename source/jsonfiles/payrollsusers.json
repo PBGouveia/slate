@@ -11,7 +11,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "The date it was created",
                 "color": "red",
                 "hide": false
             }
@@ -25,7 +25,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "The user that created it",
                 "color": "red",
                 "hide": false
             }
@@ -50,7 +50,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Payroll information",
                 "color": "red",
                 "hide": false
             }
@@ -393,7 +393,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "User information, like name, nickname and others",
                 "color": "red",
                 "hide": false
             }
@@ -419,12 +419,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
-                "color": "red",
-                "hide": false
-            },
-            "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "Punchcards information, with bill and others",
                 "color": "red",
                 "hide": false
             }
@@ -965,7 +960,7 @@
                 }
             },
             "documentation": {
-                "description": "aaaaaaaaaaaaaaaaa",
+                "description": "ADjustments information",
                 "color": "red",
                 "hide": false
             }
