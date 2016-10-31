@@ -364,6 +364,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Name's title"
                     }
                 },
                 "label": {
@@ -380,7 +383,13 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Name's label"
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with title and label"
                 }
             },
             "documentation": {
@@ -810,6 +819,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Language"
                     }
                 },
                 "office_hours": {
@@ -1129,7 +1141,13 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with the days of the week and the after hours alert"
                         }
+                    },
+                    "documentation": {
+                        "description": "Office hours on different days"
                     }
                 },
                 "phone_dialer": {
@@ -1169,6 +1187,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "The multiplier for statutory holidays"
                     }
                 },
                 "geolocation_radius": {
@@ -1186,6 +1207,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with timezone, time_format, new_user_showtime, currency, country, state, datetime_format, language, office_hours, phone_dialer, stat_holiday_multiplier and geolocation_radius"
                 }
             },
             "documentation": {
@@ -1215,6 +1239,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Executive role settings"
                     }
                 },
                 "executive_user": {
@@ -1235,7 +1262,13 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Executive user settings"
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with executiver user and role"
                 }
             },
             "documentation": {
@@ -1754,6 +1787,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "If the punchcards are enabled or not"
                     }
                 },
                 "overrides_enabled": {
@@ -1965,6 +2001,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Export type"
                     }
                 },
                 "payroll_type": {
@@ -1988,10 +2027,13 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Payroll type"
                     }
                 },
                 "documentation": {
-                    "description": "Subdocument with period, runs and type of export"
+                    "description": "Subdocument with period, runs, type of export and type of payroll"
                 }
             },
             "documentation": {
@@ -2445,6 +2487,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "City name"
                             }
                         },
                         "country": {
@@ -2468,6 +2513,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Country name"
                             }
                         },
                         "lat": {
@@ -2529,6 +2577,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "State"
                             }
                         },
                         "street": {
@@ -2545,6 +2596,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Street name"
                             }
                         },
                         "street_extra": {
@@ -2561,6 +2615,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Extra info on the street"
                             }
                         },
                         "zip": {
@@ -2757,7 +2814,6 @@
             }
         },
         "roles": {
-            "somethingdeepinside": "subdocument",
             "type": "subdocuments",
             "permissions": {
                 "documents": {
@@ -2765,7 +2821,6 @@
                 }
             },
             "subdocument": {
-                "somethingdeepinside": "permissions",
                 "label": {
                     "type": "string",
                     "permissions": {
@@ -5892,6 +5947,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Term's term"
                     }
                 },
                 "label": {
@@ -5908,7 +5966,13 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Term's label"
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with term and label"
                 }
             },
             "documentation": {
@@ -5934,6 +5998,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Taxe's label"
                     }
                 },
                 "amount": {
@@ -5950,7 +6017,13 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Amount of taxes"
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with label and amount"
                 }
             },
             "documentation": {
@@ -6104,10 +6177,22 @@
                                     },
                                     "default": {
                                         "fields": true
+                                    },
+                                    "documentation": {
+                                        "description": "Tax"
                                     }
                                 }
+                            },
+                            "documentation": {
+                                "description": "Taxes on the bill rate"
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with rate, unit and taxes"
                         }
+                    },
+                    "documentation": {
+                        "description": "Bill rate"
                     }
                 },
                 "min_billable_hours": {
@@ -6124,6 +6209,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Minimum billable hours"
                     }
                 },
                 "billable_after_some_hours": {
@@ -6148,6 +6236,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "How much it was after for the billable hours"
                             }
                         },
                         "rate": {
@@ -6164,6 +6255,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Rate for the billable after some hours"
                             }
                         },
                         "unit": {
@@ -6187,8 +6281,17 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Pay unit for the billable after some hours"
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with after, rate and unit"
                         }
+                    },
+                    "documentation": {
+                        "description": "Services billable after some hours"
                     }
                 },
                 "max_billables": {
@@ -6238,7 +6341,13 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with hours and dollars"
                                 }
+                            },
+                            "documentation": {
+                                "description": "Services visit"
                             }
                         },
                         "day": {
@@ -6280,7 +6389,13 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with hours and dollars"
                                 }
+                            },
+                            "documentation": {
+                                "description": "Services day"
                             }
                         },
                         "week": {
@@ -6322,7 +6437,13 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with hours and dollars"
                                 }
+                            },
+                            "documentation": {
+                                "description": "Services week"
                             }
                         },
                         "biweek": {
@@ -6364,7 +6485,13 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with hours and dollars"
                                 }
+                            },
+                            "documentation": {
+                                "description": "Services biweek"
                             }
                         },
                         "semimonth": {
@@ -6406,7 +6533,13 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with hours and dollars"
                                 }
+                            },
+                            "documentation": {
+                                "description": "Services semimonth"
                             }
                         },
                         "month": {
@@ -6448,7 +6581,13 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with hours and dollars"
                                 }
+                            },
+                            "documentation": {
+                                "description": "Services month"
                             }
                         },
                         "contract": {
@@ -6490,9 +6629,21 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with hours and dollars"
                                 }
+                            },
+                            "documentation": {
+                                "description": "Services contract"
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with visit, day, week, biweek, semimonth, month and contract"
                         }
+                    },
+                    "documentation": {
+                        "description": "Services max billables"
                     }
                 },
                 "pay_rate": {
@@ -6517,6 +6668,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Pay rate"
                             }
                         },
                         "unit": {
@@ -6540,8 +6694,17 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Pay rate unit"
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with rate and unit"
                         }
+                    },
+                    "documentation": {
+                        "description": "Services pay rate"
                     }
                 },
                 "payable_after_some_hours": {
@@ -6566,6 +6729,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "After"
                             }
                         },
                         "rate": {
@@ -6582,6 +6748,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Rate"
                             }
                         },
                         "unit": {
@@ -6605,8 +6774,17 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Unit"
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with after, rate and unit"
                         }
+                    },
+                    "documentation": {
+                        "description": "Services payable after some hours"
                     }
                 },
                 "duties": {
@@ -6623,6 +6801,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Services duties"
                     }
                 },
                 "catastrophic": {
@@ -6639,7 +6820,13 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Catastrophic services"
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with code, color, label, description, bill_rate, min_billable_hours, billable_after_some_hours, max_billables, pay_rate, payable_after_some_hours, duties and catastrophic"
                 }
             },
             "documentation": {
@@ -6979,6 +7166,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Sales rep external ID"
                     }
                 },
                 "accounting_id": {
@@ -6995,6 +7185,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Sales rep accounting ID"
                     }
                 },
                 "territory": {
@@ -7011,6 +7204,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Sales rep territory"
                     }
                 },
                 "name": {
@@ -7036,6 +7232,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "First name"
                             }
                         },
                         "last": {
@@ -7052,6 +7251,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Last name"
                             }
                         },
                         "middle": {
@@ -7068,6 +7270,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Middle name"
                             }
                         },
                         "nickname": {
@@ -7084,6 +7289,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Sales rep nickname"
                             }
                         },
                         "title": {
@@ -7100,8 +7308,17 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Name's title"
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with first, last, middle, nickname and title"
                         }
+                    },
+                    "documentation": {
+                        "description": "Sales representatives name"
                     }
                 },
                 "office": {
@@ -7122,6 +7339,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Sales representatives offices"
                     }
                 },
                 "phone": {
@@ -7153,6 +7373,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Phone country"
                             }
                         },
                         "number": {
@@ -7169,8 +7392,14 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Phone number"
                             }
                         }
+                    },
+                    "documentation": {
+                        "description": "Sales representatives phones"
                     }
                 },
                 "fax": {
@@ -7202,6 +7431,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Fax country"
                             }
                         },
                         "number": {
@@ -7218,8 +7450,14 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Fax number"
                             }
                         }
+                    },
+                    "documentation": {
+                        "description": "Sales representative's fax"
                     }
                 },
                 "email": {
@@ -7236,6 +7474,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Sales representative email"
                     }
                 },
                 "notes": {
@@ -7252,7 +7493,13 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Sales representative's notes"
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with notes, email, fax, phone, office, name, territory, accounting_id and ext_id"
                 }
             },
             "documentation": {
