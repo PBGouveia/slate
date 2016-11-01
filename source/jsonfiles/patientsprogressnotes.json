@@ -309,6 +309,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with approved, user and date"
                 }
             },
             "documentation": {
@@ -409,6 +412,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with user"
                 }
             },
             "documentation": {
@@ -480,6 +486,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with type and client"
                 }
             },
             "documentation": {
@@ -606,6 +615,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with tag"
                 }
             },
             "documentation": {

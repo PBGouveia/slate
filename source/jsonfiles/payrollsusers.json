@@ -388,8 +388,14 @@
                                     }
                                 }
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with _service, account_service, code, color, label, pay_rate and payable_after_some_hours"
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _user, name, services"
                 }
             },
             "documentation": {
@@ -657,6 +663,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with _patient, name, email, referred_by and legal_rep"
                         }
                     }
                 },
@@ -874,6 +883,9 @@
                                     }
                                 }
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with _service, account_service, code, color, label, invoice_to and pay_rate"
                         }
                     }
                 },
@@ -939,6 +951,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with rate and unit"
                         }
                     }
                 },
@@ -957,6 +972,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _created_date, _created_user, _last_updated_date, _last_updated_user, patient, service, amount, pay_rate and notes"
                 }
             },
             "documentation": {

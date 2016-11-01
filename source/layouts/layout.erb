@@ -128,27 +128,50 @@ under the License.
                           <td> <%= a[1]['type'] %> </td>
                           <td> <%= a[1]['documentation']['description'] %></td>
                         </tr>
-                          <tbody class="second" id="<%= jsontitle %> sub <%= a[0] %>" border="1" style="display:none;">
-                        <% a[1] = a[1].except('documentation') %>
-                        <% a[1].each do |b| %>
-                            <tr>
-                              <td> <%= b[0] %> </td>
-                              <td> <%= b[1]['type'] %> </td>
-                              <td> 
-                                    <%# if b.key?("documentation") %>
-                                    <%#= b[1]['documentation']['description'] %> 
-                                    <%# else %>
-                                    3
-                    
-                                    <%# end %>
+
+                        <tbody class="second" id="<%= jsontitle %> sub <%= a[0] %>" border="1" style="display:none;">
+                          <% a[1].each do |b| %>
+                            <% if b[0] != 'documentation' %>
+                              <tr>
+                                <td> <%= b[0] %> </td>
+                                <td> <%= b[1]['type'] %> </td>
+                                <td> 
+                                  <% if (b[1].is_a?(Hash)) && (b[1].key?("documentation")) %>
+                                    <%= b[1]['documentation']['description'] %> 
+                                  <% end %>
+                                </td>
+                              </tr>
+
+
+
+                              <% if (b[1].is_a?(Hash)) %> 
+
+                              <% b[1].each do |c| %>
+                                <% if c[0] != 'documentation' %>
+                                  <tr class="third">
+                                    <td> <%= c[0] %> </td>
+                                    <td> <%= c[1].class %> </td>
+                                    <td> 
+                                      <% if (c[1].is_a?(Hash)) && (c[1].key?("documentation")) %>
+                                        <%= c[1]['documentation']['description'] %> 
+                                      <% end %>
+                                    </td>
+                                  </tr>
+                                <% end %>
+                              <% end %>
+
+                              <% end %>
 
 
 
 
-                              </td>
-                            </tr>
-                        <% end %>
-                          </tbody>
+                              
+
+
+
+                            <% end %>
+                          <% end %>
+                        </tbody>
                       <% end %>
 
                     <% end %>

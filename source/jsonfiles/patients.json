@@ -71,6 +71,9 @@
                         "fields": true,
                         "conditions": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _deleted_date, _deleted_reason and _deleted_date"
                 }
             },
             "documentation": {
@@ -323,6 +326,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with first name, last name, middle name, nickname and title"
                 }
             },
             "documentation": {
@@ -831,6 +837,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with full_time, part_time, temp and on_call"
                 }
             },
             "documentation": {
@@ -1416,6 +1425,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with min and max"
                 }
             },
             "documentation": {
@@ -1639,6 +1651,9 @@
                             }
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with contact's name, emergency, relationship, notes and phones"
                 }
             },
             "documentation": {
@@ -1730,6 +1745,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with fluency, language and primary"
                 }
             },
             "documentation": {
@@ -1813,6 +1831,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "If the number is the primary one or not"
                     }
                 },
                 "type": {
@@ -1853,6 +1874,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with phone's country, number, primary, type and notes"
                 }
             },
             "documentation": {
@@ -2170,6 +2194,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with address, primary, title, notes and type"
                 }
             },
             "documentation": {
@@ -2214,6 +2241,9 @@
                                     "type": "Function",
                                     "function": "now"
                                 }
+                            },
+                            "documentation": {
+                                "description": "Date it was commented"
                             }
                         },
                         "comment": {
@@ -2231,6 +2261,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with comment_date and comment"
                         }
                     }
                 },
@@ -2270,6 +2303,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with comments, note_date and note"
                 }
             },
             "documentation": {
@@ -2427,6 +2463,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with problem, icd10_code, status, type, diagnosis_date, onset_date, resolved_date and notes"
                 }
             },
             "documentation": {
@@ -3167,6 +3206,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with service, invoice_to, bill_rate, min_billable_hours, billable_after_some_hours, max_billables, pay_rate, take_highest_pay, duties, notes, treatment_date, notified_date, treatment_amount, catastrophic"
                 }
             },
             "documentation": {
@@ -3319,6 +3361,9 @@
                                 "fields": true
                             }
                         }
+                    },
+                    "documentation": {
+                        "description": "Credit card invoice"
                     }
                 },
                 "billing_period": {
@@ -3754,6 +3799,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Latitude"
                             }
                         },
                         "lng": {
@@ -3770,6 +3818,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Longitude"
                             }
                         },
                         "state": {
@@ -3822,6 +3873,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Extra information on the street"
                             }
                         },
                         "zip": {
@@ -3838,6 +3892,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Zip code"
                             }
                         },
                         "map_img": {
@@ -3850,9 +3907,18 @@
                                     "update": true,
                                     "delete": true
                                 }
+                            },
+                            "documentation": {
+                                "description": "Map image"
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with accounting_id, city, country, lat, lng, state, street, street_extra, zip and map_img"
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with billing's services, invoice_to, accounting_id, cc_invoice, billing_period, start_date, intake_date, loss_date, claim_number, policy_number, sales_rep, terms, invoice_type, invoice_method, payment_method, currency, header_message, footer_message, notes, contact, office and address"
                 }
             },
             "documentation": {
@@ -3943,6 +4009,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with file's name, type, file and notes"
                 }
             },
             "documentation": {
@@ -4218,6 +4287,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with branch and number"
                 }
             },
             "documentation": {
@@ -4396,6 +4468,9 @@
                             }
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with completed and requirements"
                 }
             },
             "documentation": {

@@ -34,6 +34,9 @@
                         "fields": true,
                         "conditions": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _deleted_date, _deleted_reason and _undeleted_date"
                 }
             },
             "documentation": {

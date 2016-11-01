@@ -158,7 +158,13 @@
                                 "fields": true
                             }
                         }
+                    },
+                    "documentation": {
+                        "description": "Subdocument with user, read, read_date and read_device"
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with message's message, from, sent_date, type and read"
                 }
             },
             "documentation": {
@@ -226,6 +232,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with user, archived and flag"
                 }
             },
             "documentation": {
@@ -288,6 +297,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with user, archived and flag"
                 }
             },
             "documentation": {

@@ -207,6 +207,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "If the location is the primary or not"
                     }
                 },
                 "type": {
@@ -309,6 +312,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Latitude"
                             }
                         },
                         "lng": {
@@ -325,6 +331,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Longitude"
                             }
                         },
                         "state": {
@@ -393,6 +402,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Extra information on the street"
                             }
                         },
                         "zip": {
@@ -409,6 +421,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Zip code"
                             }
                         },
                         "map_img": {
@@ -421,7 +436,13 @@
                                     "update": true,
                                     "delete": true
                                 }
+                            },
+                            "documentation": {
+                                "description": "Map image"
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with address's city, country, lat, lng, state, title, street, street_extra, zip, map_img"
                         }
                     }
                 },
@@ -471,6 +492,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with phone's country and number"
                         }
                     }
                 },
@@ -520,8 +544,14 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with fax's country and number"
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with location's primary, type, title, address, phone and fax"
                 }
             },
             "documentation": {
@@ -576,6 +606,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with fax's country and number"
                 }
             },
             "documentation": {
@@ -774,6 +807,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with contact's first name, last name, middle name, nickname and title"
                         }
                     }
                 },
@@ -838,6 +874,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "If the phone number is the primary one or not"
                             }
                         },
                         "type": {
@@ -862,8 +901,14 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with phone's country, number, type and primary"
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with contact's _company, date of date_of_birth, gender, ethnicity, name and phones"
                 }
             },
             "documentation": {
@@ -935,9 +980,18 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Company's title"
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with title"
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with company's type, website and name"
                 }
             },
             "documentation": {

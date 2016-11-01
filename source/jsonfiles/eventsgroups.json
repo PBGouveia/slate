@@ -164,7 +164,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "If the event is grouped by month",
+                "description": "If the event is grouped by week",
                 "color": "red",
                 "hide": false
             }
@@ -283,6 +283,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with type, patient and patient_service"
                 }
             },
             "documentation": {

@@ -286,6 +286,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with bill_amount and pay_amount"
                 }
             },
             "documentation": {
@@ -468,6 +471,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with first name, last name, middle name, nicknamge and title"
                         }
                     }
                 },
@@ -684,6 +690,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Latitude"
                             }
                         },
                         "lng": {
@@ -700,6 +709,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Longitude"
                             }
                         },
                         "state": {
@@ -782,6 +794,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Extra information on the street"
                             }
                         },
                         "zip": {
@@ -801,6 +816,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Zip code"
                             }
                         },
                         "map_img": {
@@ -813,9 +831,18 @@
                                     "update": true,
                                     "delete": true
                                 }
+                            },
+                            "documentation": {
+                                "description": "Map image"
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with city, country, lat, lng, state, title, street, street_extra, zip and map_img"
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _location, type and address"
                 }
             },
             "documentation": {
@@ -959,6 +986,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Latitude"
                             }
                         },
                         "lng": {
@@ -975,6 +1005,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Longitude"
                             }
                         },
                         "state": {
@@ -1057,6 +1090,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Extra information on the street"
                             }
                         },
                         "zip": {
@@ -1076,6 +1112,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Zip code"
                             }
                         },
                         "map_img": {
@@ -1088,9 +1127,18 @@
                                     "update": true,
                                     "delete": true
                                 }
+                            },
+                            "documentation": {
+                                "description": "Map image"
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with city, country, lat, lng, state, title, street, street_extra, zip and map_img"
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _location, type and address"
                 }
             },
             "documentation": {
@@ -1283,6 +1331,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with type and client"
                         }
                     }
                 },
@@ -1375,6 +1426,9 @@
                                     }
                                 }
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with rate, unit and taxes"
                         }
                     }
                 },
@@ -1449,6 +1503,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with after, rate and unit"
                         }
                     }
                 },
@@ -1499,6 +1556,9 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with hours and dollars"
                                 }
                             }
                         },
@@ -1541,6 +1601,9 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with hours and dollars"
                                 }
                             }
                         },
@@ -1583,6 +1646,9 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with hours and dollars"
                                 }
                             }
                         },
@@ -1625,6 +1691,9 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with hours and dollars"
                                 }
                             }
                         },
@@ -1667,6 +1736,9 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with hours and dollars"
                                 }
                             }
                         },
@@ -1709,6 +1781,9 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with hours and dollars"
                                 }
                             }
                         },
@@ -1751,8 +1826,14 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with hours and dollars"
                                 }
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with visit, day, week, biweek, semimonth, month and contract"
                         }
                     }
                 },
@@ -1795,6 +1876,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with rate and unit"
                         }
                     }
                 },
@@ -1845,6 +1929,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with service's _service, account_service, code, color, label, invoice_to, bill_rate, min_billable_hours, billable_after_some_hours, max_billables, pay_rate, take_highest_pay, stat_holiday_multiplier and duties"
                 }
             },
             "documentation": {
@@ -2013,6 +2100,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Extra information on the street"
                             }
                         },
                         "zip": {
@@ -2029,6 +2119,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Zip code"
                             }
                         },
                         "lat": {
@@ -2045,6 +2138,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Latitude"
                             }
                         },
                         "lng": {
@@ -2061,6 +2157,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Longitude"
                             }
                         },
                         "map_img": {
@@ -2073,7 +2172,13 @@
                                     "update": true,
                                     "delete": true
                                 }
+                            },
+                            "documentation": {
+                                "description": "Map image"
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with city, country, state, street, street_extra, zip, lat, lng and map_img"
                         }
                     }
                 },
@@ -2117,7 +2222,13 @@
                             "query": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with patient and other"
                         }
+                    },
+                    "documentation": {
+                        "description": "Credit card invoice"
                     }
                 },
                 "billing_period": {
@@ -2166,6 +2277,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with period and day"
                         }
                     }
                 },
@@ -2287,6 +2401,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Term of the billing"
                     }
                 },
                 "invoice_type": {
@@ -2656,6 +2773,9 @@
                                             "default": {
                                                 "fields": true
                                             }
+                                        },
+                                        "documentation": {
+                                            "description": "Subdocument with rate and unit"
                                         }
                                     }
                                 },
@@ -2714,10 +2834,19 @@
                                             "default": {
                                                 "fields": true
                                             }
+                                        },
+                                        "documentation": {
+                                            "description": "Subdocument with after, rate and unit"
                                         }
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with service's _service, account_service, pay_rate and payable_after_some_hours"
                                 }
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with _user, name and service"
                         }
                     }
                 },
@@ -2767,6 +2896,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with attendees's user, status, punchcard and notes"
                 }
             },
             "documentation": {

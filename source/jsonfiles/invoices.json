@@ -247,6 +247,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with account's title and label"
                         }
                     }
                 },
@@ -373,6 +376,9 @@
                                     },
                                     "default": {
                                         "fields": true
+                                    },
+                                    "documentation": {
+                                        "description": "Extra information on the street"
                                     }
                                 },
                                 "zip": {
@@ -389,7 +395,13 @@
                                     },
                                     "default": {
                                         "fields": true
+                                    },
+                                    "documentation": {
+                                        "description": "Zip code"
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with location's city, country, state, street, street_extra and zip"
                                 }
                             }
                         },
@@ -455,6 +467,9 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with phone's country and number"
                                 }
                             }
                         },
@@ -504,8 +519,14 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with fax's country and number"
                                 }
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with location's _location, address, title, phone and fax"
                         }
                     }
                 },
@@ -524,6 +545,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with account's _account, name, location and website"
                 }
             },
             "documentation": {
@@ -679,6 +703,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with period and day"
                 }
             },
             "documentation": {
@@ -768,6 +795,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _term, term and label"
                 }
             },
             "documentation": {
@@ -1080,6 +1110,9 @@
                                     }
                                 }
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with _location, accounting_id and address"
                         }
                     }
                 },
@@ -1145,6 +1178,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with phone's _phone, country and number"
                         }
                     }
                 },
@@ -1244,6 +1280,9 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with first name, last name, middle name, nickname and title"
                                 }
                             }
                         }
@@ -1281,8 +1320,14 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with title"
                                 }
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with company's name"
                         }
                     }
                 },
@@ -1429,10 +1474,19 @@
                                     "default": {
                                         "fields": true
                                     }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with first name, last name, middle name, nickname and title"
                                 }
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with employee, employee's name and ext_id"
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _client, type, contact_type, ext_id, accounting_id, email, location, phone, contact, company and employee"
                 }
             },
             "documentation": {
@@ -1850,6 +1904,9 @@
                             }
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with patient's _patient, chart_id, accounting_id, billing_accounting_id, email, name, location and phone"
                 }
             },
             "documentation": {
@@ -2010,6 +2067,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with _event, start, end and duration"
                         }
                     }
                 },
@@ -2423,6 +2483,9 @@
                                     }
                                 }
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with _service, account_service, code, color, label, stat_holiday_multiplier and max_billables"
                         }
                     }
                 },
@@ -2549,6 +2612,9 @@
                                     }
                                 }
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with _patient and name"
                         }
                     }
                 },
@@ -2602,6 +2668,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with start, end and duration"
                         }
                     }
                 },
@@ -2754,6 +2823,9 @@
                                     }
                                 }
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with start, end, duration and bill_rate"
                         }
                     }
                 },
@@ -2807,8 +2879,14 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with start, end and duration"
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _punchcard, event, service, stat_holiday, patient, actual, bill and pay"
                 }
             },
             "documentation": {
@@ -3125,6 +3203,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _service, punchcards, hours, label, code, color, description, amount, bill_rate, taxes and total"
                 }
             },
             "documentation": {
@@ -3208,6 +3289,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _tax, label, amount and total"
                 }
             },
             "documentation": {
@@ -3628,6 +3712,9 @@
                             }
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _contact, _type, ext_id, accounting_id, contact and company"
                 }
             },
             "documentation": {
@@ -3796,6 +3883,9 @@
                             }
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _sales_rep, ext_id, accounting_id and name"
                 }
             },
             "documentation": {
@@ -3865,6 +3955,9 @@
                     "query": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with patient and other"
                 }
             },
             "documentation": {

@@ -363,6 +363,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Latitude"
                             }
                         },
                         "lng": {
@@ -379,6 +382,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Longitude"
                             }
                         },
                         "state": {
@@ -454,6 +460,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Extra information on the street"
                             }
                         },
                         "zip": {
@@ -470,6 +479,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Zip code"
                             }
                         },
                         "map_img": {
@@ -482,7 +494,13 @@
                                     "update": true,
                                     "delete": true
                                 }
+                            },
+                            "documentation": {
+                                "description": "Map image"
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with city, country, lat, lng, state, title, street, street_extra, zip and map_img"
                         }
                     }
                 },
@@ -542,7 +560,10 @@
                             },
                             "default": {
                                 "fields": true
-                            }
+                            },
+                        "documentation": {
+                            "description": "Subdocument with phone's country and number"
+                        }
                         }
                     }
                 },
@@ -603,8 +624,14 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with fax's country and number"
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with accounting_id, primary, type, title, address, phone and fax"
                 }
             },
             "documentation": {
@@ -741,6 +768,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with contacts's first name, last name, middle name, nickname and title"
                         }
                     }
                 },
@@ -816,6 +846,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "If this phone number is the primary one or not"
                             }
                         },
                         "type": {
@@ -840,8 +873,14 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with phone's country, number, primary and type"
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with contact's gender, phones and name"
                 }
             },
             "documentation": {
@@ -861,6 +900,9 @@
                 "function": "client_company",
                 "options": {
                     "type": "full"
+                },
+                "documentation": {
+                    "description": ""
                 }
             },
             "subdocument": {
@@ -878,6 +920,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Company's website"
                     }
                 },
                 "name": {
@@ -904,8 +949,17 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with title"
                         }
+                    },
+                    "documentation": {
+                        "description": "Company's name"
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with company's website and name"
                 }
             },
             "documentation": {
@@ -1026,6 +1080,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with first name, last name, middle name, nickname and title"
                         }
                     }
                 },
@@ -1099,6 +1156,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with phone's country and number"
                         }
                     }
                 },
@@ -1159,6 +1219,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with fax's country and number"
                         }
                     }
                 },
@@ -1193,6 +1256,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with employees's ext_id, name, office, phone, fax, email and notes"
                 }
             },
             "documentation": {
