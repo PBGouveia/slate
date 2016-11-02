@@ -294,6 +294,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with first name, last name, middle name, nickname and title"
                         }
                     }
                 },
@@ -454,6 +457,9 @@
                             }
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _user, name and service"
                 }
             },
             "documentation": {
@@ -577,6 +583,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with first name, last name, middle name, nickname and title"
                         }
                     }
                 },
@@ -634,6 +643,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _patient, name, email, referred_by and legal_rep"
                 }
             },
             "documentation": {
@@ -878,6 +890,9 @@
                             }
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _location, type and address"
                 }
             },
             "documentation": {
@@ -1153,6 +1168,9 @@
                             }
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _location, type and address"
                 }
             },
             "documentation": {
@@ -1893,6 +1911,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _service, account_service, code, color, label, invoice_to, bill_rate, min_billable_hours, billable_after_some_hours, max_billables, pay_rate, take_highest_pay, stat_holiday_multiplier and duties"
                 }
             },
             "documentation": {
@@ -2166,6 +2187,9 @@
                                 "fields": true
                             }
                         }
+                    },
+                    "documentation": {
+                        "description": "Credit card invoice"
                     }
                 },
                 "billing_period": {
@@ -2460,6 +2484,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _billing, contact, office, address, cc_invoice, billing_period, start_date, intake_date, loss_date, claim_number, policy_number, sales_rep, term, invoice_type, invoice_method, payment_method, currency, header_message and footer_message"
                 }
             },
             "documentation": {
@@ -2495,6 +2522,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Date it was completed"
                     }
                 },
                 "start": {
@@ -2517,6 +2547,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Date it started"
                     }
                 },
                 "end": {
@@ -2539,6 +2572,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Date it ended"
                     }
                 },
                 "duration": {
@@ -3054,6 +3090,9 @@
                                     }
                                 }
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with start, end, unverified_start, unverified_end, verified_start, verified_end, verified_start_manager, verified_end_manager, ping_start and ping_end"
                         }
                     }
                 },
@@ -3155,6 +3194,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with start, end, verified_start, verified_end, verified_start_phone and verified_end_phone"
                         }
                     }
                 },
@@ -3296,8 +3338,14 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with start, end, verified_start, verified_end, verified_start_manager, verified_end_manager, verified_start_date and verified_end_date"
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with completed, start, end, duration, late_start, late_end, geolocation, telephony and manager"
                 }
             },
             "documentation": {
@@ -3491,8 +3539,14 @@
                                     }
                                 }
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with rate, unit and taxes"
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with start, end, duration, amount and bill_rate"
                 }
             },
             "documentation": {
@@ -3636,6 +3690,9 @@
                             }
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with start, end, duration, amount and pay_rate"
                 }
             },
             "documentation": {
@@ -3723,6 +3780,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _invoice, anomaly, _closed and _removed"
                 }
             },
             "documentation": {
@@ -3846,6 +3906,9 @@
                             }
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _payroll, anomaly, _closed, _removed and audit"
                 }
             },
             "documentation": {

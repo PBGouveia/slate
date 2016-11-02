@@ -70,6 +70,9 @@
                         "fields": true,
                         "conditions": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _deleted_date, _deleted_reason and _undeleted_date"
                 }
             },
             "documentation": {
@@ -594,7 +597,13 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "If the language is the primary one or not"
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with fluency, language and primary"
                 }
             },
             "documentation": {
@@ -957,6 +966,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "If the location is the primary one or not"
                     }
                 },
                 "notes": {
@@ -1013,6 +1025,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with address, primary, notes, title and type"
                 }
             },
             "documentation": {
@@ -1122,6 +1137,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with first name, last name, middle name, nickname and title"
                 }
             },
             "documentation": {
@@ -1509,6 +1527,9 @@
                             }
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with service, held_since, rating, pay_rate and payable_after_some_hours"
                 }
             },
             "documentation": {
@@ -1595,6 +1616,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "If the phone is the primary one or not"
                     }
                 },
                 "type": {
@@ -1635,6 +1659,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with country, number, primary, type and notes"
                 }
             },
             "documentation": {
@@ -1965,6 +1992,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with name, type, file and notes"
                 }
             },
             "documentation": {
@@ -2186,6 +2216,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with full_time, part_time, temp and on_call"
                 }
             },
             "documentation": {
@@ -2556,6 +2589,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with the ranges of ages"
                 }
             },
             "documentation": {
@@ -2885,6 +2921,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with min and max values"
                 }
             },
             "documentation": {
@@ -2930,6 +2969,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with skill's tag"
                 }
             },
             "documentation": {
@@ -3034,6 +3076,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "If it is active or not"
                     }
                 },
                 "notes": {
@@ -3051,6 +3096,9 @@
                     "default": {
                         "fields": true
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with title, type, school, completed_date, active and notes"
                 }
             },
             "documentation": {
@@ -3374,6 +3422,9 @@
                             "default": {
                                 "fields": true
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with city, country and state"
                         }
                     }
                 },
@@ -3484,7 +3535,13 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "If it is okay to contact the previous employeers"
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with company_name, position_held, responsibilities, phone_number, location, employment_dates, alternative_contact, reason_leaving, pay_rate and may_contact"
                 }
             },
             "documentation": {
@@ -3713,6 +3770,9 @@
                             "events": {
                                 "insert": false
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with start, end, _created_user and _created_date"
                         }
                     }
                 },
@@ -3774,6 +3834,9 @@
                             "events": {
                                 "insert": false
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with start, end, _created_user and _created_date"
                         }
                     }
                 },
@@ -3835,6 +3898,9 @@
                             "events": {
                                 "insert": false
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with start, end, _created_user and _created_date"
                         }
                     }
                 },
@@ -3896,6 +3962,9 @@
                             "events": {
                                 "insert": false
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with start, end, _created_user and _created_date"
                         }
                     }
                 },
@@ -3957,6 +4026,9 @@
                             "events": {
                                 "insert": false
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with start, end, _created_user and _created_date"
                         }
                     }
                 },
@@ -4018,6 +4090,9 @@
                             "events": {
                                 "insert": false
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with start, end, _created_user and _created_date"
                         }
                     }
                 },
@@ -4079,8 +4154,14 @@
                             "events": {
                                 "insert": false
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with start, end, _created_user and _created_date"
                         }
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with with the days of the week"
                 }
             },
             "documentation": {
