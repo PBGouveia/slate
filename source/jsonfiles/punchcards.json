@@ -117,6 +117,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "If the event was deleted or not"
                     }
                 },
                 "_deleted_user": {
@@ -124,6 +127,9 @@
                     "events": {
                         "delete": false,
                         "undelete": false
+                    },
+                    "documentation": {
+                        "description": "Which user deleted this event"
                     }
                 },
                 "_deleted_date": {
@@ -131,7 +137,13 @@
                     "events": {
                         "delete": false,
                         "undelete": false
+                    },
+                    "documentation": {
+                        "description": "When the event was deleted"
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with _event, start, end, duration, _deleted, _deleted_user and _deleted_date"
                 }
             },
             "documentation": {
