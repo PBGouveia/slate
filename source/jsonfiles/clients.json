@@ -213,7 +213,10 @@
                     {
                         "function": "geolocate"
                     }
-                ]
+                ],
+                "documentation": {
+                    "description": "Events on that location, with insert and update"
+                }
             },
             "subdocument": {
                 "accounting_id": {
@@ -230,6 +233,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Location's accounting ID"
                     }
                 },
                 "primary": {
@@ -247,6 +253,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "If the location is the primary one or not"
                     }
                 },
                 "type": {
@@ -270,6 +279,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Location's type"
                     }
                 },
                 "title": {
@@ -286,6 +298,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Location's title"
                     }
                 },
                 "address": {
@@ -324,6 +339,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Client's city"
                             }
                         },
                         "country": {
@@ -347,6 +365,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Client's country"
                             }
                         },
                         "lat": {
@@ -405,6 +426,9 @@
                                     "update": true,
                                     "delete": true
                                 }
+                            },
+                            "documentation": {
+                                "description": "Client's state"
                             }
                         },
                         "title": {
@@ -421,6 +445,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Client's title"
                             }
                         },
                         "street": {
@@ -444,6 +471,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Client's street"
                             }
                         },
                         "street_extra": {
@@ -481,7 +511,7 @@
                                 "fields": true
                             },
                             "documentation": {
-                                "description": "Zip code"
+                                "description": "Client's zip code"
                             }
                         },
                         "map_img": {
@@ -502,6 +532,9 @@
                         "documentation": {
                             "description": "Subdocument with city, country, lat, lng, state, title, street, street_extra, zip and map_img"
                         }
+                    },
+                    "documentation": {
+                        "description": "Location's address"
                     }
                 },
                 "phone": {
@@ -540,6 +573,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Country of the client's phone"
                             }
                         },
                         "number": {
@@ -561,10 +597,16 @@
                             "default": {
                                 "fields": true
                             },
+                            "documentation": {
+                                "description": "Number of the client's number"
+                            }
+                        },
                         "documentation": {
                             "description": "Subdocument with phone's country and number"
                         }
-                        }
+                    },
+                    "documentation": {
+                        "description": "Client's phones"
                     }
                 },
                 "fax": {
@@ -603,6 +645,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Country of the client's fax"
                             }
                         },
                         "number": {
@@ -623,11 +668,17 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Number of the client's fax"
                             }
                         },
                         "documentation": {
                             "description": "Subdocument with fax's country and number"
                         }
+                    },
+                    "documentation": {
+                        "description": "Client's fax"
                     }
                 },
                 "documentation": {
@@ -674,6 +725,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Gender of the contact"
                     }
                 },
                 "name": {
@@ -703,6 +757,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "First name of the contact"
                             }
                         },
                         "last": {
@@ -719,6 +776,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Last name of the contact"
                             }
                         },
                         "middle": {
@@ -735,6 +795,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Middle name of the contact"
                             }
                         },
                         "nickname": {
@@ -751,6 +814,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Nickname of the contact"
                             }
                         },
                         "title": {
@@ -767,11 +833,17 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Title of the contact"
                             }
                         },
                         "documentation": {
                             "description": "Subdocument with contacts's first name, last name, middle name, nickname and title"
                         }
+                    },
+                    "documentation": {
+                        "description": "Name of the contact"
                     }
                 },
                 "phones": {
@@ -902,7 +974,7 @@
                     "type": "full"
                 },
                 "documentation": {
-                    "description": ""
+                    "description": "Filter for the client company"
                 }
             },
             "subdocument": {
@@ -990,6 +1062,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Employee's external ID"
                     }
                 },
                 "name": {
@@ -1015,6 +1090,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "First name of the employee"
                             }
                         },
                         "last": {
@@ -1031,6 +1109,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Last name of the employee"
                             }
                         },
                         "middle": {
@@ -1047,6 +1128,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Middle name of the employee"
                             }
                         },
                         "nickname": {
@@ -1063,6 +1147,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Nickname of the employee"
                             }
                         },
                         "title": {
@@ -1079,11 +1166,17 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Title of the employee"
                             }
                         },
                         "documentation": {
                             "description": "Subdocument with first name, last name, middle name, nickname and title"
                         }
+                    },
+                    "documentation": {
+                        "description": "Employee's name"
                     }
                 },
                 "office": {
@@ -1104,6 +1197,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Employee's office"
                     }
                 },
                 "phone": {
@@ -1135,6 +1231,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Country of the employee's phone"
                             }
                         },
                         "number": {
@@ -1155,11 +1254,17 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Number of the employee's phone"
                             }
                         },
                         "documentation": {
                             "description": "Subdocument with phone's country and number"
                         }
+                    },
+                    "documentation": {
+                        "description": "Employee's phone"
                     }
                 },
                 "fax": {
@@ -1198,6 +1303,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Country of the employee's fax"
                             }
                         },
                         "number": {
@@ -1218,11 +1326,17 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Number of the employee's fax"
                             }
                         },
                         "documentation": {
                             "description": "Subdocument with fax's country and number"
                         }
+                    },
+                    "documentation": {
+                        "description": "Employee's fax"
                     }
                 },
                 "email": {
@@ -1239,6 +1353,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Employee's email"
                     }
                 },
                 "notes": {
@@ -1255,6 +1372,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Employee's notes"
                     }
                 },
                 "documentation": {

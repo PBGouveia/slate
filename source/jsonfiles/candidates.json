@@ -277,7 +277,10 @@
                     "update": true,
                     "delete": true
                 },
-                "sort": true
+                "sort": true,
+                "documentation": {
+                    "description": "Permissions for the external ID"
+                }
             },
             "default": {
                 "fields": true
@@ -311,7 +314,10 @@
                     "update": true,
                     "delete": true
                 },
-                "sort": true
+                "sort": true,
+                "documentation": {
+                    "description": "Permissions for the gender"
+                }
             },
             "default": {
                 "fields": true
@@ -358,6 +364,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Language fluency of the candidate"
                     }
                 },
                 "language": {
@@ -388,6 +397,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Language the candidate speaks"
                     }
                 },
                 "primary": {
@@ -444,7 +456,10 @@
                     {
                         "function": "geolocate"
                     }
-                ]
+                ],
+                "documentation": {
+                    "description": "Events insert and update"
+                }
             },
             "subdocument": {
                 "address": {
@@ -483,6 +498,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Location's city"
                             }
                         },
                         "country": {
@@ -509,6 +527,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Location's contry"
                             }
                         },
                         "lat": {
@@ -573,6 +594,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Location's state"
                             }
                         },
                         "title": {
@@ -596,6 +620,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Location's title"
                             }
                         },
                         "street": {
@@ -619,6 +646,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Location's street"
                             }
                         },
                         "street_extra": {
@@ -657,6 +687,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Location's zip code"
                             }
                         },
                         "map_img": {
@@ -983,6 +1016,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Alternative contact information"
                     }
                 },
                 "reason_leaving": {
@@ -1079,6 +1115,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "First name of the candidate"
                     }
                 },
                 "last": {
@@ -1098,6 +1137,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Last name of the candidate"
                     }
                 },
                 "middle": {
@@ -1117,6 +1159,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Middle name of the candidate"
                     }
                 },
                 "nickname": {
@@ -1133,6 +1178,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Nickname of the candidate"
                     }
                 },
                 "title": {
@@ -1152,6 +1200,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Title of the candidate"
                     }
                 },
                 "documentation": {
@@ -1204,6 +1255,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Country of the candidate's phone"
                     }
                 },
                 "number": {
@@ -1226,6 +1280,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Phone number of the candidate"
                     }
                 },
                 "primary": {
@@ -1242,6 +1299,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "If the phone is the primary or not"
                     }
                 },
                 "type": {
@@ -1265,6 +1325,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Type of the candidate's phone"
                     }
                 },
                 "notes": {
@@ -1281,6 +1344,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Notes on the candidate's phone"
                     }
                 },
                 "documentation": {
@@ -1434,6 +1500,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Full-time employment"
                     }
                 },
                 "part_time": {
@@ -1454,6 +1523,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Part-time employment"
                     }
                 },
                 "temp": {
@@ -1474,6 +1546,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Temporary employment"
                     }
                 },
                 "on_call": {
@@ -1494,6 +1569,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "On-call employment"
                     }
                 },
                 "documentation": {
@@ -1680,6 +1758,9 @@
                     "insert": true,
                     "update": true,
                     "delete": true
+                },
+                "documentation": {
+                    "description": "Permissions on the number of years of experience"
                 }
             },
             "default": {
@@ -1712,10 +1793,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions for that range of ages"
                         }
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Experience with the ages between 0 and 3 months"
                     }
                 },
                 "age_3_months_1_year": {
@@ -1732,10 +1819,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions for that range of ages"
                         }
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Experience with the ages between 3 months and 1 year"
                     }
                 },
                 "age_1_year_3_years": {
@@ -1752,10 +1845,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions for that range of ages"
                         }
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Experience with the ages between 1 and 3 years"
                     }
                 },
                 "age_3_years_6_years": {
@@ -1772,10 +1871,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions for that range of ages"
                         }
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Experience with the ages between 3 and 6 years"
                     }
                 },
                 "age_6_years_10_years": {
@@ -1792,10 +1897,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions for that range of ages"
                         }
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Experience with the ages between 6 and 10 years"
                     }
                 },
                 "age_10_years_15_years": {
@@ -1812,10 +1923,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions for that range of ages"
                         }
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Experience with the ages between 10 and 15 years"
                     }
                 },
                 "age_15_years_more": {
@@ -1832,10 +1949,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions for that range of ages"
                         }
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Experience with ages of more than 15 years"
                     }
                 }
             },
@@ -1967,6 +2090,9 @@
                     "insert": true,
                     "update": true,
                     "delete": true
+                },
+                "documentation": {
+                    "description": "Permissions for the is smoker"
                 }
             },
             "default": {

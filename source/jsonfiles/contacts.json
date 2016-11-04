@@ -233,6 +233,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Location's type of the contact"
                     }
                 },
                 "title": {
@@ -249,6 +252,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Location's title of the contact"
                     }
                 },
                 "address": {
@@ -273,6 +279,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's city"
                             }
                         },
                         "country": {
@@ -296,6 +305,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's country"
                             }
                         },
                         "lat": {
@@ -354,6 +366,9 @@
                                     "update": true,
                                     "delete": true
                                 }
+                            },
+                            "documentation": {
+                                "description": "Contact's state"
                             }
                         },
                         "title": {
@@ -370,6 +385,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's title"
                             }
                         },
                         "street": {
@@ -386,6 +404,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's street"
                             }
                         },
                         "street_extra": {
@@ -423,7 +444,7 @@
                                 "fields": true
                             },
                             "documentation": {
-                                "description": "Zip code"
+                                "description": "Contact's zip code"
                             }
                         },
                         "map_img": {
@@ -444,6 +465,9 @@
                         "documentation": {
                             "description": "Subdocument with address's city, country, lat, lng, state, title, street, street_extra, zip, map_img"
                         }
+                    },
+                    "documentation": {
+                        "description": "Address of the contact"
                     }
                 },
                 "phone": {
@@ -475,6 +499,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Country of the contact's phone"
                             }
                         },
                         "number": {
@@ -491,11 +518,17 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Country of the contact's number"
                             }
                         },
                         "documentation": {
                             "description": "Subdocument with phone's country and number"
                         }
+                    },
+                    "documentation": {
+                        "description": "Contact's phone"
                     }
                 },
                 "fax": {
@@ -527,6 +560,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Country of the contact's fax"
                             }
                         },
                         "number": {
@@ -543,11 +579,17 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Number of the contact's fax"
                             }
                         },
                         "documentation": {
                             "description": "Subdocument with fax's country and number"
                         }
+                    },
+                    "documentation": {
+                        "description": "Contact's fax"
                     }
                 },
                 "documentation": {
@@ -589,6 +631,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Country of the contact's fax"
                     }
                 },
                 "number": {
@@ -605,6 +650,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Number of the contact's fax"
                     }
                 },
                 "documentation": {
@@ -656,6 +704,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Contact's company"
                     }
                 },
                 "date_of_birth": {
@@ -672,6 +723,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Contact's date of birth"
                     }
                 },
                 "gender": {
@@ -694,6 +748,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Contact's gender"
                     }
                 },
                 "ethnicity": {
@@ -717,6 +774,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Contact's ethnicity"
                     }
                 },
                 "name": {
@@ -742,6 +802,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's first name"
                             }
                         },
                         "last": {
@@ -758,6 +821,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's last name"
                             }
                         },
                         "middle": {
@@ -774,6 +840,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's middle name"
                             }
                         },
                         "nickname": {
@@ -790,6 +859,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's nickname"
                             }
                         },
                         "title": {
@@ -806,11 +878,17 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's title"
                             }
                         },
                         "documentation": {
                             "description": "Subdocument with contact's first name, last name, middle name, nickname and title"
                         }
+                    },
+                    "documentation": {
+                        "description": "Contact's name"
                     }
                 },
                 "phones": {
@@ -842,6 +920,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Country of the contact's phone"
                             }
                         },
                         "number": {
@@ -858,6 +939,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Number of the contact's phone"
                             }
                         },
                         "primary": {
@@ -877,6 +961,9 @@
                             },
                             "documentation": {
                                 "description": "If the phone number is the primary one or not"
+                            },
+                            "documentation": {
+                                "description": "If the contact's phone is the primary one or not"
                             }
                         },
                         "type": {
@@ -900,11 +987,17 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Type of the contact's phone"
                             }
                         },
                         "documentation": {
                             "description": "Subdocument with phone's country, number, type and primary"
                         }
+                    },
+                    "documentation": {
+                        "description": "Contact's phone"
                     }
                 },
                 "documentation": {
@@ -945,6 +1038,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Company's type"
                     }
                 },
                 "website": {
@@ -961,6 +1057,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Company's website"
                     }
                 },
                 "name": {
@@ -988,6 +1087,9 @@
                         "documentation": {
                             "description": "Subdocument with title"
                         }
+                    },
+                    "documentation": {
+                        "description": "Company's name"
                     }
                 },
                 "documentation": {
