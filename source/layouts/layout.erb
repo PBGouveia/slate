@@ -125,7 +125,6 @@ under the License.
                   <div id="<%= jsontitle %> table">
                   <% my_json_hash_sorted.each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
                     <% if (my_json_hash['attrs'][a[0]]['documentation'].key?("hide")) && (!my_json_hash['attrs'][a[0]]['documentation']['hide']) %>
-                      <!-- <div id="meupau">   -->
                         <div class="div-table-row">
                             <div class="div-table-col"><a href="#" onclick="showHide('<%= jsontitle %> sub <%= a[0] %>'); return false;"> <%= a[0] %> </a></div>
                             <div class="div-table-col"><%= a[1]['type'] %><br></div>
@@ -213,7 +212,6 @@ under the License.
                             <% end %>
                           <% end %>
                         </div>
-                      <!-- </div> -->
                     <% end %>
                   <% end %>
                   </div>

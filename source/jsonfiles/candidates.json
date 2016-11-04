@@ -847,6 +847,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "City where the candidate worked previously"
                             }
                         },
                         "country": {
@@ -873,6 +876,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Country in which the candidate worked previously"
                             }
                         },
                         "state": {
@@ -899,8 +905,14 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "State in which the candidate worked previously"
                             }
                         }
+                    },
+                    "documentation": {
+                        "description": "Location of the previous job"
                     }
                 },
                 "employment_dates": {
@@ -924,6 +936,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Start date of previous job"
                             }
                         },
                         "end": {
@@ -944,6 +959,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "End date of previous job"
                             }
                         }
                     },
