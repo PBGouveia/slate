@@ -38,16 +38,18 @@ under the License.
 
       function showHide(id) {
 
-        if (document.getElementById(id).style.display == "none") {
-          document.getElementById(id).style.display = '';
-        }
-
-        else {
-          document.getElementById(id).style.display = "none";
+        var elements = document.getElementsByClassName(id);
+        
+        for(var i = 0, length = elements.length; i < length; i++) {
+          if(elements[i].style.display == 'none') {
+            elements[i].style.display = '';
+          }
+          else {
+            elements[i].style.display = 'none';
+          }
         }
 
       }
-
     </script>
   </head>
 
@@ -115,108 +117,75 @@ under the License.
               <!-- Information's table -->
                 <h3> Attributes: </h3>
 
-                <div class="div-table">
-                  <div class="div-table-row">
-                      <div class="div-table-col" style="text-align:center;"><b>Atribute</b></div>
-                      <div class="div-table-col" style="text-align:center;"><b>Type</b></div>
-                      <div class="div-table-col" style="text-align:center;"><b>Description</b></div>
-                  </div>
+                <div class="mytable" style="word-break:break-word;">
+                  <header>
+                      <span class="title">Atribute</span>
+                      <span class="avail">Type</span>
+                      <span class="list">Description</span>
+                  </header>
+                  <main>
+                    <% my_json_hash_sorted.each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
+                      <% if (my_json_hash['attrs'][a[0]]['documentation'].key?("hide")) && (!my_json_hash['attrs'][a[0]]['documentation']['hide']) %>
+                        
 
-                  <div id="<%= jsontitle %> table">
-                  <% my_json_hash_sorted.each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
-                    <% if (my_json_hash['attrs'][a[0]]['documentation'].key?("hide")) && (!my_json_hash['attrs'][a[0]]['documentation']['hide']) %>
-                      <!-- <div id="meupau">   -->
-                        <div class="div-table-row">
-                            <div class="div-table-col"><a href="#" onclick="showHide('<%= jsontitle %> sub <%= a[0] %>'); return false;"> <%= a[0] %> </a></div>
-                            <div class="div-table-col"><%= a[1]['type'] %><br></div>
-                            <div class="div-table-col"><%= a[1]['documentation']['description'] %><br></div>
-                        </div>
+                        <section id="item-1">
+                          <span class="title"> <a href="#" onclick="showHide('<%= jsontitle %><%= a[0] %>'); return false;"> <%= a[0] %> </a>  </span>
+                          <span class="avail"> <%= a[1]['type'] %> </span>
+                          <span class="list"> <%= a[1]['documentation']['description'] %> </span>
+                        </section> 
 
-                        <div id="<%= jsontitle %> sub <%= a[0] %>" style="display:none;">
-                          <% a[1].each do |b| %>
-                            <% if b[0] != 'documentation' %>
-            
-                              <div class="div-table-row">
-                                  <div class="div-table-col">
+                        <% a[1].each do |b| %>
+                          <% if b[0] != 'documentation' %>
+                            <section class="<%= jsontitle %>-<%= a[0] %>" id="item-2" style="display:none;">
+                                  <span class="title"> 
                                     <% if (b[1].is_a?(Hash)) %>
-                                      <a href="#" onclick="showHide('<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %>'); return false;"><%= b[0] %></a> 
+                                      <a href="#" onclick="showHide('<%= jsontitle %>-<%= a[0] %>-<%= b[0] %>'); return false;"><%= b[0] %></a> 
                                     <% else %>
                                       <%= b[0] %>
                                     <% end %>
-                                  </div>
-                                  <div class="div-table-col"><%= b[1]['type'] %> <br></div>
-                                  <div class="div-table-col">
+                                  </span>
+                                  <span class="avail"> <%= b[1]['type'] %> </span>
+                                  <span class="list">
                                     <% if (b[1].is_a?(Hash)) && (b[1].key?("documentation")) %>
                                       <%= b[1]['documentation']['description'] %> 
                                     <% end %>
-                                  <br></div>
-                              </div>
-
-                              <% if (b[1].is_a?(Hash)) %> 
-                                <div id="<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %>" style="display:none;">
+                                  </span>
+                            </section>
 
 
-                                  <% b[1].each do |c| %>
-                                    <% if c[0] != 'documentation' %>
+                            <% if (b[1].is_a?(Hash)) %> 
 
-                                      <div class="div-table-row">
-                                          <div class="div-table-col">
-                                            <% if (c[1].is_a?(Hash)) %>
-                                              <a href="#" onclick="showHide('<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %> - <%= c[0] %>'); return false;"><%= c[0] %></a> 
-                                            <% else %>
-                                              <%= c[0] %>
-                                            <% end %>
-                                          </div>
-                                          <div class="div-table-col"> <br></div>
-                                          <div class="div-table-col">
-                                            <% if (c[1].is_a?(Hash)) && (c[1].key?("documentation")) %>
-                                              <%= c[1]['documentation']['description'] %> 
-                                            <% end %>
-                                          <br></div>
-                                      </div>
+                              <% b[1].each do |c| %>
+                                <% if c[0] != 'documentation' %>
 
-
-                                      <% if (c[1].is_a?(Hash)) %> 
-                                        <div id="<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %> - <%= c[0] %>" style="display:none;">
-
-
-                                          <% c[1].each do |d| %>
-                                            <% if d[0] != 'documentation' %>
-
-                                              <div class="div-table-row">
-                                                  <div class="div-table-col"><%= d[0] %></div>
-                                                  <div class="div-table-col"> <br></div>
-                                                  <div class="div-table-col">
-                                                    <% if (d[1].is_a?(Hash)) && (d[1].key?("documentation")) %>
-                                                      <%= d[1]['documentation']['description'] %> 
-                                                    <% end %>
-                                                  <br></div>
-                                              </div>
-
-                                            <% end %>
+                                  <section class="<%= jsontitle %>-<%= a[0] %>-<%= b[0] %>" id="item-2" style="display:none;">
+                                        <span class="title"> 
+                                          <% if (c[1].is_a?(Hash)) %>
+                                            <a href="#" onclick="showHide('<%= jsontitle %>-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>'); return false;"><%= c[0] %></a> 
+                                          <% else %>
+                                            <%= c[0] %>
                                           <% end %>
-                                        </div>
+                                        </span>
+                                        <span class="avail">  </span>
+                                        <span class="list">
+                                          
+                                        </span>
+                                  </section>
 
-                                      <% end %>
-
-
-
-
-
-                                    <% end %>
-                                  <% end %>
-                                </div>
-
+                                <% end %>
                               <% end %>
-
-
                             <% end %>
+
+
+
                           <% end %>
-                        </div>
-                      <!-- </div> -->
-                    <% end %>
-                  <% end %>
-                  </div>
+                        <% end %>
+
+
+
+                      <% end %>
+                    <% end %>        
+                  </main>
                 </div>
 
 

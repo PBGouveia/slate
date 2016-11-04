@@ -4293,7 +4293,7 @@
                 }
             },
             "documentation": {
-                "description": "",
+                "description": "Credit card account of the patient",
                 "color": "red",
                 "hide": false
             }

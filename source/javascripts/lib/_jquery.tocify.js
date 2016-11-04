@@ -94,11 +94,11 @@
 
             // **showAndHideOnScroll**: Accepts a boolean: true or false
             // Determines if table of contents nested items should be shown and hidden while scrolling
-            showAndHideOnScroll: true,
+            showAndHideOnScroll: false,
 
             // **highlightOnScroll**: Accepts a boolean: true or false
             // Determines if table of contents nested items should be highlighted (set to a different color) while scrolling
-            highlightOnScroll: true,
+            highlightOnScroll: false,
 
             // **highlightOffset**: Accepts a number
             // The offset distance in pixels to trigger the next active table of contents item
@@ -122,7 +122,7 @@
 
             // **scrollHistory**: Accepts a boolean: true or false
             // Adds a hash to the page url, to maintain history, when scrolling to a TOC item
-            scrollHistory: false,
+            scrollHistory: true,
 
             // **hashGenerator**: How the hash value (the anchor segment of the URL, following the
             // # character) will be generated.

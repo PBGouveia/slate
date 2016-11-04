@@ -10,6 +10,9 @@
                     "permissions": {
                         "fields": true,
                         "conditions": true
+                    },
+                    "documentation": {
+                        "description": "Date it was deleted"
                     }
                 },
                 "_deleted_reason": {
@@ -26,6 +29,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Reason it was deleted"
                     }
                 },
                 "_undeleted_date": {
@@ -33,6 +39,9 @@
                     "permissions": {
                         "fields": true,
                         "conditions": true
+                    },
+                    "documentation": {
+                        "description": "Date it was undeleted"
                     }
                 },
                 "documentation": {
@@ -130,7 +139,7 @@
                 "conditions": true
             },
             "documentation": {
-                "description": "",
+                "description": "User that hired",
                 "color": "red",
                 "hide": false
             }
@@ -237,7 +246,10 @@
                     "update": true,
                     "delete": true
                 },
-                "sort": true
+                "sort": true,
+                "documentation": {
+                    "description": "Permissions for the email"
+                }
             },
             "default": {
                 "fields": true
@@ -751,6 +763,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Name of the company in which the candidate worked before"
                     }
                 },
                 "position_held": {
@@ -805,6 +820,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Phone number of the company the candidate worked previously"
                     }
                 },
                 "location": {
@@ -2220,6 +2238,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Certification's title"
                     }
                 },
                 "type": {
@@ -2243,6 +2264,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Certification's type"
                     }
                 },
                 "school": {
@@ -2259,6 +2283,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Certification's school"
                     }
                 },
                 "completed_date": {
@@ -2278,6 +2305,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Certification's completed date"
                     }
                 },
                 "active": {
@@ -2313,6 +2343,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Certification's note"
                     }
                 }
             },
@@ -2408,7 +2441,7 @@
                         "fields": true
                     },
                     "documentation": {
-                        "description": "User that created"
+                        "description": "User that created it"
                     }
                 },
                 "_created_date": {
@@ -2569,6 +2602,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Start of the availability on this day"
                             }
                         },
                         "end": {
@@ -2588,18 +2624,30 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "End of the availability on this day"
                             }
                         },
                         "_created_user": {
                             "events": {
                                 "insert": false
+                            },
+                            "documentation": {
+                                "description": "User that created it"
                             }
                         },
                         "_created_date": {
                             "events": {
                                 "insert": false
+                            },
+                            "documentation": {
+                                "description": "Date that was created"
                             }
                         }
+                    },
+                    "documentation": {
+                        "description": "Monday"
                     }
                 },
                 "tue": {
@@ -2630,6 +2678,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Start of the availability on this day"
                             }
                         },
                         "end": {
@@ -2649,18 +2700,30 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "End of the availability on this day"
                             }
                         },
                         "_created_user": {
                             "events": {
                                 "insert": false
+                            },
+                            "documentation": {
+                                "description": "User that created it"
                             }
                         },
                         "_created_date": {
                             "events": {
                                 "insert": false
+                            },
+                            "documentation": {
+                                "description": "Date that was created"
                             }
                         }
+                    },
+                    "documentation": {
+                        "description": "Tuesday"
                     }
                 },
                 "wed": {
@@ -2691,6 +2754,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Start of the availability on this day"
                             }
                         },
                         "end": {
@@ -2710,18 +2776,30 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "End of the availability on this day"
                             }
                         },
                         "_created_user": {
                             "events": {
                                 "insert": false
+                            },
+                            "documentation": {
+                                "description": "User that created it"
                             }
                         },
                         "_created_date": {
                             "events": {
                                 "insert": false
+                            },
+                            "documentation": {
+                                "description": "Date that was created"
                             }
                         }
+                    },
+                    "documentation": {
+                        "description": "Wednesday"
                     }
                 },
                 "thu": {
@@ -2752,6 +2830,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Start of the availability on this day"
                             }
                         },
                         "end": {
@@ -2771,18 +2852,30 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "End of the availability on this day"
                             }
                         },
                         "_created_user": {
                             "events": {
                                 "insert": false
+                            },
+                            "documentation": {
+                                "description": "User that created it"
                             }
                         },
                         "_created_date": {
                             "events": {
                                 "insert": false
+                            },
+                            "documentation": {
+                                "description": "Date that was created"
                             }
                         }
+                    },
+                    "documentation": {
+                        "description": "Thursday"
                     }
                 },
                 "fri": {
@@ -2813,6 +2906,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Start of the availability on this day"
                             }
                         },
                         "end": {
@@ -2832,18 +2928,30 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "End of the availability on this day"
                             }
                         },
                         "_created_user": {
                             "events": {
                                 "insert": false
+                            },
+                            "documentation": {
+                                "description": "User that created it"
                             }
                         },
                         "_created_date": {
                             "events": {
                                 "insert": false
+                            },
+                            "documentation": {
+                                "description": "Date that was created"
                             }
                         }
+                    },
+                    "documentation": {
+                        "description": "Friday"
                     }
                 },
                 "sat": {
@@ -2874,6 +2982,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Start of the availability on this day"
                             }
                         },
                         "end": {
@@ -2893,18 +3004,30 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "End of the availability on this day"
                             }
                         },
                         "_created_user": {
                             "events": {
                                 "insert": false
+                            },
+                            "documentation": {
+                                "description": "User that created it"
                             }
                         },
                         "_created_date": {
                             "events": {
                                 "insert": false
+                            },
+                            "documentation": {
+                                "description": "Date that was created"
                             }
                         }
+                    },
+                    "documentation": {
+                        "description": "Saturday"
                     }
                 },
                 "sun": {
@@ -2935,6 +3058,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Start of the availability on this day"
                             }
                         },
                         "end": {
@@ -2954,18 +3080,30 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "End of the availability on this day"
                             }
                         },
                         "_created_user": {
                             "events": {
                                 "insert": false
+                            },
+                            "documentation": {
+                                "description": "User that created it"
                             }
                         },
                         "_created_date": {
                             "events": {
                                 "insert": false
+                            },
+                            "documentation": {
+                                "description": "Date that was created"
                             }
                         }
+                    },
+                    "documentation": {
+                        "description": "Sunday"
                     }
                 },
                 "documentation": {

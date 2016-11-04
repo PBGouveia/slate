@@ -65,7 +65,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "",
+                "description": "Dante the event group ends",
                 "color": "red",
                 "hide": false
             }
@@ -135,7 +135,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "",
+                "description": "Date the event group started",
                 "color": "red",
                 "hide": false
             }
@@ -289,7 +289,7 @@
                 }
             },
             "documentation": {
-                "description": "",
+                "description": "The ends of the event",
                 "color": "red",
                 "hide": false
             }

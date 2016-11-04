@@ -96,7 +96,7 @@
                 "fields": true
             },
             "documentation": {
-                "description": "",
+                "description": "Group of events",
                 "color": "red",
                 "hide": false
             }

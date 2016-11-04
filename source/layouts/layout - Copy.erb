@@ -47,7 +47,6 @@ under the License.
         }
 
       }
-
     </script>
   </head>
 
@@ -115,109 +114,133 @@ under the License.
               <!-- Information's table -->
                 <h3> Attributes: </h3>
 
-                <div class="div-table">
-                  <div class="div-table-row">
-                      <div class="div-table-col" style="text-align:center;"><b>Atribute</b></div>
-                      <div class="div-table-col" style="text-align:center;"><b>Type</b></div>
-                      <div class="div-table-col" style="text-align:center;"><b>Description</b></div>
-                  </div>
+                <table style="width:50%;word-break:break-word;">
+                    <tr>
+                        <th style="width:30%"> Atribute  </th>
+                        <th style="width:20%"> Type </th>
+                        <th style="width:50%"> Description </th>
+                    </tr>
+                    <% my_json_hash_sorted.each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
+          
+                      <% if (my_json_hash['attrs'][a[0]]['documentation'].key?("hide")) && (!my_json_hash['attrs'][a[0]]['documentation']['hide']) %>
+                        <tr class="first">
+                          <td> <a href="#" onclick="showHide('<%= jsontitle %> sub <%= a[0] %>'); return false;"> <%= a[0] %> </a> </td>
+                          <td> <%= a[1]['type'] %> </td>
+                          <td> <%= a[1]['documentation']['description'] %></td>
+                        </tr>
 
-                  <div id="<%= jsontitle %> table">
-                  <% my_json_hash_sorted.each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
-                    <% if (my_json_hash['attrs'][a[0]]['documentation'].key?("hide")) && (!my_json_hash['attrs'][a[0]]['documentation']['hide']) %>
-                      <!-- <div id="meupau">   -->
-                        <div class="div-table-row">
-                            <div class="div-table-col"><a href="#" onclick="showHide('<%= jsontitle %> sub <%= a[0] %>'); return false;"> <%= a[0] %> </a></div>
-                            <div class="div-table-col"><%= a[1]['type'] %><br></div>
-                            <div class="div-table-col"><%= a[1]['documentation']['description'] %><br></div>
-                        </div>
-
-                        <div id="<%= jsontitle %> sub <%= a[0] %>" style="display:none;">
+                        <tbody class="second" id="<%= jsontitle %> sub <%= a[0] %>" border="1" style="display:none;">
                           <% a[1].each do |b| %>
                             <% if b[0] != 'documentation' %>
-            
-                              <div class="div-table-row">
-                                  <div class="div-table-col">
-                                    <% if (b[1].is_a?(Hash)) %>
-                                      <a href="#" onclick="showHide('<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %>'); return false;"><%= b[0] %></a> 
-                                    <% else %>
-                                      <%= b[0] %>
-                                    <% end %>
-                                  </div>
-                                  <div class="div-table-col"><%= b[1]['type'] %> <br></div>
-                                  <div class="div-table-col">
-                                    <% if (b[1].is_a?(Hash)) && (b[1].key?("documentation")) %>
-                                      <%= b[1]['documentation']['description'] %> 
-                                    <% end %>
-                                  <br></div>
-                              </div>
-
-                              <% if (b[1].is_a?(Hash)) %> 
-                                <div id="<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %>" style="display:none;">
+                              <tr>
+                                <td> 
+                                  <% if (b[1].is_a?(Hash)) %>
+                                    <a href="#" onclick="showHide('<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %>'); return false;"><%= b[0] %></a> 
+                                  <% else %>
+                                    <%= b[0] %>
+                                  <% end %>
+                                </td>
+                                <td> <%= b[1]['type'] %> </td>
+                                <td> 
+                                  <% if (b[1].is_a?(Hash)) && (b[1].key?("documentation")) %>
+                                    <%= b[1]['documentation']['description'] %> 
+                                  <% end %>
+                                </td>
+                              </tr>
 
 
-                                  <% b[1].each do |c| %>
-                                    <% if c[0] != 'documentation' %>
+                                  <% if (b[1].is_a?(Hash)) %> 
 
-                                      <div class="div-table-row">
-                                          <div class="div-table-col">
+                                    <% b[1].each do |c| %>
+                                      <% if c[0] != 'documentation' %>
+                                        <tr class="third" id="<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %>" border="1" style="display:none;">
+                                          <td> 
                                             <% if (c[1].is_a?(Hash)) %>
-                                              <a href="#" onclick="showHide('<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %> - <%= c[0] %>'); return false;"><%= c[0] %></a> 
+                                              <a href="#" onclick="showHide('<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %> - <%= c[0] %>'); return false;"><%= c[0] %> </a>
                                             <% else %>
                                               <%= c[0] %>
                                             <% end %>
-                                          </div>
-                                          <div class="div-table-col"> <br></div>
-                                          <div class="div-table-col">
+                                            
+
+                                           </td>
+                                          <td> <%= c[1].class %> </td>
+                                          <td> 
                                             <% if (c[1].is_a?(Hash)) && (c[1].key?("documentation")) %>
                                               <%= c[1]['documentation']['description'] %> 
                                             <% end %>
-                                          <br></div>
-                                      </div>
+                                          </td>
+                                        </tr>
+
+                                              <% if (c[1].is_a?(Hash)) %>
 
 
-                                      <% if (c[1].is_a?(Hash)) %> 
-                                        <div id="<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %> - <%= c[0] %>" style="display:none;">
+                                                <% c[1].each do |d| %>
+                                                  <% if d[0] != 'documentation' %>
+                                                    <tr class="fourth" id="<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %> - <%= c[0] %>" border="1" style="display:none;">
+                                                      <td> 
+
+                                                        <% if (d[1].is_a?(Hash)) %>
+                                                          <a href="#" onclick="showHide('<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %> - <%= c[0] %> - <%= d[0] %>'); return false;"><%= d[0] %></a> 
+                                                        <% else %>
+                                                          <%= d[0] %>
+                                                        <% end %>
+                                                      </td>
+                                                      <td> <%= d[1].class %> </td>
+                                                      <td> 
+                                                        <% if (d[1].is_a?(Hash)) && (d[1].key?("documentation")) %>
+                                                          <%= d[1]['documentation']['description'] %> 
+                                                        <% end %>
+                                                      </td>
+                                                    </tr>
+
+                                                              <% if (d[1].is_a?(Hash)) %> 
+
+                                                                <% d[1].each do |e| %>
+                                                                  <% if e[0] != 'documentation' %>
+                                                                    <tr class="fifth" id="<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %> - <%= c[0] %> - <%= d[0] %>" border="1" style="display:none;">
+                                                                      <td> <%= e[0] %> </td>
+                                                                      <td> <%= e[1].class %> </td>
+                                                                      <td> 
+                                                                        <% if (e[1].is_a?(Hash)) && (e[1].key?("documentation")) %>
+                                                                          <%= e[1]['documentation']['description'] %> 
+                                                                        <% end %>
+                                                                      </td>
+                                                                    </tr>
+                                                                  <% end %>
+                                                                <% end %>
+
+                                                              <% end %>
 
 
-                                          <% c[1].each do |d| %>
-                                            <% if d[0] != 'documentation' %>
 
-                                              <div class="div-table-row">
-                                                  <div class="div-table-col"><%= d[0] %></div>
-                                                  <div class="div-table-col"> <br></div>
-                                                  <div class="div-table-col">
-                                                    <% if (d[1].is_a?(Hash)) && (d[1].key?("documentation")) %>
-                                                      <%= d[1]['documentation']['description'] %> 
-                                                    <% end %>
-                                                  <br></div>
-                                              </div>
+                                                  <% end %>
+                                                <% end %>
 
-                                            <% end %>
-                                          <% end %>
-                                        </div>
+                                              <% end %>
 
+
+                                        <% end %>
                                       <% end %>
-
-
-
-
-
-                                    <% end %>
                                   <% end %>
-                                </div>
 
-                              <% end %>
+
+
+
+
+
+
+
+                              
+
 
 
                             <% end %>
                           <% end %>
-                        </div>
-                      <!-- </div> -->
+                        </tbody>
+                      <% end %>
+
                     <% end %>
-                  <% end %>
-                  </div>
-                </div>
+                </table>
 
 
                 <!-- Code for printing examples and language -->

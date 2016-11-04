@@ -4,13 +4,19 @@
     "attrs": {
         "_id": {
             "default": {
-                "fields": true
+                "fields": true,
+                "documentation": {
+                    "description": "Default ID"
+                }
             },
             "manditory": {
                 "fields": true,
                 "conditions": {
                     "type": "Function",
-                    "function": "account"
+                    "function": "account",
+                    "documentation": {
+                        "description": "Conditons to be mandatory"
+                    }
                 },
                 "documentation": {
                     "description": "If it is manditory or not"
@@ -22,36 +28,7 @@
                 "notice": "This is a notice example",
                 "warning": "This is a warning example",
                 "success": "This is a success example",
-                "hide": false,
-                "table": {
-                    "title": "Minha Tabela",
-                    "head": {
-                        "h1": "Teste1",
-                        "h2": "Teste2",
-                        "h3": "Teste3",
-                        "h4": "Teste4"
-                    },
-                    "body": {
-                        "line1": {
-                            "h1": "1x1",
-                            "h2": "1x2",
-                            "h3": "1x3",
-                            "h4": "1x4"
-                        },
-                        "line2": {
-                            "h1": "2x1",
-                            "h2": "2x2",
-                            "h3": "2x3",
-                            "h4": "2x4"
-                        },
-                        "line3": {
-                            "h1": "3x1",
-                            "h2": "3x2",
-                            "h3": "3x3",
-                            "h4": "3x4"
-                        }
-                    }
-                }
+                "hide": false
             }
         },
         "_account": {
@@ -64,10 +41,20 @@
         },
         "_created_date": {
             "permissions": {
-                "fields": true
+                "fields": true,
+                "documentation": {
+                    "description": "Permissions for the _created_date",
+                    "color": "red",
+                    "hide": false
+                }
             },
             "default": {
-                "fields": true
+                "fields": true,
+                "documentation": {
+                    "description": "Default _created_date",
+                    "color": "red",
+                    "hide": false
+                }
             },
             "documentation": {
                 "description": "This contains the created date",
@@ -100,10 +87,16 @@
                     "insert": true,
                     "update": true,
                     "delete": true
+                },
+                "documentation": {
+                    "description": "External ID permissions"
                 }
             },
             "default": {
-                "fields": true
+                "fields": true,
+                "documentation": {
+                    "description": "Default external ID"
+                }
             },
             "documentation": {
                 "description": "Contains the external id",
@@ -121,10 +114,16 @@
                     "insert": true,
                     "update": true,
                     "delete": true
+                },
+                "documentation": {
+                    "description": "Email permissions"
                 }
             },
             "default": {
-                "fields": true
+                "fields": true,
+                "documentation": {
+                    "description": "Default email"
+                }
             },
             "documentation": {
                 "description": "Retrieves the email data",
@@ -163,10 +162,16 @@
                     "insert": true,
                     "update": true,
                     "delete": true
+                },
+                "documentation": {
+                    "description": "HST number permissions"
                 }
             },
             "default": {
-                "fields": true
+                "fields": true,
+                "documentation": {
+                    "description": "Default HST number"
+                }
             },
             "documentation": {
                 "description": "Contains the HST number",
@@ -184,14 +189,23 @@
                     "insert": true,
                     "update": true,
                     "delete": true
+                },
+                "documentation": {
+                    "description": "Permissions on the active"
                 }
             },
             "default": {
-                "fields": true
+                "fields": true,
+                "documentation": {
+                    "description": "Default option"
+                }
             },
             "events": {
                 "insert": {
                     "default": 1
+                },
+                "documentation": {
+                    "description": "The events for the activation"
                 }
             },
             "documentation": {
@@ -360,10 +374,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Title permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default title"
+                        }
                     },
                     "documentation": {
                         "description": "Name's title"
@@ -379,10 +399,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions on the label"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default label"
+                        }
                     },
                     "documentation": {
                         "description": "Name's label"
@@ -412,10 +438,16 @@
                     "insert": true,
                     "update": true,
                     "delete": true
+                },
+                "documentation": {
+                    "description": "Permissions on the logo"
                 }
             },
             "default": {
-                "fields": true
+                "fields": true,
+                "documentation": {
+                    "description": "Default logo"
+                }
             },
             "documentation": {
                 "description": "Company logo",
@@ -446,6 +478,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Telephony number"
                     }
                 },
                 "errors": {
@@ -467,7 +502,13 @@
                                 "fields": true
                             }
                         }
+                    },
+                    "documentation": {
+                        "description": "Telephony errors"
                     }
+                },
+                "documentation": {
+                    "description": "Subdocument with account_sid, auth_token, number and errors"
                 }
             },
             "documentation": {
@@ -637,10 +678,16 @@
                     "insert": true,
                     "update": true,
                     "delete": true
+                },
+                "documentation": {
+                    "description": "Permissions of the policy"
                 }
             },
             "default": {
-                "fields": true
+                "fields": true,
+                "documentation": {
+                    "description": "Default policy"
+                }
             },
             "documentation": {
                 "description": "The company's policy",
@@ -672,6 +719,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Timezone options on the settings"
                     }
                 },
                 "time_format": {
@@ -695,6 +745,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Time format options on the settings"
                     }
                 },
                 "new_user_showtime": {
@@ -711,6 +764,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Showtime of the new user on the settings"
                     }
                 },
                 "currency": {
@@ -734,6 +790,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Currency settings"
                     }
                 },
                 "country": {
@@ -757,6 +816,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Country settings"
                     }
                 },
                 "state": {
@@ -780,6 +842,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "State settings"
                     }
                 },
                 "datetime_format": {
@@ -796,6 +861,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Datetime format settings"
                     }
                 },
                 "language": {
@@ -821,7 +889,7 @@
                         "fields": true
                     },
                     "documentation": {
-                        "description": "Language"
+                        "description": "Language settings"
                     }
                 },
                 "office_hours": {
@@ -1147,7 +1215,7 @@
                         }
                     },
                     "documentation": {
-                        "description": "Office hours on different days"
+                        "description": "Office hours on different days settings"
                     }
                 },
                 "phone_dialer": {
@@ -1171,6 +1239,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Phone dialer settings"
                     }
                 },
                 "stat_holiday_multiplier": {
@@ -1189,7 +1260,7 @@
                         "fields": true
                     },
                     "documentation": {
-                        "description": "The multiplier for statutory holidays"
+                        "description": "The multiplier for statutory holidays settings"
                     }
                 },
                 "geolocation_radius": {
@@ -1206,6 +1277,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Geolocation radius settings"
                     }
                 },
                 "documentation": {
@@ -1235,10 +1309,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Executive role permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default executive role"
+                        }
                     },
                     "documentation": {
                         "description": "Executive role settings"
@@ -1258,10 +1338,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Executive user permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default exective user"
+                        }
                     },
                     "documentation": {
                         "description": "Executive user settings"
@@ -1284,7 +1370,10 @@
                     "type": "id",
                     "reference": {
                         "type": "referenceOne",
-                        "collection": "contacts"
+                        "collection": "contacts",
+                        "documentation": {
+                            "description": "Referral reference"
+                        }
                     },
                     "permissions": {
                         "fields": true,
@@ -1294,10 +1383,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Referral permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default referral"
+                        }
                     },
                     "documentation": {
                         "description": "Reference contact"
@@ -1307,7 +1402,10 @@
                     "type": "id",
                     "reference": {
                         "type": "referenceOne",
-                        "collection": "accounts.sales_reps"
+                        "collection": "accounts.sales_reps",
+                        "documentation": {
+                            "description": "Sales rep reference"
+                        }
                     },
                     "permissions": {
                         "fields": true,
@@ -1317,10 +1415,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Sales rep permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default sales rep"
+                        }
                     },
                     "documentation": {
                         "description": "Sales representative"
@@ -1353,10 +1457,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions on the term"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default term"
+                        }
                     },
                     "documentation": {
                         "description": "Term of the billing"
@@ -1372,10 +1482,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions on header message"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default header message"
+                        }
                     },
                     "documentation": {
                         "description": "Message on header of the billing"
@@ -1391,10 +1507,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions on footer message"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default footer message"
+                        }
                     },
                     "documentation": {
                         "description": "Message on footer of the billing"
@@ -1406,7 +1528,13 @@
                         "type": "picklist",
                         "filter": {
                             "function": "invoice_type",
-                            "options": []
+                            "options": [],
+                            "documentation": {
+                                "description": "Reference filter"
+                            }
+                        },
+                        "documentation": {
+                            "description": "Reference type of the billing settings"
                         }
                     },
                     "permissions": {
@@ -1417,10 +1545,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions for the type"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default type"
+                        }
                     },
                     "documentation": {
                         "description": "Type of billing"
@@ -1436,10 +1570,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions on from whom is the email"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default from_email"
+                        }
                     },
                     "documentation": {
                         "description": "From what email"
@@ -1452,6 +1592,9 @@
                         "filter": {
                             "function": "invoice_number_generation_type",
                             "options": []
+                        },
+                        "documentation": {
+                            "description": "Invoice number generation's reference"
                         }
                     },
                     "permissions": {
@@ -1462,10 +1605,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Invoice number generation's permission"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default invoice number generation"
+                        }
                     },
                     "documentation": {
                         "description": "The invoice number generation type"
@@ -1481,10 +1630,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Start number's permission"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default start number"
+                        }
                     },
                     "documentation": {
                         "description": "Start number of the billing"
@@ -1497,6 +1652,9 @@
                         "filter": {
                             "function": "invoice_method",
                             "options": []
+                        },
+                        "documentation": {
+                            "description": "Reference method of the billing settings"
                         }
                     },
                     "permissions": {
@@ -1507,10 +1665,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions of the method"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default method"
+                        }
                     },
                     "documentation": {
                         "description": "The method of billing"
@@ -1526,10 +1690,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions for the accounting ID"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default accounting ID"
+                        }
                     },
                     "documentation": {
                         "description": "Accounting IDs"
@@ -1545,10 +1715,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions of the client location accounting ID"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default client location accounting ID"
+                        }
                     },
                     "documentation": {
                         "description": "Client location accounting IDs"
@@ -1564,10 +1740,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "The permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default patient billing accounting ID"
+                        }
                     },
                     "documentation": {
                         "description": "The accounting IDs for the patient billing"
@@ -1583,10 +1765,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Patient default accounting ID permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default patient default accounting ID"
+                        }
                     },
                     "documentation": {
                         "description": "Default patient accounting IDs"
@@ -1597,6 +1785,9 @@
                     "permissions": {
                         "documents": {
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions of the billing period"
                         }
                     },
                     "subdocument": {
@@ -1607,6 +1798,9 @@
                                 "filter": {
                                     "function": "billing_period",
                                     "options": []
+                                },
+                                "documentation": {
+                                    "description": "Period's reference"
                                 }
                             },
                             "permissions": {
@@ -1617,10 +1811,19 @@
                                     "insert": true,
                                     "update": true,
                                     "delete": true
+                                },
+                                "documentation": {
+                                    "description": "Permissions of period"
                                 }
                             },
                             "default": {
-                                "fields": true
+                                "fields": true,
+                                "documentation": {
+                                    "description": "Default period"
+                                }
+                            },
+                            "documentation": {
+                                "description": "Period of the billing period"
                             }
                         },
                         "day": {
@@ -1633,11 +1836,23 @@
                                     "insert": true,
                                     "update": true,
                                     "delete": true
+                                },
+                                "documentation": {
+                                    "description": "Permissions for the billing period's day"
                                 }
                             },
                             "default": {
-                                "fields": true
+                                "fields": true,
+                                "documentation": {
+                                    "description": "Default day"
+                                }
+                            },
+                            "documentation": {
+                                "description": "Day of the billing period"
                             }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with period and day"
                         }
 
                     },
@@ -1655,10 +1870,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Outstanding permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default outstanding"
+                        }
                     },
                     "documentation": {
                         "description": "Outstanding value"
@@ -1671,6 +1892,9 @@
                         "filter": {
                             "function": "bill_rounding_types",
                             "options": []
+                        },
+                        "documentation": {
+                            "description": "Rounding type reference"
                         }
                     },
                     "permissions": {
@@ -1681,10 +1905,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Rounding type permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default rounding type"
+                        }
                     },
                     "documentation": {
                         "description": "What is the rounding type for the bill"
@@ -1700,10 +1930,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions of the clock estimate"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default clock estimate"
+                        }
                     },
                     "documentation": {
                         "description": "Estimate on the clock"
@@ -1719,10 +1955,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Early checkin permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default early checkin"
+                        }
                     },
                     "documentation": {
                         "description": "Billing for early check in"
@@ -1738,10 +1980,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Late checking permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default late checkin"
+                        }
                     },
                     "documentation": {
                         "description": "Billing for late check in"
@@ -1757,10 +2005,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Late checkout permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default late checkout"
+                        }
                     },
                     "documentation": {
                         "description": "Billing for late check out"
@@ -1867,6 +2121,9 @@
                     "permissions": {
                         "documents": {
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions of the pay period"
                         }
                     },
                     "subdocument": {
@@ -1940,10 +2197,16 @@
                                     "insert": true,
                                     "update": true,
                                     "delete": true
+                                },
+                                "documentation": {
+                                    "description": "Permissions of the current payroll run"
                                 }
                             },
                             "default": {
-                                "fields": true
+                                "fields": true,
+                                "documentation": {
+                                    "description": "Default current payroll runs"
+                                }
                             },
                             "documentation": {
                                 "description": "Current payroll run"
@@ -1963,10 +2226,16 @@
                                     "insert": true,
                                     "update": true,
                                     "delete": true
+                                },
+                                "documentation": {
+                                    "description": "Permissions on the previous payroll runs"
                                 }
                             },
                             "default": {
-                                "fields": true
+                                "fields": true,
+                                "documentation": {
+                                    "description": "Default previous payroll run"
+                                }
                             },
                             "documentation": {
                                 "description": "Previous payroll run"
@@ -1997,10 +2266,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions of the export type of the payroll settings"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default export type"
+                        }
                     },
                     "documentation": {
                         "description": "Export type"
@@ -2023,10 +2298,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions of the payroll type"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default payroll type"
+                        }
                     },
                     "documentation": {
                         "description": "Payroll type"
@@ -2052,6 +2333,9 @@
                         "filter": {
                             "function": "weekday",
                             "options": []
+                        },
+                        "documentation": {
+                            "description": "Start of the week's reference"
                         }
                     },
                     "permissions": {
@@ -2062,10 +2346,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions of the start of the week of the scheduler settings"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default start of the week"
+                        }
                     },
                     "documentation": {
                         "description": "Start of the week on event"
@@ -2081,10 +2371,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permission of the scheduler settings duration"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default duration"
+                        }
                     },
                     "documentation": {
                         "description": "Duration of event"
@@ -2108,10 +2404,16 @@
                     "permissions": {
                         "fields": true,
                         "conditions": true,
-                        "sort": true
+                        "sort": true,
+                        "documentation": {
+                            "description": "Request ID permissions"
+                        }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default request ID"
+                        }
                     },
                     "documentation": {
                         "description": "Request ID"
@@ -2122,10 +2424,16 @@
                     "permissions": {
                         "fields": true,
                         "conditions": true,
-                        "sort": true
+                        "sort": true,
+                        "documentation": {
+                            "description": "Submit ID permissions"
+                        }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default submit ID"
+                        }
                     },
                     "documentation": {
                         "description": "Submit ID"
@@ -2141,10 +2449,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions on the is hiring"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default is_hearing"
+                        }
                     },
                     "documentation": {
                         "description": "If it is hiring"
@@ -2160,10 +2474,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Candidate description permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default candidate description"
+                        }
                     },
                     "documentation": {
                         "description": "Candidate description"
@@ -2179,10 +2499,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Completed submission message permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default completed submission message"
+                        }
                     },
                     "documentation": {
                         "description": "Entire submission message"
@@ -2193,6 +2519,9 @@
                     "permissions": {
                         "documents": {
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Candidate stages permissions"
                         }
                     },
                     "subdocument": {
@@ -2206,10 +2535,16 @@
                                     "insert": true,
                                     "update": true,
                                     "delete": true
+                                },
+                                "documentation": {
+                                    "description": "Code permissions"
                                 }
                             },
                             "default": {
-                                "fields": true
+                                "fields": true,
+                                "documentation": {
+                                    "description": "Default code"
+                                }
                             },
                             "documentation": {
                                 "description": "Code of the stage"
@@ -2225,10 +2560,16 @@
                                     "insert": true,
                                     "update": true,
                                     "delete": true
+                                },
+                                "documentation": {
+                                    "description": "Label permissions"
                                 }
                             },
                             "default": {
-                                "fields": true
+                                "fields": true,
+                                "documentation": {
+                                    "description": "Default label"
+                                }
                             },
                             "documentation": {
                                 "description": "Label of the stage"
@@ -2244,10 +2585,16 @@
                                     "insert": true,
                                     "update": true,
                                     "delete": true
+                                },
+                                "documentation": {
+                                    "description": "Color permissions"
                                 }
                             },
                             "default": {
-                                "fields": true
+                                "fields": true,
+                                "documentation": {
+                                    "description": "Default color"
+                                }
                             },
                             "documentation": {
                                 "description": "Color of the stage"
@@ -2263,10 +2610,16 @@
                                     "insert": true,
                                     "update": true,
                                     "delete": true
+                                },
+                                "documentation": {
+                                    "description": "Order permissions"
                                 }
                             },
                             "default": {
-                                "fields": true
+                                "fields": true,
+                                "documentation": {
+                                    "description": "Default order"
+                                }
                             },
                             "documentation": {
                                 "description": "Order of the stages"
@@ -2284,7 +2637,10 @@
                     "type": "file",
                     "reference": {
                         "type": "referenceOne",
-                        "collection": "files"
+                        "collection": "files",
+                        "documentation": {
+                            "description": "Candidate agreement reference"
+                        }
                     },
                     "permissions": {
                         "fields": true,
@@ -2294,10 +2650,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Candidate agreement permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default candidate agreement"
+                        }
                     }
                     ,
                     "documentation": {
@@ -2314,10 +2676,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Human resources email permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default human resources email"
+                        }
                     },
                     "documentation": {
                         "description": "Human resources email"
@@ -2442,6 +2810,9 @@
             "permissions": {
                 "documents": {
                     "delete": true
+                },
+                "documentation": {
+                    "description": "Locations permissions"
                 }
             },
             "subdocument": {
@@ -2456,10 +2827,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Primary permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default primary"
+                        }
                     },
                     "documentation": {
                         "description": "If the location is the primay location or not"
@@ -2470,6 +2847,9 @@
                     "permissions": {
                         "documents": {
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions on the address"
                         }
                     },
                     "subdocument": {
@@ -6050,6 +6430,9 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Permissions of the code of the service"
                         }
                     },
                     "default": {
@@ -6070,6 +6453,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Color of the service"
                     }
                 },
                 "label": {
@@ -6086,6 +6472,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Label of the service"
                     }
                 },
                 "description": {
@@ -6102,6 +6491,9 @@
                     },
                     "default": {
                         "fields": true
+                    },
+                    "documentation": {
+                        "description": "Description of the service"
                     }
                 },
                 "bill_rate": {
@@ -6126,6 +6518,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Rate of the service"
                             }
                         },
                         "unit": {
@@ -6149,6 +6544,9 @@
                             },
                             "default": {
                                 "fields": true
+                            },
+                            "documentation": {
+                                "description": "Unit of the service's bill_rate"
                             }
                         },
                         "taxes": {
@@ -6347,7 +6745,7 @@
                                 }
                             },
                             "documentation": {
-                                "description": "Services visit"
+                                "description": "Services max billables visit"
                             }
                         },
                         "day": {
@@ -6372,6 +6770,9 @@
                                     },
                                     "default": {
                                         "fields": true
+                                    },
+                                    "documentation": {
+                                        "description": "Hours of the day for the max billable of the service"
                                     }
                                 },
                                 "dollars": {
@@ -6388,6 +6789,9 @@
                                     },
                                     "default": {
                                         "fields": true
+                                    },
+                                    "documentation": {
+                                        "description": "Dollars of the day for the max billable of the service"
                                     }
                                 },
                                 "documentation": {
@@ -6420,6 +6824,9 @@
                                     },
                                     "default": {
                                         "fields": true
+                                    },
+                                    "documentation": {
+                                        "description": "Hours of the week for the max billable of the service"
                                     }
                                 },
                                 "dollars": {
@@ -6436,6 +6843,9 @@
                                     },
                                     "default": {
                                         "fields": true
+                                    },
+                                    "documentation": {
+                                        "description": "Dollars of the week for the max billable of the service"
                                     }
                                 },
                                 "documentation": {
@@ -6468,6 +6878,9 @@
                                     },
                                     "default": {
                                         "fields": true
+                                    },
+                                    "documentation": {
+                                        "description": "Hours of the biweek for the max billable of the service"
                                     }
                                 },
                                 "dollars": {
@@ -6484,6 +6897,9 @@
                                     },
                                     "default": {
                                         "fields": true
+                                    },
+                                    "documentation": {
+                                        "description": "Dollars of the biweek for the max billable of the service"
                                     }
                                 },
                                 "documentation": {
@@ -6516,6 +6932,9 @@
                                     },
                                     "default": {
                                         "fields": true
+                                    },
+                                    "documentation": {
+                                        "description": "Hours of the semimonth for the max billable of the service"
                                     }
                                 },
                                 "dollars": {
@@ -6532,6 +6951,9 @@
                                     },
                                     "default": {
                                         "fields": true
+                                    },
+                                    "documentation": {
+                                        "description": "Dollars of the semimonth for the max billable of the service"
                                     }
                                 },
                                 "documentation": {
@@ -6564,6 +6986,9 @@
                                     },
                                     "default": {
                                         "fields": true
+                                    },
+                                    "documentation": {
+                                        "description": "Hours of the month for the max billable of the service"
                                     }
                                 },
                                 "dollars": {
@@ -6580,6 +7005,9 @@
                                     },
                                     "default": {
                                         "fields": true
+                                    },
+                                    "documentation": {
+                                        "description": "Dollars of the month for the max billable of the service"
                                     }
                                 },
                                 "documentation": {
@@ -6612,6 +7040,9 @@
                                     },
                                     "default": {
                                         "fields": true
+                                    },
+                                    "documentation": {
+                                        "description": "Hours of the contract for the max billable of the service"
                                     }
                                 },
                                 "dollars": {
@@ -6628,6 +7059,9 @@
                                     },
                                     "default": {
                                         "fields": true
+                                    },
+                                    "documentation": {
+                                        "description": "Dolalrs of the contract for the max billable of the service"
                                     }
                                 },
                                 "documentation": {
@@ -6731,7 +7165,7 @@
                                 "fields": true
                             },
                             "documentation": {
-                                "description": "After"
+                                "description": "Time after the payable hours"
                             }
                         },
                         "rate": {
@@ -6750,7 +7184,7 @@
                                 "fields": true
                             },
                             "documentation": {
-                                "description": "Rate"
+                                "description": "Rate for after the payable hours"
                             }
                         },
                         "unit": {
@@ -6776,7 +7210,7 @@
                                 "fields": true
                             },
                             "documentation": {
-                                "description": "Unit"
+                                "description": "Unit for after the payable hours"
                             }
                         },
                         "documentation": {
@@ -6840,6 +7274,9 @@
             "permissions": {
                 "documents": {
                     "delete": true
+                },
+                "documentation": {
+                    "description": "Emergency phones permissions"
                 }
             },
             "subdocument": {
@@ -6853,10 +7290,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Primary permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default primary"
+                        }
                     },
                     "documentation": {
                         "description": "If it is the primary emergency phone number or not"
@@ -6872,10 +7315,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Title permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default title"
+                        }
                     },
                     "documentation": {
                         "description": "Title of the emergency phone"
@@ -6891,10 +7340,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Number permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default number"
+                        }
                     },
                     "documentation": {
                         "description": "The emergency phone number"
@@ -6907,6 +7362,9 @@
                         "filter": {
                             "function": "country",
                             "options": []
+                        },
+                        "documentation": {
+                            "description": "Country's reference"
                         }
                     },
                     "permissions": {
@@ -6917,10 +7375,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Country's permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default country"
+                        }
                     },
                     "documentation": {
                         "description": "Country of the emergency phone number"
@@ -7162,10 +7626,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "External ID permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default external ID"
+                        }
                     },
                     "documentation": {
                         "description": "Sales rep external ID"
@@ -7181,10 +7651,16 @@
                             "insert": true,
                             "update": true,
                             "delete": true
+                        },
+                        "documentation": {
+                            "description": "Accounting ID permissions"
                         }
                     },
                     "default": {
-                        "fields": true
+                        "fields": true,
+                        "documentation": {
+                            "description": "Default accounting id"
+                        }
                     },
                     "documentation": {
                         "description": "Sales rep accounting ID"
