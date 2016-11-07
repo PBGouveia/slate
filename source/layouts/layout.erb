@@ -34,18 +34,16 @@ under the License.
       <%= javascript_include_tag  "all_nosearch" %>
     <% end %>
 
+    <script type="text/javascript" url="javascripts/lib/_jquery.js"></script>
     <script type="text/javascript">
 
       function showHide(id) {
-
-        if (document.getElementById(id).style.display == "none") {
-          document.getElementById(id).style.display = '';
+        var $el = $(id);
+        if ($el.css('display') == 'none') {
+          $el.show();
+        } else {
+          $el.hide();
         }
-
-        else {
-          document.getElementById(id).style.display = "none";
-        }
-
       }
 
     </script>
@@ -112,170 +110,218 @@ under the License.
 
             <h2 id="<%= jsontitle + '_object' %>">The <%= jsontitle %> object</h2>     <!--  prints each subtitle on the html --> 
 
-              <!-- Information's table -->
-                <h3> Attributes: </h3>
+            <!-- Information's table -->
+            <h3> Attributes: </h3>
+            <div class="div-table">
+              <div class="div-table-row">
+                  <div class="div-table-col" style="text-align:center;"><b>Attribute</b></div>
+                  <div class="div-table-col" style="text-align:center;"><b>Type</b></div>
+                  <div class="div-table-col" style="text-align:center;"><b>Description</b></div>
+              </div>
 
-                <div class="div-table">
-                  <div class="div-table-row">
-                      <div class="div-table-col" style="text-align:center;"><b>Atribute</b></div>
-                      <div class="div-table-col" style="text-align:center;"><b>Type</b></div>
-                      <div class="div-table-col" style="text-align:center;"><b>Description</b></div>
-                  </div>
+              <div id="<%= jsontitle %>-table">
+              <% my_json_hash_sorted.each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
+              <% if (my_json_hash['attrs'][a[0]]['documentation'].key?("hide")) && (!my_json_hash['attrs'][a[0]]['documentation']['hide']) %>
 
-                  <div id="<%= jsontitle %> table">
-                  <% my_json_hash_sorted.each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
-                    <% if (my_json_hash['attrs'][a[0]]['documentation'].key?("hide")) && (!my_json_hash['attrs'][a[0]]['documentation']['hide']) %>
-                        <div class="div-table-row">
-                            <div class="div-table-col"><a href="#" onclick="showHide('<%= jsontitle %> sub <%= a[0] %>'); return false;"> <%= a[0] %> </a></div>
-                            <div class="div-table-col"><%= a[1]['type'] %><br></div>
-                            <div class="div-table-col"><%= a[1]['documentation']['description'] %><br></div>
-                        </div>
-
-                        <div id="<%= jsontitle %> sub <%= a[0] %>" style="display:none;">
-                          <% a[1].each do |b| %>
-                            <% if b[0] != 'documentation' %>
-            
-                              <div class="div-table-row">
-                                  <div class="div-table-col">
-                                    <% if (b[1].is_a?(Hash)) %>
-                                      <a href="#" onclick="showHide('<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %>'); return false;"><%= b[0] %></a> 
-                                    <% else %>
-                                      <%= b[0] %>
-                                    <% end %>
-                                  </div>
-                                  <div class="div-table-col"><%= b[1]['type'] %> <br></div>
-                                  <div class="div-table-col">
-                                    <% if (b[1].is_a?(Hash)) && (b[1].key?("documentation")) %>
-                                      <%= b[1]['documentation']['description'] %> 
-                                    <% end %>
-                                  <br></div>
-                              </div>
-
-                              <% if (b[1].is_a?(Hash)) %> 
-                                <div id="<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %>" style="display:none;">
-
-
-                                  <% b[1].each do |c| %>
-                                    <% if c[0] != 'documentation' %>
-
-                                      <div class="div-table-row">
-                                          <div class="div-table-col">
-                                            <% if (c[1].is_a?(Hash)) %>
-                                              <a href="#" onclick="showHide('<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %> - <%= c[0] %>'); return false;"><%= c[0] %></a> 
-                                            <% else %>
-                                              <%= c[0] %>
-                                            <% end %>
-                                          </div>
-                                          <div class="div-table-col"> <br></div>
-                                          <div class="div-table-col">
-                                            <% if (c[1].is_a?(Hash)) && (c[1].key?("documentation")) %>
-                                              <%= c[1]['documentation']['description'] %> 
-                                            <% end %>
-                                          <br></div>
-                                      </div>
-
-
-                                      <% if (c[1].is_a?(Hash)) %> 
-                                        <div id="<%= jsontitle %> sub <%= a[0] %> - <%= b[0] %> - <%= c[0] %>" style="display:none;">
-
-
-                                          <% c[1].each do |d| %>
-                                            <% if d[0] != 'documentation' %>
-
-                                              <div class="div-table-row">
-                                                  <div class="div-table-col"><%= d[0] %></div>
-                                                  <div class="div-table-col"> <br></div>
-                                                  <div class="div-table-col">
-                                                    <% if (d[1].is_a?(Hash)) && (d[1].key?("documentation")) %>
-                                                      <%= d[1]['documentation']['description'] %> 
-                                                    <% end %>
-                                                  <br></div>
-                                              </div>
-
-                                            <% end %>
-                                          <% end %>
-                                        </div>
-
-                                      <% end %>
-
-
-
-
-
-                                    <% end %>
-                                  <% end %>
-                                </div>
-
-                              <% end %>
-
-
-                            <% end %>
-                          <% end %>
-                        </div>
-                    <% end %>
-                  <% end %>
-                  </div>
+                <div class="div-table-row">
+                    <div class="div-table-col">
+                      <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>'); return false;">
+                        <%= a[0] %>
+                      </a>
+                    </div>
+                    <div class="div-table-col">
+                      <%= a[1]['type'] %>
+                    </div>
+                    <div class="div-table-col">
+                      <%= a[1]['documentation']['description'] %>
+                    </div>
                 </div>
 
+                <% a[1].each do |b| %>
+                <% if b[0] != 'documentation' %>
 
-                <!-- Code for printing examples and language -->
+                  <div class="div-table-row <%= jsontitle %>-sub-<%= a[0] %>" style="display:none;background-color: aquamarine;">
+                    <div class="div-table-col">
+                      <% if (b[1].is_a?(Hash)) %>
+                        <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>'); return false;">
+                          <%= b[0] %>
+                        </a> 
+                      <% else %>
+                        <%= b[0] %>
+                      <% end %>
+                      &nbsp;
+                    </div>
+                    <div class="div-table-col">
+                      <%= b[1]['type'] %>
+                      &nbsp;
+                    </div>
+                    <div class="div-table-col">
+                      <% if (b[1].is_a?(Hash)) && (b[1].key?("documentation")) %>
+                        <%= b[1]['documentation']['description'] %> 
+                      <% end %>
+                      &nbsp;
+                    </div>
+                  </div>
 
-                <%# my_json_languages_hash['codes'].each do |b| %>   <!-- loop through all the different codes on the json file --> 
-                  <%# entirecode = '' %>         
-                  <%# b[1].each do |c| %>        <!-- loop through each line of each code -->
-                    <%# entirecode = entirecode + c[1] + "\n" %>    <!-- put all the lines together -->
-                  <%# end %>
-                  <%# highlightedcode = Rouge.highlight(entirecode, b[0], 'html') %>     <!-- pretty colors -->
-                  <%# highlightedcode.gsub! '<pre class="highlight"', '<pre class="highlight' + ' ' + b[0] + '"' %>   <!-- makes so each language block of code has its own subclass -->
-                  <%#= highlightedcode %>
-                <%# end %>
+                  <% if (b[1].is_a?(Hash)) %> 
+                  <% b[1].each do |c| %>
+                  <% if c[0] != 'documentation' %>
 
-                <!-- //////////////////////////////////////////// -->
+                    <div class="div-table-row <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>" style="display:none;background-color: rebeccapurple;">
+                      <div class="div-table-col">
+                        <% if (c[1].is_a?(Hash)) %>
+                          <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>'); return false;">
+                            <%= c[0] %>
+                          </a> 
+                        <% else %>
+                          <%= c[0] %>
+                        <% end %>
+                        &nbsp;
+                      </div>
+                      <div class="div-table-col">
+                        &nbsp;
+                      </div>
+                      <div class="div-table-col">
+                        <% if (c[1].is_a?(Hash)) && (c[1].key?("documentation")) %>
+                          <%= c[1]['documentation']['description'] %> 
+                        <% end %>
+                        &nbsp;
+                      </div>
+                    </div>
 
-                <!--<blockquote>
-                  <p>The above command returns JSON structured like this:</p>
-                </blockquote> -->
+                    <% if (c[1].is_a?(Hash)) %> 
+                    <% c[1].each do |d| %>
+                    <% if d[0] != 'documentation' %>
 
-                <!-- Check if there is something nested that needs to be hidden -->
+                      <div id="<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>" class="div-table-row" style="display:none;background-color: red;">
+                        <div class="div-table-col">
+                          <% if (d[1].is_a?(Hash)) %>
+                            <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>'); return false;"><%= c[0] %></a> 
+                          <% else %>
+                            <%= d[0] %>
+                          <% end %>
+                          &nbsp;
+                        </div>
+                        <div class="div-table-col">
+                          &nbsp;
+                        </div>
+                        <div class="div-table-col">
+                          <% if (d[1].is_a?(Hash)) && (d[1].key?("documentation")) %>
+                            <%= d[1]['documentation']['description'] %> 
+                          <% end %>
+                        </div>
+                        &nbsp;
+                      </div>
 
-                <%# if a[1].key?("somethingdeepinside") %>
-                  <%# value = a[1]['somethingdeepinside'] %>
-                  <%# a[1] = a[1].except('somethingdeepinside') %>
+                      <% if (d[1].is_a?(Hash)) %> 
+                      <% d[1].each do |e| %>
+                      <% if e[0] != 'documentation' %>
 
-                  <%# if a[1][value].key?("somethingdeepinside") %>  <!--if a[1]['subdocument'].key? -->
-                    <%# a[1][value] = a[1][value].except(a[1][value]['somethingdeepinside']) %>
-                    <%# a[1][value] = a[1][value].except('somethingdeepinside') %>
-                  <%# else %>
-                    <%# a[1][value] = a[1][value].except(value) %>
-                    <%# a[1][value] = a[1][value].except('somethingdeepinside') %>  
-                  <%# end %>
+                        <div id="<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>" class="div-table-row" style="display:none;background-color: blue;">
+                          <div class="div-table-col">
+                            <%= e[0] %>
+                            &nbsp;
+                          </div>
+                          <div class="div-table-col">
+                            &nbsp;
+                          </div>
+                          <div class="div-table-col">
+                            <% if (e[1].is_a?(Hash)) && (e[1].key?("documentation")) %>
+                              <%= e[1]['documentation']['description'] %> 
+                            <% end %>
+                            &nbsp;
+                          </div>
+                        </div>
 
-                <%# end %>
+                      <% end %>
+                      <% end %>
+                      <% end %>
+                      <!-- end d loop -->
 
-                <%# my_json_hash_pretty = JSON.pretty_generate(a[1].except('documentation')) %>    <!-- sit still, look pretty; the except is used so the description doesnt show on the json code block -->
+                    <% end %>
+                    <% end %>
+                    <% end %>
+                    <!-- end c loop -->
 
-                <!-- <code><%#= Rouge.highlight(my_json_hash_pretty, 'json', 'html') %></code>     pretty colors --> 
+                  <% end %>
+                  <% end %>
+                  <% end %>
+                  <!-- end b loop -->
 
-                <!-- <p><%#= a[1]['documentation']['description'] %></p>     display the description --> 
+                <% end %>
+                <% end %>
+                <!-- end a loop -->
 
-                
+              <% end %>
+              <% end %>
+              <!-- end collection loop -->
 
-                <!-- Notice, warning and success -->
+              </div>
+            </div>
+            <!-- end collection table -->
 
-                <%# if a[1]['documentation'].key?("notice") %>
-                  <!-- <aside class="notice"><%#= a[1]['documentation']['notice'] %></aside> -->
-                <%# end %>
+            <!-- Code for printing examples and language -->
+            <% my_json_hash['codes'].each do |langs| %>     <!-- loop through all the different codes on the json file --> 
+              <% entirecode = '' %>         
+              <% langs[1].each do |lines| %>        <!-- loop through each line of each code -->
+                <% entirecode = entirecode + lines[1] + "\n" %>    <!-- put all the lines together -->
+              <% end %>
+              <% highlightedcode = Rouge.highlight(entirecode, langs[0], 'html') %>     <!-- pretty colors -->
+              <% highlightedcode.gsub! '<pre class="highlight"', '<pre class="highlight' + ' ' + langs[0] + '"' %>   <!-- makes so each language block of code has its own subclass -->
+              <%= highlightedcode %>
+            <% end %>
+            
 
-                <%# if a[1]['documentation'].key?("warning") %>
-                  <!-- <aside class="warning"><%#= a[1]['documentation']['warning'] %></aside> -->
-                <%# end %>
+            <!-- //////////////////////////////////////////// -->
 
-                <%# if a[1]['documentation'].key?("success") %>
-                  <!-- <aside class="success"><%#= a[1]['documentation']['success'] %></aside> -->
-                <%# end %>
+            <!--<blockquote>
+              <p>The above command returns JSON structured like this:</p>
+            </blockquote> -->
+
+            <!-- Check if there is something nested that needs to be hidden -->
+
+            <%# if a[1].key?("somethingdeepinside") %>
+              <%# value = a[1]['somethingdeepinside'] %>
+              <%# a[1] = a[1].except('somethingdeepinside') %>
+
+              <%# if a[1][value].key?("somethingdeepinside") %>  <!--if a[1]['subdocument'].key? -->
+                <%# a[1][value] = a[1][value].except(a[1][value]['somethingdeepinside']) %>
+                <%# a[1][value] = a[1][value].except('somethingdeepinside') %>
+              <%# else %>
+                <%# a[1][value] = a[1][value].except(value) %>
+                <%# a[1][value] = a[1][value].except('somethingdeepinside') %>  
+              <%# end %>
+
+            <%# end %>
+
+            <%# my_json_hash_pretty = JSON.pretty_generate(a[1].except('documentation')) %>    <!-- sit still, look pretty; the except is used so the description doesnt show on the json code block -->
+
+            <!-- <code><%#= Rouge.highlight(my_json_hash_pretty, 'json', 'html') %></code>     pretty colors --> 
+
+            <!-- <p><%#= a[1]['documentation']['description'] %></p>     display the description --> 
+
+            
+
+            <!-- Notice, warning and success -->
+
+            <%# if a[1]['documentation'].key?("notice") %>
+              <!-- <aside class="notice"><%#= a[1]['documentation']['notice'] %></aside> -->
+            <%# end %>
+
+            <%# if a[1]['documentation'].key?("warning") %>
+              <!-- <aside class="warning"><%#= a[1]['documentation']['warning'] %></aside> -->
+            <%# end %>
+
+            <%# if a[1]['documentation'].key?("success") %>
+              <!-- <aside class="success"><%#= a[1]['documentation']['success'] %></aside> -->
+            <%# end %>
 
           <% end %>
+          <!-- end show collection -->
+        
         <% end %>
+        <!-- end all collections (.json) loop -->
+
       </div>     <!-- closes class="content" -->
       <div class="dark-box">
         <% if language_tabs %>

@@ -409,27 +409,30 @@ html, body {
 
 
 
-    .div-table{
-      display:table;         
-      width:auto;         
-      background-color:#eee;         
-      border:1px solid  #666666;         
-      border-spacing:5px;/*cellspacing:poor IE support for  this*/
-      // margin-right: 50%;
-    }
-    .div-table-row{
-      display:table-row;
-      width:auto;
-      clear:both;
-    }
-    .div-table-col{
-      float:left;/*fix for  buggy browsers*/
-      display:table-column;         
-      width:200px; 
-      // width: 30%;    
-      text-align: center;    
-      background-color:#eee;  
-    }
+  .div-table {
+    display: table;         
+    width: auto;         
+    background-color: #eee;         
+    border: 1px solid #666666;         
+    border-spacing: 5px; /* cellspacing:poor IE support for this */
+    // width: 50%;
+    margin-right: 50%;
+  }
+
+  .div-table-row {
+    display: table-row;
+    width: 100%;
+    clear: both;
+    float: left;
+  }
+
+  .div-table-col {
+    float: left; /* fix for buggy browsers */
+    display: table-column;         
+    width: 33%;    
+    text-align: center;    
+    background-color: #eee;  
+  }
 
 
 
