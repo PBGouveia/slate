@@ -150,17 +150,17 @@ under the License.
                       <% else %>
                         <%= b[0] %>
                       <% end %>
-                      &nbsp;
+                      
                     </div>
                     <div class="div-table-col" style="background-color: aquamarine;">
                       <%= b[1]['type'] %>
-                      &nbsp;
+                      &nbsp;                      
                     </div>
                     <div class="div-table-col" style="background-color: aquamarine;">
                       <% if (b[1].is_a?(Hash)) && (b[1].key?("documentation")) %>
                         <%= b[1]['documentation']['description'] %> 
                       <% end %>
-                      &nbsp;
+                      
                     </div>
                   </div>
 
@@ -168,8 +168,8 @@ under the License.
                   <% b[1].each do |c| %>
                   <% if c[0] != 'documentation' %>
 
-                    <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>" style="display:none;background-color: rebeccapurple;">
-                      <div class="div-table-col" style="background-color: rebeccapurple;">
+                    <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>" style="display:none;background-color: white;">
+                      <div class="div-table-col" style="background-color: white;">
                         <% if (c[1].is_a?(Hash)) %>
                           <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>', '.c-<%= c[0] %>'); return false;">
                             <%= c[0] %>
@@ -177,16 +177,16 @@ under the License.
                         <% else %>
                           <%= c[0] %>
                         <% end %>
-                        &nbsp;
+                        
                       </div>
-                      <div class="div-table-col" style="background-color: rebeccapurple;">
-                        &nbsp;
+                      <div class="div-table-col" style="background-color: white;">
+                       &nbsp;                      
                       </div>
-                      <div class="div-table-col" style="background-color: rebeccapurple;">
+                      <div class="div-table-col" style="background-color: white;">
                         <% if (c[1].is_a?(Hash)) && (c[1].key?("documentation")) %>
                           <%= c[1]['documentation']['description'] %> 
                         <% end %>
-                        &nbsp;
+                        
                       </div>
                     </div>
 
@@ -194,23 +194,25 @@ under the License.
                     <% c[1].each do |d| %>
                     <% if d[0] != 'documentation' %>
 
-                      <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> c-<%= c[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>" style="display:none;background-color: red;">
-                        <div class="div-table-col" style="background-color: red;">
+                      <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> c-<%= c[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>" style="display:none;background-color: lightgreen;">
+                        <div class="div-table-col" style="background-color: lightgreen;">
                           <% if (d[1].is_a?(Hash)) %>
-                            <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>', '.d-<%= d[0] %>'); return false;"><%= c[0] %></a> 
+                            <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>', '.d-<%= d[0] %>'); return false;">
+                              <%= d[0] %>
+                            </a> 
                           <% else %>
                             <%= d[0] %>
                           <% end %>
-                          &nbsp;
+                          
                         </div>
-                        <div class="div-table-col" style="background-color: red;">
-                          &nbsp;
+                        <div class="div-table-col" style="background-color: lightgreen;">
+                          &nbsp;                      
                         </div>
-                        <div class="div-table-col" style="background-color: red;">
+                        <div class="div-table-col" style="background-color: lightgreen;">
                           <% if (d[1].is_a?(Hash)) && (d[1].key?("documentation")) %>
                             <%= d[1]['documentation']['description'] %> 
                           <% end %>
-                          &nbsp;
+                          
                         </div>
                       </div>
 
@@ -218,19 +220,18 @@ under the License.
                       <% d[1].each do |e| %>
                       <% if e[0] != 'documentation' %>
 
-                        <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> c-<%= c[0] %> d-<%= d[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>" style="display:none;background-color: blue;">
-                          <div class="div-table-col" style="background-color: blue;">
+                        <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> c-<%= c[0] %> d-<%= d[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>" style="display:none;background-color: yellow;">
+                          <div class="div-table-col" style="background-color: yellow;">
                             <%= e[0] %>
-                            &nbsp;
                           </div>
-                          <div class="div-table-col" style="background-color: blue;">
-                            &nbsp;
+                          <div class="div-table-col" style="background-color: yellow;">
+                            &nbsp;                      
                           </div>
-                          <div class="div-table-col" style="background-color: blue;">
+                          <div class="div-table-col" style="background-color: yellow;">
                             <% if (e[1].is_a?(Hash)) && (e[1].key?("documentation")) %>
                               <%= e[1]['documentation']['description'] %> 
                             <% end %>
-                            &nbsp;
+                            
                           </div>
                         </div>
 
@@ -262,22 +263,22 @@ under the License.
             <!-- end collection table -->
 
             <!-- Code for printing examples and language -->
-            <%# my_json_hash['codes'].each do |langs| %>     <!-- loop through all the different codes on the json file --> 
-              <%# entirecode = '' %>         
-              <%# langs[1].each do |lines| %>        <!-- loop through each line of each code -->
-                <%# entirecode = entirecode + lines[1] + "\n" %>    <!-- put all the lines together -->
-              <%# end %>
-              <%# highlightedcode = Rouge.highlight(entirecode, langs[0], 'html') %>     <!-- pretty colors -->
-              <%# highlightedcode.gsub! '<pre class="highlight"', '<pre class="highlight' + ' ' + langs[0] + '"' %>   <!-- makes so each language block of code has its own subclass -->
-              <%#= highlightedcode %>
-            <%# end %>
+            <% my_json_hash['codes'].each do |langs| %>     <!-- loop through all the different codes on the json file --> 
+              <% entirecode = '' %>         
+              <% langs[1].each do |lines| %>        <!-- loop through each line of each code -->
+                <% entirecode = entirecode + lines[1] + "\n" %>    <!-- put all the lines together -->
+              <% end %>
+              <% highlightedcode = Rouge.highlight(entirecode, langs[0], 'html') %>     <!-- pretty colors -->
+              <% highlightedcode.gsub! '<pre class="highlight"', '<pre class="highlight' + ' ' + langs[0] + '"' %>   <!-- makes so each language block of code has its own subclass -->
+              <%= highlightedcode %>
+            <% end %>
             
 
             <!-- //////////////////////////////////////////// -->
 
-            <!--<blockquote>
+           <!--  <blockquote>
               <p>The above command returns JSON structured like this:</p>
-            </blockquote> -->
+            </blockquote>  -->
 
             <!-- Check if there is something nested that needs to be hidden -->
 

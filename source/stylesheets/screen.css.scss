@@ -413,10 +413,11 @@ html, body {
     display: table;         
     width: auto;         
     background-color: #eee;         
-    border: 1px solid #666666;         
+    // border: 1px solid #666666;         
     border-spacing: 5px; /* cellspacing:poor IE support for this */
     width: 50%;
     // margin-right: 50%;
+    float: left;
   }
 
   .div-table-row {
@@ -424,6 +425,7 @@ html, body {
     width: 100%;
     clear: both;
     float: left;
+    border: 1px solid #666666;
   }
 
   .div-table-col {
