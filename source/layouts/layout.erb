@@ -141,7 +141,7 @@ under the License.
                 <% a[1].each do |b| %>
                 <% if b[0] != 'documentation' %>
 
-                  <div class="div-table-row a-<%= a[0] %> <%= jsontitle %>-sub-<%= a[0] %>" style="display:none;">
+                  <div class="div-table-row a-<%= a[0] %> <%= jsontitle %>-sub-<%= a[0] %>" style="display:none;background-color:aquamarine;">
                     <div class="div-table-col" style="background-color: aquamarine;">
                       <% if (b[1].is_a?(Hash)) %>
                         <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>', '.b-<%= b[0] %>' ); return false;">
@@ -168,7 +168,7 @@ under the License.
                   <% b[1].each do |c| %>
                   <% if c[0] != 'documentation' %>
 
-                    <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>" style="display:none;">
+                    <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>" style="display:none;background-color: rebeccapurple;">
                       <div class="div-table-col" style="background-color: rebeccapurple;">
                         <% if (c[1].is_a?(Hash)) %>
                           <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>', '.c-<%= c[0] %>'); return false;">
@@ -194,7 +194,7 @@ under the License.
                     <% c[1].each do |d| %>
                     <% if d[0] != 'documentation' %>
 
-                      <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> c-<%= c[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>" style="display:none;">
+                      <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> c-<%= c[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>" style="display:none;background-color: red;">
                         <div class="div-table-col" style="background-color: red;">
                           <% if (d[1].is_a?(Hash)) %>
                             <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>', '.d-<%= d[0] %>'); return false;"><%= c[0] %></a> 
@@ -218,7 +218,7 @@ under the License.
                       <% d[1].each do |e| %>
                       <% if e[0] != 'documentation' %>
 
-                        <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> c-<%= c[0] %> d-<%= d[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>" style="display:none;">
+                        <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> c-<%= c[0] %> d-<%= d[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>" style="display:none;background-color: blue;">
                           <div class="div-table-col" style="background-color: blue;">
                             <%= e[0] %>
                             &nbsp;
@@ -262,15 +262,15 @@ under the License.
             <!-- end collection table -->
 
             <!-- Code for printing examples and language -->
-            <% my_json_hash['codes'].each do |langs| %>     <!-- loop through all the different codes on the json file --> 
-              <% entirecode = '' %>         
-              <% langs[1].each do |lines| %>        <!-- loop through each line of each code -->
-                <% entirecode = entirecode + lines[1] + "\n" %>    <!-- put all the lines together -->
-              <% end %>
-              <% highlightedcode = Rouge.highlight(entirecode, langs[0], 'html') %>     <!-- pretty colors -->
-              <% highlightedcode.gsub! '<pre class="highlight"', '<pre class="highlight' + ' ' + langs[0] + '"' %>   <!-- makes so each language block of code has its own subclass -->
-              <%= highlightedcode %>
-            <% end %>
+            <%# my_json_hash['codes'].each do |langs| %>     <!-- loop through all the different codes on the json file --> 
+              <%# entirecode = '' %>         
+              <%# langs[1].each do |lines| %>        <!-- loop through each line of each code -->
+                <%# entirecode = entirecode + lines[1] + "\n" %>    <!-- put all the lines together -->
+              <%# end %>
+              <%# highlightedcode = Rouge.highlight(entirecode, langs[0], 'html') %>     <!-- pretty colors -->
+              <%# highlightedcode.gsub! '<pre class="highlight"', '<pre class="highlight' + ' ' + langs[0] + '"' %>   <!-- makes so each language block of code has its own subclass -->
+              <%#= highlightedcode %>
+            <%# end %>
             
 
             <!-- //////////////////////////////////////////// -->
