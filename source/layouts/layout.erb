@@ -141,10 +141,10 @@ under the License.
                 <% a[1].each do |b| %>
                 <% if b[0] != 'documentation' %>
 
-                  <div class="div-table-row a-<%= a[0] %> <%= jsontitle %>-sub-<%= a[0] %>" style="display:none;background-color: aquamarine;">
-                    <div class="div-table-col">
+                  <div class="div-table-row a-<%= a[0] %> <%= jsontitle %>-sub-<%= a[0] %>" style="display:none;">
+                    <div class="div-table-col" style="background-color: aquamarine;">
                       <% if (b[1].is_a?(Hash)) %>
-                        <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>'); return false;">
+                        <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>', '.b-<%= b[0] %>' ); return false;">
                           <%= b[0] %>
                         </a> 
                       <% else %>
@@ -152,11 +152,11 @@ under the License.
                       <% end %>
                       &nbsp;
                     </div>
-                    <div class="div-table-col">
+                    <div class="div-table-col" style="background-color: aquamarine;">
                       <%= b[1]['type'] %>
                       &nbsp;
                     </div>
-                    <div class="div-table-col">
+                    <div class="div-table-col" style="background-color: aquamarine;">
                       <% if (b[1].is_a?(Hash)) && (b[1].key?("documentation")) %>
                         <%= b[1]['documentation']['description'] %> 
                       <% end %>
@@ -168,10 +168,10 @@ under the License.
                   <% b[1].each do |c| %>
                   <% if c[0] != 'documentation' %>
 
-                    <div class="div-table-row a-<%= a[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>" style="display:none;background-color: rebeccapurple;">
-                      <div class="div-table-col">
+                    <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>" style="display:none;">
+                      <div class="div-table-col" style="background-color: rebeccapurple;">
                         <% if (c[1].is_a?(Hash)) %>
-                          <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>'); return false;">
+                          <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>', '.c-<%= c[0] %>'); return false;">
                             <%= c[0] %>
                           </a> 
                         <% else %>
@@ -179,10 +179,10 @@ under the License.
                         <% end %>
                         &nbsp;
                       </div>
-                      <div class="div-table-col">
+                      <div class="div-table-col" style="background-color: rebeccapurple;">
                         &nbsp;
                       </div>
-                      <div class="div-table-col">
+                      <div class="div-table-col" style="background-color: rebeccapurple;">
                         <% if (c[1].is_a?(Hash)) && (c[1].key?("documentation")) %>
                           <%= c[1]['documentation']['description'] %> 
                         <% end %>
@@ -194,39 +194,39 @@ under the License.
                     <% c[1].each do |d| %>
                     <% if d[0] != 'documentation' %>
 
-                      <div class="div-table-row a-<%= a[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>" style="display:none;background-color: red;">
-                        <div class="div-table-col">
+                      <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> c-<%= c[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>" style="display:none;">
+                        <div class="div-table-col" style="background-color: red;">
                           <% if (d[1].is_a?(Hash)) %>
-                            <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>'); return false;"><%= c[0] %></a> 
+                            <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>', '.d-<%= d[0] %>'); return false;"><%= c[0] %></a> 
                           <% else %>
                             <%= d[0] %>
                           <% end %>
                           &nbsp;
                         </div>
-                        <div class="div-table-col">
+                        <div class="div-table-col" style="background-color: red;">
                           &nbsp;
                         </div>
-                        <div class="div-table-col">
+                        <div class="div-table-col" style="background-color: red;">
                           <% if (d[1].is_a?(Hash)) && (d[1].key?("documentation")) %>
                             <%= d[1]['documentation']['description'] %> 
                           <% end %>
+                          &nbsp;
                         </div>
-                        &nbsp;
                       </div>
 
                       <% if (d[1].is_a?(Hash)) %> 
                       <% d[1].each do |e| %>
                       <% if e[0] != 'documentation' %>
 
-                        <div class="div-table-row a-<%= a[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>" style="display:none;background-color: blue;">
-                          <div class="div-table-col">
+                        <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> c-<%= c[0] %> d-<%= d[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>" style="display:none;">
+                          <div class="div-table-col" style="background-color: blue;">
                             <%= e[0] %>
                             &nbsp;
                           </div>
-                          <div class="div-table-col">
+                          <div class="div-table-col" style="background-color: blue;">
                             &nbsp;
                           </div>
-                          <div class="div-table-col">
+                          <div class="div-table-col" style="background-color: blue;">
                             <% if (e[1].is_a?(Hash)) && (e[1].key?("documentation")) %>
                               <%= e[1]['documentation']['description'] %> 
                             <% end %>
