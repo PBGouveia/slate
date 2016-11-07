@@ -1,0 +1,189 @@
+{
+    "name": "files",
+    "documentationhide": false,
+    "attrs": {
+        "file": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "The file",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "type": {
+            "type": "id",
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "file_type",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Type of the file",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "name": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Name of the file",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "_uploaded_date": {
+            "type": "datetime",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "events": {
+                "insert": {
+                    "type": "Function",
+                    "function": "now"
+                }
+            },
+            "documentation": {
+                "description": "Date in which the file was uploaded",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "notes": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Notes on the file",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "content_type": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Type of the content of the file",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "checksum": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Checksum number in order to detect errors on the file",
+                "color": "red",
+                "hide": false
+            }
+        }
+    },
+    "codes": {
+        "ruby": {
+            "line1": "require 'test'",
+            "line2": "api = Test::APIClient.authorize!('key')",
+            "line3": "api.tests.get"
+        },
+        "javascript": {
+            "line1": "dsja javascript",
+            "line2": "dsja javascript",
+            "line3": "print 'Hello, world!'",
+            "line4": "sads shell"
+        },
+        "python": {
+            "line1": "import test",
+            "line2": " ",
+            "line3": "api = test.authorize('key')",
+            "line4": "api.test.get()"
+        },
+        "shell": {
+            "line1": "curl 'http://example.com/api/test'",
+            "line2": "  -H 'Authorization: key'"
+        }
+    }
+}

@@ -1,0 +1,204 @@
+{
+    "name": "usersactivities",
+    "documentationhide": true,
+    "attrs": {
+        "_account": {
+            "manditory": {
+                "conditions": false
+            },
+            "documentation": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "_date": {
+            "type": "float",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "user": {
+            "type": "id",
+            "reference": {
+                "type": "referenceOne",
+                "collection": "users"
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true
+            },
+            "query": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "email": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true
+            },
+            "query": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "activities": {
+            "type": "subdocuments",
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "_app": {
+                    "type": "id",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "activity": {
+                    "type": "id",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "date": {
+                    "type": "datetime",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "help": {
+                    "type": "subdocument",
+                    "subdocument": {
+                        "_scope": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "url": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "user": {
+                            "type": "subdocument",
+                            "subdocument": {
+                                "identifier": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "role": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "documentation": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red",
+                "hide": false
+            }
+        }
+    },
+    "codes": {
+        "ruby": {
+            "line1": "require 'test'",
+            "line2": "api = Test::APIClient.authorize!('key')",
+            "line3": "api.tests.get"
+        },
+        "javascript": {
+            "line1": "dsja javascript",
+            "line2": "dsja javascript",
+            "line3": "print 'Hello, world!'",
+            "line4": "sads shell"
+        },
+        "python": {
+            "line1": "import test",
+            "line2": " ",
+            "line3": "api = test.authorize('key')",
+            "line4": "api.test.get()"
+        },
+        "shell": {
+            "line1": "curl 'http://example.com/api/test'",
+            "line2": "  -H 'Authorization: key'"
+        }
+    }
+}

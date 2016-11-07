@@ -1,0 +1,270 @@
+{
+    "name": "usersnotes",
+    "documentationhide": false,
+    "attrs": {
+        "_deleted": {
+            "permissions": {
+                "fields": true
+            },
+            "default": {
+                "fields": true,
+                "conditions": false
+            },
+            "documentation": {
+                "description": "If it was deleted",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "user": {
+            "type": "id",
+            "reference": {
+                "type": "referenceOne",
+                "collection": "users"
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "User ID",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "priority": {
+            "type": "id",
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "note_priority",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "The priority of the note",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "status": {
+            "type": "id",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Status ID",
+                "color": "red",
+                "hide": true
+            }
+        },
+        "title": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "The title of the note",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "_created_user": {
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Which user created the note",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "_created_date": {
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Date in which the note was created",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "last_updated_user": {
+            "type": "id",
+            "reference": {
+                "type": "referenceOne",
+                "collection": "users"
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true
+            },
+            "default": {
+                "fields": true
+            },
+            "events": {
+                "update": {
+                    "type": "Function",
+                    "function": "user"
+                }
+            },
+            "documentation": {
+                "description": "Last user that updated the note",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "last_updated_date": {
+            "type": "datetime",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true
+            },
+            "default": {
+                "fields": true
+            },
+            "events": {
+                "update": {
+                    "type": "Function",
+                    "function": "now"
+                }
+            },
+            "documentation": {
+                "description": "Last date note was updated",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "note": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "The note itself",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "attachments": {
+            "type": "subdocuments",
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "file": {
+                    "type": "id",
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "patients.files"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                }
+            },
+            "documentation": {
+                "description": "Any document attached to the note",
+                "color": "red",
+                "hide": true
+            }
+        }
+    },
+    "codes": {
+        "ruby": {
+            "line1": "require 'test'",
+            "line2": "api = Test::APIClient.authorize!('key')",
+            "line3": "api.tests.get"
+        },
+        "javascript": {
+            "line1": "dsja javascript",
+            "line2": "dsja javascript",
+            "line3": "print 'Hello, world!'",
+            "line4": "sads shell"
+        },
+        "python": {
+            "line1": "import test",
+            "line2": " ",
+            "line3": "api = test.authorize('key')",
+            "line4": "api.test.get()"
+        },
+        "shell": {
+            "line1": "curl 'http://example.com/api/test'",
+            "line2": "  -H 'Authorization: key'"
+        }
+    }
+}

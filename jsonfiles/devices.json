@@ -1,0 +1,71 @@
+{
+    "name": "devices",
+    "documentationhide": true,
+    "attrs": {
+        "uuid": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "title": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red",
+                "hide": false
+            }
+        }
+    },
+    "codes": {
+        "ruby": {
+            "line1": "require 'test'",
+            "line2": "api = Test::APIClient.authorize!('key')",
+            "line3": "api.tests.get"
+        },
+        "javascript": {
+            "line1": "dsja javascript",
+            "line2": "dsja javascript",
+            "line3": "print 'Hello, world!'",
+            "line4": "sads shell"
+        },
+        "python": {
+            "line1": "import test",
+            "line2": " ",
+            "line3": "api = test.authorize('key')",
+            "line4": "api.test.get()"
+        },
+        "shell": {
+            "line1": "curl 'http://example.com/api/test'",
+            "line2": "  -H 'Authorization: key'"
+        }
+    }
+}

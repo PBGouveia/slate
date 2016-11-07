@@ -1,0 +1,438 @@
+{
+    "name": "eventsgroups",
+    "documentationhide": false,
+    "attrs": {
+        "events": {
+            "type": "array",
+            "array_type": "id",
+            "reference": {
+                "type": "referenceMany",
+                "collection": "events"
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "All the events in that group of events",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "start": {
+            "type": "datetime",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "When the group of events start",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "end": {
+            "type": "datetime",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Dante the event group ends",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "freq": {
+            "type": "string",
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "repeat_frequencies",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "The frequency in which the event repeats",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "interval": {
+            "type": "integer",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "The interval in which the event happens",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "dtstart": {
+            "type": "date",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Date the event group started",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "byweekday": {
+            "type": "array",
+            "array_type": "string",
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "repeat_wkst_types",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "If the event is grouped by week",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "bymonthday": {
+            "type": "array",
+            "array_type": "integer",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "If the event is grouped by month",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "bycustom": {
+            "type": "array",
+            "array_type": "integer",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red",
+                "hide": true
+            }
+        },
+        "ends": {
+            "type": "subdocument",
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "type": {
+                    "type": "id",
+                    "reference": {
+                        "type": "picklist",
+                        "filter": {
+                            "function": "repeats_end_type",
+                            "options": []
+                        }
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "patient": {
+                    "type": "id",
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "patients"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "patient_service": {
+                    "type": "id",
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "patients.services"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with type, patient and patient_service"
+                }
+            },
+            "documentation": {
+                "description": "The ends of the event",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "count": {
+            "type": "integer",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "How many times the event happens",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "wkst": {
+            "type": "string",
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "repeat_wkst_types",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "until": {
+            "type": "datetime",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Until when the group of events is supposed to happen",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "exceptions": {
+            "type": "subdocuments",
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "start": {
+                    "type": "datetime",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "end": {
+                    "type": "datetime",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                }
+            },
+            "documentation": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red",
+                "hide": true
+            }
+        }
+    },
+    "codes": {
+        "ruby": {
+            "line1": "require 'test'",
+            "line2": "api = Test::APIClient.authorize!('key')",
+            "line3": "api.tests.get"
+        },
+        "javascript": {
+            "line1": "dsja javascript",
+            "line2": "dsja javascript",
+            "line3": "print 'Hello, world!'",
+            "line4": "sads shell"
+        },
+        "python": {
+            "line1": "import test",
+            "line2": " ",
+            "line3": "api = test.authorize('key')",
+            "line4": "api.test.get()"
+        },
+        "shell": {
+            "line1": "curl 'http://example.com/api/test'",
+            "line2": "  -H 'Authorization: key'"
+        }
+    }
+}

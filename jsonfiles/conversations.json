@@ -1,0 +1,335 @@
+{
+    "name": "conversations",
+    "documentationhide": false,
+    "attrs": {
+        "messages": {
+            "type": "subdocuments",
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "message": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "from": {
+                    "type": "id",
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "users"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "sent_date": {
+                    "type": "datetime",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "type": {
+                    "type": "integer",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "read": {
+                    "type": "subdocuments",
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "user": {
+                            "type": "id",
+                            "reference": {
+                                "type": "referenceOne",
+                                "collection": "users"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "read": {
+                            "type": "boolean",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "read_date": {
+                            "type": "datetime",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "read_device": {
+                            "type": "id",
+                            "reference": {
+                                "type": "referenceOne",
+                                "collection": "devices"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        }
+                    },
+                    "documentation": {
+                        "description": "Subdocument with user, read, read_date and read_device"
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with message's message, from, sent_date, type and read"
+                }
+            },
+            "documentation": {
+                "description": "The message info",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "to": {
+            "type": "subdocuments",
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "user": {
+                    "type": "id",
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "users"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "archived": {
+                    "type": "boolean",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "flag": {
+                    "type": "boolean",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with user, archived and flag"
+                }
+            },
+            "documentation": {
+                "description": "To whom the message will be sent",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "from": {
+            "type": "subdocument",
+            "subdocument": {
+                "user": {
+                    "type": "id",
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "users"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "archived": {
+                    "type": "boolean",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "flag": {
+                    "type": "boolean",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with user, archived and flag"
+                }
+            },
+            "documentation": {
+                "description": "Form whom the message comes",
+                "color": "red",
+                "hide": false
+            }
+        }
+    },
+    "codes": {
+        "ruby": {
+            "line1": "require 'test'",
+            "line2": "api = Test::APIClient.authorize!('key')",
+            "line3": "api.tests.get"
+        },
+        "javascript": {
+            "line1": "dsja javascript",
+            "line2": "dsja javascript",
+            "line3": "print 'Hello, world!'",
+            "line4": "sads shell"
+        },
+        "python": {
+            "line1": "import test",
+            "line2": " ",
+            "line3": "api = test.authorize('key')",
+            "line4": "api.test.get()"
+        },
+        "shell": {
+            "line1": "curl 'http://example.com/api/test'",
+            "line2": "  -H 'Authorization: key'"
+        }
+    }
+}

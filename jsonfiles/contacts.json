@@ -1,0 +1,1129 @@
+{
+    "name": "contacts",
+    "documentationhide": false,
+    "attrs": {
+        "_type": {
+            "type": "id",
+            "title": {
+                "singular": "Type"
+            },
+            "filter": {
+                "order": 3
+            },
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "contact_type",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Type of contact, if it is company or person",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "_referral": {
+            "type": "id",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red",
+                "hide": true
+            }
+        },
+        "ext_id": {
+            "type": "string",
+            "title": {
+                "singular": "External ID"
+            },
+            "filter": {
+                "order": 2
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Contains the external id",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "accounting_id": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Contains the accounting id",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "email": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Contains the email of the contact",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "photo": {
+            "type": "file",
+            "reference": {
+                "type": "referenceOne",
+                "collection": "files"
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Photo of the contact",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "notes": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Notes on the contact",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "locations": {
+            "type": "subdocuments",
+            "events": {
+                "insert": [
+                    {
+                        "function": "geolocate"
+                    }
+                ],
+                "update": [
+                    {
+                        "function": "geolocate"
+                    }
+                ]
+            },
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "primary": {
+                    "type": "boolean",
+                    "primary": true,
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    },
+                    "documentation": {
+                        "description": "If the location is the primary or not"
+                    }
+                },
+                "type": {
+                    "type": "id",
+                    "reference": {
+                        "type": "picklist",
+                        "filter": {
+                            "function": "location_type",
+                            "options": []
+                        }
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    },
+                    "documentation": {
+                        "description": "Location's type of the contact"
+                    }
+                },
+                "title": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    },
+                    "documentation": {
+                        "description": "Location's title of the contact"
+                    }
+                },
+                "address": {
+                    "type": "subdocument",
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "city": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's city"
+                            }
+                        },
+                        "country": {
+                            "type": "id",
+                            "reference": {
+                                "type": "picklist",
+                                "filter": {
+                                    "function": "country",
+                                    "options": []
+                                }
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's country"
+                            }
+                        },
+                        "lat": {
+                            "type": "float",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Latitude"
+                            }
+                        },
+                        "lng": {
+                            "type": "float",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Longitude"
+                            }
+                        },
+                        "state": {
+                            "type": "id",
+                            "reference": {
+                                "type": "picklist",
+                                "filter": {
+                                    "function": "state",
+                                    "options": []
+                                }
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "documentation": {
+                                "description": "Contact's state"
+                            }
+                        },
+                        "title": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's title"
+                            }
+                        },
+                        "street": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's street"
+                            }
+                        },
+                        "street_extra": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Extra information on the street"
+                            }
+                        },
+                        "zip": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's zip code"
+                            }
+                        },
+                        "map_img": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "documentation": {
+                                "description": "Map image"
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with address's city, country, lat, lng, state, title, street, street_extra, zip, map_img"
+                        }
+                    },
+                    "documentation": {
+                        "description": "Address of the contact"
+                    }
+                },
+                "phone": {
+                    "type": "subdocument",
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "country": {
+                            "type": "id",
+                            "reference": {
+                                "type": "picklist",
+                                "filter": {
+                                    "function": "country",
+                                    "options": []
+                                }
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Country of the contact's phone"
+                            }
+                        },
+                        "number": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Country of the contact's number"
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with phone's country and number"
+                        }
+                    },
+                    "documentation": {
+                        "description": "Contact's phone"
+                    }
+                },
+                "fax": {
+                    "type": "subdocument",
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "country": {
+                            "type": "id",
+                            "reference": {
+                                "type": "picklist",
+                                "filter": {
+                                    "function": "country",
+                                    "options": []
+                                }
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Country of the contact's fax"
+                            }
+                        },
+                        "number": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Number of the contact's fax"
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with fax's country and number"
+                        }
+                    },
+                    "documentation": {
+                        "description": "Contact's fax"
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with location's primary, type, title, address, phone and fax"
+                }
+            },
+            "documentation": {
+                "description": "Location info, like address and geolocation",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "fax": {
+            "type": "subdocument",
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "country": {
+                    "type": "id",
+                    "reference": {
+                        "type": "picklist",
+                        "filter": {
+                            "function": "country",
+                            "options": []
+                        }
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    },
+                    "documentation": {
+                        "description": "Country of the contact's fax"
+                    }
+                },
+                "number": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    },
+                    "documentation": {
+                        "description": "Number of the contact's fax"
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with fax's country and number"
+                }
+            },
+            "documentation": {
+                "description": "Contains the fax number of the contact",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "contact": {
+            "type": "subdocument",
+            "filter": {
+                "function": "contact_contact",
+                "order": 4,
+                "options": {
+                    "type": "name"
+                }
+            },
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "_company": {
+                    "type": "id",
+                    "title": {
+                        "singular": "Company"
+                    },
+                    "filter": {
+                        "order": 5
+                    },
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "contacts"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    },
+                    "documentation": {
+                        "description": "Contact's company"
+                    }
+                },
+                "date_of_birth": {
+                    "type": "date",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    },
+                    "documentation": {
+                        "description": "Contact's date of birth"
+                    }
+                },
+                "gender": {
+                    "type": "id",
+                    "reference": {
+                        "type": "picklist",
+                        "filter": {
+                            "function": "gender",
+                            "options": []
+                        }
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true
+                        },
+                        "sort": true
+                    },
+                    "default": {
+                        "fields": true
+                    },
+                    "documentation": {
+                        "description": "Contact's gender"
+                    }
+                },
+                "ethnicity": {
+                    "type": "id",
+                    "reference": {
+                        "type": "picklist",
+                        "filter": {
+                            "function": "ethnicity",
+                            "options": []
+                        }
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    },
+                    "documentation": {
+                        "description": "Contact's ethnicity"
+                    }
+                },
+                "name": {
+                    "type": "subdocument",
+                    "filter": {
+                        "function": "name",
+                        "options": {
+                            "type": "full"
+                        }
+                    },
+                    "subdocument": {
+                        "first": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                },
+                                "sort": true
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's first name"
+                            }
+                        },
+                        "last": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                },
+                                "sort": true
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's last name"
+                            }
+                        },
+                        "middle": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's middle name"
+                            }
+                        },
+                        "nickname": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's nickname"
+                            }
+                        },
+                        "title": {
+                            "type": "id",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Contact's title"
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with contact's first name, last name, middle name, nickname and title"
+                        }
+                    },
+                    "documentation": {
+                        "description": "Contact's name"
+                    }
+                },
+                "phones": {
+                    "type": "subdocuments",
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "country": {
+                            "type": "id",
+                            "reference": {
+                                "type": "picklist",
+                                "filter": {
+                                    "function": "billing_period",
+                                    "options": []
+                                }
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Country of the contact's phone"
+                            }
+                        },
+                        "number": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Number of the contact's phone"
+                            }
+                        },
+                        "primary": {
+                            "type": "boolean",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "If the phone number is the primary one or not"
+                            },
+                            "documentation": {
+                                "description": "If the contact's phone is the primary one or not"
+                            }
+                        },
+                        "type": {
+                            "type": "id",
+                            "reference": {
+                                "type": "picklist",
+                                "filter": {
+                                    "function": "phone_type",
+                                    "options": []
+                                }
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Type of the contact's phone"
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with phone's country, number, type and primary"
+                        }
+                    },
+                    "documentation": {
+                        "description": "Contact's phone"
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with contact's _company, date of date_of_birth, gender, ethnicity, name and phones"
+                }
+            },
+            "documentation": {
+                "description": "Information on the client, like name, phones and gender",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "company": {
+            "type": "subdocument",
+            "filter": {
+                "function": "contact_company",
+                "options": {
+                    "type": "name"
+                }
+            },
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "type": {
+                    "type": "id",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    },
+                    "documentation": {
+                        "description": "Company's type"
+                    }
+                },
+                "website": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    },
+                    "documentation": {
+                        "description": "Company's website"
+                    }
+                },
+                "name": {
+                    "type": "subdocument",
+                    "subdocument": {
+                        "title": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            },
+                            "documentation": {
+                                "description": "Company's title"
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with title"
+                        }
+                    },
+                    "documentation": {
+                        "description": "Company's name"
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with company's type, website and name"
+                }
+            },
+            "documentation": {
+                "description": "Company's name and website",
+                "color": "red",
+                "hide": false
+            }
+        }
+    },
+    "codes": {
+        "ruby": {
+            "line1": "require 'test'",
+            "line2": "api = Test::APIClient.authorize!('key')",
+            "line3": "api.tests.get"
+        },
+        "javascript": {
+            "line1": "dsja javascript",
+            "line2": "dsja javascript",
+            "line3": "print 'Hello, world!'",
+            "line4": "sads shell"
+        },
+        "python": {
+            "line1": "import test",
+            "line2": " ",
+            "line3": "api = test.authorize('key')",
+            "line4": "api.test.get()"
+        },
+        "shell": {
+            "line1": "curl 'http://example.com/api/test'",
+            "line2": "  -H 'Authorization: key'"
+        }
+    }
+}

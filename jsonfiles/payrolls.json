@@ -1,0 +1,162 @@
+{
+    "name": "payrolls",
+    "documentationhide": false,
+    "attrs": {
+        "_closed": {
+            "type": "boolean",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "If payroll was closed or not",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "_closed_date": {
+            "type": "datetime",
+            "permissions": {
+                "conditions": true
+            },
+            "documentation": {
+                "description": "Date when payroll was closed",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "_closed_user": {
+            "type": "id",
+            "reference": {
+                "type": "referenceOne",
+                "collection": "users"
+            },
+            "permissions": {
+                "conditions": true
+            },
+            "documentation": {
+                "description": "User that closed the payroll",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "start": {
+            "type": "date",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Start date",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "end": {
+            "type": "date",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "End date",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "period_type": {
+            "type": "id",
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "billing_period",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Type of the period",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "period_extra": {
+            "type": "integer",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Extra period",
+                "color": "red",
+                "hide": false
+            }
+        }
+    },
+    "codes": {
+        "ruby": {
+            "line1": "require 'test'",
+            "line2": "api = Test::APIClient.authorize!('key')",
+            "line3": "api.tests.get"
+        },
+        "javascript": {
+            "line1": "dsja javascript",
+            "line2": "dsja javascript",
+            "line3": "print 'Hello, world!'",
+            "line4": "sads shell"
+        },
+        "python": {
+            "line1": "import test",
+            "line2": " ",
+            "line3": "api = test.authorize('key')",
+            "line4": "api.test.get()"
+        },
+        "shell": {
+            "line1": "curl 'http://example.com/api/test'",
+            "line2": "  -H 'Authorization: key'"
+        }
+    }
+}

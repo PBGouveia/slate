@@ -1,0 +1,4126 @@
+{
+    "name": "invoices",
+    "documentationhide": false,
+    "attrs": {
+        "_archived": {
+            "type": "boolean",
+            "title": {
+                "singular": "Archived"
+            },
+            "filter": {
+                "order": 11
+            },
+            "permissions": {
+                "conditions": true,
+                "documents": {
+                    "update": true
+                }
+            },
+            "default": {
+                "conditions": {
+                    "operator": "$ne",
+                    "value": true
+                }
+            },
+            "documentation": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red",
+                "hide": true
+            }
+        },
+        "_archived_date": {
+            "type": "datetime",
+            "permissions": {
+                "conditions": true
+            },
+            "events": {
+                "delete": {
+                    "type": "Function",
+                    "function": "now"
+                }
+            },
+            "documentation": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red",
+                "hide": true
+            }
+        },
+        "_archived_user": {
+            "type": "id",
+            "reference": {
+                "type": "referenceOne",
+                "collection": "users"
+            },
+            "permissions": {
+                "conditions": true
+            },
+            "events": {
+                "delete": {
+                    "type": "Function",
+                    "function": "user"
+                }
+            },
+            "documentation": {
+                "description": "aaaaaaaaaaaaaaaaa",
+                "color": "red",
+                "hide": true
+            }
+        },
+        "_closed": {
+            "type": "boolean",
+            "title": {
+                "singular": "Closed"
+            },
+            "filter": {
+                "order": 10
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "If the invoice is closed or not",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "_closed_date": {
+            "type": "datetime",
+            "permissions": {
+                "conditions": true
+            },
+            "documentation": {
+                "description": "Date in which the invoice was closed in case it was closed",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "_closed_user": {
+            "type": "id",
+            "reference": {
+                "type": "referenceOne",
+                "collection": "users"
+            },
+            "permissions": {
+                "conditions": true
+            },
+            "documentation": {
+                "description": "User that closed the invoice",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "template": {
+            "type": "id",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Invoice template",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "status": {
+            "type": "id",
+            "title": {
+                "singular": "Status"
+            },
+            "filter": {
+                "order": 21
+            },
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "invoice_status",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Status of the invoice",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "from_email": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Email used for the invoice",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "account": {
+            "type": "subdocument",
+            "subdocument": {
+                "_account": {
+                    "type": "id",
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "accounts"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "name": {
+                    "type": "subdocument",
+                    "subdocument": {
+                        "title": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "label": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with account's title and label"
+                        }
+                    }
+                },
+                "location": {
+                    "type": "subdocument",
+                    "subdocument": {
+                        "_location": {
+                            "type": "id",
+                            "reference": {
+                                "type": "referenceOne",
+                                "collection": "accounts.locations"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "address": {
+                            "type": "subdocument",
+                            "permissions": {
+                                "documents": {
+                                    "delete": true
+                                }
+                            },
+                            "subdocument": {
+                                "city": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "country": {
+                                    "type": "id",
+                                    "reference": {
+                                        "type": "picklist",
+                                        "filter": {
+                                            "function": "country",
+                                            "options": []
+                                        }
+                                    },
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "state": {
+                                    "type": "id",
+                                    "reference": {
+                                        "type": "picklist",
+                                        "filter": {
+                                            "function": "state",
+                                            "options": []
+                                        }
+                                    },
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "street": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "street_extra": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    },
+                                    "documentation": {
+                                        "description": "Extra information on the street"
+                                    }
+                                },
+                                "zip": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    },
+                                    "documentation": {
+                                        "description": "Zip code"
+                                    }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with location's city, country, state, street, street_extra and zip"
+                                }
+                            }
+                        },
+                        "title": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "phone": {
+                            "type": "subdocument",
+                            "permissions": {
+                                "documents": {
+                                    "delete": true
+                                }
+                            },
+                            "subdocument": {
+                                "country": {
+                                    "type": "id",
+                                    "reference": {
+                                        "type": "picklist",
+                                        "filter": {
+                                            "function": "country",
+                                            "options": []
+                                        }
+                                    },
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "number": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with phone's country and number"
+                                }
+                            }
+                        },
+                        "fax": {
+                            "type": "subdocument",
+                            "permissions": {
+                                "documents": {
+                                    "delete": true
+                                }
+                            },
+                            "subdocument": {
+                                "country": {
+                                    "type": "id",
+                                    "reference": {
+                                        "type": "picklist",
+                                        "filter": {
+                                            "function": "country",
+                                            "options": []
+                                        }
+                                    },
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "number": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with fax's country and number"
+                                }
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with location's _location, address, title, phone and fax"
+                        }
+                    }
+                },
+                "website": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with account's _account, name, location and website"
+                }
+            },
+            "documentation": {
+                "description": "Information on the account, like name, location and website",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "number": {
+            "type": "string",
+            "title": {
+                "singular": "Invoice No."
+            },
+            "filter": {
+                "order": 2
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Invoice number",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "invoice_date": {
+            "type": "date",
+            "title": {
+                "singular": "Invoice Date"
+            },
+            "filter": {
+                "order": 1
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Date of the invoice",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "billing_period_start_date": {
+            "type": "date",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Date in which the billing period starts",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "billing_period_end_date": {
+            "type": "date",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Date in which the billing period ends",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "billing_period": {
+            "type": "subdocument",
+            "filter": {
+                "order": 20,
+                "label": false
+            },
+            "subdocument": {
+                "period": {
+                    "type": "id",
+                    "title": {
+                        "singular": "Billing Period"
+                    },
+                    "filter": {
+                        "order": 7
+                    },
+                    "reference": {
+                        "type": "picklist",
+                        "filter": {
+                            "function": "billing_period",
+                            "options": []
+                        }
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "day": {
+                    "type": "integer",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with period and day"
+                }
+            },
+            "documentation": {
+                "description": "What is the billing period",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "due_date": {
+            "type": "date",
+            "title": {
+                "singular": "Due"
+            },
+            "filter": {
+                "order": 13
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "When it is due",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "term": {
+            "type": "subdocument",
+            "subdocument": {
+                "_term": {
+                    "type": "id",
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "accounts.terms"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "term": {
+                    "type": "integer",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "label": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with _term, term and label"
+                }
+            },
+            "documentation": {
+                "description": "Invoice's term",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "client": {
+            "type": "subdocument",
+            "filter": {
+                "order": 3,
+                "label": false
+            },
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "_client": {
+                    "type": "id",
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "clients"
+                    },
+                    "title": {
+                        "singular": "Client",
+                        "plural": "Clients"
+                    },
+                    "filter": {
+                        "order": 3
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "type": {
+                    "type": "id",
+                    "reference": {
+                        "type": "picklist",
+                        "filter": {
+                            "function": "client_type",
+                            "options": []
+                        }
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "contact_type": {
+                    "type": "id",
+                    "reference": {
+                        "type": "picklist",
+                        "filter": {
+                            "function": "contact_type",
+                            "options": []
+                        }
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "ext_id": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "accounting_id": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        },
+                        "sort": true
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "email": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "location": {
+                    "type": "subdocument",
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "filter": {
+                        "order": 24,
+                        "label": false
+                    },
+                    "subdocument": {
+                        "_location": {
+                            "type": "id",
+                            "reference": {
+                                "type": "referenceOne",
+                                "collection": "clients.locations"
+                            },
+                            "title": {
+                                "singular": "Location",
+                                "plural": "Locations"
+                            },
+                            "filter": {
+                                "order": 25
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "accounting_id": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "address": {
+                            "type": "subdocument",
+                            "permissions": {
+                                "documents": {
+                                    "delete": true
+                                }
+                            },
+                            "subdocument": {
+                                "city": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "country": {
+                                    "type": "id",
+                                    "reference": {
+                                        "type": "picklist",
+                                        "filter": {
+                                            "function": "country",
+                                            "options": []
+                                        }
+                                    },
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "state": {
+                                    "type": "id",
+                                    "reference": {
+                                        "type": "picklist",
+                                        "filter": {
+                                            "function": "state",
+                                            "options": []
+                                        }
+                                    },
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    }
+                                },
+                                "street": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "street_extra": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "zip": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                }
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with _location, accounting_id and address"
+                        }
+                    }
+                },
+                "phone": {
+                    "type": "subdocument",
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "_phone": {
+                            "type": "id",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "country": {
+                            "type": "id",
+                            "reference": {
+                                "type": "picklist",
+                                "filter": {
+                                    "function": "country",
+                                    "options": []
+                                }
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "number": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with phone's _phone, country and number"
+                        }
+                    }
+                },
+                "contact": {
+                    "type": "subdocument",
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "name": {
+                            "type": "subdocument",
+                            "filter": {
+                                "function": "name",
+                                "options": {
+                                    "type": "full"
+                                }
+                            },
+                            "subdocument": {
+                                "first": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        },
+                                        "sort": true
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "last": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        },
+                                        "sort": true
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "middle": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "nickname": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "title": {
+                                    "type": "id",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with first name, last name, middle name, nickname and title"
+                                }
+                            }
+                        }
+                    }
+                },
+                "company": {
+                    "type": "subdocument",
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "name": {
+                            "type": "subdocument",
+                            "filter": {
+                                "function": "companyName",
+                                "options": {
+                                    "type": "full"
+                                }
+                            },
+                            "subdocument": {
+                                "title": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with title"
+                                }
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with company's name"
+                        }
+                    }
+                },
+                "employee": {
+                    "type": "subdocument",
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "filter": {
+                        "order": 22,
+                        "label": false
+                    },
+                    "subdocument": {
+                        "_employee": {
+                            "type": "id",
+                            "reference": {
+                                "type": "referenceOne",
+                                "collection": "clients.employees"
+                            },
+                            "title": {
+                                "singular": "Adjuster",
+                                "plural": "Adjusters"
+                            },
+                            "filter": {
+                                "order": 23
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "ext_id": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "name": {
+                            "type": "subdocument",
+                            "filter": {
+                                "function": "name",
+                                "options": {
+                                    "type": "full"
+                                }
+                            },
+                            "subdocument": {
+                                "first": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        },
+                                        "sort": true
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "last": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        },
+                                        "sort": true
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "middle": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "nickname": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "title": {
+                                    "type": "id",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "documentation": {
+                                    "description": "Subdocument with first name, last name, middle name, nickname and title"
+                                }
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with employee, employee's name and ext_id"
+                        }
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with _client, type, contact_type, ext_id, accounting_id, email, location, phone, contact, company and employee"
+                }
+            },
+            "documentation": {
+                "description": "Information on the client, like for example type, id, email, phone and others",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "patient": {
+            "type": "subdocument",
+            "filter": {
+                "order": 4,
+                "label": false
+            },
+            "subdocument": {
+                "_patient": {
+                    "type": "id",
+                    "title": {
+                        "singular": "Patient",
+                        "plural": "Patients"
+                    },
+                    "filter": {
+                        "order": 16
+                    },
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "patients"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "chart_id": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        },
+                        "sort": true
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "accounting_id": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        },
+                        "sort": true
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "billing_accounting_id": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        },
+                        "sort": true
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "email": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "name": {
+                    "type": "subdocument",
+                    "subdocument": {
+                        "first": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                },
+                                "sort": true
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "last": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                },
+                                "sort": true
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "middle": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "nickname": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "title": {
+                            "type": "id",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        }
+                    }
+                },
+                "location": {
+                    "type": "subdocument",
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "filter": {
+                        "order": 27,
+                        "label": false
+                    },
+                    "subdocument": {
+                        "_location": {
+                            "type": "id",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "title": {
+                                "singular": "Location",
+                                "plural": "Locations"
+                            },
+                            "filter": {
+                                "order": 27
+                            },
+                            "reference": {
+                                "type": "referenceOne",
+                                "collection": "patients.locations"
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "address": {
+                            "type": "subdocument",
+                            "permissions": {
+                                "documents": {
+                                    "delete": true
+                                }
+                            },
+                            "subdocument": {
+                                "city": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "country": {
+                                    "type": "id",
+                                    "reference": {
+                                        "type": "picklist",
+                                        "filter": {
+                                            "function": "country",
+                                            "options": []
+                                        }
+                                    },
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "state": {
+                                    "type": "id",
+                                    "reference": {
+                                        "type": "picklist",
+                                        "filter": {
+                                            "function": "country",
+                                            "options": []
+                                        }
+                                    },
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    }
+                                },
+                                "street": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "street_extra": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "zip": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "phone": {
+                    "type": "subdocument",
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "_phone": {
+                            "type": "id",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "reference": {
+                                "type": "referenceOne",
+                                "collection": "patients.phones"
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "country": {
+                            "type": "id",
+                            "reference": {
+                                "type": "picklist",
+                                "filter": {
+                                    "function": "country",
+                                    "options": []
+                                }
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "number": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        }
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with patient's _patient, chart_id, accounting_id, billing_accounting_id, email, name, location and phone"
+                }
+            },
+            "documentation": {
+                "description": "Information on the patient, with email, name, location, phone and others",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "claim_number": {
+            "type": "string",
+            "title": {
+                "singular": "Claim No."
+            },
+            "filter": {
+                "order": 8
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Contains the number of the claim",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "loss_date": {
+            "type": "date",
+            "title": {
+                "singular": "Loss Date"
+            },
+            "filter": {
+                "order": 19
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Date of loss",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "punchcards": {
+            "type": "subdocuments",
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "_punchcard": {
+                    "type": "id",
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "punchcards"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "query": {
+                        "fields": true
+                    }
+                },
+                "event": {
+                    "type": "subdocument",
+                    "subdocument": {
+                        "_event": {
+                            "type": "id",
+                            "reference": {
+                                "type": "referenceOne",
+                                "collection": "events"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "query": {
+                                "fields": true
+                            }
+                        },
+                        "start": {
+                            "type": "datetime",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "end": {
+                            "type": "datetime",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "duration": {
+                            "type": "float",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with _event, start, end and duration"
+                        }
+                    }
+                },
+                "service": {
+                    "type": "subdocument",
+                    "subdocument": {
+                        "_service": {
+                            "type": "id",
+                            "reference": {
+                                "type": "referenceOne",
+                                "collection": "patients.services"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "account_service": {
+                            "type": "id",
+                            "reference": {
+                                "type": "referenceOne",
+                                "collection": "accounts.services"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "code": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "color": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "label": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "stat_holiday_multiplier": {
+                            "type": "float",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "max_billables": {
+                            "type": "subdocument",
+                            "permissions": {
+                                "documents": {
+                                    "delete": true
+                                }
+                            },
+                            "subdocument": {
+                                "visit": {
+                                    "type": "subdocument",
+                                    "permissions": {
+                                        "documents": {
+                                            "delete": true
+                                        }
+                                    },
+                                    "subdocument": {
+                                        "hours": {
+                                            "type": "float",
+                                            "permissions": {
+                                                "fields": true,
+                                                "conditions": true,
+                                                "sort": true,
+                                                "documents": {
+                                                    "insert": true,
+                                                    "update": true,
+                                                    "delete": true
+                                                }
+                                            },
+                                            "default": {
+                                                "fields": true
+                                            }
+                                        },
+                                        "dollars": {
+                                            "type": "float",
+                                            "permissions": {
+                                                "fields": true,
+                                                "conditions": true,
+                                                "sort": true,
+                                                "documents": {
+                                                    "insert": true,
+                                                    "update": true,
+                                                    "delete": true
+                                                }
+                                            },
+                                            "default": {
+                                                "fields": true
+                                            }
+                                        }
+                                    }
+                                },
+                                "day": {
+                                    "type": "subdocument",
+                                    "permissions": {
+                                        "documents": {
+                                            "delete": true
+                                        }
+                                    },
+                                    "subdocument": {
+                                        "hours": {
+                                            "type": "float",
+                                            "permissions": {
+                                                "fields": true,
+                                                "conditions": true,
+                                                "sort": true,
+                                                "documents": {
+                                                    "insert": true,
+                                                    "update": true,
+                                                    "delete": true
+                                                }
+                                            },
+                                            "default": {
+                                                "fields": true
+                                            }
+                                        },
+                                        "dollars": {
+                                            "type": "float",
+                                            "permissions": {
+                                                "fields": true,
+                                                "conditions": true,
+                                                "sort": true,
+                                                "documents": {
+                                                    "insert": true,
+                                                    "update": true,
+                                                    "delete": true
+                                                }
+                                            },
+                                            "default": {
+                                                "fields": true
+                                            }
+                                        }
+                                    }
+                                },
+                                "week": {
+                                    "type": "subdocument",
+                                    "permissions": {
+                                        "documents": {
+                                            "delete": true
+                                        }
+                                    },
+                                    "subdocument": {
+                                        "hours": {
+                                            "type": "float",
+                                            "permissions": {
+                                                "fields": true,
+                                                "conditions": true,
+                                                "sort": true,
+                                                "documents": {
+                                                    "insert": true,
+                                                    "update": true,
+                                                    "delete": true
+                                                }
+                                            },
+                                            "default": {
+                                                "fields": true
+                                            }
+                                        },
+                                        "dollars": {
+                                            "type": "float",
+                                            "permissions": {
+                                                "fields": true,
+                                                "conditions": true,
+                                                "sort": true,
+                                                "documents": {
+                                                    "insert": true,
+                                                    "update": true,
+                                                    "delete": true
+                                                }
+                                            },
+                                            "default": {
+                                                "fields": true
+                                            }
+                                        }
+                                    }
+                                },
+                                "biweek": {
+                                    "type": "subdocument",
+                                    "permissions": {
+                                        "documents": {
+                                            "delete": true
+                                        }
+                                    },
+                                    "subdocument": {
+                                        "hours": {
+                                            "type": "float",
+                                            "permissions": {
+                                                "fields": true,
+                                                "conditions": true,
+                                                "sort": true,
+                                                "documents": {
+                                                    "insert": true,
+                                                    "update": true,
+                                                    "delete": true
+                                                }
+                                            },
+                                            "default": {
+                                                "fields": true
+                                            }
+                                        },
+                                        "dollars": {
+                                            "type": "float",
+                                            "permissions": {
+                                                "fields": true,
+                                                "conditions": true,
+                                                "sort": true,
+                                                "documents": {
+                                                    "insert": true,
+                                                    "update": true,
+                                                    "delete": true
+                                                }
+                                            },
+                                            "default": {
+                                                "fields": true
+                                            }
+                                        }
+                                    }
+                                },
+                                "semimonth": {
+                                    "type": "subdocument",
+                                    "permissions": {
+                                        "documents": {
+                                            "delete": true
+                                        }
+                                    },
+                                    "subdocument": {
+                                        "hours": {
+                                            "type": "float",
+                                            "permissions": {
+                                                "fields": true,
+                                                "conditions": true,
+                                                "sort": true,
+                                                "documents": {
+                                                    "insert": true,
+                                                    "update": true,
+                                                    "delete": true
+                                                }
+                                            },
+                                            "default": {
+                                                "fields": true
+                                            }
+                                        },
+                                        "dollars": {
+                                            "type": "float",
+                                            "permissions": {
+                                                "fields": true,
+                                                "conditions": true,
+                                                "sort": true,
+                                                "documents": {
+                                                    "insert": true,
+                                                    "update": true,
+                                                    "delete": true
+                                                }
+                                            },
+                                            "default": {
+                                                "fields": true
+                                            }
+                                        }
+                                    }
+                                },
+                                "month": {
+                                    "type": "subdocument",
+                                    "permissions": {
+                                        "documents": {
+                                            "delete": true
+                                        }
+                                    },
+                                    "subdocument": {
+                                        "hours": {
+                                            "type": "float",
+                                            "permissions": {
+                                                "fields": true,
+                                                "conditions": true,
+                                                "sort": true,
+                                                "documents": {
+                                                    "insert": true,
+                                                    "update": true,
+                                                    "delete": true
+                                                }
+                                            },
+                                            "default": {
+                                                "fields": true
+                                            }
+                                        },
+                                        "dollars": {
+                                            "type": "float",
+                                            "permissions": {
+                                                "fields": true,
+                                                "conditions": true,
+                                                "sort": true,
+                                                "documents": {
+                                                    "insert": true,
+                                                    "update": true,
+                                                    "delete": true
+                                                }
+                                            },
+                                            "default": {
+                                                "fields": true
+                                            }
+                                        }
+                                    }
+                                },
+                                "contract": {
+                                    "type": "subdocument",
+                                    "permissions": {
+                                        "documents": {
+                                            "delete": true
+                                        }
+                                    },
+                                    "subdocument": {
+                                        "hours": {
+                                            "type": "float",
+                                            "permissions": {
+                                                "fields": true,
+                                                "conditions": true,
+                                                "sort": true,
+                                                "documents": {
+                                                    "insert": true,
+                                                    "update": true,
+                                                    "delete": true
+                                                }
+                                            },
+                                            "default": {
+                                                "fields": true
+                                            }
+                                        },
+                                        "dollars": {
+                                            "type": "float",
+                                            "permissions": {
+                                                "fields": true,
+                                                "conditions": true,
+                                                "sort": true,
+                                                "documents": {
+                                                    "insert": true,
+                                                    "update": true,
+                                                    "delete": true
+                                                }
+                                            },
+                                            "default": {
+                                                "fields": true
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with _service, account_service, code, color, label, stat_holiday_multiplier and max_billables"
+                        }
+                    }
+                },
+                "stat_holiday": {
+                    "type": "boolean",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "patient": {
+                    "type": "subdocument",
+                    "subdocument": {
+                        "_patient": {
+                            "type": "id",
+                            "reference": {
+                                "type": "referenceOne",
+                                "collection": "patients"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "name": {
+                            "type": "subdocument",
+                            "subdocument": {
+                                "first": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        },
+                                        "sort": true
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "last": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        },
+                                        "sort": true
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "middle": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "nickname": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "title": {
+                                    "type": "id",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                }
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with _patient and name"
+                        }
+                    }
+                },
+                "actual": {
+                    "type": "subdocument",
+                    "subdocument": {
+                        "start": {
+                            "type": "datetime",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "end": {
+                            "type": "datetime",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "duration": {
+                            "type": "float",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with start, end and duration"
+                        }
+                    }
+                },
+                "bill": {
+                    "type": "subdocument",
+                    "subdocument": {
+                        "start": {
+                            "type": "datetime",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "end": {
+                            "type": "datetime",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "duration": {
+                            "type": "float",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "bill_rate": {
+                            "type": "subdocument",
+                            "permissions": {
+                                "documents": {
+                                    "delete": true
+                                }
+                            },
+                            "subdocument": {
+                                "rate": {
+                                    "type": "float",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "unit": {
+                                    "type": "id",
+                                    "reference": {
+                                        "type": "picklist",
+                                        "filter": {
+                                            "function": "pay_unit",
+                                            "options": []
+                                        }
+                                    },
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "taxes": {
+                                    "type": "subdocuments",
+                                    "permissions": {
+                                        "documents": {
+                                            "delete": true
+                                        }
+                                    },
+                                    "subdocument": {
+                                        "_tax": {
+                                            "type": "id",
+                                            "reference": {
+                                                "type": "referenceOne",
+                                                "collection": "patients.services.taxes"
+                                            },
+                                            "permissions": {
+                                                "fields": true,
+                                                "conditions": true,
+                                                "sort": true,
+                                                "documents": {
+                                                    "insert": true,
+                                                    "update": true,
+                                                    "delete": true
+                                                }
+                                            },
+                                            "default": {
+                                                "fields": true
+                                            }
+                                        },
+                                        "tax": {
+                                            "type": "id",
+                                            "reference": {
+                                                "type": "referenceOne",
+                                                "collection": "accounts.taxes"
+                                            },
+                                            "permissions": {
+                                                "fields": true,
+                                                "conditions": true,
+                                                "sort": true,
+                                                "documents": {
+                                                    "insert": true,
+                                                    "update": true,
+                                                    "delete": true
+                                                }
+                                            },
+                                            "default": {
+                                                "fields": true
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with start, end, duration and bill_rate"
+                        }
+                    }
+                },
+                "pay": {
+                    "type": "subdocument",
+                    "subdocument": {
+                        "start": {
+                            "type": "datetime",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "end": {
+                            "type": "datetime",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "duration": {
+                            "type": "float",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "documentation": {
+                            "description": "Subdocument with start, end and duration"
+                        }
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with _punchcard, event, service, stat_holiday, patient, actual, bill and pay"
+                }
+            },
+            "documentation": {
+                "description": "Punchcards information, with bill and others",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "services": {
+            "type": "subdocuments",
+            "filter": {
+                "order": 17,
+                "label": false
+            },
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "_service": {
+                    "type": "id",
+                    "title": {
+                        "singular": "Service",
+                        "plural": "Services"
+                    },
+                    "filter": {
+                        "order": 12
+                    },
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "accounts.services"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "punchcards": {
+                    "type": "array",
+                    "array_type": "id",
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "punchcards"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "hours": {
+                    "type": "subdocument",
+                    "permissions": {
+                        "conditions": true,
+                        "documents": {
+                            "insert": true
+                        }
+                    },
+                    "subdocument": {
+                        "actual": {
+                            "type": "float",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "bill": {
+                            "type": "float",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "pay": {
+                            "type": "float",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "scheduled": {
+                            "type": "float",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        }
+                    }
+                },
+                "label": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "code": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "color": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "description": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "amount": {
+                    "type": "float",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "bill_rate": {
+                    "type": "subdocument",
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "rate": {
+                            "type": "float",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "unit": {
+                            "type": "id",
+                            "reference": {
+                                "type": "picklist",
+                                "filter": {
+                                    "function": "pay_unit",
+                                    "options": []
+                                }
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        }
+                    }
+                },
+                "taxes": {
+                    "type": "subdocuments",
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "tax": {
+                            "type": "id",
+                            "reference": {
+                                "type": "referenceOne",
+                                "collection": "accounts.taxes"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        }
+                    }
+                },
+                "total": {
+                    "type": "float",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with _service, punchcards, hours, label, code, color, description, amount, bill_rate, taxes and total"
+                }
+            },
+            "documentation": {
+                "description": "Contains the services and its informations, like its code, description, pay rate and others",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "taxes": {
+            "type": "subdocuments",
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "_tax": {
+                    "type": "id",
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "accounts.taxes"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "label": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "amount": {
+                    "type": "float",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "total": {
+                    "type": "float",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with _tax, label, amount and total"
+                }
+            },
+            "documentation": {
+                "description": "Contains the taxes info, like the amount and its label",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "subtotal": {
+            "type": "float",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Invoice's subtotal",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "total": {
+            "type": "float",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Invoice's total",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "tax_total": {
+            "type": "float",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Total taxes",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "amount_paid": {
+            "type": "float",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "How much was paid",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "amount_due": {
+            "type": "float",
+            "title": {
+                "singular": "Amount Due"
+            },
+            "filter": {
+                "order": 9
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "How much is due to be paid",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "hst_number": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Contains the HST number",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "header_message": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Message on the header",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "footer_message": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Message on the footer",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "referred_by": {
+            "type": "subdocument",
+            "filter": {
+                "order": 18,
+                "label": false
+            },
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "_contact": {
+                    "type": "id",
+                    "title": {
+                        "singular": "Referred By"
+                    },
+                    "filter": {
+                        "order": 5
+                    },
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "contacts"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "_type": {
+                    "type": "id",
+                    "reference": {
+                        "type": "picklist",
+                        "filter": {
+                            "function": "contact_type",
+                            "options": []
+                        }
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "ext_id": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "accounting_id": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "contact": {
+                    "type": "subdocument",
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "_company": {
+                            "type": "id",
+                            "reference": {
+                                "type": "referenceOne",
+                                "collection": "contacts"
+                            },
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "name": {
+                            "type": "subdocument",
+                            "subdocument": {
+                                "first": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        },
+                                        "sort": true
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "last": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        },
+                                        "sort": true
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "middle": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "nickname": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                },
+                                "title": {
+                                    "type": "id",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "company": {
+                    "type": "subdocument",
+                    "permissions": {
+                        "documents": {
+                            "delete": true
+                        }
+                    },
+                    "subdocument": {
+                        "name": {
+                            "type": "subdocument",
+                            "subdocument": {
+                                "title": {
+                                    "type": "string",
+                                    "permissions": {
+                                        "fields": true,
+                                        "conditions": true,
+                                        "sort": true,
+                                        "documents": {
+                                            "insert": true,
+                                            "update": true,
+                                            "delete": true
+                                        }
+                                    },
+                                    "default": {
+                                        "fields": true
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with _contact, _type, ext_id, accounting_id, contact and company"
+                }
+            },
+            "documentation": {
+                "description": "By whom it was referred",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "sales_rep": {
+            "type": "subdocument",
+            "filter": {
+                "label": false,
+                "order": 15
+            },
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "_sales_rep": {
+                    "type": "id",
+                    "title": {
+                        "singular": "Sales Rep"
+                    },
+                    "filter": {
+                        "order": 6
+                    },
+                    "reference": {
+                        "type": "referenceOne",
+                        "collection": "accounts.sales_reps"
+                    },
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "ext_id": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "accounting_id": {
+                    "type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "name": {
+                    "type": "subdocument",
+                    "filter": {
+                        "function": "name",
+                        "options": {
+                            "type": "full"
+                        }
+                    },
+                    "subdocument": {
+                        "first": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                },
+                                "sort": true
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "last": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                },
+                                "sort": true
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "middle": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "nickname": {
+                            "type": "string",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        },
+                        "title": {
+                            "type": "id",
+                            "permissions": {
+                                "fields": true,
+                                "conditions": true,
+                                "sort": true,
+                                "documents": {
+                                    "insert": true,
+                                    "update": true,
+                                    "delete": true
+                                }
+                            },
+                            "default": {
+                                "fields": true
+                            }
+                        }
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with _sales_rep, ext_id, accounting_id and name"
+                }
+            },
+            "documentation": {
+                "description": "Contains information on the sales rep, like his or hers name, office, nickname and others",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "legal_rep": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                },
+                "sort": true
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Information on the legal rep",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "cc_invoice": {
+            "type": "subdocument",
+            "permissions": {
+                "documents": {
+                    "delete": true
+                }
+            },
+            "subdocument": {
+                "patient": {
+                    "type": "boolean",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "default": {
+                        "fields": true
+                    }
+                },
+                "other": {
+                    "type": "array",
+                    "array_type": "string",
+                    "permissions": {
+                        "fields": true,
+                        "conditions": true,
+                        "sort": true,
+                        "documents": {
+                            "insert": true,
+                            "update": true,
+                            "delete": true
+                        }
+                    },
+                    "query": {
+                        "fields": true
+                    }
+                },
+                "documentation": {
+                    "description": "Subdocument with patient and other"
+                }
+            },
+            "documentation": {
+                "description": "Credit card invoice",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "invoice_type": {
+            "type": "id",
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "invoice_type",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Type of the invoice",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "currency": {
+            "type": "id",
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "currency",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Currency used",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "method": {
+            "type": "id",
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "invoice_method",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Method used for the invoice",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "payment_method": {
+            "type": "id",
+            "reference": {
+                "type": "picklist",
+                "filter": {
+                    "function": "payment_method",
+                    "options": []
+                }
+            },
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Method used for the payment",
+                "color": "red",
+                "hide": false
+            }
+        },
+        "notes": {
+            "type": "string",
+            "permissions": {
+                "fields": true,
+                "conditions": true,
+                "sort": true,
+                "documents": {
+                    "insert": true,
+                    "update": true,
+                    "delete": true
+                }
+            },
+            "default": {
+                "fields": true
+            },
+            "documentation": {
+                "description": "Notes on the invoice",
+                "color": "red",
+                "hide": false
+            }
+        }
+    },
+    "codes": {
+        "ruby": {
+            "line1": "require 'test'",
+            "line2": "api = Test::APIClient.authorize!('key')",
+            "line3": "api.tests.get"
+        },
+        "javascript": {
+            "line1": "dsja javascript",
+            "line2": "dsja javascript",
+            "line3": "print 'Hello, world!'",
+            "line4": "sads shell"
+        },
+        "python": {
+            "line1": "import test",
+            "line2": " ",
+            "line3": "api = test.authorize('key')",
+            "line4": "api.test.get()"
+        },
+        "shell": {
+            "line1": "curl 'http://example.com/api/test'",
+            "line2": "  -H 'Authorization: key'"
+        }
+    }
+}
