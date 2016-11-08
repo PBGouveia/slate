@@ -122,8 +122,8 @@ under the License.
             <h3> Attributes: </h3>
             <div class="div-table">
               <div class="div-table-row head-row">
-                  <div class="div-table-col attribute"><b>Attribute</b></div>
-                  <div class="div-table-col description"><b>Description</b></div>
+                  <div class="div-table-col attribute" style="color:black;"><b><u>Attribute</u></b></div>
+                  <div class="div-table-col description" style="color:black;"><b><u>Description</u></b></div>
               </div>
 
               <div id="<%= jsontitle %>-table">
@@ -147,7 +147,7 @@ under the License.
                 <% a[1].each do |b| %>
                 <% if b[0] != 'documentation' %>
 
-                  <div class="div-table-row a-<%= a[0] %> <%= jsontitle %>-sub-<%= a[0] %>" style="display:none;background-color:aquamarine;">
+                  <div class="div-table-row child a-<%= a[0] %> <%= jsontitle %>-sub-<%= a[0] %>" style="display:none;background-color:aquamarine;">
                     <div class="div-table-col attribute" style="background-color: aquamarine;">
                       <% if (b[1].is_a?(Hash)) %>
                         <a class="showhideclick" href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>', '.b-<%= b[0] %>' ); return false;">
@@ -173,7 +173,7 @@ under the License.
                   <% b[1].each do |c| %>
                   <% if c[0] != 'documentation' %>
 
-                    <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>" style="display:none;background-color: white;">
+                    <div class="div-table-row child a-<%= a[0] %> b-<%= b[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>" style="display:none;background-color: white;">
                       <div class="div-table-col attribute" style="background-color: white;">
                         <% if (c[1].is_a?(Hash)) %>
                           <a class="showhideclick" href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>', '.c-<%= c[0] %>'); return false;">

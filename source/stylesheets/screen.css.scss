@@ -418,6 +418,7 @@ html, body {
     width: 50%;
     // margin-right: 50%;
     float: left;
+    font-size:14px;
   }
 
   .div-table-row {
@@ -425,10 +426,16 @@ html, body {
     width: 100%;
     clear: both;
     float: left;
+    color: green;
     // border-bottom: 1px solid #666666;
-    border-bottom: 1px solid #666666;
-    padding-bottom: 7px;
-    padding-top: 7px;
+    border-bottom: 1px solid #E1E98B;
+    padding-bottom: 14px;
+    padding-top: 14px;
+  }
+
+  .div-table-row.child {
+    border-right: 1px solid #E1E98B;
+    border-left: 1px solid #E1E98B;
   }
 
   .div-table-col.attribute {
@@ -446,7 +453,7 @@ html, body {
     // width: 100%;
     // clear: both;
     // float: left;
-    border-top: 1px solid #666666;
+    border-top: 1px solid #E1E98B;
     // border-top: 1px solid #666666;
   }
 
@@ -463,6 +470,8 @@ html, body {
     width: 60%;    
     background-color: $main-bg;  
   }
+
+
 
 
 
