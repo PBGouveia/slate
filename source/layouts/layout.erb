@@ -1033,13 +1033,15 @@ under the License.
 
               <!-- Code for printing examples and language -->
               <% my_json_hash['codes'].each do |langs| %>     <!-- loop through all the different codes on the json file --> 
-                <% entirecode = '' %>         
-                <% langs[1].each do |lines| %>        <!-- loop through each line of each code -->
-                  <% entirecode = entirecode + lines[1] + "\n" %>    <!-- put all the lines together -->
+                <% entirecode = '' %> 
+                <% if (langs[0] == 'shell') %>       
+                  <% langs[1].each do |lines| %>        <!-- loop through each line of each code -->
+                    <% entirecode = entirecode + lines[1] + "\n" %>    <!-- put all the lines together -->
+                  <% end %>
+                  <% highlightedcode = Rouge.highlight(entirecode, langs[0], 'html') %>     <!-- pretty colors -->
+                  <% highlightedcode.gsub! '<pre class="highlight"', '<pre class="highlight' + ' ' + langs[0] + '"' %>   <!-- makes so each language block of code has its own subclass -->
+                  <%= highlightedcode %>
                 <% end %>
-                <% highlightedcode = Rouge.highlight(entirecode, langs[0], 'html') %>     <!-- pretty colors -->
-                <% highlightedcode.gsub! '<pre class="highlight"', '<pre class="highlight' + ' ' + langs[0] + '"' %>   <!-- makes so each language block of code has its own subclass -->
-                <%= highlightedcode %>
               <% end %>
             <% end %>
 

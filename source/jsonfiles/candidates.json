@@ -3283,5 +3283,183 @@
             "line1": "curl 'http://example.com/api/test'",
             "line2": "  -H 'Authorization: key'"
         }
+    },
+    "kralho": {
+        "line4": {
+            "_id": "57bb51926de3adca448b456c",
+            "candidate_status": "f577a1a7ca2e3da7c4e5d509",
+            "email": "carol.fuji@alaunus.com",
+            "rating": 1,
+            "_account": {
+                "_id": "53f6aa644d2de64fb30000af",
+                "candidate_settings": {
+                    "submit_id": "6d54f4fa69cc90efa35d9ac3",
+                    "is_hiring": true,
+                    "candidate_stages": [
+                        {
+                            "_id": "8a0a81c9d3ac2a850d05a1a9",
+                            "code": "applied",
+                            "color": "#919191",
+                            "label": "Applied",
+                            "order": 0,
+                            "_key": 0
+                        },
+                        {
+                            "color": "#6699ff",
+                            "label": "Phone Screened",
+                            "order": 1,
+                            "_id": "a8afc802b406cbb465019cb3",
+                            "code": "phone",
+                            "_key": 1
+                        },
+                        {
+                            "order": 2,
+                            "_id": "b9901f6a469fceb28b9759c5",
+                            "code": "interview",
+                            "color": "#009999",
+                            "label": "Selected for Interview",
+                            "_key": 2
+                        },
+                        {
+                            "_id": "f577a1a7ca2e3da7c4e5d509",
+                            "code": "other",
+                            "color": "#009933",
+                            "label": "Interviewed",
+                            "order": 3,
+                            "_key": 3
+                        }
+                    ],
+                    "request_id": "49db79f2b33c237eac6bdc26"
+                }
+            },
+            "ext_id": "KVLA02F",
+            "experience_with_ages": {
+                "age_0_months_3_months": false,
+                "age_3_months_1_year": false,
+                "age_1_year_3_years": false,
+                "age_3_years_6_years": false,
+                "age_6_years_10_years": false,
+                "age_10_years_15_years": false,
+                "age_15_years_more": false
+            },
+            "criminal_offender": true,
+            "work_permit": "30afd55e70f46110f468034c",
+            "_schema": "55b12234599748249a5b3341",
+            "_created_date": "2016-08-22T15:25:06-04:00",
+            "availability": {
+                "mon": [
+                    {
+                        "start": 0,
+                        "end": 1440,
+                        "_id": "57e875924c120cc7018b456e",
+                        "_key": 0
+                    }
+                ],
+                "tue": [
+                    {
+                        "start": 0,
+                        "end": 1440,
+                        "_id": "57e875924c120cc7018b456f",
+                        "_key": 0
+                    }
+                ],
+                "wed": [
+                    {
+                        "start": 0,
+                        "end": 1440,
+                        "_id": "57e875924c120cc7018b4570",
+                        "_key": 0
+                    }
+                ],
+                "thu": [
+                    {
+                        "start": 0,
+                        "end": 1440,
+                        "_id": "57e875924c120cc7018b4571",
+                        "_key": 0
+                    }
+                ],
+                "fri": [
+                    {
+                        "start": 0,
+                        "end": 1440,
+                        "_id": "57e875924c120cc7018b4572",
+                        "_key": 0
+                    }
+                ],
+                "sat": [
+                    {
+                        "start": 0,
+                        "end": 1440,
+                        "_id": "57e875924c120cc7018b4573",
+                        "_key": 0
+                    }
+                ],
+                "sun": [
+                    {
+                        "start": 0,
+                        "end": 1440,
+                        "_id": "57e875924c120cc7018b4574",
+                        "_key": 0
+                    }
+                ]
+            },
+            "travel_passport": false,
+            "living_status": "14063fd9ce471eb4a89e8efb",
+            "us_visa": false,
+            "is_smoker": false,
+            "has_pets": false,
+            "phones": [
+                {
+                    "country": "29f678bca33e6a07d9d61066",
+                    "number": "+15585451132",
+                    "_id": "57bb51926de3adca448b456a",
+                    "_created_user": {
+                        "_id": "57360e77f90e15c27c8b4567",
+                        "name": {
+                            "first": "John",
+                            "last": "Doe"
+                        }
+                    },
+                    "primary": true,
+                    "_key": 0
+                }
+            ],
+            "will_travel": false,
+            "date_of_birth": "1989-11-16",
+            "name": {
+                "first": "Caroline",
+                "last": "Fuji"
+            },
+            "locations": [
+                {
+                    "address": {
+                        "lat": 43.6152684,
+                        "lng": -79.7098497,
+                        "country": "29f678bca33e6a07d9d61066",
+                        "state": "baa39fa80fb2f0bbf4d8cfdf",
+                        "street": "834 Mays Crescent",
+                        "city": "Mississauga",
+                        "zip": "L5V2G6"
+                    },
+                    "primary": true,
+                    "_id": "57bb51926de3adca448b456b",
+                    "_created_user": {
+                        "_id": "57360e77f90e15c27c8b4567",
+                        "name": {
+                            "first": "John",
+                            "last": "Doe"
+                        }
+                    },
+                    "_key": 0
+                }
+            ],
+            "work_status": {
+                "temp": false,
+                "on_call": false,
+                "full_time": false,
+                "part_time": false
+            }
+        }
     }
 }

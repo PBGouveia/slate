@@ -2,10 +2,7 @@
 title: API Alaunus
 
 language_tabs:
-  - shell: Shell
-  - ruby: Ruby
-  - python: Python
-  - javascript: Javascript
+  - shell: Curl
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
