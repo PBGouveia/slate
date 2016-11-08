@@ -412,7 +412,7 @@ html, body {
   .div-table {
     display: table;         
     width: auto;         
-    background-color: #eee;         
+    background-color: $main-bg;         
     // border: 1px solid #666666;         
     border-spacing: 5px; /* cellspacing:poor IE support for this */
     width: 50%;
@@ -425,7 +425,27 @@ html, body {
     width: 100%;
     clear: both;
     float: left;
-    border: 1px solid #666666;
+    // border-bottom: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+    padding-bottom: 7px;
+    padding-top: 7px;
+  }
+
+  .div-table-col.attribute {
+    text-align: right;
+  }
+
+  .div-table-col.description {
+    text-align: left;
+  }
+
+  .head-row {
+    // display: table-row;
+    // width: 100%;
+    // clear: both;
+    // float: left;
+    border-top: 1px solid #666666;
+    // border-top: 1px solid #666666;
   }
 
   .div-table-col {
@@ -433,7 +453,7 @@ html, body {
     display: table-column;         
     width: 33.33%;    
     text-align: center;    
-    background-color: #eee;  
+    background-color: $main-bg;  
   }
 
 

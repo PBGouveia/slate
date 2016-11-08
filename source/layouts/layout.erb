@@ -38,6 +38,7 @@ under the License.
     <script type="text/javascript">
 
       function showHide(id, classe) {
+        // history.replaceState({}, "", "#" + id);
         var $el = $(id);
         if ($el.css('display') == 'none') {
           $el.show();
@@ -114,10 +115,10 @@ under the License.
             <!-- Information's table -->
             <h3> Attributes: </h3>
             <div class="div-table">
-              <div class="div-table-row">
-                  <div class="div-table-col" style="text-align:center;"><b>Attribute</b></div>
-                  <div class="div-table-col" style="text-align:center;"><b>Type</b></div>
-                  <div class="div-table-col" style="text-align:center;"><b>Description</b></div>
+              <div class="div-table-row head-row">
+                  <div class="div-table-col attribute"><b>Attribute</b></div>
+                  <div class="div-table-col"><b>Type</b></div>
+                  <div class="div-table-col description"><b>Description</b></div>
               </div>
 
               <div id="<%= jsontitle %>-table">
@@ -125,15 +126,24 @@ under the License.
               <% if (my_json_hash['attrs'][a[0]]['documentation'].key?("hide")) && (!my_json_hash['attrs'][a[0]]['documentation']['hide']) %>
 
                 <div class="div-table-row">
-                    <div class="div-table-col">
+                    <div class="div-table-col attribute">
                       <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>', '.a-<%= a[0] %>'); return false;">
                         <%= a[0] %>
                       </a>
+
+                      <% if (a[1].key?("type")) %>
+                        <br> <%= a[1]['type'] %>
+                      <% end %>
+
+
+
+
                     </div>
                     <div class="div-table-col">
                       <%= a[1]['type'] %>
+                      &nbsp; 
                     </div>
-                    <div class="div-table-col">
+                    <div class="div-table-col description">
                       <%= a[1]['documentation']['description'] %>
                     </div>
                 </div>
@@ -142,7 +152,7 @@ under the License.
                 <% if b[0] != 'documentation' %>
 
                   <div class="div-table-row a-<%= a[0] %> <%= jsontitle %>-sub-<%= a[0] %>" style="display:none;background-color:aquamarine;">
-                    <div class="div-table-col" style="background-color: aquamarine;">
+                    <div class="div-table-col attribute" style="background-color: aquamarine;">
                       <% if (b[1].is_a?(Hash)) %>
                         <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>', '.b-<%= b[0] %>' ); return false;">
                           <%= b[0] %>
@@ -156,7 +166,7 @@ under the License.
                       <%= b[1]['type'] %>
                       &nbsp;                      
                     </div>
-                    <div class="div-table-col" style="background-color: aquamarine;">
+                    <div class="div-table-col description" style="background-color: aquamarine;">
                       <% if (b[1].is_a?(Hash)) && (b[1].key?("documentation")) %>
                         <%= b[1]['documentation']['description'] %> 
                       <% end %>
@@ -169,7 +179,7 @@ under the License.
                   <% if c[0] != 'documentation' %>
 
                     <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>" style="display:none;background-color: white;">
-                      <div class="div-table-col" style="background-color: white;">
+                      <div class="div-table-col attribute" style="background-color: white;">
                         <% if (c[1].is_a?(Hash)) %>
                           <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>', '.c-<%= c[0] %>'); return false;">
                             <%= c[0] %>
@@ -182,7 +192,7 @@ under the License.
                       <div class="div-table-col" style="background-color: white;">
                        &nbsp;                      
                       </div>
-                      <div class="div-table-col" style="background-color: white;">
+                      <div class="div-table-col description" style="background-color: white;">
                         <% if (c[1].is_a?(Hash)) && (c[1].key?("documentation")) %>
                           <%= c[1]['documentation']['description'] %> 
                         <% end %>
@@ -195,7 +205,7 @@ under the License.
                     <% if d[0] != 'documentation' %>
 
                       <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> c-<%= c[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>" style="display:none;background-color: lightgreen;">
-                        <div class="div-table-col" style="background-color: lightgreen;">
+                        <div class="div-table-col attribute" style="background-color: lightgreen;">
                           <% if (d[1].is_a?(Hash)) %>
                             <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>', '.d-<%= d[0] %>'); return false;">
                               <%= d[0] %>
@@ -208,7 +218,7 @@ under the License.
                         <div class="div-table-col" style="background-color: lightgreen;">
                           &nbsp;                      
                         </div>
-                        <div class="div-table-col" style="background-color: lightgreen;">
+                        <div class="div-table-col description" style="background-color: lightgreen;">
                           <% if (d[1].is_a?(Hash)) && (d[1].key?("documentation")) %>
                             <%= d[1]['documentation']['description'] %> 
                           <% end %>
@@ -221,13 +231,13 @@ under the License.
                       <% if e[0] != 'documentation' %>
 
                         <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> c-<%= c[0] %> d-<%= d[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>" style="display:none;background-color: yellow;">
-                          <div class="div-table-col" style="background-color: yellow;">
+                          <div class="div-table-col attribute" style="background-color: yellow;">
                             <%= e[0] %>
                           </div>
                           <div class="div-table-col" style="background-color: yellow;">
                             &nbsp;                      
                           </div>
-                          <div class="div-table-col" style="background-color: yellow;">
+                          <div class="div-table-col description" style="background-color: yellow;">
                             <% if (e[1].is_a?(Hash)) && (e[1].key?("documentation")) %>
                               <%= e[1]['documentation']['description'] %> 
                             <% end %>
@@ -262,15 +272,20 @@ under the License.
             </div>
             <!-- end collection table -->
 
-            <!-- Code for printing examples and language -->
-            <% my_json_hash['codes'].each do |langs| %>     <!-- loop through all the different codes on the json file --> 
-              <% entirecode = '' %>         
-              <% langs[1].each do |lines| %>        <!-- loop through each line of each code -->
-                <% entirecode = entirecode + lines[1] + "\n" %>    <!-- put all the lines together -->
+            <% examples = true %>
+
+            <% if examples == true %>
+
+              <!-- Code for printing examples and language -->
+              <% my_json_hash['codes'].each do |langs| %>     <!-- loop through all the different codes on the json file --> 
+                <% entirecode = '' %>         
+                <% langs[1].each do |lines| %>        <!-- loop through each line of each code -->
+                  <% entirecode = entirecode + lines[1] + "\n" %>    <!-- put all the lines together -->
+                <% end %>
+                <% highlightedcode = Rouge.highlight(entirecode, langs[0], 'html') %>     <!-- pretty colors -->
+                <% highlightedcode.gsub! '<pre class="highlight"', '<pre class="highlight' + ' ' + langs[0] + '"' %>   <!-- makes so each language block of code has its own subclass -->
+                <%= highlightedcode %>
               <% end %>
-              <% highlightedcode = Rouge.highlight(entirecode, langs[0], 'html') %>     <!-- pretty colors -->
-              <% highlightedcode.gsub! '<pre class="highlight"', '<pre class="highlight' + ' ' + langs[0] + '"' %>   <!-- makes so each language block of code has its own subclass -->
-              <%= highlightedcode %>
             <% end %>
             
 
