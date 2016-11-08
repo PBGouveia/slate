@@ -160,7 +160,29 @@ under the License.
       return false;
     });
     window.onpopstate = function() {
+      console.log("eta menidsadsadno");
+
       activateLanguage(getLanguageFromQueryString());
     };
   });
+
+
+  // if we click on a language tab, activate that language
+  $(function() {
+    $(".showhideclick").on("click", function() {
+      // var language = $(this).data("language-name");
+
+      // pushURL(language);
+      // activateLanguage(language);
+      // return false;
+      global.toc.calculateHeights();
+    });
+    window.onpopstate = function() {
+      // activateLanguage(getLanguageFromQueryString());
+
+    };
+  });
+
+
+
 })(window);

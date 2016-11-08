@@ -433,10 +433,12 @@ html, body {
 
   .div-table-col.attribute {
     text-align: right;
+    padding-right: 5px;
   }
 
   .div-table-col.description {
     text-align: left;
+    padding-left: 5px;
   }
 
   .head-row {
@@ -448,14 +450,19 @@ html, body {
     // border-top: 1px solid #666666;
   }
 
-  .div-table-col {
+  .div-table-col.attribute {
     float: left; /* fix for buggy browsers */
     display: table-column;         
     width: 33.33%;    
-    text-align: center;    
     background-color: $main-bg;  
   }
 
+  .div-table-col.description {
+    float: left; /* fix for buggy browsers */
+    display: table-column;         
+    width: 60%;    
+    background-color: $main-bg;  
+  }
 
 
 

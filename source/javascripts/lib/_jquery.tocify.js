@@ -94,11 +94,11 @@
 
             // **showAndHideOnScroll**: Accepts a boolean: true or false
             // Determines if table of contents nested items should be shown and hidden while scrolling
-            showAndHideOnScroll: false,
+            showAndHideOnScroll: true,
 
             // **highlightOnScroll**: Accepts a boolean: true or false
             // Determines if table of contents nested items should be highlighted (set to a different color) while scrolling
-            highlightOnScroll: false,
+            highlightOnScroll: true,
 
             // **highlightOffset**: Accepts a number
             // The offset distance in pixels to trigger the next active table of contents item

@@ -35,9 +35,15 @@ under the License.
     <% end %>
 
     <script type="text/javascript" url="javascripts/lib/_jquery.js"></script>
+    <script type="text/javascript" url="javascripts/lib/_jquery.tocify.js"></script>
+    <script type="text/javascript" url="javascripts/app/_lang.js"></script>
+    <script type="text/javascript" url="javascripts/app/_toc.js"></script>
+
     <script type="text/javascript">
 
       function showHide(id, classe) {
+        // global.toc.calculateHeights();
+
         // history.replaceState({}, "", "#" + id);
         var $el = $(id);
         if ($el.css('display') == 'none') {
@@ -117,7 +123,6 @@ under the License.
             <div class="div-table">
               <div class="div-table-row head-row">
                   <div class="div-table-col attribute"><b>Attribute</b></div>
-                  <div class="div-table-col"><b>Type</b></div>
                   <div class="div-table-col description"><b>Description</b></div>
               </div>
 
@@ -127,21 +132,12 @@ under the License.
 
                 <div class="div-table-row">
                     <div class="div-table-col attribute">
-                      <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>', '.a-<%= a[0] %>'); return false;">
-                        <%= a[0] %>
-                      </a>
-
+                      <a class="showhideclick" href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>', '.a-<%= a[0] %>'); return false;">
+                        <%= a[0]%></a>
                       <% if (a[1].key?("type")) %>
-                        <br> <%= a[1]['type'] %>
+                        <br><%= a[1]['type'] %>&nbsp;
                       <% end %>
 
-
-
-
-                    </div>
-                    <div class="div-table-col">
-                      <%= a[1]['type'] %>
-                      &nbsp; 
                     </div>
                     <div class="div-table-col description">
                       <%= a[1]['documentation']['description'] %>
@@ -154,17 +150,16 @@ under the License.
                   <div class="div-table-row a-<%= a[0] %> <%= jsontitle %>-sub-<%= a[0] %>" style="display:none;background-color:aquamarine;">
                     <div class="div-table-col attribute" style="background-color: aquamarine;">
                       <% if (b[1].is_a?(Hash)) %>
-                        <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>', '.b-<%= b[0] %>' ); return false;">
-                          <%= b[0] %>
-                        </a> 
+                        <a class="showhideclick" href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>', '.b-<%= b[0] %>' ); return false;">
+                          <%= b[0]%></a> 
                       <% else %>
                         <%= b[0] %>
                       <% end %>
+
+                      <% if (b[1].is_a?(Hash)) && (b[1].key?("type")) %>
+                        <br> <%= b[1]['type'] %>&nbsp;
+                      <% end %>
                       
-                    </div>
-                    <div class="div-table-col" style="background-color: aquamarine;">
-                      <%= b[1]['type'] %>
-                      &nbsp;                      
                     </div>
                     <div class="div-table-col description" style="background-color: aquamarine;">
                       <% if (b[1].is_a?(Hash)) && (b[1].key?("documentation")) %>
@@ -181,16 +176,16 @@ under the License.
                     <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>" style="display:none;background-color: white;">
                       <div class="div-table-col attribute" style="background-color: white;">
                         <% if (c[1].is_a?(Hash)) %>
-                          <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>', '.c-<%= c[0] %>'); return false;">
-                            <%= c[0] %>
-                          </a> 
+                          <a class="showhideclick" href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>', '.c-<%= c[0] %>'); return false;">
+                            <%= c[0] %></a> 
                         <% else %>
                           <%= c[0] %>
                         <% end %>
+
+                        <% if (c[1].is_a?(Hash)) && (c[1].key?("type")) %>
+                          <br> <%= c[1]['type'] %>
+                        <% end %>
                         
-                      </div>
-                      <div class="div-table-col" style="background-color: white;">
-                       &nbsp;                      
                       </div>
                       <div class="div-table-col description" style="background-color: white;">
                         <% if (c[1].is_a?(Hash)) && (c[1].key?("documentation")) %>
@@ -207,16 +202,15 @@ under the License.
                       <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> c-<%= c[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>" style="display:none;background-color: lightgreen;">
                         <div class="div-table-col attribute" style="background-color: lightgreen;">
                           <% if (d[1].is_a?(Hash)) %>
-                            <a href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>', '.d-<%= d[0] %>'); return false;">
-                              <%= d[0] %>
-                            </a> 
+                            <a class="showhideclick" href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>', '.d-<%= d[0] %>'); return false;">
+                              <%= d[0] %></a> 
                           <% else %>
                             <%= d[0] %>
                           <% end %>
+                          <% if (d[1].is_a?(Hash)) && (d[1].key?("type")) %>
+                            <br> <%= d[1]['type'] %>
+                          <% end %>
                           
-                        </div>
-                        <div class="div-table-col" style="background-color: lightgreen;">
-                          &nbsp;                      
                         </div>
                         <div class="div-table-col description" style="background-color: lightgreen;">
                           <% if (d[1].is_a?(Hash)) && (d[1].key?("documentation")) %>
@@ -233,9 +227,9 @@ under the License.
                         <div class="div-table-row a-<%= a[0] %> b-<%= b[0] %> c-<%= c[0] %> d-<%= d[0] %> <%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>" style="display:none;background-color: yellow;">
                           <div class="div-table-col attribute" style="background-color: yellow;">
                             <%= e[0] %>
-                          </div>
-                          <div class="div-table-col" style="background-color: yellow;">
-                            &nbsp;                      
+                            <% if (e[1].is_a?(Hash)) && (e[1].key?("type")) %>
+                              <br> <%= e[1]['type'] %>
+                            <% end %>
                           </div>
                           <div class="div-table-col description" style="background-color: yellow;">
                             <% if (e[1].is_a?(Hash)) && (e[1].key?("documentation")) %>
