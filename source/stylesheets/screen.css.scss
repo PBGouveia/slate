@@ -415,10 +415,12 @@ html, body {
     background-color: $main-bg;         
     // border: 1px solid #666666;         
     border-spacing: 5px; /* cellspacing:poor IE support for this */
-    width: 50%;
+    width: 48%;
     // margin-right: 50%;
     float: left;
     font-size:14px;
+    margin: auto;
+    padding-left: 9px;
   }
 
   .div-table-row {
@@ -701,7 +703,8 @@ html, body {
   }
 
   .div-table {
-    width: 100% !important;
+    width: 96% !important;
+    
   }
 
 

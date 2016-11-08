@@ -8007,5 +8007,48 @@
             "line1": "curl 'http://example.com/api/test'",
             "line2": "  -H 'Authorization: key'"
         }
+    },
+    "kralho": {
+        "line4": {
+            "auth": {
+                "access_token": "JDJhJDEwJDZucU9qVDEvVXo3dFlvNXk3b2NOR09NZFpWUWJNZlcvek9jbGptaWNCcmkvVmtMejN4Snhl",
+                "access_secret": "VTJGc2RHVmtYMS91TDRQWTZxeE5LTWJPZ0xkanBSWW9WbHhaSnZLdHVZTDBZL2laVUhKN2NhRXQ4NUNVWXYrZEx0YzlSOVA4dEM2VldXUi9SMDRHV3c9PQ==",
+                "access_key": "VTJGc2RHVmtYMSs4cjJqUlAxckxxRDV2NUN4Uk14OUNPRjNNclFnMVZMMkcyUmM1dTRZQnBqekRtVGFFZWRUZU9uWE5LVExIUnA0a2RBQ0pmd3RXamc9PQ=="
+            },
+            "user": {
+                "_id": "57360e77f90e15c27c8b4567",
+                "ext_id": "6O0482C",
+                "last_login_date": "2016-11-08T15:37:29-05:00",
+                "pin_lastchanged_date": "2016-05-13T13:36:44-04:00",
+                "date_of_birth": "1983-05-17",
+                "locations": [{
+                    "_created_user": {
+                        "_id": "5679cdb609da69d90c8b4577",
+                        "ext_id": "BNUWU93",
+                        "email": "iegor.benzyk2@alaunus.com",
+                        "name": {
+                            "first": "Isaac",
+                            "last": "Romanov",
+                            "title": "2e5c84ad927c053c8b7a7657"
+                        }
+                    },
+                    "address": {
+                        "street": "151 Charles St W",
+                        "city": "Kitchener",
+                        "lat": 43.4509381,
+                        "lng": -80.4982637,
+                        "country": "29f678bca33e6a07d9d61066",
+                        "state": "baa39fa80fb2f0bbf4d8cfdf"
+                    },
+                    "primary": true,
+                    "type": "3f5aa337cc7338b01f435787",
+                    "_id": "5736124ef90e15c37c8b456c",
+                    "_key": 0
+                }],
+                "is_recover": true
+            },
+            "stage": "dev",
+            "version": "1.4.5"
+        }
     }
 }
