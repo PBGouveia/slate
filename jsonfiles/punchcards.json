@@ -3940,5 +3940,351 @@
             "line1": "curl 'http://example.com/api/test'",
             "line2": "  -H 'Authorization: key'"
         }
+    },
+    "kralho": {
+        "line4": {
+            "_id": "573a20d3f90e15de078b4570",
+            "_created_user": {
+                "_id": "5679cdb609da69d90c8b4577",
+                "name": {
+                    "first": "Isaac",
+                    "last": "Romanov",
+                    "title": "2e5c84ad927c053c8b7a7657"
+                }
+            },
+            "_last_updated_user": "5398bdb769aed1910a0000b1",
+            "patient": {
+                "_patient": {
+                    "_id": "57360e2cf90e15a37b8b45de",
+                    "chart_id": "R44RERF",
+                    "name": {
+                        "first": "Alex",
+                        "last": "Snow",
+                        "title": "2e5c84ad927c053c8b7a7657"
+                    },
+                    "date_of_birth": "1962-08-17",
+                    "gender": "388057a478772ba4b477d1d7",
+                    "general_notes": "Keys under carpet. Client needs...",
+                    "phones": {
+                        "57360e2cf90e15a37b8b45d1": {
+                            "primary": true,
+                            "country": "29f678bca33e6a07d9d61066",
+                            "type": "4d781246adf865e9e117968b",
+                            "notes": "Call after 5 p.m.",
+                            "number": "+14056286752;ext=11",
+                            "_id": "57360e2cf90e15a37b8b45d1",
+                            "_created_user": "5679cdb609da69d90c8b4577",
+                            "_key": 0
+                        }
+                    },
+                    "locations": {
+                        "57360e2cf90e15a37b8b45d2": {
+                            "address": {
+                                "country": "29f678bca33e6a07d9d61066",
+                                "state": "baa39fa80fb2f0bbf4d8cfdf",
+                                "street": "12 Rosedale Ave",
+                                "city": "Kitchener",
+                                "zip": "N2H1J3",
+                                "lat": 43.443177,
+                                "lng": -80.4683897,
+                                "map_img": "https:\/\/maps.google.com\/maps\/api\/static..."
+                            },
+                            "primary": true,
+                            "type": "235a44f0aafaf29a9695a9d3",
+                            "_id": "57360e2cf90e15a37b8b45d2",
+                            "_created_user": "5679cdb609da69d90c8b4577",
+                            "_key": 0
+                        }
+                    },
+                    "services": {
+                        "57360e2cf90e15a37b8b45d6": {
+                            "invoice_to": {
+                                "type": "2f3b211669c6c8bc5903935e"
+                            },
+                            "take_highest_pay": true,
+                            "treatment_date": "2016-02-07",
+                            "service": "536f3444f518db6e5202a32c",
+                            "bill_rate": {
+                                "rate": 25,
+                                "unit": "2c39fd62449c8da26b9b09ac"
+                            },
+                            "pay_rate": {
+                                "rate": 15,
+                                "unit": "50ab5c594ef4ae57bda03025"
+                            },
+                            "_id": "57360e2cf90e15a37b8b45d6",
+                            "_created_user": "5679cdb609da69d90c8b4577",
+                            "_deleted": true,
+                            "_key": 0
+                        },
+                        "57b72e76563de14a3f8b456f": {
+                            "invoice_to": {
+                                "type": "518bffa09c79e9cd0f2fbc82",
+                                "client": {
+                                    "_id": "53f6b931ccdf0519510000fe",
+                                    "contact_type": "537117bbf518db6e5202a33c",
+                                    "company": {
+                                        "name": {
+                                            "title": "TD General Insurance Company"
+                                        }
+                                    }
+                                }
+                            },
+                            "take_highest_pay": true,
+                            "service": "536f3444f518db6e5202a32c",
+                            "bill_rate": {
+                                "rate": 23.95,
+                                "unit": "50ab5c594ef4ae57bda03025",
+                                "taxes": {
+                                    "57b72e76563de14a3f8b456e": {
+                                        "tax": "536f3405f518db6e5202a32b",
+                                        "_id": "57b72e76563de14a3f8b456e",
+                                        "_created_user": "57360e77f90e15c27c8b4567"
+                                    }
+                                }
+                            },
+                            "pay_rate": {
+                                "rate": 13.75,
+                                "unit": "50ab5c594ef4ae57bda03025"
+                            },
+                            "min_billable_hours": 2,
+                            "max_billables": {
+                                "month": {
+                                    "dollars": 5548.83
+                                },
+                                "contract": {
+                                    "dollars": 36000
+                                }
+                            },
+                            "_id": "57b72e76563de14a3f8b456f",
+                            "_created_user": "57360e77f90e15c27c8b4567",
+                            "_key": 1
+                        },
+                        "57ead5e17e00025c088b456b": {
+                            "invoice_to": {
+                                "type": "2f3b211669c6c8bc5903935e"
+                            },
+                            "service": "536f3627f518db6e5202a32e",
+                            "bill_rate": {
+                                "rate": 150,
+                                "unit": "2c39fd62449c8da26b9b09ac"
+                            },
+                            "_id": "57ead5e17e00025c088b456b",
+                            "_created_user": "57360e77f90e15c27c8b4567",
+                            "_deleted": true,
+                            "_key": 2
+                        }
+                    }
+                },
+                "name": {
+                    "last": "Snow",
+                    "first": "Alex"
+                },
+                "email": "test1@alaunus.com",
+                "legal_rep": "Ivan Boyko",
+                "general_notes": "Keys under carpet"
+            },
+            "service": {
+                "stat_holiday_multiplier": 1.5,
+                "_service": {
+                    "invoice_to": {
+                        "type": "2f3b211669c6c8bc5903935e"
+                    },
+                    "take_highest_pay": true,
+                    "treatment_date": "2016-02-07",
+                    "service": "536f3444f518db6e5202a32c",
+                    "bill_rate": {
+                        "rate": 25,
+                        "unit": "2c39fd62449c8da26b9b09ac"
+                    },
+                    "pay_rate": {
+                        "rate": 15,
+                        "unit": "50ab5c594ef4ae57bda03025"
+                    },
+                    "_id": "57360e2cf90e15a37b8b45d6",
+                    "_created_user": "5679cdb609da69d90c8b4577",
+                    "_deleted": true,
+                    "_key": 0
+                },
+                "account_service": "536f3444f518db6e5202a32c",
+                "color": "#00aa00",
+                "invoice_to": {
+                    "type": "2f3b211669c6c8bc5903935e"
+                },
+                "bill_rate": {
+                    "rate": 25,
+                    "unit": "2c39fd62449c8da26b9b09ac"
+                },
+                "take_highest_pay": true,
+                "label": "Attendant Care",
+                "code": "AC001",
+                "pay_rate": {
+                    "rate": 15,
+                    "unit": "50ab5c594ef4ae57bda03025"
+                }
+            },
+            "_group": "573a20d3f90e15de078b456e",
+            "attendees": [{
+                "user": {
+                    "_user": {
+                        "_id": "57360e77f90e15c27c8b4567",
+                        "name": {
+                            "first": "John",
+                            "last": "Doe"
+                        }
+                    },
+                    "name": {
+                        "first": "John",
+                        "last": "Doe"
+                    },
+                    "service": {
+                        "account_service": "536f3444f518db6e5202a32c",
+                        "pay_rate": {
+                            "rate": 15,
+                            "unit": "50ab5c594ef4ae57bda03025"
+                        },
+                        "_service": "57361206f90e15b07a8b4580"
+                    }
+                },
+                "status": "a7f2da8ce2f36c258fb83d90",
+                "_id": "573a20d5f90e15de078b4589",
+                "_created_user": {
+                    "_id": "5679cdb609da69d90c8b4577",
+                    "name": {
+                        "first": "Isaac",
+                        "last": "Romanov",
+                        "title": "2e5c84ad927c053c8b7a7657"
+                    }
+                },
+                "punchcard": {
+                    "_id": "573f6b69f90e154d1d8b4570",
+                    "actual": {
+                        "manager": {
+                            "start": "2016-05-17T15:35:00-04:00",
+                            "verified_start": true,
+                            "verified_start_date": "2016-05-20T15:54:17-04:00",
+                            "verified_start_manager": {
+                                "_id": "57360e77f90e15c27c8b4567",
+                                "name": {
+                                    "first": "John",
+                                    "last": "Doe"
+                                }
+                            },
+                            "end": "2016-05-17T17:35:00-04:00",
+                            "verified_end": true,
+                            "verified_end_date": "2016-05-20T15:54:17-04:00",
+                            "verified_end_manager": {
+                                "_id": "57360e77f90e15c27c8b4567",
+                                "name": {
+                                    "first": "John",
+                                    "last": "Doe"
+                                }
+                            }
+                        },
+                        "start": "2016-05-17T15:35:00-04:00",
+                        "end": "2016-05-17T17:35:00-04:00",
+                        "duration": 7200,
+                        "completed": "2016-05-20T15:54:17-04:00"
+                    },
+                    "bill": {
+                        "start": "2016-05-17T15:35:00-04:00",
+                        "end": "2016-05-17T17:35:00-04:00",
+                        "duration": 3600,
+                        "bill_rate": {
+                            "rate": 25,
+                            "unit": "2c39fd62449c8da26b9b09ac"
+                        }
+                    },
+                    "pay": {
+                        "start": "2016-05-17T15:35:00-04:00",
+                        "end": "2016-05-17T17:35:00-04:00",
+                        "duration": 7200,
+                        "pay_rate": {
+                            "rate": 15,
+                            "unit": "50ab5c594ef4ae57bda03025"
+                        }
+                    },
+                    "stat_holiday": false,
+                    "payroll": {
+                        "_payroll": {
+                            "_id": "5726f997f90e15f2428b45c3",
+                            "start": "2016-05-02",
+                            "end": "2016-06-01"
+                        },
+                        "audit": {
+                            "audited": true,
+                            "audit_date": "2016-06-02T00:00:00-04:00"
+                        },
+                        "_removed": false
+                    },
+                    "invoice": {
+                        "_invoice": {
+                            "_id": "573f343af90e15011b8b4576",
+                            "invoice_date": "2016-06-01",
+                            "number": "A000000103"
+                        },
+                        "_removed": false
+                    },
+                    "_deleted": false
+                },
+                "_key": 0
+            }],
+            "_schema": "55dcdc807862c370d5a76245",
+            "start": "2016-05-17T15:35:00-04:00",
+            "duration": 7200,
+            "status": "a7f2da8ce2f36c258fb83d90",
+            "_created_date": "2016-05-16T15:34:45-04:00",
+            "_last_updated_date": "2016-06-25T20:31:40-04:00",
+            "billing": {
+                "footer_message": "Thank you for your business. Please send...",
+                "_billing": "57360e2cf90e15a37b8b45d0",
+                "term": "536f311aaa78d2940c0000f7",
+                "invoice_type": "7e1a564dfadc3bd13b251d69",
+                "invoice_method": "35f16131a2aa09285decbb09",
+                "currency": "158fd9fea21be1043f5f3118",
+                "cc_invoice": {
+                    "patient": false
+                },
+                "billing_period": {
+                    "period": "f44aaeb99e21a2ea93134762",
+                    "day": 1
+                },
+                "payment_method": "3bd8f8b09e49ee5ebc42eea5"
+            },
+            "_account": "53f6aa644d2de64fb30000af",
+            "location": {
+                "_location": {
+                    "address": {
+                        "country": "29f678bca33e6a07d9d61066",
+                        "state": "baa39fa80fb2f0bbf4d8cfdf",
+                        "street": "12 Rosedale Ave",
+                        "city": "Kitchener",
+                        "zip": "N2H1J3",
+                        "lat": 43.443177,
+                        "lng": -80.4683897,
+                        "map_img": "https:\/\/maps.google.com\/maps\/api\/static..."
+                    },
+                    "primary": true,
+                    "type": "235a44f0aafaf29a9695a9d3",
+                    "_id": "57360e2cf90e15a37b8b45d2",
+                    "_created_user": "5679cdb609da69d90c8b4577",
+                    "_key": 0
+                },
+                "type": "235a44f0aafaf29a9695a9d3",
+                "address": {
+                    "country": "29f678bca33e6a07d9d61066",
+                    "state": "baa39fa80fb2f0bbf4d8cfdf",
+                    "street": "12 Rosedale Ave",
+                    "city": "Kitchener",
+                    "zip": "N2H1J3",
+                    "lat": 43.443177,
+                    "lng": -80.4683897,
+                    "map_img": "https:\/\/maps.google.com\/maps\/api\/static..."
+                }
+            },
+            "end": "2016-05-17T17:35:00-04:00",
+            "stat_holiday": false,
+            "_deleted": false
+        }
     }
 }

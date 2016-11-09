@@ -2930,5 +2930,132 @@
             "line1": "curl 'http://example.com/api/test'",
             "line2": "  -H 'Authorization: key'"
         }
+    },
+    "kralho": {
+        "line4": {
+            "meta": {
+                "start": "2016-05-16T04:00:00+00:00",
+                "end": "2016-05-25T03:59:59+00:00",
+                "visits": {
+                    "filtered": 0,
+                    "total": 0
+                },
+                "duration": {
+                    "filtered": 0
+                },
+                "resource": "patients",
+                "group": "patients"
+            },
+            "data": [],
+            "resource": {
+                "57360e2cf90e15a37b8b45de": {
+                    "_id": "57360e2cf90e15a37b8b45de"
+                },
+                "53f6e9ba52b53f0b300005fc": {
+                    "_id": "53f6e9ba52b53f0b300005fc"
+                },
+                "53f6e8dd52b53fdb3100023c": {
+                    "_id": "53f6e8dd52b53fdb3100023c"
+                },
+                "575acaaaf90e1582768b458b": {
+                    "_id": "575acaaaf90e1582768b458b"
+                },
+                "53f6e92852b53f0b30000444": {
+                    "_id": "53f6e92852b53f0b30000444"
+                },
+                "53f6e91652b53f0b30000418": {
+                    "_id": "53f6e91652b53f0b30000418"
+                }
+            },
+            "resources": {
+                "users": {
+                    "57a8ca9d7e00026e298b456c": {
+                        "_id": "57a8ca9d7e00026e298b456c",
+                        "role": "5398cbd8888e52e485000146",
+                        "ext_id": "67KJH48",
+                        "name": {
+                            "last": "Verma",
+                            "first": "Amandeep"
+                        }
+                    },
+                    "5679cdb609da69d90c8b4577": {
+                        "_id": "5679cdb609da69d90c8b4577",
+                        "ext_id": "BNUWU93",
+                        "role": "5398cbd8888e52e485000145",
+                        "name": {
+                            "first": "Isaac",
+                            "last": "Romanov",
+                            "title": "2e5c84ad927c053c8b7a7657"
+                        }
+                    },
+                    "57360e77f90e15c27c8b4567": {
+                        "_id": "57360e77f90e15c27c8b4567",
+                        "ext_id": "6O0482C",
+                        "role": "5398cbd8888e52e485000146",
+                        "name": {
+                            "first": "John",
+                            "last": "Doe"
+                        }
+                    }
+                },
+                "locations": [
+                    {
+                        "country": "29f678bca33e6a07d9d61066",
+                        "city": "Kitchener",
+                        "state": "baa39fa80fb2f0bbf4d8cfdf"
+                    },
+                    {
+                        "country": "29f678bca33e6a07d9d61066",
+                        "city": "Toronto",
+                        "state": "baa39fa80fb2f0bbf4d8cfdf"
+                    },
+                    {
+                        "country": "29f678bca33e6a07d9d61066",
+                        "state": "baa39fa80fb2f0bbf4d8cfdf",
+                        "city": "Bolton"
+                    },
+                    {
+                        "country": "29f678bca33e6a07d9d61066",
+                        "city": "Brampton",
+                        "state": "baa39fa80fb2f0bbf4d8cfdf"
+                    },
+                    {
+                        "country": "29f678bca33e6a07d9d61066",
+                        "state": "baa39fa80fb2f0bbf4d8cfdf",
+                        "city": "Markham"
+                    },
+                    {
+                        "country": "29f678bca33e6a07d9d61066",
+                        "city": "Milton",
+                        "state": "baa39fa80fb2f0bbf4d8cfdf"
+                    },
+                    {
+                        "state": "baa39fa80fb2f0bbf4d8cfdf",
+                        "country": "29f678bca33e6a07d9d61066",
+                        "city": "Thornhill"
+                    },
+                    {
+                        "state": "baa39fa80fb2f0bbf4d8cfdf",
+                        "country": "29f678bca33e6a07d9d61066",
+                        "city": "North York"
+                    },
+                    {
+                        "country": "29f678bca33e6a07d9d61066",
+                        "city": "Mississauga",
+                        "state": "baa39fa80fb2f0bbf4d8cfdf"
+                    },
+                    {
+                        "city": "Kitchner",
+                        "country": "29f678bca33e6a07d9d61066",
+                        "state": "baa39fa80fb2f0bbf4d8cfdf"
+                    },
+                    {
+                        "country": "29f678bca33e6a07d9d61066",
+                        "state": "baa39fa80fb2f0bbf4d8cfdf",
+                        "city": "Waterloo"
+                    }
+                ]
+            }
+        }
     }
 }

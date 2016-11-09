@@ -1410,5 +1410,106 @@
             "line1": "curl 'http://example.com/api/test'",
             "line2": "  -H 'Authorization: key'"
         }
+    },
+    "kralho": {
+        "line4": {
+            "_id": "53f6b931ccdf0519510000fe",
+            "_created_date": "2014-06-22T04:25:42-04:00",
+            "ext_id": "X93FR",
+            "accounting_id": "X93FR",
+            "employees": [
+                {
+                    "name": {
+                        "title": "2e5c84ad927c053c8b7a7657",
+                        "first": "Anderson",
+                        "last": "Smith"
+                    },
+                    "office": {
+                        "address": {
+                            "state": "baa39fa80fb2f0bbf4d8cfdf",
+                            "lat": 43.8076048,
+                            "lng": -79.3381626,
+                            "street": "3650 Victoria Avenue",
+                            "country": "29f678bca33e6a07d9d61066",
+                            "street_extra": "9th Floor",
+                            "city": "North York",
+                            "zip": "M2H3P7"
+                        },
+                        "_id": "53bc6f33f918f12387000000",
+                        "_created_user": "53a8701dd6c8df514f8b459d",
+                        "title": "North York Location",
+                        "_key": 0
+                    },
+                    "_created_user": "53a8701dd6c8df514f8b459d",
+                    "phone": {
+                        "country": "29f678bca33e6a07d9d61066",
+                        "number": "+16359961547"
+                    },
+                    "email": "anderson.smith@alaunus.com",
+                    "_id": "54bd355e6fe5165c1700005e",
+                    "ext_id": "YTQX87S",
+                    "_key": 0
+                }
+            ],
+            "color": "#3CBB3A",
+            "_account": "53f6aa644d2de64fb30000af",
+            "type": "518bffa09c79e9cd0f2fbc82",
+            "contact_type": "537117bbf518db6e5202a33c",
+            "company": {
+                "name": {
+                    "title": "TD General Insurance Company"
+                }
+            },
+            "locations": [
+                {
+                    "address": {
+                        "state": "baa39fa80fb2f0bbf4d8cfdf",
+                        "lat": 43.8076048,
+                        "lng": -79.3381626,
+                        "street": "3650 Victoria Avenue",
+                        "country": "29f678bca33e6a07d9d61066",
+                        "street_extra": "9th Floor",
+                        "city": "North York",
+                        "zip": "M2H3P7"
+                    },
+                    "_id": "53bc6f33f918f12387000000",
+                    "_created_user": "53a8701dd6c8df514f8b459d",
+                    "title": "North York Location",
+                    "_key": 0
+                },
+                {
+                    "address": {
+                        "street_extra": "4th Floor",
+                        "city": "Toronto",
+                        "zip": "M4S3A6",
+                        "state": "baa39fa80fb2f0bbf4d8cfdf",
+                        "lat": 43.7043681,
+                        "lng": -79.3978194,
+                        "street": "2161 Yonge Street",
+                        "country": "29f678bca33e6a07d9d61066"
+                    },
+                    "_id": "53bc6f33f918f12387000001",
+                    "_created_user": "53a8701dd6c8df514f8b459d",
+                    "title": "Toronto Location",
+                    "_key": 1
+                },
+                {
+                    "_created_user": "53a8701dd6c8df514f8b459d",
+                    "title": "Burlington Location",
+                    "address": {
+                        "country": "29f678bca33e6a07d9d61066",
+                        "street_extra": "Suite 100",
+                        "city": "Burlington",
+                        "zip": "L7Y5Y7",
+                        "state": "baa39fa80fb2f0bbf4d8cfdf",
+                        "lat": 43.3809104,
+                        "lng": -79.7698832,
+                        "street": "5045 South Service Road"
+                    },
+                    "_id": "53bc6f33f918f12387000002",
+                    "_key": 2
+                }
+            ]
+        }
     }
 }

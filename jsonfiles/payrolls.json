@@ -158,5 +158,478 @@
             "line1": "curl 'http://example.com/api/test'",
             "line2": "  -H 'Authorization: key'"
         }
+    },
+    "kralho": {
+        "line4": {
+            "_id": "573f6b91f90e15ac1b8b4584",
+            "_account": "53f6aa644d2de64fb30000af",
+            "payroll": {
+                "_id": "5726f997f90e15f2428b45c3",
+                "start": "2016-05-02",
+                "end": "2016-06-01"
+            },
+            "user": {
+                "_user": "53f6b4a43fae5b667c000076",
+                "name": {
+                    "first": "Jeanne",
+                    "last": "Simmons"
+                },
+                "services": {
+                    "574fd818f90e151d4d8b4575": {
+                        "pay_rate": {
+                            "rate": 13.12,
+                            "unit": "50ab5c594ef4ae57bda03025"
+                        },
+                        "_service": {
+                            "service": "536f3444f518db6e5202a32c",
+                            "pay_rate": {
+                                "rate": 13.12,
+                                "unit": "50ab5c594ef4ae57bda03025"
+                            },
+                            "_id": "53f6b51795370f425b00007c",
+                            "_key": 0
+                        },
+                        "account_service": "536f3444f518db6e5202a32c",
+                        "code": "AC001",
+                        "color": "#00aa00",
+                        "label": "Attendant Care",
+                        "_id": "574fd818f90e151d4d8b4575",
+                        "_key": 0
+                    },
+                    "574fd818f90e151d4d8b4576": {
+                        "pay_rate": {
+                            "rate": 32,
+                            "unit": "2c39fd62449c8da26b9b09ac"
+                        },
+                        "_service": {
+                            "service": "53a37d11056553f52d00000f",
+                            "pay_rate": {
+                                "rate": 32,
+                                "unit": "2c39fd62449c8da26b9b09ac"
+                            },
+                            "_id": "53f6b51e3fae5bfa78000084",
+                            "_key": 1
+                        },
+                        "account_service": "53a37d11056553f52d00000f",
+                        "code": "RPN001",
+                        "color": "#00ccff",
+                        "label": "Registered Practical Nurse",
+                        "_id": "574fd818f90e151d4d8b4576",
+                        "_key": 1
+                    },
+                    "574fd818f90e151d4d8b4577": {
+                        "pay_rate": {
+                            "rate": 31,
+                            "unit": "2c39fd62449c8da26b9b09ac"
+                        },
+                        "_service": {
+                            "service": "536f3627f518db6e5202a32e",
+                            "pay_rate": {
+                                "rate": 31,
+                                "unit": "2c39fd62449c8da26b9b09ac"
+                            },
+                            "_id": "53f6b5263fae5b667c000088",
+                            "_key": 2
+                        },
+                        "account_service": "536f3627f518db6e5202a32e",
+                        "code": "RN001",
+                        "color": "#aa00aa",
+                        "label": "Nursing",
+                        "_id": "574fd818f90e151d4d8b4577",
+                        "_key": 2
+                    },
+                    "574fd818f90e151d4d8b4578": {
+                        "pay_rate": {
+                            "rate": 44,
+                            "unit": "50ab5c594ef4ae57bda03025"
+                        },
+                        "_service": {
+                            "service": "5398cbbdd6d01fec78000039",
+                            "pay_rate": {
+                                "rate": 44,
+                                "unit": "50ab5c594ef4ae57bda03025"
+                            },
+                            "_id": "54008f421c2c61517a8b4843",
+                            "_key": 3
+                        },
+                        "account_service": "5398cbbdd6d01fec78000039",
+                        "code": "RSW001",
+                        "color": "#5484ED",
+                        "label": "Medical Rehab",
+                        "_id": "574fd818f90e151d4d8b4578",
+                        "_key": 3
+                    }
+                }
+            },
+            "punchcards": [{
+                "_id": "573f6b91f90e15ac1b8b4583",
+                "actual": {
+                    "manager": {
+                        "start": "2016-05-17T10:00:00-04:00",
+                        "verified_start": true,
+                        "verified_start_date": "2016-05-20T15:54:57-04:00",
+                        "verified_start_manager": "57360e77f90e15c27c8b4567",
+                        "end": "2016-05-17T12:00:00-04:00",
+                        "verified_end": true,
+                        "verified_end_date": "2016-05-20T15:54:57-04:00",
+                        "verified_end_manager": "57360e77f90e15c27c8b4567"
+                    },
+                    "start": "2016-05-17T10:00:00-04:00",
+                    "end": "2016-05-17T12:00:00-04:00",
+                    "duration": 7200,
+                    "completed": "2016-05-20T15:54:57-04:00"
+                },
+                "pay": {
+                    "start": "2016-05-17T10:00:00-04:00",
+                    "end": "2016-05-17T12:00:00-04:00",
+                    "duration": 3600,
+                    "pay_rate": {
+                        "rate": 32,
+                        "unit": "2c39fd62449c8da26b9b09ac"
+                    }
+                },
+                "event": "573f6ad5f90e153e1d8b457b",
+                "_event": {
+                    "duration": 7200,
+                    "_deleted": false
+                },
+                "patient": {
+                    "_patient": "53f6e8dd52b53fdb3100023c",
+                    "name": {
+                        "first": "Gabriella",
+                        "last": "Gonzalez"
+                    }
+                },
+                "location": {
+                    "address": {
+                        "street": "6440 Copper Falls Ave",
+                        "city": "Thornhill"
+                    }
+                },
+                "service": {
+                    "account_service": "53a37d11056553f52d00000f",
+                    "code": "RPN001",
+                    "color": "#00ccff",
+                    "invoice_to": {
+                        "type": "518bffa09c79e9cd0f2fbc82",
+                        "client": {
+                            "_id": "53f6b9590f0905a1240000f0",
+                            "company": {
+                                "name": {
+                                    "title": "State Farm Insurance"
+                                }
+                            }
+                        }
+                    }
+                },
+                "payroll": {
+                    "_payroll": "5726f997f90e15f2428b45c3"
+                },
+                "invoice": {
+                    "_invoice": {
+                        "_id": "573f6b92f90e15ac1b8b4587",
+                        "number": "A000000106"
+                    }
+                },
+                "_deleted": false
+            }, {
+                "_id": "573f6d57f90e158e1d8b4569",
+                "actual": {
+                    "manager": {
+                        "start": "2016-05-10T10:00:00-04:00",
+                        "verified_start": true,
+                        "verified_start_date": "2016-05-20T16:02:31-04:00",
+                        "verified_start_manager": "57360e77f90e15c27c8b4567",
+                        "end": "2016-05-10T12:00:00-04:00",
+                        "verified_end": true,
+                        "verified_end_date": "2016-05-20T16:02:31-04:00",
+                        "verified_end_manager": "57360e77f90e15c27c8b4567"
+                    },
+                    "start": "2016-05-10T10:00:00-04:00",
+                    "end": "2016-05-10T12:00:00-04:00",
+                    "duration": 7200,
+                    "completed": "2016-05-20T16:02:31-04:00"
+                },
+                "pay": {
+                    "start": "2016-05-10T10:00:00-04:00",
+                    "end": "2016-05-10T12:00:00-04:00",
+                    "duration": 3600,
+                    "pay_rate": {
+                        "rate": 32,
+                        "unit": "2c39fd62449c8da26b9b09ac"
+                    }
+                },
+                "event": "573f6ad5f90e153e1d8b4579",
+                "_event": {
+                    "duration": 7200,
+                    "_deleted": false
+                },
+                "patient": {
+                    "_patient": "53f6e8dd52b53fdb3100023c",
+                    "name": {
+                        "first": "Gabriella",
+                        "last": "Gonzalez"
+                    }
+                },
+                "location": {
+                    "address": {
+                        "street": "6440 Copper Falls Ave",
+                        "city": "Thornhill"
+                    }
+                },
+                "service": {
+                    "account_service": "53a37d11056553f52d00000f",
+                    "code": "RPN001",
+                    "color": "#00ccff",
+                    "invoice_to": {
+                        "type": "518bffa09c79e9cd0f2fbc82",
+                        "client": {
+                            "_id": "53f6b9590f0905a1240000f0",
+                            "company": {
+                                "name": {
+                                    "title": "State Farm Insurance"
+                                }
+                            }
+                        }
+                    }
+                },
+                "payroll": {
+                    "_payroll": "5726f997f90e15f2428b45c3"
+                },
+                "invoice": {
+                    "_invoice": {
+                        "_id": "573f6b92f90e15ac1b8b4587",
+                        "number": "A000000106"
+                    }
+                },
+                "_deleted": false
+            }, {
+                "_id": "573f6dd0f90e15251e8b4574",
+                "actual": {
+                    "manager": {
+                        "start": "2016-05-05T10:00:00-04:00",
+                        "verified_start": true,
+                        "verified_start_date": "2016-05-20T16:04:32-04:00",
+                        "verified_start_manager": "57360e77f90e15c27c8b4567",
+                        "end": "2016-05-05T12:00:00-04:00",
+                        "verified_end": true,
+                        "verified_end_date": "2016-05-20T16:04:32-04:00",
+                        "verified_end_manager": "57360e77f90e15c27c8b4567"
+                    },
+                    "start": "2016-05-05T10:00:00-04:00",
+                    "end": "2016-05-05T12:00:00-04:00",
+                    "duration": 7200,
+                    "completed": "2016-05-20T16:04:32-04:00"
+                },
+                "pay": {
+                    "start": "2016-05-05T10:00:00-04:00",
+                    "end": "2016-05-05T12:00:00-04:00",
+                    "duration": 3600,
+                    "pay_rate": {
+                        "rate": 32,
+                        "unit": "2c39fd62449c8da26b9b09ac"
+                    }
+                },
+                "event": "573f6ad5f90e153e1d8b4578",
+                "_event": {
+                    "duration": 7200,
+                    "_deleted": false
+                },
+                "patient": {
+                    "_patient": "53f6e8dd52b53fdb3100023c",
+                    "name": {
+                        "first": "Gabriella",
+                        "last": "Gonzalez"
+                    }
+                },
+                "location": {
+                    "address": {
+                        "street": "6440 Copper Falls Ave",
+                        "city": "Thornhill"
+                    }
+                },
+                "service": {
+                    "account_service": "53a37d11056553f52d00000f",
+                    "code": "RPN001",
+                    "color": "#00ccff",
+                    "invoice_to": {
+                        "type": "518bffa09c79e9cd0f2fbc82",
+                        "client": {
+                            "_id": "53f6b9590f0905a1240000f0",
+                            "company": {
+                                "name": {
+                                    "title": "State Farm Insurance"
+                                }
+                            }
+                        }
+                    }
+                },
+                "payroll": {
+                    "_payroll": "5726f997f90e15f2428b45c3"
+                },
+                "invoice": {
+                    "_invoice": {
+                        "_id": "573f6b92f90e15ac1b8b4587",
+                        "number": "A000000106"
+                    }
+                },
+                "_deleted": false
+            }, {
+                "_id": "573f6e12f90e15381e8b4567",
+                "actual": {
+                    "manager": {
+                        "start": "2016-05-03T10:00:00-04:00",
+                        "verified_start": true,
+                        "verified_start_date": "2016-05-20T16:05:37-04:00",
+                        "verified_start_manager": "57360e77f90e15c27c8b4567",
+                        "end": "2016-05-03T12:00:00-04:00",
+                        "verified_end": true,
+                        "verified_end_date": "2016-05-20T16:05:37-04:00",
+                        "verified_end_manager": "57360e77f90e15c27c8b4567"
+                    },
+                    "start": "2016-05-03T10:00:00-04:00",
+                    "end": "2016-05-03T12:00:00-04:00",
+                    "duration": 7200,
+                    "completed": "2016-05-20T16:05:37-04:00"
+                },
+                "pay": {
+                    "start": "2016-05-03T10:00:00-04:00",
+                    "end": "2016-05-03T12:00:00-04:00",
+                    "duration": 3600,
+                    "pay_rate": {
+                        "rate": 32,
+                        "unit": "2c39fd62449c8da26b9b09ac"
+                    }
+                },
+                "event": "573f6ad5f90e153e1d8b4577",
+                "_event": {
+                    "duration": 7200,
+                    "_deleted": false
+                },
+                "patient": {
+                    "_patient": "53f6e8dd52b53fdb3100023c",
+                    "name": {
+                        "first": "Gabriella",
+                        "last": "Gonzalez"
+                    }
+                },
+                "location": {
+                    "address": {
+                        "street": "6440 Copper Falls Ave",
+                        "city": "Thornhill"
+                    }
+                },
+                "service": {
+                    "account_service": "53a37d11056553f52d00000f",
+                    "code": "RPN001",
+                    "color": "#00ccff",
+                    "invoice_to": {
+                        "type": "518bffa09c79e9cd0f2fbc82",
+                        "client": {
+                            "_id": "53f6b9590f0905a1240000f0",
+                            "company": {
+                                "name": {
+                                    "title": "State Farm Insurance"
+                                }
+                            }
+                        }
+                    }
+                },
+                "payroll": {
+                    "_payroll": "5726f997f90e15f2428b45c3"
+                },
+                "invoice": {
+                    "_invoice": {
+                        "_id": "573f6b92f90e15ac1b8b4587",
+                        "number": "A000000106"
+                    }
+                },
+                "_deleted": false
+            }],
+            "_schema": "55b1224e599748249a5b334f",
+            "_created_date": "2016-05-20T15:54:57-04:00",
+            "_created_user": {
+                "_id": "57360e77f90e15c27c8b4567",
+                "ext_id": "6O0482C",
+                "accounting_id": "6O0482C",
+                "services": {
+                    "57361206f90e15b07a8b4580": {
+                        "service": "536f3444f518db6e5202a32c",
+                        "pay_rate": {
+                            "rate": 15,
+                            "unit": "50ab5c594ef4ae57bda03025"
+                        },
+                        "_id": "57361206f90e15b07a8b4580",
+                        "_key": 0
+                    },
+                    "573f18fef90e15f6178b4588": {
+                        "service": "53a37d11056553f52d00000f",
+                        "pay_rate": {
+                            "rate": 32,
+                            "unit": "2c39fd62449c8da26b9b09ac"
+                        },
+                        "_id": "573f18fef90e15f6178b4588",
+                        "_key": 1
+                    },
+                    "573f1934f90e15d3198b4573": {
+                        "service": "536f3627f518db6e5202a32e",
+                        "pay_rate": {
+                            "rate": 31,
+                            "unit": "2c39fd62449c8da26b9b09ac"
+                        },
+                        "_id": "573f1934f90e15d3198b4573",
+                        "_key": 2
+                    }
+                }
+            },
+            "total": 14400,
+            "visits": 4,
+            "services": [{
+                "account_service": "53a37d11056553f52d00000f",
+                "code": "RPN001",
+                "color": "#00ccff",
+                "total": 14400
+            }],
+            "name": "Jeanne Simmons",
+            "accounting_id": "1KC9KK0",
+            "user_services": {
+                "53f6b51795370f425b00007c": {
+                    "service": "536f3444f518db6e5202a32c",
+                    "pay_rate": {
+                        "rate": 13.12,
+                        "unit": "50ab5c594ef4ae57bda03025"
+                    },
+                    "_id": "53f6b51795370f425b00007c",
+                    "_key": 0
+                },
+                "53f6b51e3fae5bfa78000084": {
+                    "service": "53a37d11056553f52d00000f",
+                    "pay_rate": {
+                        "rate": 32,
+                        "unit": "2c39fd62449c8da26b9b09ac"
+                    },
+                    "_id": "53f6b51e3fae5bfa78000084",
+                    "_key": 1
+                },
+                "53f6b5263fae5b667c000088": {
+                    "service": "536f3627f518db6e5202a32e",
+                    "pay_rate": {
+                        "rate": 31,
+                        "unit": "2c39fd62449c8da26b9b09ac"
+                    },
+                    "_id": "53f6b5263fae5b667c000088",
+                    "_key": 2
+                },
+                "54008f421c2c61517a8b4843": {
+                    "service": "5398cbbdd6d01fec78000039",
+                    "pay_rate": {
+                        "rate": 44,
+                        "unit": "50ab5c594ef4ae57bda03025"
+                    },
+                    "_id": "54008f421c2c61517a8b4843",
+                    "_key": 3
+                }
+            }
+        }
     }
 }

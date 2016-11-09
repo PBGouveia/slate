@@ -4122,5 +4122,99 @@
             "line1": "curl 'http://example.com/api/test'",
             "line2": "  -H 'Authorization: key'"
         }
+    },
+    "kralho": {
+        "line4": {
+            "_id": "573f343af90e15011b8b4576",
+            "status": "3aad821f389be2ad5dd2f72f",
+            "currency": "158fd9fea21be1043f5f3118",
+            "number": "A000000103",
+            "billing_period_start_date": "2016-05-02",
+            "amount_paid": 0,
+            "template": "5361bcbc695af3e0a9634341",
+            "invoice_type": "7e1a564dfadc3bd13b251d69",
+            "payment_method": "3bd8f8b09e49ee5ebc42eea5",
+            "from_email": "support@alaunus.com",
+            "footer_message": "Thank you for your business. Please send payment...",
+            "due_date": "2016-07-01",
+            "_created_date": "2016-05-20T11:58:50-04:00",
+            "cc_invoice": {
+                "patient": false
+            },
+            "amount_due": 100,
+            "services": [
+                {
+                    "hours": {
+                        "actual": 28860,
+                        "bill": 14400,
+                        "pay": 28860,
+                        "scheduled": 28800
+                    },
+                    "label": "Attendant Care",
+                    "_service": "536f3444f518db6e5202a32c",
+                    "description": "Attendant Care: 5\/1\/2016 - 5\/31\/2016",
+                    "bill_rate": {
+                        "rate": 25,
+                        "unit": "2c39fd62449c8da26b9b09ac"
+                    },
+                    "total": 100,
+                    "_created_user": "57360e77f90e15c27c8b4567",
+                    "amount": 4,
+                    "punchcards": [
+                        "573e318cf90e1588188b4567",
+                        "573f3469f90e15791b8b457a",
+                        "573e32c4f90e15cf178b4573",
+                        "573f6b69f90e154d1d8b4570"
+                    ],
+                    "code": "AC001",
+                    "color": "#00aa00",
+                    "_id": "573f343af90e15011b8b4575",
+                    "_key": 0
+                }
+            ],
+            "legal_rep": "Ivan Boyko",
+            "method": "35f16131a2aa09285decbb09",
+            "term": {
+                "_term": "536f311aaa78d2940c0000f7",
+                "term": 30,
+                "label": "NET 30"
+            },
+            "billing_period_end_date": "2016-06-01",
+            "billing_period": {
+                "period": "f44aaeb99e21a2ea93134762",
+                "day": 1
+            },
+            "_account": "53f6aa644d2de64fb30000af",
+            "invoice_date": "2016-06-01",
+            "subtotal": 100,
+            "tax_total": 0,
+            "total": 100,
+            "account": {
+                "name": {
+                    "title": "Acme Health Services"
+                },
+                "website": "www.alaunus.com",
+                "location": {
+                    "_location": "54655d0e52b53f2579000d5a",
+                    "title": "Toronto Office",
+                    "phone": {
+                        "country": "29f678bca33e6a07d9d61066",
+                        "number": "+19058760572"
+                    },
+                    "fax": {
+                        "country": "29f678bca33e6a07d9d61066",
+                        "number": "+19058764293"
+                    },
+                    "address": {
+                        "street": "123 King Street",
+                        "city": "Toronto",
+                        "country": "29f678bca33e6a07d9d61066",
+                        "state": "baa39fa80fb2f0bbf4d8cfdf"
+                    }
+                },
+                "_account": "53f6aa644d2de64fb30000af"
+            },
+            "_schema": "56e10982199748249ab9f007"
+        }
     }
 }
