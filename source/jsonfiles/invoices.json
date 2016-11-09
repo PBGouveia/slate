@@ -4135,7 +4135,7 @@
             "invoice_type": "7e1a564dfadc3bd13b251d69",
             "payment_method": "3bd8f8b09e49ee5ebc42eea5",
             "from_email": "support@alaunus.com",
-            "footer_message": "Thank you for your business. Please send payment within 30 days of the date on this invoice.",
+            "footer_message": "Thank you for your business. Please send payment...",
             "due_date": "2016-07-01",
             "_created_date": "2016-05-20T11:58:50-04:00",
             "cc_invoice": {

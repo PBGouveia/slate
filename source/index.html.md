@@ -5,9 +5,9 @@ language_tabs:
   - shell: Curl
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://alaunus.com'>Access Alaunus Website</a>
-  - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
+  - <a href='#' target="_blank">Sign Up for a Developer Key</a>
+  - <a href='https://alaunus.com' target="_blank">Access Alaunus Website</a>
+  - <a href='https://github.com/tripit/slate' target="_blank">Documentation Powered by Slate</a>
 
 includes:
   - filej1

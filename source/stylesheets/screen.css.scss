@@ -173,8 +173,8 @@ html, body {
 
   // This is the currently selected ToC entry
   .tocify-focus {
-    box-shadow: 0px 1px 0px $nav-active-shadow;
-    background-color: $nav-active-bg;
+    // box-shadow: 0px 1px 0px $nav-active-shadow;
+    // background-color: $nav-active-bg;
     color: $nav-active-text;
   }
 
@@ -482,6 +482,7 @@ html, body {
     overflow: auto;
     padding-left: 0;
     padding-right: 0;
+    margin-right: 50%;
     th,td {
       text-align: left;
       vertical-align: top;

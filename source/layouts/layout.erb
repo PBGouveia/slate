@@ -93,6 +93,244 @@ under the License.
       <div class="dark-box"></div>
       <div class="content">
         <%= yield %> <!-- read stuff from markdown file -->
+
+        <h1 id="query">Query</h1>
+
+        <h2 id="queries">Queries</h2>
+
+        <div class="div-table">
+
+          <div class="div-table-row head-row">
+              <div class="div-table-col attribute" style="color:black;"><b><u>Operators</u></b></div>
+              <div class="div-table-col description" style="color:black;"><b><u>Notes</u></b></div>
+          </div>
+
+          <div id="query-table-equality">
+
+            <div class="div-table-row">
+              <div class="div-table-col attribute">
+                  equality
+                  <br>
+                <a class="showhideclick" href="#" onclick="showHide('.equality-operator'); return false;">(show more) </a>
+              </div>
+              <div class="div-table-col description">
+                passes if the document's value is equal to the query's value for the specified field
+              </div>
+            </div>
+
+            <div class="div-table-row equality-operator child" style="display:none;background-color:lightcyan;">
+              <div class="div-table-col attribute" style="color:black;background-color:lightcyan;"><b><u>Query Format</u></b></div>
+              <div class="div-table-col description" style="color:black;background-color:lightcyan;"><b><u>Examples</u></b></div>
+            </div>
+
+            <div class="div-table-row equality-operator child" style="display:none;background-color:lightcyan;">
+              <div class="div-table-col attribute" style="background-color: lightcyan;">
+                "field":value
+              </div>
+              <div class="div-table-col description" style="background-color: lightcyan;">
+                "name.first":"Jane"
+                <br>
+                "age":30
+              </div>
+            </div>
+          </div>
+
+          <div id="query-table-gt-gte">
+
+            <div class="div-table-row">
+              <div class="div-table-col attribute">
+                $gt, $gte, $lt, $lte, $ne
+                <br>
+                <a class="showhideclick" href="#" onclick="showHide('.gt-gte-operator'); return false;">(show more) </a>
+              </div>
+              <div class="div-table-col description">
+                similar to the equality operator, but with the other comparison operators instead: 
+                <br>
+                >, >=, <, <=, !=
+              </div>
+            </div>
+
+            <div class="div-table-row gt-gte-operator child" style="display:none;background-color:lightcyan;">
+              <div class="div-table-col attribute" style="color:black;background-color:lightcyan;"><b><u>Query Format</u></b></div>
+              <div class="div-table-col description" style="color:black;background-color:lightcyan;"><b><u>Examples</u></b></div>
+            </div>
+
+            <div class="div-table-row gt-gte-operator child" style="display:none;background-color:lightcyan;">
+              <div class="div-table-col attribute" style="background-color: lightcyan;">
+                "field":{"operator":value}
+              </div>
+              <div class="div-table-col description" style="background-color: lightcyan;">
+                "date_of_birth":{"$gte":"1981-07-01"}
+                <br>
+                "_id":{"$ne":"542d8675e59911df228b45a4"}
+              </div>
+            </div>
+          </div>
+
+          <div id="query-table-in-nin">
+
+            <div class="div-table-row">
+              <div class="div-table-col attribute">
+                $in, $nin
+                <br>
+                <a class="showhideclick" href="#" onclick="showHide('.in-nin-operator'); return false;">(show more) </a>
+              </div>
+              <div class="div-table-col description">
+                $in: passes if the document's value is equal to one of the query's values for the specified field
+                <br>
+                $nin: passes if the document's value is not equal to any of the query's values for the field
+              </div>
+            </div>
+
+            <div class="div-table-row in-nin-operator child" style="display:none;background-color:lightcyan;">
+              <div class="div-table-col attribute" style="color:black;background-color:lightcyan;"><b><u>Query Format</u></b></div>
+              <div class="div-table-col description" style="color:black;background-color:lightcyan;"><b><u>Examples</u></b></div>
+            </div>
+
+            <div class="div-table-row in-nin-operator child" style="display:none;background-color:lightcyan;">
+              <div class="div-table-col attribute" style="background-color: lightcyan;">
+                "field":{"operator":array(values)}
+              </div>
+              <div class="div-table-col description" style="background-color: lightcyan;">
+                "_id":{"$in":["542d8675e59911df228b45a4", "53d93f4de5a2111758000518"]}
+              </div>
+            </div>
+          </div>
+
+          <div id="query-table-exists">
+
+            <div class="div-table-row">
+              <div class="div-table-col attribute">
+                  $exists
+                  <br>
+                <a class="showhideclick" href="#" onclick="showHide('.exists-operator'); return false;">(show more) </a>
+              </div>
+              <div class="div-table-col description">
+                passes if the specified field exists/doesn't exist in the document
+              </div>
+            </div>
+
+            <div class="div-table-row exists-operator child" style="display:none;background-color:lightcyan;">
+              <div class="div-table-col attribute" style="color:black;background-color:lightcyan;"><b><u>Query Format</u></b></div>
+              <div class="div-table-col description" style="color:black;background-color:lightcyan;"><b><u>Examples</u></b></div>
+            </div>
+
+            <div class="div-table-row exists-operator child" style="display:none;background-color:lightcyan;">
+              <div class="div-table-col attribute" style="background-color: lightcyan;">
+                "field":{"$exists":[true, false]}
+              </div>
+              <div class="div-table-col description" style="background-color: lightcyan;">
+                "_deleted":{"$exists":false}
+                <br>
+                "phones":{"$exists":true}
+              </div>
+            </div>
+          </div>
+
+          <div id="query-table-or-and-not">
+
+            <div class="div-table-row">
+              <div class="div-table-col attribute">
+                $or, $and, $not ,$nor
+                <br>
+                <a class="showhideclick" href="#" onclick="showHide('.or-and-not-operator'); return false;">(show more) </a>
+              </div>
+              <div class="div-table-col description">
+                $or: passes if one of the subqueries passes
+                <br>
+                $and: passes if all of the subqueries pass
+                <br>
+                $not: inverts the result of the subqueries
+                <br>
+                $nor: passes if none of the subqueries pass
+              </div>
+            </div>
+
+            <div class="div-table-row or-and-not-operator child" style="display:none;background-color:lightcyan;">
+              <div class="div-table-col attribute" style="color:black;background-color:lightcyan;"><b><u>Query Format</u></b></div>
+              <div class="div-table-col description" style="color:black;background-color:lightcyan;"><b><u>Examples</u></b></div>
+            </div>
+
+            <div class="div-table-row or-and-not-operator child" style="display:none;background-color:lightcyan;">
+              <div class="div-table-col attribute" style="background-color: lightcyan;">
+                "operator":array({queries})              
+              </div>
+              <div class="div-table-col description" style="background-color: lightcyan;">
+                "$or":[{"name.first":"Jane"}, {"name.first":"John"}]
+              </div>
+            </div>
+          </div>
+
+          <div id="query-table-elemmatch">
+
+            <div class="div-table-row">
+              <div class="div-table-col attribute">
+                $elemMatch
+                <br>
+                <a class="showhideclick" href="#" onclick="showHide('.elemmatch-operator'); return false;">(show more) </a>
+              </div>
+              <div class="div-table-col description">
+                passes if all subqueries pass on the document's subfields of field
+                <ul>
+                  <li>the fields of the subqueries are the subfields of field</li>
+                  <li>the outer field must be of type subdocuments or array</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="div-table-row elemmatch-operator child" style="display:none;background-color:lightcyan;">
+              <div class="div-table-col attribute" style="color:black;background-color:lightcyan;"><b><u>Query Format</u></b></div>
+              <div class="div-table-col description" style="color:black;background-color:lightcyan;"><b><u>Examples</u></b></div>
+            </div>
+
+            <div class="div-table-row elemmatch-operator child" style="display:none;background-color:lightcyan;">
+              <div class="div-table-col attribute" style="background-color: lightcyan;">
+                "field":{"$elemMatch":{queries}}              
+              </div>
+              <div class="div-table-col description" style="background-color: lightcyan;">
+                "services":{"$elemMatch":{"service":"536f3444f518db6e5202a32c", "bill_rate.rate":23.95}}
+              </div>
+            </div>
+          </div>
+
+          <div id="query-table-regex">
+
+            <div class="div-table-row">
+              <div class="div-table-col attribute">
+                $regex
+                <br>
+                <a class="showhideclick" href="#" onclick="showHide('.regex-operator'); return false;">(show more) </a>
+              </div>
+              <div class="div-table-col description">
+                passes if the document's value matches the pattern of the query's value for the specified field
+                <ul>
+                  <li>this is useful for partial string matching</li>
+                  <li>for the given example, value "and" accepts names like "Andrew", "Sandy", "Ferdinand", ...</li>
+                  <li>"$options":"i" means case insensitive</li>
+                  <li>there are other options: m, x, s</li>
+                  <li>refer to <a href="http://docs.mongodb.org/manual/reference/operator/query/regex/" target="_blank">mongodb</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="div-table-row regex-operator child" style="display:none;background-color:lightcyan;">
+              <div class="div-table-col attribute" style="color:black;background-color:lightcyan;"><b><u>Query Format</u></b></div>
+              <div class="div-table-col description" style="color:black;background-color:lightcyan;"><b><u>Examples</u></b></div>
+            </div>
+
+            <div class="div-table-row regex-operator child" style="display:none;background-color:lightcyan;">
+              <div class="div-table-col attribute" style="background-color: lightcyan;">
+                "field":{"$regex":value, "$options":"i"}              
+              </div>
+              <div class="div-table-col description" style="background-color: lightcyan;">
+                "name.first":{"$regex":"and","$options":"i"}
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
         <% Dir.glob("source/jsonfiles/*.json") do |jsonfilepath| %>  <!-- loop through folder and jsonfilepath = path to each json file -->
           
           <% require 'json' %>
@@ -1055,7 +1293,7 @@ under the License.
               <% my_json_hash_pretty = JSON.pretty_generate(kralho) %>    <!-- sit still, look pretty; the except is used so the description doesnt show on the json code block -->
 
 
-              <code><%= Rouge.highlight(my_json_hash_pretty, 'json', 'html') %></code>    <!-- pretty colors -->
+              <%= Rouge.highlight(my_json_hash_pretty, 'json', 'html') %>   <!-- pretty colors -->
 
 
             <% end %>
@@ -1116,6 +1354,375 @@ under the License.
             Tony Stark, an industrialist and master engineer, builds a powered exoskeleton 
             and becomes the technologically advanced superhero Iron Man.</p>     <!-- display the description --> 
 
+            <h2 id="<%= jsontitle + '_edit' %>">Edit <%= jsontitle %></h2>     <!--  prints each subtitle on the html --> 
+
+            <p>Doctor Strange is a 2016 American superhero film featuring the Marvel 
+            Comics character of the same name, produced by Marvel Studios and distributed 
+            by Walt Disney Studios Motion Pictures. It is the fourteenth film of the 
+            Marvel Cinematic Universe (MCU). The film is directed by Scott Derrickson, 
+            who wrote the film with Jon Spaihts and C. Robert Cargill, and stars Benedict 
+            Cumberbatch, Chiwetel Ejiofor, Rachel McAdams, Benedict Wong, Michael Stuhlbarg, 
+            Benjamin Bratt, Scott Adkins, Mads Mikkelsen, and Tilda Swinton. In Doctor 
+            Strange, surgeon Stephen Strange learns the mystic arts from the Ancient One 
+            after a career-ending car accident.
+            <br><br>
+            Various incarnations of a Doctor Strange film have been in development since 
+            the mid-1980s until Paramount Pictures acquired the film rights in April 2005 
+            on behalf of Marvel Studios. Thomas Dean Donnelly and Joshua Oppenheimer were 
+            brought on board in June 2010 to write a screenplay. In June 2014, Derrickson 
+            and Spaihts were hired to direct and re-write the film, respectively. 
+            Cumberbatch was chosen for the eponymous role in December 2014, necessitating 
+            a schedule change to work around his other commitments. This gave Derrickson 
+            time to work on the script himself, for which he brought Cargill on to help. 
+            The film began principal photography in November 2015 in Nepal before moving 
+            to the United Kingdom, and concluded in New York City in April 2016. Filming 
+            also occurred in Hong Kong.</p>     <!-- display the description --> 
+
+            <h2 id="<%= jsontitle + 'delete' %>">Delete <%= jsontitle %></h2>     <!--  prints each subtitle on the html --> 
+
+            <p>A Carreta Furacão é um grupo que viaja com o Trenzinho da Alegria, que é 
+            uma carreta pintada, pelas ruas do Brasil mais especificamente de Ribeirão Preto, 
+            e são os maiores causadores de acidentes, ao menos entre eles, já que sempre 
+            um ou outro se machuca.
+            <br><br>
+            Eles fazem isso todos os dias. A Carreta Furacão é o Esquadrão Suicida brasileiro, 
+            mas nem precisa de colar explosivo para alguém morrer. Em vez de Arlequina é o 
+            Bozo, e até o Capitão América fazendo esse papel de guerrilheiro suicida devido 
+            à crise nos Estados Unidos.</p>     <!-- display the description --> 
+
+            <h2 id="<%= jsontitle + '_get' %>">Get <%= jsontitle.chomp('s') %></h2>     <!--  prints each subtitle on the html --> 
+
+            <p>Iron Man is a 2008 American superhero film featuring the Marvel Comics 
+            character of the same name, produced by Marvel Studios and distributed by 
+            Paramount Pictures.1 It is the first film in the Marvel Cinematic Universe. 
+            The film was directed by Jon Favreau, with a screenplay by Mark Fergus and 
+            Hawk Ostby and Art Marcum and Matt Holloway. It stars Robert Downey Jr., 
+            Terrence Howard, Jeff Bridges, Shaun Toub and Gwyneth Paltrow. In Iron Man, 
+            Tony Stark, an industrialist and master engineer, builds a powered exoskeleton 
+            and becomes the technologically advanced superhero Iron Man.</p>     <!-- display the description --> 
+
+            <div class="div-table">
+              <div class="div-table-row head-row">
+                  <div class="div-table-col attribute" style="color:black;"><b><u>Argument</u></b></div>
+                  <div class="div-table-col description" style="color:black;"><b><u>Description</u></b></div>
+              </div>
+
+              <div id="<%= jsontitle %>-table">
+                <%# my_json_hash_sorted.each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
+                <%# if (my_json_hash['attrs'][a[0]]['documentation'].key?("hide")) && (!my_json_hash['attrs'][a[0]]['documentation']['hide']) %>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>objects</u>
+                        <br>
+                        true, false, "primary", "secondary"
+                      </div>
+                      <div class="div-table-col description">
+                        returns documents and/or subdocuments as objects or arrays
+                        <br>
+                        <ul>
+                          <li>true returns objects</li>
+                          <li>false returns arrays</li>
+                          <li>primary returns documents as objects and subdocuments as arrays</li>
+                          <li>secondary returns documents in an array and subdocuments as objects</li>
+                        </ul>
+                      </div>
+                  </div>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>archived</u>
+                        <br>
+                        true, false, "primary", "secondary"
+                      </div>
+                      <div class="div-table-col description">
+                        enables returning archived documents and subdocuments (i.e. the field _deleted is true)
+                        <br>
+                        <ul>
+                          <li>true returns all archived and unarchived documents and subdocuments</li>
+                          <li>false prevents all archived documents/subdocuments from being returned</li>
+                          <li>primary returns all archived and unarchived documents and only unarchived subdocuments</li>
+                          <li>secondary returns only unarchived documents and all archived and unarchived subdocuments for those documents</li>
+                        </ul>
+                      </div>
+                  </div>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>primary</u>
+                        <br>
+                        true, false
+                      </div>
+                      <div class="div-table-col description">
+                        this function is currently broken
+                      </div>
+                  </div>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>fields</u>
+                        <br>
+                        comma separated fields
+                      </div>
+                      <div class="div-table-col description">
+                        the document returns with only the specified fields; if no fields are specified, then all fields are returned
+                        <br>
+                        <ul>
+                          <li>note that fields within subdocument(s) can be specified using dot notation</li>
+                          <li>example: locations.address.city</li>
+                          <li>there are some fields that are always returned whether they're specified or not:
+                            <ul>
+                              <li>_id</li>
+                              <li>subdocuments._id</li>
+                              <li>subdocuments._key</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                  </div>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>files</u>
+                        <br>
+                        comma separated fields
+                      </div>
+                      <div class="div-table-col description">
+                        embeds a file subdocument in the specified file-type fields
+                      </div>
+                  </div>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>embeds</u>
+                        <br>
+                        array({"collection":collection, "function":value})
+                      </div>
+                      <div class="div-table-col description">
+                        embeds within the returned document content from a document of a different (or the same) collection
+                        <br>
+                        <ul>
+                          <li>you can specify zero or more of the following functions to execute on the embedded document:
+                          <ul>
+                              <li>objects, archived, primary, fields, embeds</li>
+                              <li>within an embed, the archived function defaults its value to true and its value primary is disabled</li>
+                              <li>the primary function is currently broken</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                  </div>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>query</u>
+                        <br>
+                        {comma separated queries}
+                      </div>
+                      <div class="div-table-col description">
+                        Click <a href='http://localhost:4567/?shell#query'>here</a> to be redirected for the query information
+                      </div>
+                  </div>
+
+
+                <%# end %>
+                <%# end %>
+              </div>
+            </div>
+
+            <h2 id="<%= jsontitle + '_list' %>">List <%= jsontitle %></h2>     <!--  prints each subtitle on the html --> 
+
+            <p>Iron Man is a 2008 American superhero film featuring the Marvel Comics 
+            character of the same name, produced by Marvel Studios and distributed by 
+            Paramount Pictures.1 It is the first film in the Marvel Cinematic Universe. 
+            The film was directed by Jon Favreau, with a screenplay by Mark Fergus and 
+            Hawk Ostby and Art Marcum and Matt Holloway. It stars Robert Downey Jr., 
+            Terrence Howard, Jeff Bridges, Shaun Toub and Gwyneth Paltrow. In Iron Man, 
+            Tony Stark, an industrialist and master engineer, builds a powered exoskeleton 
+            and becomes the technologically advanced superhero Iron Man.</p>     <!-- display the description --> 
+
+            <div class="div-table">
+              <div class="div-table-row head-row">
+                  <div class="div-table-col attribute" style="color:black;"><b><u>Argument</u></b></div>
+                  <div class="div-table-col description" style="color:black;"><b><u>Description</u></b></div>
+              </div>
+
+              <div id="<%= jsontitle %>-table">
+                <%# my_json_hash_sorted.each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
+                <%# if (my_json_hash['attrs'][a[0]]['documentation'].key?("hide")) && (!my_json_hash['attrs'][a[0]]['documentation']['hide']) %>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>objects</u>
+                        <br>
+                        true, false, "primary", "secondary"
+                      </div>
+                      <div class="div-table-col description">
+                        returns documents and/or subdocuments as objects or arrays
+                        <br>
+                        <ul>
+                          <li>true returns objects</li>
+                          <li>false returns arrays</li>
+                          <li>primary returns documents as objects and subdocuments as arrays</li>
+                          <li>secondary returns documents in an array and subdocuments as objects</li>
+                        </ul>
+                      </div>
+                  </div>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>archived</u>
+                        <br>
+                        true, false, "primary", "secondary"
+                      </div>
+                      <div class="div-table-col description">
+                        enables returning archived documents and subdocuments (i.e. the field _deleted is true)
+                        <br>
+                        <ul>
+                          <li>true returns all archived and unarchived documents and subdocuments</li>
+                          <li>false prevents all archived documents/subdocuments from being returned</li>
+                          <li>primary returns all archived and unarchived documents and only unarchived subdocuments</li>
+                          <li>secondary returns only unarchived documents and all archived and unarchived subdocuments for those documents</li>
+                        </ul>
+                      </div>
+                  </div>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>primary</u>
+                        <br>
+                        true, false
+                      </div>
+                      <div class="div-table-col description">
+                        this function is currently broken
+                      </div>
+                  </div>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>limit</u>
+                        <br>
+                        non-negative integer
+                      </div>
+                      <div class="div-table-col description">
+                        limits the total amount of documents that are returned to the number specified
+                      </div>
+                  </div>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>offset</u>
+                        <br>
+                        non-negative integer
+                      </div>
+                      <div class="div-table-col description">
+                        skips the first specified number of result documents
+                      </div>
+                  </div>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>fields</u>
+                        <br>
+                        comma separated fields
+                      </div>
+                      <div class="div-table-col description">
+                        the document returns with only the specified fields; if no fields are specified, then all fields are returned
+                        <br>
+                        <ul>
+                          <li>note that fields within subdocument(s) can be specified using dot notation</li>
+                          <li>example: locations.address.city</li>
+                          <li>there are some fields that are always returned whether they're specified or not:
+                            <ul>
+                              <li>_id</li>
+                              <li>subdocuments._id</li>
+                              <li>subdocuments._key</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                  </div>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>files</u>
+                        <br>
+                        comma separated fields
+                      </div>
+                      <div class="div-table-col description">
+                        embeds a file subdocument in the specified file-type fields
+                      </div>
+                  </div>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>sort</u>
+                        <br>
+                        {comma separated fields in the form "field":[1, -1]}
+                      </div>
+                      <div class="div-table-col description">
+                        sorts the results by the specified fields in the order that they appear
+                        <br>
+                        <ul>
+                          <li>in the given example we first sort by name.first, then by name.last</li>
+                          <li>1 means sort ascending (A -> Z); -1 means sort descending (Z -> A)</li>
+                        </ul>
+                      </div>
+                  </div>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>msort</u>
+                        <br>
+                        array({"fields": array(array(comma separated fields)), "sort":[1, -1]})
+                      </div>
+                      <div class="div-table-col description">
+                        merges the innermost arrays in the order of the specified fields, then sorts and returns the results
+                        <br>
+                        <ul>
+                          <li>in the given example we first merge to get a strings in the form "contact.name.first contact.name.last" or "company.name.title", like "Jane Doe" or "Intact Insurance Company"</li>
+                          <li>then we sort the resulting strings either ascending or descending and return the result after sorting</li>
+                        </ul>
+                      </div>
+                  </div>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>embeds</u>
+                        <br>
+                        array({"collection":collection, "function":value})
+                      </div>
+                      <div class="div-table-col description">
+                        embeds within the returned document content from a document of a different (or the same) collection
+                        <br>
+                        <ul>
+                          <li>you can specify zero or more of the following functions to execute on the embedded document:
+                          <ul>
+                              <li>objects, archived, primary, fields, embeds</li>
+                              <li>within an embed, the archived function defaults its value to true and its value primary is disabled</li>
+                              <li>the primary function is currently broken</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                  </div>
+
+                  <div class="div-table-row">
+                      <div class="div-table-col attribute">
+                        <u>query</u>
+                        <br>
+                        {comma separated queries}
+                      </div>
+                      <div class="div-table-col description">
+                        see below
+                      </div>
+                  </div>
+
+
+                <%# end %>
+                <%# end %>
+              </div>
+            </div>
 
           <% end %>
           <!-- end show collection -->

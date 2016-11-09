@@ -3964,7 +3964,7 @@
                     },
                     "date_of_birth": "1962-08-17",
                     "gender": "388057a478772ba4b477d1d7",
-                    "general_notes": "Keys under carpet. Client needs assistance bathing.",
+                    "general_notes": "Keys under carpet. Client needs...",
                     "phones": {
                         "57360e2cf90e15a37b8b45d1": {
                             "primary": true,
@@ -3987,7 +3987,7 @@
                                 "zip": "N2H1J3",
                                 "lat": 43.443177,
                                 "lng": -80.4683897,
-                                "map_img": "https:\/\/maps.google.com\/maps\/api\/staticmap?center=43.443177%2C-80.4683897&zoom=14&language=en-GB&maptype=roadmap&format=png&size=350x350&scale=1&key=AIzaSyCzbApR2DDoyJTlr_kWqgKYVbEQYUEX3Lw&markers=43.443177,-80.4683897&sensor=false"
+                                "map_img": "https:\/\/maps.google.com\/maps\/api\/static..."
                             },
                             "primary": true,
                             "type": "235a44f0aafaf29a9695a9d3",
@@ -4236,7 +4236,7 @@
             "_created_date": "2016-05-16T15:34:45-04:00",
             "_last_updated_date": "2016-06-25T20:31:40-04:00",
             "billing": {
-                "footer_message": "Thank you for your business. Please send payment within 30 days of the date on this invoice.",
+                "footer_message": "Thank you for your business. Please send...",
                 "_billing": "57360e2cf90e15a37b8b45d0",
                 "term": "536f311aaa78d2940c0000f7",
                 "invoice_type": "7e1a564dfadc3bd13b251d69",
@@ -4262,7 +4262,7 @@
                         "zip": "N2H1J3",
                         "lat": 43.443177,
                         "lng": -80.4683897,
-                        "map_img": "https:\/\/maps.google.com\/maps\/api\/staticmap?center=43.443177%2C-80.4683897&zoom=14&language=en-GB&maptype=roadmap&format=png&size=350x350&scale=1&key=AIzaSyCzbApR2DDoyJTlr_kWqgKYVbEQYUEX3Lw&markers=43.443177,-80.4683897&sensor=false"
+                        "map_img": "https:\/\/maps.google.com\/maps\/api\/static..."
                     },
                     "primary": true,
                     "type": "235a44f0aafaf29a9695a9d3",
@@ -4279,7 +4279,7 @@
                     "zip": "N2H1J3",
                     "lat": 43.443177,
                     "lng": -80.4683897,
-                    "map_img": "https:\/\/maps.google.com\/maps\/api\/staticmap?center=43.443177%2C-80.4683897&zoom=14&language=en-GB&maptype=roadmap&format=png&size=350x350&scale=1&key=AIzaSyCzbApR2DDoyJTlr_kWqgKYVbEQYUEX3Lw&markers=43.443177,-80.4683897&sensor=false"
+                    "map_img": "https:\/\/maps.google.com\/maps\/api\/static..."
                 }
             },
             "end": "2016-05-17T17:35:00-04:00",
