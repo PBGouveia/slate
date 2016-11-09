@@ -4226,5 +4226,195 @@
             "line1": "curl 'http://example.com/api/test'",
             "line2": "  -H 'Authorization: key'"
         }
+    },
+    "kralho": {
+        "line4": {
+            "_id": "53f6b74b6396a0d27200004b",
+            "ext_id": "S1HII3J",
+            "timezone": "1ba1a8c71d512573a97cb8d6",
+            "name": {
+                "first": "Bernard",
+                "last": "Rodriguez",
+                "title": "2e5c84ad927c053c8b7a7657"
+            },
+            "email": "bernard.rodriguez30@alaunus.com",
+            "start_date": "2014-08-21",
+            "photo": {
+                "_id": "53f6b74b6396a0d27200004a",
+                "name": "92.jpg"
+            },
+            "_created_date": "2014-08-21T23:21:47-04:00",
+            "is_setup": true,
+            "services": [{
+                "service": {
+                    "_id": "536f3444f518db6e5202a32c",
+                    "code": "AC001",
+                    "color": "#00aa00",
+                    "label": "Attendant Care",
+                    "bill_rate": {
+                        "rate": 21.95,
+                        "unit": "50ab5c594ef4ae57bda03025",
+                        "taxes": [{
+                            "_id": "536f34e6f518db6e5202a32d",
+                            "tax": "536f3405f518db6e5202a32b"
+                        }]
+                    },
+                    "pay_rate": {
+                        "rate": 13.12,
+                        "unit": "50ab5c594ef4ae57bda03025"
+                    },
+                    "_key": 0
+                },
+                "pay_rate": {
+                    "rate": 13.5,
+                    "unit": "50ab5c594ef4ae57bda03025"
+                },
+                "_id": "53f6b7536396a0d272000050",
+                "_created_user": "53a8701dd6c8df514f8b459d",
+                "held_since": "2015-11-08",
+                "rating": 4,
+                "_key": 0
+                }, 
+                {
+                "service": {
+                    "color": "#FFB878",
+                    "code": "HK001",
+                    "label": "Housekeeping",
+                    "bill_rate": {
+                        "rate": 21.5,
+                        "unit": "50ab5c594ef4ae57bda03025",
+                        "taxes": [{
+                            "tax": "536f3405f518db6e5202a32b",
+                            "_id": "5398cbc54b4eafb21e000038",
+                            "_created_user": "5398bdb769aed1910a0000b1"
+                        }]
+                    },
+                    "pay_rate": {
+                        "rate": 13,
+                        "unit": "50ab5c594ef4ae57bda03025"
+                    },
+                    "_id": "5398cb8304fff5090c00002e",
+                    "_created_user": "5398bdb769aed1910a0000b1",
+                    "min_billable_hours": 2,
+                    "_key": 2
+                },
+                "pay_rate": {
+                    "rate": 17,
+                    "unit": "50ab5c594ef4ae57bda03025"
+                },
+                "_id": "53f6b75a3fae5bfa780000bd",
+                "_created_user": "53a8701dd6c8df514f8b459d",
+                "held_since": "2016-05-15",
+                "rating": 2,
+                "_key": 1
+            }, {
+                "service": {
+                    "color": "#00ccff",
+                    "code": "RPN001",
+                    "label": "Registered Practical Nurse",
+                    "bill_rate": {
+                        "rate": 41.2,
+                        "unit": "2c39fd62449c8da26b9b09ac"
+                    },
+                    "pay_rate": {
+                        "rate": 32,
+                        "unit": "2c39fd62449c8da26b9b09ac"
+                    },
+                    "_id": "53a37d11056553f52d00000f",
+                    "_created_user": "5398bdb769aed1910a0000b1",
+                    "_key": 4
+                },
+                "pay_rate": {
+                    "rate": 32,
+                    "unit": "2c39fd62449c8da26b9b09ac"
+                },
+                "held_since": "2014-08-03",
+                "rating": 5,
+                "_id": "53f78c2252b53f9e38000575",
+                "_created_user": "53a8701dd6c8df514f8b459d",
+                "_key": 2
+            }],
+            "manager": {
+                "_id": "57360e77f90e15c27c8b4567",
+                "name": {
+                    "first": "John",
+                    "last": "Doe"
+                }
+            },
+            "accounting_id": "S1HII3J",
+            "_setup_date": "2014-08-22T12:19:34-04:00",
+            "languages": [{
+                "primary": false,
+                "language": "23aec8cc02f681a6158f919d",
+                "fluency": "1cc5a6123c0bebd535e5a6ee",
+                "_id": "57597e9ff90e154f718b4572",
+                "_created_user": {
+                    "_id": "57360e77f90e15c27c8b4567",
+                    "name": {
+                        "first": "John",
+                        "last": "Doe"
+                    }
+                },
+                "_key": 0
+            }, {
+                "primary": false,
+                "language": "0abeb098607ced61942835a3",
+                "fluency": "2521a1856e750264c5645c2f",
+                "_id": "57597e9ff90e154f718b4573",
+                "_created_user": {
+                    "_id": "57360e77f90e15c27c8b4567",
+                    "name": {
+                        "first": "John",
+                        "last": "Doe"
+                    }
+                },
+                "_key": 1
+            }, {
+                "primary": true,
+                "language": "318722ea904dbe2ec1abc659",
+                "fluency": "1cc5a6123c0bebd535e5a6ee",
+                "_id": "57b71aae563de13e3f8b456a",
+                "_created_user": {
+                    "_id": "57360e77f90e15c27c8b4567",
+                    "name": {
+                        "first": "John",
+                        "last": "Doe"
+                    }
+                },
+                "_key": 2
+            }],
+            "living_status": "14063fd9ce471eb4a89e8efb",
+            "date_of_birth": "1985-04-07",
+            "ssn_expiry_date": "2020-08-25",
+            "gender": "388057a478772ba4b477d1d7",
+            "education_level": "86ed613f78fc346bc0f93c98",
+            "transportation": "576b0594efa3eedd9ff03687",
+            "experience_num_of_years": "576b0827efa3eedd9ff0368f",
+            "cooking_skill": "576b1eaaefa3eedd9ff036a3",
+            "cleaning_skill": "576b23b1efa3eedd9ff036aa",
+            "is_smoker": true,
+            "has_pets": true,
+            "type_of_pets": "576b1dc8efa3eedd9ff0369c",
+            "ssn": "789546154",
+            "criminal_offender": false,
+            "will_travel": false,
+            "travel_passport": false,
+            "us_visa": false,
+            "experience_with_ages": {
+                "age_0_months_3_months": false,
+                "age_3_months_1_year": false,
+                "age_1_year_3_years": false,
+                "age_3_years_6_years": false,
+                "age_6_years_10_years": false,
+                "age_10_years_15_years": false,
+                "age_15_years_more": false
+            },
+            "work_status": {
+                "full_time": false,
+                "part_time": false,
+                "temp": false,
+                "on_call": false
+            }
+        }
     }
 }

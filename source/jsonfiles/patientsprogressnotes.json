@@ -649,5 +649,119 @@
             "line1": "curl 'http://example.com/api/test'",
             "line2": "  -H 'Authorization: key'"
         }
+    },
+    "kralho": {
+        "line4": {
+            "_id": "57b739937e0002bc408b457e",
+            "users": {
+                "57b739937e0002bc408b457d": {
+                    "user": {
+                        "_id": "53f6b74b6396a0d27200004b",
+                        "ext_id": "S1HII3J",
+                        "name": {
+                            "first": "Bernard",
+                            "last": "Rodriguez",
+                            "title": "2e5c84ad927c053c8b7a7657"
+                        },
+                        "photo": "53f6b74b6396a0d27200004a"
+                    },
+                    "_id": "57b739937e0002bc408b457d",
+                    "_created_user": {
+                        "_id": "57360e77f90e15c27c8b4567",
+                        "ext_id": "6O0482C",
+                        "name": {
+                            "first": "John",
+                            "last": "Doe"
+                        }
+                    },
+                    "_key": 0
+                }
+            },
+            "note": "Client called On Call at 5:30pm asking for a PSW to drive him to a dentist appointment for tomorrow at 3:00pm. Arranged for PSW to go in for 2:00pm to 6:00pm to drive the client. He also wanted a PSW for Thursday July 14th for an appointment (also driver).",
+            "_account": "53f6aa644d2de64fb30000af",
+            "_last_updated_date": "2016-08-19T14:17:24-04:00",
+            "priority": "5f13306723ef2a2f494b359c",
+            "patient": "57360e2cf90e15a37b8b45de",
+            "_created_user": {
+                "_id": "57360e77f90e15c27c8b4567",
+                "ext_id": "6O0482C",
+                "name": {
+                    "first": "John",
+                    "last": "Doe"
+                }
+            },
+            "tags": {
+                "57b74d347e0002bc408b457f": {
+                    "_created_user": {
+                        "_id": "57360e77f90e15c27c8b4567",
+                        "ext_id": "6O0482C",
+                        "name": {
+                            "first": "John",
+                            "last": "Doe"
+                        }
+                    },
+                    "tag": {
+                        "_id": "57b73a617e0002c4408b4576",
+                        "title": "Quality Check"
+                    },
+                    "_id": "57b74d347e0002bc408b457f",
+                    "_key": 0
+                },
+                "57b74d347e0002bc408b4580": {
+                    "tag": {
+                        "_id": "57b72d1c6de3adc23e8b4567",
+                        "title": "Shift Cancelation"
+                    },
+                    "_id": "57b74d347e0002bc408b4580",
+                    "_created_user": {
+                        "_id": "57360e77f90e15c27c8b4567",
+                        "ext_id": "6O0482C",
+                        "name": {
+                            "first": "John",
+                            "last": "Doe"
+                        }
+                    },
+                    "_key": 1
+                },
+                "57b74d347e0002bc408b4581": {
+                    "_created_user": {
+                        "_id": "57360e77f90e15c27c8b4567",
+                        "ext_id": "6O0482C",
+                        "name": {
+                            "first": "John",
+                            "last": "Doe"
+                        }
+                    },
+                    "tag": {
+                        "_id": "573f93dbf90e154d1d8b457b",
+                        "title": "Service Change"
+                    },
+                    "_id": "57b74d347e0002bc408b4581",
+                    "_key": 2
+                }
+            },
+            "service": {
+                "_id": "536f3444f518db6e5202a32c",
+                "code": "AC001",
+                "color": "#00aa00",
+                "_key": 0
+            },
+            "invoice_to": {
+                "client": "53f6b931ccdf0519510000fe",
+                "type": "518bffa09c79e9cd0f2fbc82"
+            },
+            "_schema": "55b12264599748249a5b335a",
+            "_created_date": "2016-08-19T12:53:39-04:00",
+            "_last_updated_user": {
+                "_id": "57360e77f90e15c27c8b4567",
+                "ext_id": "6O0482C",
+                "name": {
+                    "first": "John",
+                    "last": "Doe"
+                }
+            },
+            "private": true,
+            "patient_service": "57b72e76563de14a3f8b456f"
+        }
     }
 }

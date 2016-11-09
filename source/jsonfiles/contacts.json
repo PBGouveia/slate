@@ -1125,5 +1125,21 @@
             "line1": "curl 'http://example.com/api/test'",
             "line2": "  -H 'Authorization: key'"
         }
+    },
+    "kralho": {
+        "line4": {
+            "_id": "573f2b84f90e15421b8b456a",
+            "accounting_id": "HOUSE",
+            "company": {
+                "name": {
+                    "title": "House"
+                }
+            },
+            "_schema": "55b122aa599748249a5b3380",
+            "ext_id": "HOUSE",
+            "_type": "537117bbf518db6e5202a33c",
+            "_account": "53f6aa644d2de64fb30000af",
+            "_created_date": "2016-05-20T11:21:40-04:00"
+        }
     }
 }
