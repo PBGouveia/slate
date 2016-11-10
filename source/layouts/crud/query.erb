@@ -1,0 +1,234 @@
+    <h1 id="query">Query</h1>
+
+    <h2 id="queries">Queries</h2>
+
+    <div class="div-table">
+
+      <div class="div-table-row head-row">
+          <div class="div-table-col attribute" style="color:black;"><b><u>Operators</u></b></div>
+          <div class="div-table-col description" style="color:black;"><b><u>Notes</u></b></div>
+      </div>
+
+      <div id="query-table-equality">
+
+        <div class="div-table-row">
+          <div class="div-table-col attribute">
+              equality
+              <br>
+            <a class="showhideclick change-label-equality" href="#" onclick="showHides('.equality-operator', '.change-label-equality'); return false;">(show more) </a>
+          </div>
+          <div class="div-table-col description">
+            passes if the document's value is equal to the query's value for the specified field
+          </div>
+        </div>
+
+        <div class="div-table-row equality-operator child" style="display:none;background-color:lightcyan;">
+          <div class="div-table-col attribute" style="color:black;background-color:lightcyan;"><b><u>Query Format</u></b></div>
+          <div class="div-table-col description" style="color:black;background-color:lightcyan;"><b><u>Examples</u></b></div>
+        </div>
+
+        <div class="div-table-row equality-operator child" style="display:none;background-color:lightcyan;">
+          <div class="div-table-col attribute" style="background-color: lightcyan;">
+            "field":value
+          </div>
+          <div class="div-table-col description" style="background-color: lightcyan;">
+            "name.first":"Jane"
+            <br>
+            "age":30
+          </div>
+        </div>
+      </div>
+
+      <div id="query-table-gt-gte">
+
+        <div class="div-table-row">
+          <div class="div-table-col attribute">
+            $gt, $gte, $lt, $lte, $ne
+            <br>
+            <a class="showhideclick change-label-gt-gte" href="#" onclick="showHides('.gt-gte-operator', '.change-label-gt-gte'); return false;">(show more) </a>
+          </div>
+          <div class="div-table-col description">
+            similar to the equality operator, but with the other comparison operators instead: 
+            <br>
+            >, >=, <, <=, !=
+          </div>
+        </div>
+
+        <div class="div-table-row gt-gte-operator child" style="display:none;background-color:lightcyan;">
+          <div class="div-table-col attribute" style="color:black;background-color:lightcyan;"><b><u>Query Format</u></b></div>
+          <div class="div-table-col description" style="color:black;background-color:lightcyan;"><b><u>Examples</u></b></div>
+        </div>
+
+        <div class="div-table-row gt-gte-operator child" style="display:none;background-color:lightcyan;">
+          <div class="div-table-col attribute" style="background-color: lightcyan;">
+            "field":{"operator":value}
+          </div>
+          <div class="div-table-col description" style="background-color: lightcyan;">
+            "date_of_birth":{"$gte":"1981-07-01"}
+            <br>
+            "_id":{"$ne":"542d8675e59911df228b45a4"}
+          </div>
+        </div>
+      </div>
+
+      <div id="query-table-in-nin">
+
+        <div class="div-table-row">
+          <div class="div-table-col attribute">
+            $in, $nin
+            <br>
+            <a class="showhideclick change-label-in-nin" href="#" onclick="showHides('.in-nin-operator', '.change-label-in-nin'); return false;">(show more) </a>
+          </div>
+          <div class="div-table-col description">
+            $in: passes if the document's value is equal to one of the query's values for the specified field
+            <br>
+            $nin: passes if the document's value is not equal to any of the query's values for the field
+          </div>
+        </div>
+
+        <div class="div-table-row in-nin-operator child" style="display:none;background-color:lightcyan;">
+          <div class="div-table-col attribute" style="color:black;background-color:lightcyan;"><b><u>Query Format</u></b></div>
+          <div class="div-table-col description" style="color:black;background-color:lightcyan;"><b><u>Examples</u></b></div>
+        </div>
+
+        <div class="div-table-row in-nin-operator child" style="display:none;background-color:lightcyan;">
+          <div class="div-table-col attribute" style="background-color: lightcyan;">
+            "field":{"operator":array(values)}
+          </div>
+          <div class="div-table-col description" style="background-color: lightcyan;">
+            "_id":{"$in":["542d8675e59911df228b45a4", "53d93f4de5a2111758000518"]}
+          </div>
+        </div>
+      </div>
+
+      <div id="query-table-exists">
+
+        <div class="div-table-row">
+          <div class="div-table-col attribute">
+              $exists
+              <br>
+            <a class="showhideclick change-label-exists" href="#" onclick="showHides('.exists-operator', '.change-label-exists'); return false;">(show more) </a>
+          </div>
+          <div class="div-table-col description">
+            passes if the specified field exists/doesn't exist in the document
+          </div>
+        </div>
+
+        <div class="div-table-row exists-operator child" style="display:none;background-color:lightcyan;">
+          <div class="div-table-col attribute" style="color:black;background-color:lightcyan;"><b><u>Query Format</u></b></div>
+          <div class="div-table-col description" style="color:black;background-color:lightcyan;"><b><u>Examples</u></b></div>
+        </div>
+
+        <div class="div-table-row exists-operator child" style="display:none;background-color:lightcyan;">
+          <div class="div-table-col attribute" style="background-color: lightcyan;">
+            "field":{"$exists":[true, false]}
+          </div>
+          <div class="div-table-col description" style="background-color: lightcyan;">
+            "_deleted":{"$exists":false}
+            <br>
+            "phones":{"$exists":true}
+          </div>
+        </div>
+      </div>
+
+      <div id="query-table-or-and-not">
+
+        <div class="div-table-row">
+          <div class="div-table-col attribute">
+            $or, $and, $not ,$nor
+            <br>
+            <a class="showhideclick change-label-or-and-not" href="#" onclick="showHides('.or-and-not-operator', '.change-label-or-and-not'); return false;">(show more) </a>
+          </div>
+          <div class="div-table-col description">
+            $or: passes if one of the subqueries passes
+            <br>
+            $and: passes if all of the subqueries pass
+            <br>
+            $not: inverts the result of the subqueries
+            <br>
+            $nor: passes if none of the subqueries pass
+          </div>
+        </div>
+
+        <div class="div-table-row or-and-not-operator child" style="display:none;background-color:lightcyan;">
+          <div class="div-table-col attribute" style="color:black;background-color:lightcyan;"><b><u>Query Format</u></b></div>
+          <div class="div-table-col description" style="color:black;background-color:lightcyan;"><b><u>Examples</u></b></div>
+        </div>
+
+        <div class="div-table-row or-and-not-operator child" style="display:none;background-color:lightcyan;">
+          <div class="div-table-col attribute" style="background-color: lightcyan;">
+            "operator":array({queries})              
+          </div>
+          <div class="div-table-col description" style="background-color: lightcyan;">
+            "$or":[{"name.first":"Jane"}, {"name.first":"John"}]
+          </div>
+        </div>
+      </div>
+
+      <div id="query-table-elemmatch">
+
+        <div class="div-table-row">
+          <div class="div-table-col attribute">
+            $elemMatch
+            <br>
+            <a class="showhideclick change-label-row" href="#" onclick="showHides('.elemmatch-operator', '.change-label-row'); return false;">(show more) </a>
+          </div>
+          <div class="div-table-col description">
+            passes if all subqueries pass on the document's subfields of field
+            <ul>
+              <li>the fields of the subqueries are the subfields of field</li>
+              <li>the outer field must be of type subdocuments or array</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="div-table-row elemmatch-operator child" style="display:none;background-color:lightcyan;">
+          <div class="div-table-col attribute" style="color:black;background-color:lightcyan;"><b><u>Query Format</u></b></div>
+          <div class="div-table-col description" style="color:black;background-color:lightcyan;"><b><u>Examples</u></b></div>
+        </div>
+
+        <div class="div-table-row elemmatch-operator child" style="display:none;background-color:lightcyan;">
+          <div class="div-table-col attribute" style="background-color: lightcyan;">
+            "field":{"$elemMatch":{queries}}              
+          </div>
+          <div class="div-table-col description" style="background-color: lightcyan;">
+            "services":{"$elemMatch":{"service":"536f3444f518db6e5202a32c", "bill_rate.rate":23.95}}
+          </div>
+        </div>
+      </div>
+
+      <div id="query-table-regex">
+
+        <div class="div-table-row">
+          <div class="div-table-col attribute">
+            $regex
+            <br>
+            <a class="showhideclick change-label-regex" href="#" onclick="showHides('.regex-operator', '.change-label-regex'); return false;">(show more) </a>
+          </div>
+          <div class="div-table-col description">
+            passes if the document's value matches the pattern of the query's value for the specified field
+            <ul>
+              <li>this is useful for partial string matching</li>
+              <li>for the given example, value "and" accepts names like "Andrew", "Sandy", "Ferdinand", ...</li>
+              <li>"$options":"i" means case insensitive</li>
+              <li>there are other options: m, x, s</li>
+              <li>refer to <a href="http://docs.mongodb.org/manual/reference/operator/query/regex/" target="_blank">mongodb</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="div-table-row regex-operator child" style="display:none;background-color:lightcyan;">
+          <div class="div-table-col attribute" style="color:black;background-color:lightcyan;"><b><u>Query Format</u></b></div>
+          <div class="div-table-col description" style="color:black;background-color:lightcyan;"><b><u>Examples</u></b></div>
+        </div>
+
+        <div class="div-table-row regex-operator child" style="display:none;background-color:lightcyan;">
+          <div class="div-table-col attribute" style="background-color: lightcyan;">
+            "field":{"$regex":value, "$options":"i"}              
+          </div>
+          <div class="div-table-col description" style="background-color: lightcyan;">
+            "name.first":{"$regex":"and","$options":"i"}
+          </div>
+        </div>
+      </div>
+    </div>

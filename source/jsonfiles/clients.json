@@ -1411,8 +1411,8 @@
             "line2": "  -H 'Authorization: key'"
         }
     },
-    "kralho": {
-        "line4": {
+    "examples": {
+        "example1": {
             "_id": "53f6b931ccdf0519510000fe",
             "_created_date": "2014-06-22T04:25:42-04:00",
             "ext_id": "X93FR",
@@ -1511,5 +1511,13 @@
                 }
             ]
         }
+    },
+    "actions":{
+        "create": "crud/create.erb",
+        "delete": "crud/delete.erb",
+        "edit": "crud/edit.erb",
+        "get": "crud/get.erb",
+        "list": "crud/list.erb",
+        "custom1": "account/custom1.erb"
     }
 }

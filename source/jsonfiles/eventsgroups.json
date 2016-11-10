@@ -435,8 +435,8 @@
             "line2": "  -H 'Authorization: key'"
         }
     },
-    "kralho": {
-        "line4": [{
+    "examples": {
+        "example1": [{
             "_id": "573f6ad5f90e153e1d8b4577",
             "end": "2016-05-03T12:00:00-04:00",
             "duration": 7200,
@@ -545,5 +545,13 @@
             "start": "2016-05-19T10:00:00-04:00",
             "_deleted": false
         }]
+    },
+    "actions":{
+        "create": "crud/create.erb",
+        "delete": "crud/delete.erb",
+        "edit": "crud/edit.erb",
+        "get": "crud/get.erb",
+        "list": "eventsgroup/list.erb",
+        "custom1": "account/custom1.erb"
     }
 }

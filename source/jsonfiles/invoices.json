@@ -4123,8 +4123,8 @@
             "line2": "  -H 'Authorization: key'"
         }
     },
-    "kralho": {
-        "line4": {
+    "examples": {
+        "example1": {
             "_id": "573f343af90e15011b8b4576",
             "status": "3aad821f389be2ad5dd2f72f",
             "currency": "158fd9fea21be1043f5f3118",
@@ -4216,5 +4216,13 @@
             },
             "_schema": "56e10982199748249ab9f007"
         }
+    },
+    "actions":{
+        "create": "crud/create.erb",
+        "delete": "crud/delete.erb",
+        "edit": "crud/edit.erb",
+        "get": "crud/get.erb",
+        "list": "crud/list.erb",
+        "custom1": "account/custom1.erb"
     }
 }

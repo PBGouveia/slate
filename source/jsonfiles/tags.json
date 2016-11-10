@@ -88,5 +88,19 @@
             "line1": "curl 'http://example.com/api/test'",
             "line2": "  -H 'Authorization: key'"
         }
+    },
+    "examples": {
+        "example1": {
+            "color": "blue",
+            "description": "Nursing",
+            "tittle": "RN00"
+        }
+    },
+    "actions":{
+        "create": "crud/create.erb",
+        "delete": "crud/delete.erb",
+        "edit": "crud/edit.erb",
+        "get": "crud/get.erb",
+        "custom1": "account/custom1.erb"
     }
 }

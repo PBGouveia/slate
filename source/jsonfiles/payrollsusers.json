@@ -1007,8 +1007,8 @@
             "line2": "  -H 'Authorization: key'"
         }
     },
-    "kralho": {
-        "line4": {
+    "examples": {
+        "example1": {
             "totalPayrollUsersHours": 216060,
             "totalPayrollUsersVisits": 45,
             "payrollUsers": [{
@@ -1341,5 +1341,12 @@
             "filteredPayrollUsersHours": 216060,
             "filteredPayrollUsersVisits": 45
         }
+    },
+    "actions":{
+        "create": "crud/create.erb",
+        "delete": "crud/delete.erb",
+        "edit": "crud/edit.erb",
+        "get": "crud/get.erb",
+        "custom1": "account/custom1.erb"
     }
 }

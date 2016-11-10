@@ -186,8 +186,8 @@
             "line2": "  -H 'Authorization: key'"
         }
     },
-    "kralho": {
-        "line4": {
+    "examples": {
+        "example1": {
             "file": "file.pdf",
             "type": "575042e0f90e15f24e8b456b",
             "name": "Mikael's resume",
@@ -195,5 +195,12 @@
             "content_type": "pdf",
             "checksum": "A6F4DS8sa2f316FDA3as1ADSA465fd1s3v1a6dsa1DF4SAdsa1fd65SF"
         }
+    },
+    "actions":{
+        "create": "crud/create.erb",
+        "delete": "crud/delete.erb",
+        "edit": "crud/edit.erb",
+        "get": "crud/get.erb",
+        "custom1": "account/custom1.erb"
     }
 }

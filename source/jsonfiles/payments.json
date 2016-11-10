@@ -138,5 +138,21 @@
             "line1": "curl 'http://example.com/api/test'",
             "line2": "  -H 'Authorization: key'"
         }
+    },
+    "examples": {
+        "example1": {
+            "amount": "5781.00",
+            "client": "575042e7q90e15f24e8b456b",
+            "date": "15/04/1451",
+            "invoice": "575714e7q90e15f24e8b456b",
+            "notes": "payment was made early"
+        }
+    },
+    "actions":{
+        "create": "crud/create.erb",
+        "delete": "crud/delete.erb",
+        "edit": "crud/edit.erb",
+        "get": "crud/get.erb",
+        "custom1": "account/custom1.erb"
     }
 }

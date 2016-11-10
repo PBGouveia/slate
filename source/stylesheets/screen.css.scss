@@ -421,6 +421,34 @@ html, body {
     font-size:14px;
     margin: auto;
     padding-left: 9px;
+
+    .backgroundfirst {
+      background-color:lightcyan;
+      .backgroundfirst {
+      background-color:lightcyan;
+    }
+
+    }
+    .backgroundsecond {
+      background-color: #eaf2f6;
+      .backgroundsecond {
+        background-color: #eaf2f6;
+      }
+    }
+
+    .backgroundthird {
+      background-color:lightgreen;
+      .backgroundthird {
+        background-color:lightgreen;
+      }
+    }
+
+    .backgroundfourth {
+      background-color:lightpink;
+      .backgroundfourth {
+        background-color:lightpink;
+      }
+    }
   }
 
   .div-table-row {
