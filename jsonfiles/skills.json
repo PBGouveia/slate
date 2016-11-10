@@ -88,5 +88,12 @@
             "line1": "curl 'http://example.com/api/test'",
             "line2": "  -H 'Authorization: key'"
         }
+    },
+    "kralho": {
+        "line4": {
+            "color": "blue",
+            "description": "Able to work with patients that have diabetes",
+            "tittle": "Diabetes"
+        }
     }
 }

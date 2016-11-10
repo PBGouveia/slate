@@ -8050,5 +8050,13 @@
             "stage": "dev",
             "version": "1.4.5"
         }
+    },
+    "actions":{
+        "create": "crud/create.erb",
+        "delete": "crud/delete.erb",
+        "edit": "crud/edit.erb",
+        "get": "crud/get.erb",
+        "list": "account/list.erb",
+        "custom1": "account/custom1.erb"
     }
 }

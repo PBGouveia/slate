@@ -138,5 +138,14 @@
             "line1": "curl 'http://example.com/api/test'",
             "line2": "  -H 'Authorization: key'"
         }
+    },
+    "kralho": {
+        "line4": {
+            "amount": "5781.00",
+            "client": "575042e7q90e15f24e8b456b",
+            "date": "15/04/1451",
+            "invoice": "575714e7q90e15f24e8b456b",
+            "notes": "payment was made early"
+        }
     }
 }
