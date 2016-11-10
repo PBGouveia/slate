@@ -1,4 +1,4 @@
-    <h2 id="<%= jsontitle + '_list' %>">List <%= jsontitle %></h2>     <!--  prints each subtitle on the html --> 
+	<h2 id="<%= jsontitle + '_get' %>">Get <%= jsontitle.chomp('s') %></h2>     <!--  prints each subtitle on the html --> 
 
     <p>Iron Man is a 2008 American superhero film featuring the Marvel Comics 
     character of the same name, produced by Marvel Studios and distributed by 
@@ -68,28 +68,6 @@
 
           <div class="div-table-row">
               <div class="div-table-col attribute">
-                <u>limit</u>
-                <br>
-                non-negative integer
-              </div>
-              <div class="div-table-col description">
-                limits the total amount of documents that are returned to the number specified
-              </div>
-          </div>
-
-          <div class="div-table-row">
-              <div class="div-table-col attribute">
-                <u>offset</u>
-                <br>
-                non-negative integer
-              </div>
-              <div class="div-table-col description">
-                skips the first specified number of result documents
-              </div>
-          </div>
-
-          <div class="div-table-row">
-              <div class="div-table-col attribute">
                 <u>fields</u>
                 <br>
                 comma separated fields
@@ -124,38 +102,6 @@
 
           <div class="div-table-row">
               <div class="div-table-col attribute">
-                <u>sort</u>
-                <br>
-                {comma separated fields in the form "field":[1, -1]}
-              </div>
-              <div class="div-table-col description">
-                sorts the results by the specified fields in the order that they appear
-                <br>
-                <ul>
-                  <li>in the given example we first sort by name.first, then by name.last</li>
-                  <li>1 means sort ascending (A -> Z); -1 means sort descending (Z -> A)</li>
-                </ul>
-              </div>
-          </div>
-
-          <div class="div-table-row">
-              <div class="div-table-col attribute">
-                <u>msort</u>
-                <br>
-                array({"fields": array(array(comma separated fields)), "sort":[1, -1]})
-              </div>
-              <div class="div-table-col description">
-                merges the innermost arrays in the order of the specified fields, then sorts and returns the results
-                <br>
-                <ul>
-                  <li>in the given example we first merge to get a strings in the form "contact.name.first contact.name.last" or "company.name.title", like "Jane Doe" or "Intact Insurance Company"</li>
-                  <li>then we sort the resulting strings either ascending or descending and return the result after sorting</li>
-                </ul>
-              </div>
-          </div>
-
-          <div class="div-table-row">
-              <div class="div-table-col attribute">
                 <u>embeds</u>
                 <br>
                 array({"collection":collection, "function":value})
@@ -182,7 +128,7 @@
                 {comma separated queries}
               </div>
               <div class="div-table-col description">
-                see below
+                Click <a href='http://localhost:4567/?shell#query'>here</a> to be redirected for the query information
               </div>
           </div>
 
