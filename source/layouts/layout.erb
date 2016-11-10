@@ -1391,6 +1391,7 @@ under the License.
             à crise nos Estados Unidos.</p>     <!-- display the description --> 
 
             <%#= render "layouts/crud/edit.erb" %>
+            <%= ERB.new(File.read(File.expand_path("source/layouts/crud/edit.erb"))).result(binding) %>
 
             <h2 id="<%= jsontitle + '_get' %>">Get <%= jsontitle.chomp('s') %></h2>     <!--  prints each subtitle on the html --> 
 
