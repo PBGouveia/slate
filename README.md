@@ -52,22 +52,6 @@ Now that Alaunus API is all set up on your machine, you'll probably want to lear
 
 If you'd prefer to use Docker, instructions are available [in the wiki](https://github.com/PBGouveia/slate/wiki/Docker).
 
-Companies Using Slate
----------------------------------
-
-* [NASA](https://api.nasa.gov)
-* [IBM Cloudant](https://docs.cloudant.com/api.html)
-* [Travis-CI](https://docs.travis-ci.com/api/)
-* [Mozilla](http://mozilla.github.io/localForage/)
-* [Appium](http://appium.io/slate/en/master)
-* [Dwolla](https://docs.dwolla.com/)
-* [Clearbit](https://clearbit.com/docs)
-* [Coinbase](https://developers.coinbase.com/api)
-* [Parrot Drones](http://developer.parrot.com/docs/bebop/)
-* [Fidor Bank](http://docs.fidor.de/)
-
-You can view more in [the list on the wiki](https://github.com/lord/slate/wiki/Slate-in-the-Wild).
-
 Need Help? Found a bug?
 --------------------
 
