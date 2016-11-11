@@ -1,7 +1,5 @@
 <p align="center">
-  <img src="https://s3.amazonaws.com/alaunus-web-2.0-us-east-data/wp-content/uploads/2015/06/logo_1500x571.png" alt="Slate: API Documentation Generator" width="226">
-  <br>
-  <a href="https://travis-ci.org/lord/slate"><img src="https://travis-ci.org/lord/slate.svg?branch=master" alt="Build Status"></a>
+  <img href="https://travis-ci.org/lord/slate" src="https://s3.amazonaws.com/alaunus-web-2.0-us-east-data/wp-content/uploads/2015/06/logo_1500x571.png" alt="Alaunus: API Documentation" width="226">
 </p>
 
 <p align="center">Slate helps you create beautiful, intelligent, responsive API documentation.</p>
