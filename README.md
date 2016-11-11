@@ -9,7 +9,7 @@
 Features
 ------------
 
-* **Clean, intuaitive design** — The description of Alaunus API is on the left side of the documentation, and all the code examples are on the right side. Alaunus API is responsive, so it looks great on tablets, phones, and even in print.
+* **Clean, intuitive design** — The description of Alaunus API is on the left side of the documentation, and all the code examples are on the right side. Alaunus API is responsive, so it looks great on tablets, phones, and even in print.
 
 * **Everything on a single page** — Gone are the days when your users had to search through a million pages to find what they wanted. The entire documentation is on a single page. We haven't sacrificed linkability, though. As you scroll, your browser's hash will update to the nearest header, so linking to a particular point in the documentation is still natural and easy.
 
@@ -21,7 +21,7 @@ Features
 
 * **Automatic, smoothly scrolling table of contents** on the far left of the page. As you scroll, it displays your current position in the document. It's fast, too.
 
-Getting Started with Slate
+Getting Started with Alaunus API
 ------------------------------
 
 ### Prerequisites
@@ -34,10 +34,8 @@ You're going to need:
 
 ### Getting Set Up
 
-1. Fork this repository on Github.
-2. Clone *your forked repository* (not our original one) to your hard drive with `git clone https://github.com/YOURUSERNAME/slate.git`
-3. `cd slate`
-4. Initialize and start Slate. You can either do this locally, or with Vagrant:
+1. Clone this repository on Github.
+2. Initialize and start Alaunus API. You can either do this locally, or with Vagrant:
 
 ```shell
 # either run this to run locally
@@ -50,9 +48,9 @@ vagrant up
 
 You can now see the docs at http://localhost:4567. Whoa! That was fast!
 
-Now that Slate is all set up on your machine, you'll probably want to learn more about [editing Slate markdown](https://github.com/lord/slate/wiki/Markdown-Syntax), or [how to publish your docs](https://github.com/lord/slate/wiki/Deploying-Slate).
+Now that Alaunus API is all set up on your machine, you'll probably want to learn more about [editing Alaunus API markdown](https://github.com/PBGouveia/slate/wiki/Markdown-Syntax), or [how to publish your docs](https://github.com/PBGouveia/slate/wiki/Deploying-it).
 
-If you'd prefer to use Docker, instructions are available [in the wiki](https://github.com/lord/slate/wiki/Docker).
+If you'd prefer to use Docker, instructions are available [in the wiki](https://github.com/PBGouveia/slate/wiki/Docker).
 
 Companies Using Slate
 ---------------------------------
