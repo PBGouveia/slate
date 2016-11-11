@@ -2931,8 +2931,8 @@
             "line2": "  -H 'Authorization: key'"
         }
     },
-    "kralho": {
-        "line4": {
+    "examples": {
+        "example1": {
             "meta": {
                 "start": "2016-05-16T04:00:00+00:00",
                 "end": "2016-05-25T03:59:59+00:00",
@@ -3057,5 +3057,13 @@
                 ]
             }
         }
+    },
+    "actions":{
+        "create": "crud/create.erb",
+        "delete": "crud/delete.erb",
+        "edit": "crud/edit.erb",
+        "get": "crud/get.erb",
+        "list": "crud/list.erb",
+        "custom1": "account/custom1.erb"
     }
 }

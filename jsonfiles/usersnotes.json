@@ -267,8 +267,8 @@
             "line2": "  -H 'Authorization: key'"
         }
     },
-    "kralho": {
-        "line4": {
+    "examples": {
+        "example1": {
             "_created_date": "05/05/1998",
             "_created_user": "Mike",
             "_deleted": false,
@@ -279,5 +279,12 @@
             "title": "What happened",
             "user": "766f6b19f90e15ac1b8b4584"
         }
+    },
+    "actions":{
+        "create": "crud/create.erb",
+        "delete": "crud/delete.erb",
+        "edit": "crud/edit.erb",
+        "get": "crud/get.erb",
+        "custom1": "account/custom1.erb"
     }
 }

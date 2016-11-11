@@ -3284,8 +3284,8 @@
             "line2": "  -H 'Authorization: key'"
         }
     },
-    "kralho": {
-        "line4": {
+    "examples": {
+        "example1": {
             "_id": "57bb51926de3adca448b456c",
             "candidate_status": "f577a1a7ca2e3da7c4e5d509",
             "email": "carol.fuji@alaunus.com",
@@ -3461,5 +3461,13 @@
                 "part_time": false
             }
         }
+    },
+    "actions":{
+        "create": "crud/create.erb",
+        "delete": "crud/delete.erb",
+        "edit": "crud/edit.erb",
+        "get": "crud/get.erb",
+        "list": "crud/list.erb",
+        "custom1": "account/custom1.erb"
     }
 }

@@ -8008,8 +8008,8 @@
             "line2": "  -H 'Authorization: key'"
         }
     },
-    "kralho": {
-        "line4": {
+    "examples": {
+        "example1": {
             "auth": {
                 "access_token": "JDJhJDEwJDZucU9qVDEvVXo3dFlvNXk3b2NOR0...",
                 "access_secret": "VTJGc2RHVmtYMS91TDRQWTZxeE5LTWJPZ0xka...",
@@ -8056,7 +8056,7 @@
         "delete": "crud/delete.erb",
         "edit": "crud/edit.erb",
         "get": "crud/get.erb",
-        "list": "account/list.erb",
+        "list": "crud/list.erb",
         "custom1": "account/custom1.erb"
     }
 }

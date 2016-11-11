@@ -159,8 +159,8 @@
             "line2": "  -H 'Authorization: key'"
         }
     },
-    "kralho": {
-        "line4": {
+    "examples": {
+        "example1": {
             "_id": "573f6b91f90e15ac1b8b4584",
             "_account": "53f6aa644d2de64fb30000af",
             "payroll": {
@@ -631,5 +631,13 @@
                 }
             }
         }
+    },
+    "actions":{
+        "create": "crud/create.erb",
+        "delete": "crud/delete.erb",
+        "edit": "crud/edit.erb",
+        "get": "crud/get.erb",
+        "list": "crud/list.erb",
+        "custom1": "account/custom1.erb"
     }
 }

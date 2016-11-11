@@ -4503,8 +4503,8 @@
             "line2": "  -H 'Authorization: key'"
         }
     },
-    "kralho": {
-        "line4": {
+    "examples": {
+        "example1": {
             "_id": "57360e2cf90e15a37b8b45de",
             "problems": [
                 {
@@ -4836,5 +4836,13 @@
             "_created_date": "2016-05-13T13:26:04-04:00",
             "transportation": "576b0594efa3eedd9ff03687"
         }
+    },
+    "actions":{
+        "create": "crud/create.erb",
+        "delete": "crud/delete.erb",
+        "edit": "crud/edit.erb",
+        "get": "crud/get.erb",
+        "list": "patient/list.erb",
+        "custom1": "account/custom1.erb"
     }
 }
