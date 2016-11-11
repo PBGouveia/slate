@@ -1,15 +1,28 @@
-  <div class="div-table-row child a-<%= a[0] %> <%= jsontitle %>-sub-<%= a[0] %> backgroundfirst" style="display:none;">
+  <div class="div-table-row child first a-<%= a[0] %> <%= jsontitle %>-sub-<%= a[0] %> backgroundfirst" style="display:none;">
     <div class="div-table-col attribute backgroundfirst">
+      
       <% if (b[1].is_a?(Hash)) %>
-        <a class="showhideclick" href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>', '.b-<%= b[0] %>' ); return false;">
-          <%= b[0]%></a> 
+        <% if (b[1].key?("type")) && ((b[1]['type']=='subdocuments') || (b[1]['type']=='subdocument')) %>
+          <b><%= b[0] %></b>
+          <br> <a class="typegrey"><%= b[1]['type'] %></a>
+          <br> <a class="showhideclick subdoc-<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %> subdoc-a-<%= a[0] %> subdoc-b-<%= b[0] %>" href="#" onclick="showHidess('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>', '.b-<%= b[0] %>', '.subdoc-<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>', '.subdoc-b-<%= b[0] %>' ); return false;">show more</a> 
+
+        <% else %>
+
+          <a class="showhideclick" href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>', '.b-<%= b[0] %>' ); return false;">
+            <%= b[0] %></a> 
+          <% if (b[1].is_a?(Hash)) && (b[1].key?("type")) %>
+            <br> <a class="typegrey"><%= b[1]['type'] %></a>
+          <% end %>
+
+        <% end %>
+      
+
       <% else %>
         <%= b[0] %>
       <% end %>
 
-      <% if (b[1].is_a?(Hash)) && (b[1].key?("type")) %>
-        <br> <a class="typegrey"><%= b[1]['type'] %></a>
-      <% end %>
+      
       
     </div>
     <div class="div-table-col description backgroundfirst">

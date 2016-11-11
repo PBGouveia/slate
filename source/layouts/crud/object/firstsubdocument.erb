@@ -1,0 +1,20 @@
+  <div class="div-table-row child first a-<%= a[0] %> <%= jsontitle %>-sub-<%= a[0] %> backgroundfirst" style="display:none;">
+    <div class="div-table-col attribute backgroundfirst">
+      <b><%= b[0] %></b>
+
+      <% if (b[1].is_a?(Hash)) && (b[1].key?("type")) %>
+        <br> <a class="typegrey"><%= b[1]['type'] %></a>
+      <% end %>
+      
+      <% if (b[1].is_a?(Hash)) %>
+        <br> <a class="showhideclick subdoc-<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>" href="#" onclick="showHidess('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>', '.b-<%= b[0] %>', '.subdoc-<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>' ); return false;">show more</a> 
+      <% end %>
+    </div>
+    <div class="div-table-col description backgroundfirst">
+      <% if (b[1].is_a?(Hash)) && (b[1].key?("documentation")) %>
+        <%= b[1]['documentation']['description'] %> 
+      <% end %>
+      
+    </div>
+  </div>
+  
