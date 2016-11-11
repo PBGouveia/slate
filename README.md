@@ -2,11 +2,9 @@
   <img src="https://s3.amazonaws.com/alaunus-web-2.0-us-east-data/wp-content/uploads/2015/06/logo_1500x571.png" alt="Alaunus: API Documentation" width="226">
 </p>
 
-<p align="center">Slate helps you create beautiful, intelligent, responsive API documentation.</p>
+<p align="center">Alaunus API Documentation.</p>
 
-<p align="center"><img src="https://github.com/PBGouveia/slate/blob/paulo-v3-readme/source/images/logo.png" width=700 alt="Screenshot of Example Documentation created with Slate"></p>
-
-<p align="center"><em>The example above was created with Slate. Check it out at <a href="https://lord.github.io/slate">lord.github.io/slate</a>.</em></p>
+<p align="center"><img src="https://github.com/PBGouveia/slate/blob/paulo-v3-readme/source/images/Alaunus-api_screenshot.png" width=700 alt="Screenshot of Example Documentation created with Slate"></p>
 
 Features
 ------------
