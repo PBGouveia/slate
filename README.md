@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://s3.amazonaws.com/alaunus-web-2.0-us-east-data/wp-content/uploads/2015/06/logo_1500x571.png" alt="Alaunus: API Documentation" width="226">
+  <img src="https://s3.amazonaws.com/alaunus-web-2.0-us-east-data/wp-content/uploads/2015/06/logo_1500x571.png" alt="Alaunus: API Documentation" width="228">
 </p>
 
 <p align="center">Alaunus API Documentation.</p>
 
-<p align="center"><img src="https://github.com/PBGouveia/slate/blob/paulo-v3-readme/source/images/Alaunus-api_screenshot.png" width=700 alt="Screenshot of Example Documentation created with Slate"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/PBGouveia/slate/paulo-v3-readme/source/images/Alaunus-api_screenshot.png" width=800 alt="Screenshot of Example Documentation created with Slate"></p>
 
 Features
 ------------
