@@ -2,7 +2,7 @@
     <div class="div-table-col attribute backgroundfourth">
       <%= e[0] %>
       <% if (e[1].is_a?(Hash)) && (e[1].key?("type")) %>
-        <br> <%= e[1]['type'] %>
+        <br> <a class="typegrey"><%= e[1]['type'] %></a>
       <% end %>
     </div>
     <div class="div-table-col description backgroundfourth">

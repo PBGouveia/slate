@@ -126,7 +126,9 @@ under the License.
             <h2 id="<%= jsontitle + '_object' %>">The <%= jsontitle %> object</h2>     <!--  prints each subtitle on the html --> 
 
             <!-- Information's table -->
-            
+            <% everything = true %>
+
+            <% if everything %>
             <h3> Attributes: </h3>
             <div class="div-table">
               <div class="div-table-row head-row">
@@ -143,7 +145,7 @@ under the License.
                         <a class="showhideclick" href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>', '.a-<%= a[0] %>'); return false;">
                           <%= a[0]%></a>
                         <% if (a[1].key?("type")) %>
-                          <br><%= a[1]['type'] %>&nbsp;
+                          <br><a class="typegrey"><%= a[1]['type'] %></a>
                         <% end %>
 
                       </div>
@@ -556,10 +558,11 @@ under the License.
 
               </div>
             </div>
+            <% end %>
 
             <!-- end collection table -->
 
-            <% examples = true %>
+            <% examples = false %>
 
             <!-- Code for printing code examples and language -->
             <% if examples == true %>

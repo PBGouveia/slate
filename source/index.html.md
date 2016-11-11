@@ -179,8 +179,6 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 
 <aside class="notice">The Alaunus API uses the following error codes:</aside>
 
-The Alaunus API uses the following error codes:
-
 
 Error | Short | Description
 ----- | ----- | -----------

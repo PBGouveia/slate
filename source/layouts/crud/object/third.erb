@@ -7,7 +7,7 @@
         <%= d[0] %>
       <% end %>
       <% if (d[1].is_a?(Hash)) && (d[1].key?("type")) %>
-        <br> <%= d[1]['type'] %>
+        <br> <a class="typegrey"><%= d[1]['type'] %></a>
       <% end %>
       
     </div>
