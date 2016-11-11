@@ -12,7 +12,7 @@
         <% else %>
 
           <a class="showhideclick" href="#" onclick="showHide('.<%= jsontitle %>-sub-<%= a[0] %>-<%= b[0] %>-<%= c[0] %>-<%= d[0] %>', '.d-<%= d[0] %>' ); return false;">
-            <%= d[0] %></a> 
+            <b><%= d[0] %></b></a> 
           <% if (d[1].is_a?(Hash)) && (d[1].key?("type")) %>
             <br> <a class="typegrey"><%= d[1]['type'] %></a>
           <% end %>
