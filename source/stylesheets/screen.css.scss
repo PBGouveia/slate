@@ -555,6 +555,18 @@ html, body {
       border-bottom: 1px solid #ccc;
     }
 
+    td:first-child {
+      word-break: normal;
+    }
+
+    td:nth-child(2) {
+      word-break: break-all;
+    }
+
+    td:last-child {
+      word-break: break-all;
+    }
+
     // tr:nth-child(odd)>td {
     //   background-color: lighten($main-bg,4.2%);
     // }
