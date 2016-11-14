@@ -121,14 +121,14 @@ under the License.
 
         <%= ERB.new(File.read("source/layouts/crud/query.erb")).result(binding) %>
 
-        <% Dir.glob("source/jsonfiles/*.json") do |jsonfilepath| %>  <!-- loop through folder and jsonfilepath = path to each json file -->
+        <% Dir.glob("source/Models/*.json") do |jsonfilepath| %>  <!-- loop through folder and jsonfilepath = path to each json file -->
           
           <% require 'json' %>
           <% file = File.read(jsonfilepath) %>       <!-- read each json file -->
           <% my_json_hash = JSON.parse(file) %>      <!-- read each json file -->
 
           <% jsontitle = jsonfilepath %>      <!-- use the name of the json file as title -->
-          <% jsontitle.slice! "source/jsonfiles/" %>    <!-- use the name of the json file as title -->
+          <% jsontitle.slice! "source/Models/" %>    <!-- use the name of the json file as title -->
           <% jsontitle.slice! ".json" %>      <!-- use the name of the json file as title -->
 
           <% if (my_json_hash.key?("attrs")) && (!my_json_hash['documentationhide']) %>      <!-- check if the key 'attrs' exists -->
