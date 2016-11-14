@@ -135,6 +135,17 @@ under the License.
             
             <h1 id="<%= jsontitle %>"><%= jsontitle.capitalize %></h1>    <!-- print title on html -->
             
+            <% my_json_hash_sortedd = my_json_hash %>
+
+            <% if (my_json_hash.key?("opts")) %>
+              <% my_json_hash['attrs']['opts'] = my_json_hash['opts'] %>
+
+            <% end %>
+
+            <% if (my_json_hash.key?("events")) %>
+              <% my_json_hash['attrs']['events'] = my_json_hash['events'] %>
+
+            <% end %>
             <% my_json_hash_sorted = my_json_hash['attrs'].sort %>
 
             <h2 id="<%= jsontitle + '_object' %>">The <%= jsontitle %> object</h2>     <!--  prints each subtitle on the html --> 
@@ -152,6 +163,8 @@ under the License.
 
               <div id="<%= jsontitle %>-table">
                 <% my_json_hash_sorted.each do |a| %>       <!-- loop through each section inside the attrs key on the json file -->
+                <%# puts jsontitle %>
+                <%# puts a[0] %>
                 <% if (my_json_hash['attrs'][a[0]]['documentation'].key?("hide")) && (!my_json_hash['attrs'][a[0]]['documentation']['hide']) %>
 
                   <div class="div-table-row">
