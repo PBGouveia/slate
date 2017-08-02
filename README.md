@@ -17,7 +17,7 @@ Features
 
 * **Write code samples in multiple languages** — You can easily put in tabs to switch between the languages. In your document, you'll distinguish different languages by specifying the language name at the top of each code block, just like with Github Flavored Markdown.
 
-* **Out-of-the-box syntax highlighting** for [almost 100 languages](http://rouge.jneen.net/), no configuration required.
+* **Out-of-the-box syntax highlighting** for [over 100 languages](https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers), no configuration required.
 
 * **Automatic, smoothly scrolling table of contents** on the far left of the page. As you scroll, it displays your current position in the document. It's fast, too.
 
@@ -29,7 +29,7 @@ Getting Started with Alaunus API
 You're going to need:
 
  - **Linux or OS X** — Windows may work, but is unsupported.
- - **Ruby, version 2.0 or newer**
+ - **Ruby, version 2.3.1 or newer**
  - **Bundler** — If Ruby is already installed, but the `bundle` command doesn't work, just run `gem install bundler` in a terminal.
 
 ### Getting Set Up
@@ -52,19 +52,27 @@ Now that Alaunus API is all set up on your machine, you'll probably want to lear
 
 If you'd prefer to use Docker, instructions are available [in the wiki](https://github.com/PBGouveia/slate/wiki/Docker).
 
+### Note on JavaScript Runtime
+
+For those who don't have JavaScript runtime or are experiencing JavaScript runtime issues with ExecJS, it is recommended to add the [rubyracer gem](https://github.com/cowboyd/therubyracer) to your gemfile and run `bundle` again.
+
 Companies Using Slate
 ---------------------------------
 
 * [NASA](https://api.nasa.gov)
-* [IBM Cloudant](https://docs.cloudant.com/api.html)
+* [IBM](https://docs.cloudant.com/api.html)
+* [Sony](http://developers.cimediacloud.com)
+* [Best Buy](https://bestbuyapis.github.io/api-documentation/)
 * [Travis-CI](https://docs.travis-ci.com/api/)
-* [Mozilla](http://mozilla.github.io/localForage/)
+* [Greenhouse](https://developers.greenhouse.io/harvest.html)
+* [Woocommerce](http://woocommerce.github.io/woocommerce-rest-api-docs/)
 * [Appium](http://appium.io/slate/en/master)
 * [Dwolla](https://docs.dwolla.com/)
 * [Clearbit](https://clearbit.com/docs)
 * [Coinbase](https://developers.coinbase.com/api)
 * [Parrot Drones](http://developer.parrot.com/docs/bebop/)
 * [Fidor Bank](http://docs.fidor.de/)
+* [Scale](https://docs.scaleapi.com/)
 
 You can view more in [the list on the wiki](https://github.com/lord/slate/wiki/Slate-in-the-Wild).
 
@@ -85,7 +93,7 @@ Thanks to the following people who have submitted major pull requests:
 - [@realityking](https://github.com/realityking)
 - [@cvkef](https://github.com/cvkef)
 
-Also, thanks to [Sauce Labs](http://saucelabs.com) for helping sponsor the project.
+Also, thanks to [Sauce Labs](http://saucelabs.com) for sponsoring the development of the responsive styles.
 
 Special Thanks
 --------------------
