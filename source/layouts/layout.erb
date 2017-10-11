@@ -135,10 +135,19 @@ under the License.
           <% require 'json' %>
           <% file = File.read(jsonfilepath) %>       <!-- read each json file -->
           <% my_json_hash = JSON.parse(file) %>      <!-- read each json file -->
-
           <% jsontitle = jsonfilepath %>      <!-- use the name of the json file as title -->
           <% jsontitle.slice! "source/jsonfiles/" %>    <!-- use the name of the json file as title -->
           <% jsontitle.slice! ".json" %>      <!-- use the name of the json file as title -->
+
+          <% if jsontitle == 'usersnotes' %>
+            <% jsontitle = 'Users Notes' %>
+          <%elsif jsontitle == 'payrollsusers'%>
+            <% jsontitle = 'Payroll Users'%>
+          <%elsif jsontitle == 'patientsprogressnotes'%>
+            <% jsontitle = 'Patients Progress Notes'%>
+          <%elsif jsontitle == 'eventsgroups'%>
+            <% jsontitle = 'Event Groups'%>
+          <% end %>
 
           <% if (my_json_hash.key?("attrs")) && (!my_json_hash['documentationhide']) %>      <!-- check if the key 'attrs' exists -->
             
@@ -623,7 +632,7 @@ under the License.
         
         <% end %>
         <!-- end all collections (.json) loop -->
-        <%= page_content %>
+        <!-- <%= page_content %>-->
 
       </div>     <!-- closes class="content" -->
       <div class="dark-box">
