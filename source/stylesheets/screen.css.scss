@@ -165,8 +165,8 @@ html, body {
   // This is the currently selected ToC entry
   .toc-link.active {
     // box-shadow: 1px 1px 0px $nav-active-shadow;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+    // border-bottom: 1px solid black;
+    // border-top: 1px solid black;
     background-color: $nav-active-bg;
     color: $nav-active-text;
   }
