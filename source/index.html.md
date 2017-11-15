@@ -112,7 +112,7 @@ but for the purposes of the Alaunus API, we reference them this way.
 ## Values
 
 A "value" is what a field is set to. 
-A values can be exactly one of the following types in the table below.
+Values can be exactly one of the following types in the table below.
 
 <aside class="warning">Warning: There are certain special characters that can exist in a string type such as the plus sign (+) that can't be entered in the url in the normal way. Special characters must be encoded in order to use them in the url. For example, the plus sign gets encoded to %2B. This website is useful for encoding and decoding urls: <a href='http://www.freeformatter.com/url-encoder.html' target="_blank">http://www.freeformatter.com/url-encoder.html</a></aside>
 

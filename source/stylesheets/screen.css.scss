@@ -355,7 +355,7 @@ html, body {
 
   // the div is the tocify hidden div for placeholding stuff
   &>h1, &>h2, &>div {
-    clear:both;
+    clear:left;
   }
 
   h1 {
@@ -544,6 +544,8 @@ html, body {
     padding-left: 0;
     padding-right: 0;
     margin-right: 50%;
+    word-wrap: break-word;
+    white-space: normal;
     th,td {
       text-align: left;
       vertical-align: top;
@@ -723,12 +725,25 @@ html, body {
 // These are the styles for phones and tablets
 // There are also a couple styles disperesed
 
+@media (max-width: 1210px) and (min-width: $tablet-width) {
+  .content table td {
+    max-width: 125px;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .toc-wrapper {
     left: -$nav-width;
 
     &.open {
       left: 0;
+    }
+  }
+  .content table {
+    td {
+    max-width: 33vw;
+    word-wrap: break-word;
+    white-space: normal;
     }
   }
 
@@ -747,8 +762,15 @@ html, body {
 }
 
 @media (max-width: $phone-width) {
+  .content table {
+    td {
+    max-width: 25vw;
+    }
+  }
+
   table {
-    width: 100% !important;
+    width: calc(100% - 10px) !important;
+    margin-right: 0 !important;
   }
 
   div.mytable {
