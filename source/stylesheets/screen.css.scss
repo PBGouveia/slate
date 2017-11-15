@@ -818,3 +818,21 @@ html, body {
 .highlight, .highlight .w {
   background-color: $code-bg;
 }
+
+.codehilite {
+  span {
+    color: #e6db74;
+  }
+  span.mi {
+    color: #ae81ff;
+  }
+  span.mf {
+    color: #ae81ff;
+    }
+  span.p {
+    color: #fff;
+  }
+  span.kc {
+  color: #66d9ef;
+  }
+}
